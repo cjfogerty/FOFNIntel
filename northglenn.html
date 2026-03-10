@@ -8289,29 +8289,6 @@
         }
 
 
-        // Update headline modals
-        function updateHeadlineModals(analytics) {
-            let totalEnrolled = 0;
-            let totalCapacity = 0;
-            
-            if (analytics.categorySummary) {
-                analytics.categorySummary.forEach(cat => {
-                    totalEnrolled += cat.Enrolled || 0;
-                    totalCapacity += cat.TotalCapacity || 0;
-                });
-            } else if (analytics.levelSummary) {
-                analytics.levelSummary.forEach(level => {
-                    totalEnrolled += level.Enrolled || 0;
-                    totalCapacity += level.TotalCapacity || 0;
-                });
-            }
-            
-            const utilization = totalCapacity > 0 ? (totalEnrolled / totalCapacity * 100).toFixed(1) : 0;
-            
-            document.getElementById('totalEnrollments').textContent = totalEnrolled.toLocaleString();
-            document.getElementById('totalCapacitySubscript').textContent = 'of ' + totalCapacity.toLocaleString() + ' total capacity';
-            document.getElementById('totalUtilization').textContent = utilization + '%';
-        }
 
         // Initialize filters
         function initializeFilters() {
@@ -9126,6 +9103,11 @@
             html += '</tbody>';
 
             document.getElementById('timeTable').innerHTML = html;
+
+            // Update headline modals with the grand total from this table
+            document.getElementById('totalEnrollments').textContent = grandTotal.enrolled.toLocaleString();
+            document.getElementById('totalCapacitySubscript').textContent = 'of ' + grandTotal.capacity.toLocaleString() + ' total capacity';
+            document.getElementById('totalUtilization').textContent = grandUtil + '%';
         }
 
         // Initialize
