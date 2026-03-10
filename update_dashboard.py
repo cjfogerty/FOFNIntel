@@ -22,13 +22,13 @@ from collections import defaultdict
 # === CATEGORY MAPPING ===
 # Maps class level prefixes to BBSS program categories
 CATEGORY_MAP = {
-    "Backfloat Baby": "Baby Blue",
-    "Little": "Baby Blue",
-    "Middle": "Bright Blue",
-    "Big": "Bold Blue",
-    "10+": "Big Blue",
-    "Adult": "Big Blue",
-    "Private Lesson": "Private",
+    "Backfloat Baby": "Backfloat Baby",
+    "Little": "Littles",
+    "Middle": "Middles",
+    "Big": "Bigs",
+    "10+": "10+",
+    "Adult": "Adults and Privates",
+    "Private Lesson": "Adults and Privates",
 }
 
 def get_category(class_level):
