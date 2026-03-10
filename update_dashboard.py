@@ -27,8 +27,13 @@ CATEGORY_MAP = {
     "Middle": "Middles",
     "Big": "Bigs",
     "10+": "10+",
-    "Adult": "Adults and Privates",
-    "Private Lesson": "Adults and Privates",
+    "Adult": "Adults",
+    "Private Lesson": "Privates",
+}
+
+# Levels that must always appear in levelSummary even with 0 data
+ALWAYS_INCLUDE_LEVELS = {
+    "Adult 3 (A3)": "Adults",
 }
 
 def get_category(class_level):
@@ -172,6 +177,11 @@ def compute_analytics(raw_data):
         lv["Enrolled"] += r["Enrolled"]
         lv["SpotsOpen"] += r["Spots Left"]
         lv["LessonsScheduled"] += 1
+
+    # Inject always-include levels (e.g. A3) with zero data if not already present
+    for lv_name, cat in ALWAYS_INCLUDE_LEVELS.items():
+        if lv_name not in level:
+            level[lv_name]["Category"] = cat
 
     level_summary = []
     for lv_name in sorted(level.keys()):
