@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=NG_foss_dashboard_with_newdata.html">
-  <title>FOFNIntel - Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOFNIntel - FOSS Inventory Dashboards</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f4f8; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+    .container { text-align: center; padding: 40px 20px; }
+    h1 { font-size: 2rem; color: #1a365d; margin-bottom: 8px; }
+    p.sub { color: #4a5568; margin-bottom: 40px; font-size: 1.1rem; }
+    .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+    a.card { display: block; background: #fff; border-radius: 12px; padding: 32px 40px; text-decoration: none; color: #2d3748; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.15s, box-shadow 0.15s; min-width: 260px; }
+    a.card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+    a.card h2 { font-size: 1.3rem; margin-bottom: 8px; color: #2b6cb0; }
+    a.card span { color: #718096; font-size: 0.95rem; }
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="NG_foss_dashboard_with_newdata.html">NG Foss Dashboard</a>...</p>
+  <div class="container">
+    <h1>FOFNIntel</h1>
+    <p class="sub">FOSS Swim School Inventory Dashboards</p>
+    <div class="cards">
+      <a class="card" href="NG_foss_dashboard_with_newdata.html">
+        <h2>Northglenn, CO</h2>
+        <span>View utilization dashboard &rarr;</span>
+      </a>
+      <a class="card" href="foss_OFALLON_utilization_dashboard_v3_updated.html">
+        <h2>O'Fallon, MO</h2>
+        <span>View utilization dashboard &rarr;</span>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
