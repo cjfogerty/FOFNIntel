@@ -264,13 +264,60 @@ def update_html(html_path, raw_data, analytics, location_name=None):
     with open(html_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Update date in title
-    today = datetime.now().strftime("%b %-d, %Y")
-    content = re.sub(
-        r'(<title>Foss Swim School [^<]*?)\([^)]*\)',
-        lambda m: m.group(1) + f'({today})',
-        content
-    )
+    now = datetime.now()
+    today = now.strftime("%b %-d, %Y")
+    timestamp_short = now.strftime("%b %-d, %Y, %-I:%M %p")   # e.g. "Mar 11, 2026, 11:59 AM"
+    timestamp_long  = now.strftime("%B %-d, %Y at %-I:%M %p")  # e.g. "March 11, 2026 at 11:59 AM"
+
+    # Remove any stray Northglenn navigation links
+    content = re.sub(r'\s*<a href="northglenn\.html">Go to Northglenn Dashboard</a>\n?', '\n', content)
+
+    # Update <title>: replace location + date/time
+    if location_name:
+        content = re.sub(
+            r'<title>Foss Swim School [^<]*?</title>',
+            f'<title>Foss Swim School {location_name} - Weekly Utilization Dashboard ({timestamp_short})</title>',
+            content
+        )
+    else:
+        content = re.sub(
+            r'(<title>Foss Swim School [^<]*?)\([^)]*\)',
+            lambda m: m.group(1) + f'({timestamp_short})',
+            content
+        )
+
+    # Update <h1>: replace location + strip old date from heading
+    if location_name:
+        content = re.sub(
+            r'<h1>🏊 Foss Swim School [^<]*?</h1>',
+            f'<h1>🏊 Foss Swim School {location_name} - Weekly Utilization Dashboard</h1>',
+            content
+        )
+    else:
+        content = re.sub(
+            r'(<h1>🏊 Foss Swim School [^<]*? - Weekly Utilization Dashboard)[^<]*?</h1>',
+            lambda m: m.group(1) + '</h1>',
+            content
+        )
+
+    # Update extraction timestamp subtitle (add if missing, replace if present)
+    extraction_div = f'<div class="extraction-time">Data extracted: {timestamp_long}</div>'
+    if 'class="extraction-time"' in content:
+        content = re.sub(
+            r'<div class="extraction-time">.*?</div>',
+            extraction_div,
+            content
+        )
+    else:
+        # Insert after h1, and inject CSS if not already present
+        if '.extraction-time' not in content:
+        	css = '\n        .extraction-time {\n            font-size: 13px;\n            color: #718096;\n            margin-bottom: 10px;\n            margin-top: -10px;\n        }\n'
+        	content = content.replace('        h1 {', css + '        h1 {', 1)
+        content = re.sub(
+            r'(</h1>)(\s*\n\s*<div class="filters">)',
+            lambda m: m.group(1) + f'\n            {extraction_div}' + m.group(2),
+            content
+        )
 
     # Replace ANALYTICS block (use lambda to avoid regex escape issues with \u in JSON)
     analytics_json = json.dumps(analytics, indent=8, ensure_ascii=False)
