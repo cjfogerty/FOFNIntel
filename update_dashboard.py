@@ -269,10 +269,12 @@ def update_html(html_path, raw_data, analytics, location_name=None):
     timestamp_short = now.strftime("%b %-d, %Y, %-I:%M %p")   # e.g. "Mar 11, 2026, 11:59 AM"
     timestamp_long  = now.strftime("%B %-d, %Y at %-I:%M %p")  # e.g. "March 11, 2026 at 11:59 AM"
 
-    # Remove any stray Northglenn navigation links
-    content = re.sub(r'\s*<a href="northglenn\.html">Go to Northglenn Dashboard</a>\n?', '\n', content)
+    # Remove any cross-location navigation links (all directions)
+    content = re.sub(r'\s*<a href="northglenn\.html">[^<]*</a>\n?', '\n', content)
+    content = re.sub(r'\s*<a href="ofallon\.html">[^<]*</a>\n?', '\n', content)
+    content = re.sub(r'\s*<a href="lakeview\.html">[^<]*</a>\n?', '\n', content)
 
-    # Update <title>: replace location + date/time
+    # Update <title>: set location (if provided) and always stamp date+time
     if location_name:
         content = re.sub(
             r'<title>Foss Swim School [^<]*?</title>',
@@ -280,27 +282,48 @@ def update_html(html_path, raw_data, analytics, location_name=None):
             content
         )
     else:
+        # Keep existing location name, just replace the (date) portion with date+time
         content = re.sub(
-            r'(<title>Foss Swim School [^<]*?)\([^)]*\)',
-            lambda m: m.group(1) + f'({timestamp_short})',
+            r'(<title>Foss Swim School [^<]*?)\s*\([^)]*\)(.*?</title>)',
+            lambda m: m.group(1) + f' ({timestamp_short})' + m.group(2).replace('</title>', '</title>').replace(m.group(2), '</title>'),
+            content
+        )
+        # Simpler fallback: replace anything in parens at end of title
+        content = re.sub(
+            r'(<title>Foss Swim School .*?)\s*\([^)]*\)\s*(</title>)',
+            lambda m: m.group(1) + f' ({timestamp_short})' + m.group(2),
             content
         )
 
-    # Update <h1>: replace location + strip old date from heading
+    # Update <h1>: set correct location name and strip any inline date
     if location_name:
+        # Replace entire h1 with correct location
         content = re.sub(
-            r'<h1>🏊 Foss Swim School [^<]*?</h1>',
+            r'<h1>[^<]*?Foss Swim School [^<]*?</h1>',
             f'<h1>🏊 Foss Swim School {location_name} - Weekly Utilization Dashboard</h1>',
             content
         )
     else:
+        # Strip any trailing (date) from h1 text, keep location intact
         content = re.sub(
-            r'(<h1>🏊 Foss Swim School [^<]*? - Weekly Utilization Dashboard)[^<]*?</h1>',
-            lambda m: m.group(1) + '</h1>',
+            r'(<h1>[^<]*?- Weekly Utilization (?:Dashboard|Analytics))\s*\([^)]*\)(</h1>)',
+            lambda m: m.group(1) + m.group(2),
             content
         )
 
-    # Update extraction timestamp subtitle (add if missing, replace if present)
+    # Ensure extraction-time CSS exists
+    if '.extraction-time' not in content:
+        css = (
+            '\n        .extraction-time {\n'
+            '            font-size: 13px;\n'
+            '            color: #718096;\n'
+            '            margin-bottom: 10px;\n'
+            '            margin-top: -10px;\n'
+            '        }\n'
+        )
+        content = content.replace('        h1 {', css + '        h1 {', 1)
+
+    # Update extraction timestamp subtitle (replace if present, insert after h1 if missing)
     extraction_div = f'<div class="extraction-time">Data extracted: {timestamp_long}</div>'
     if 'class="extraction-time"' in content:
         content = re.sub(
@@ -309,10 +332,6 @@ def update_html(html_path, raw_data, analytics, location_name=None):
             content
         )
     else:
-        # Insert after h1, and inject CSS if not already present
-        if '.extraction-time' not in content:
-        	css = '\n        .extraction-time {\n            font-size: 13px;\n            color: #718096;\n            margin-bottom: 10px;\n            margin-top: -10px;\n        }\n'
-        	content = content.replace('        h1 {', css + '        h1 {', 1)
         content = re.sub(
             r'(</h1>)(\s*\n\s*<div class="filters">)',
             lambda m: m.group(1) + f'\n            {extraction_div}' + m.group(2),
