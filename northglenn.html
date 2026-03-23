@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foss Swim School Northglenn - Weekly Utilization Analytics (Mar 23, 2026, 4:16 PM)</title>
+    <title>Foss Swim School Northglenn - Weekly Utilization Dashboard (Mar 23, 2026, 4:44 PM)</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
     <style>
         * {
@@ -395,11 +395,18 @@
 <body>
     <div class="dashboard">
         <div class="header">
-            <h1>ð Foss Swim School Northglenn - Weekly Utilization Analytics</h1>
-            <div class="extraction-time">Data extracted: March 23, 2026 at 4:16 PM</div>
+            <h1>🏊 Foss Swim School Northglenn - Weekly Utilization Dashboard</h1>
+            <div class="extraction-time">Data extracted: March 23, 2026 at 4:44 PM</div>
             <div class="filters">
                 <div class="filter-group">
-                    <label>Day of Week</label>
+                    <label>View</label>
+                    <select id="viewFilter">
+                        <option value="weekly">Weekly Classes</option>
+                        <option value="camps">4 Week Camps</option>
+                    </select>
+                </div>
+                <div class="filter-group" id="dayFilterGroup">
+                    <label id="dayFilterLabel">Day of Week</label>
                     <select id="dayFilter">
                         <option value="">All Days</option>
                     </select>
@@ -443,7 +450,7 @@
         </div>
         <div class="chart-grid">
             <div class="chart-card">
-                <div class="chart-title">Weekly Lesson Utilization by Day</div>
+                <div class="chart-title" id="dailyChartTitle">Weekly Lesson Utilization by Day</div>
                 <canvas id="dailyChart"></canvas>
             </div>
 
@@ -459,7 +466,7 @@
         </div>
 
         <div class="table-card">
-            <div class="chart-title">Curriculum Level Daily Summary</div>
+            <div class="chart-title" id="dailyTableTitle">Curriculum Level Daily Summary</div>
             <table id="dailyTable"></table>
         </div>
 
@@ -9182,12 +9189,880 @@
         }
 ];
 
+        const CAMP_RAW_DATA = [
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "4:15 PM",
+                "Class Level": "Little 1 (L1)",
+                "Time Range": "4:15 PM – 4:45 PM",
+                "Spots Left": 2,
+                "Total Capacity": 3,
+                "Enrolled": 1,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Littles",
+                "TimeSlot": "16:15",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "5:15 PM",
+                "Class Level": "Little 1 (L1)",
+                "Time Range": "5:15 PM – 5:45 PM",
+                "Spots Left": 2,
+                "Total Capacity": 3,
+                "Enrolled": 1,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Littles",
+                "TimeSlot": "17:15",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "4:15 PM",
+                "Class Level": "Little 1 (L1)",
+                "Time Range": "4:15 PM – 4:45 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Littles",
+                "TimeSlot": "16:15",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "4:45 PM",
+                "Class Level": "Little 1 (L1)",
+                "Time Range": "4:45 PM – 5:15 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Littles",
+                "TimeSlot": "16:45",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "5:45 PM",
+                "Class Level": "Little 1 (L1)",
+                "Time Range": "5:45 PM – 6:15 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Littles",
+                "TimeSlot": "17:45",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "4:45 PM",
+                "Class Level": "Little 2 (L2)",
+                "Time Range": "4:45 PM – 5:15 PM",
+                "Spots Left": 4,
+                "Total Capacity": 4,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "4:1",
+                "Category": "Littles",
+                "TimeSlot": "16:45",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "5:15 PM",
+                "Class Level": "Little 2 (L2)",
+                "Time Range": "5:15 PM – 5:45 PM",
+                "Spots Left": 4,
+                "Total Capacity": 4,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "4:1",
+                "Category": "Littles",
+                "TimeSlot": "17:15",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "4:30 PM",
+                "Class Level": "Middle 1 (M1)",
+                "Time Range": "4:30 PM – 5:00 PM",
+                "Spots Left": 2,
+                "Total Capacity": 3,
+                "Enrolled": 1,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Middles",
+                "TimeSlot": "16:30",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "5:45 PM",
+                "Class Level": "Middle 1 (M1)",
+                "Time Range": "5:45 PM – 6:15 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Middles",
+                "TimeSlot": "17:45",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "6:15 PM",
+                "Class Level": "Middle 1 (M1)",
+                "Time Range": "6:15 PM – 6:45 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Middles",
+                "TimeSlot": "18:15",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "5:00 PM",
+                "Class Level": "Middle 1 (M1)",
+                "Time Range": "5:00 PM – 5:30 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Middles",
+                "TimeSlot": "17:00",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "6:15 PM",
+                "Class Level": "Middle 1 (M1)",
+                "Time Range": "6:15 PM – 6:45 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Middles",
+                "TimeSlot": "18:15",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "6:00 PM",
+                "Class Level": "Middle 2 (M2)",
+                "Time Range": "6:00 PM – 6:30 PM",
+                "Spots Left": 4,
+                "Total Capacity": 4,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "4:1",
+                "Category": "Middles",
+                "TimeSlot": "18:00",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "5:30 PM",
+                "Class Level": "Middle 2 (M2)",
+                "Time Range": "5:30 PM – 6:00 PM",
+                "Spots Left": 4,
+                "Total Capacity": 4,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "4:1",
+                "Category": "Middles",
+                "TimeSlot": "17:30",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "4:00 PM",
+                "Class Level": "Big 1 (B1)",
+                "Time Range": "4:00 PM – 4:30 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Bigs",
+                "TimeSlot": "16:00",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "5:00 PM",
+                "Class Level": "Big 1 (B1)",
+                "Time Range": "5:00 PM – 5:30 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Bigs",
+                "TimeSlot": "17:00",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "6:30 PM",
+                "Class Level": "Big 1 (B1)",
+                "Time Range": "6:30 PM – 7:00 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Bigs",
+                "TimeSlot": "18:30",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "4:00 PM",
+                "Class Level": "Big 1 (B1)",
+                "Time Range": "4:00 PM – 4:30 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Bigs",
+                "TimeSlot": "16:00",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "6:00 PM",
+                "Class Level": "Big 1 (B1)",
+                "Time Range": "6:00 PM – 6:30 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Bigs",
+                "TimeSlot": "18:00",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "6:30 PM",
+                "Class Level": "Big 1 (B1)",
+                "Time Range": "6:30 PM – 7:00 PM",
+                "Spots Left": 3,
+                "Total Capacity": 3,
+                "Enrolled": 0,
+                "Student:Teacher Ratio": "3:1",
+                "Category": "Bigs",
+                "TimeSlot": "18:30",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        },
+        {
+                "Camp Name": "4 Week Camp 2",
+                "Date Range": "04/14 05/07",
+                "Days": "Every Tue, Thu",
+                "Time": "5:30 PM",
+                "Class Level": "Big 2 (B2)",
+                "Time Range": "5:30 PM – 6:00 PM",
+                "Spots Left": 3,
+                "Total Capacity": 4,
+                "Enrolled": 1,
+                "Student:Teacher Ratio": "4:1",
+                "Category": "Bigs",
+                "TimeSlot": "17:30",
+                "Camp": "4 Week Camp 2 (04/14 05/07)"
+        },
+        {
+                "Camp Name": "4 Week Camp 3",
+                "Date Range": "05/12 06/04",
+                "Days": "Every Tue, Thu",
+                "Time": "4:30 PM",
+                "Class Level": "Big 2 (B2)",
+                "Time Range": "4:30 PM – 5:00 PM",
+                "Spots Left": 3,
+                "Total Capacity": 4,
+                "Enrolled": 1,
+                "Student:Teacher Ratio": "4:1",
+                "Category": "Bigs",
+                "TimeSlot": "16:30",
+                "Camp": "4 Week Camp 3 (05/12 06/04)"
+        }
+];
+        const CAMP_ANALYTICS = {
+        "campSummary": [
+                {
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "TotalCapacity": 36,
+                        "Enrolled": 4,
+                        "SpotsOpen": 32,
+                        "LessonsScheduled": 11,
+                        "Utilization": 11.1
+                },
+                {
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "TotalCapacity": 36,
+                        "Enrolled": 1,
+                        "SpotsOpen": 35,
+                        "LessonsScheduled": 11,
+                        "Utilization": 2.8
+                }
+        ],
+        "timeslotSummary": [
+                {
+                        "TimeSlot": "16:00",
+                        "TotalCapacity": 6,
+                        "Enrolled": 0,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "16:15",
+                        "TotalCapacity": 6,
+                        "Enrolled": 1,
+                        "SpotsOpen": 5,
+                        "LessonsScheduled": 2,
+                        "Utilization": 16.7
+                },
+                {
+                        "TimeSlot": "16:30",
+                        "TotalCapacity": 7,
+                        "Enrolled": 2,
+                        "SpotsOpen": 5,
+                        "LessonsScheduled": 2,
+                        "Utilization": 28.6
+                },
+                {
+                        "TimeSlot": "16:45",
+                        "TotalCapacity": 7,
+                        "Enrolled": 0,
+                        "SpotsOpen": 7,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:00",
+                        "TotalCapacity": 6,
+                        "Enrolled": 0,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:15",
+                        "TotalCapacity": 7,
+                        "Enrolled": 1,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 14.3
+                },
+                {
+                        "TimeSlot": "17:30",
+                        "TotalCapacity": 8,
+                        "Enrolled": 1,
+                        "SpotsOpen": 7,
+                        "LessonsScheduled": 2,
+                        "Utilization": 12.5
+                },
+                {
+                        "TimeSlot": "17:45",
+                        "TotalCapacity": 6,
+                        "Enrolled": 0,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:00",
+                        "TotalCapacity": 7,
+                        "Enrolled": 0,
+                        "SpotsOpen": 7,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:15",
+                        "TotalCapacity": 6,
+                        "Enrolled": 0,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:30",
+                        "TotalCapacity": 6,
+                        "Enrolled": 0,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                }
+        ],
+        "levelSummary": [
+                {
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 18,
+                        "Enrolled": 0,
+                        "SpotsOpen": 18,
+                        "LessonsScheduled": 6,
+                        "Utilization": 0.0
+                },
+                {
+                        "Level": "Big 2 (B2)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 8,
+                        "Enrolled": 2,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 25.0
+                },
+                {
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 15,
+                        "Enrolled": 2,
+                        "SpotsOpen": 13,
+                        "LessonsScheduled": 5,
+                        "Utilization": 13.3
+                },
+                {
+                        "Level": "Little 2 (L2)",
+                        "Category": "Littles",
+                        "TotalCapacity": 8,
+                        "Enrolled": 0,
+                        "SpotsOpen": 8,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 15,
+                        "Enrolled": 1,
+                        "SpotsOpen": 14,
+                        "LessonsScheduled": 5,
+                        "Utilization": 6.7
+                },
+                {
+                        "Level": "Middle 2 (M2)",
+                        "Category": "Middles",
+                        "TotalCapacity": 8,
+                        "Enrolled": 0,
+                        "SpotsOpen": 8,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                }
+        ],
+        "campLevelMatrix": [
+                {
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 9,
+                        "Enrolled": 0,
+                        "SpotsOpen": 9,
+                        "LessonsScheduled": 3,
+                        "Utilization": 0.0
+                },
+                {
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Big 2 (B2)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 4,
+                        "Enrolled": 1,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 25.0
+                },
+                {
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 6,
+                        "Enrolled": 2,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 2,
+                        "Utilization": 33.3
+                },
+                {
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Little 2 (L2)",
+                        "Category": "Littles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 9,
+                        "Enrolled": 1,
+                        "SpotsOpen": 8,
+                        "LessonsScheduled": 3,
+                        "Utilization": 11.1
+                },
+                {
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Middle 2 (M2)",
+                        "Category": "Middles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 9,
+                        "Enrolled": 0,
+                        "SpotsOpen": 9,
+                        "LessonsScheduled": 3,
+                        "Utilization": 0.0
+                },
+                {
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Big 2 (B2)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 4,
+                        "Enrolled": 1,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 25.0
+                },
+                {
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 9,
+                        "Enrolled": 0,
+                        "SpotsOpen": 9,
+                        "LessonsScheduled": 3,
+                        "Utilization": 0.0
+                },
+                {
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Little 2 (L2)",
+                        "Category": "Littles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 6,
+                        "Enrolled": 0,
+                        "SpotsOpen": 6,
+                        "LessonsScheduled": 2,
+                        "Utilization": 0.0
+                },
+                {
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Middle 2 (M2)",
+                        "Category": "Middles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                }
+        ],
+        "timeslotCampLevelMatrix": [
+                {
+                        "TimeSlot": "16:00",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "16:00",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "16:15",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 1,
+                        "SpotsOpen": 2,
+                        "LessonsScheduled": 1,
+                        "Utilization": 33.3
+                },
+                {
+                        "TimeSlot": "16:15",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "16:30",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 1,
+                        "SpotsOpen": 2,
+                        "LessonsScheduled": 1,
+                        "Utilization": 33.3
+                },
+                {
+                        "TimeSlot": "16:30",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Big 2 (B2)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 4,
+                        "Enrolled": 1,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 25.0
+                },
+                {
+                        "TimeSlot": "16:45",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Little 2 (L2)",
+                        "Category": "Littles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "16:45",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:00",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:00",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:15",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 1,
+                        "SpotsOpen": 2,
+                        "LessonsScheduled": 1,
+                        "Utilization": 33.3
+                },
+                {
+                        "TimeSlot": "17:15",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Little 2 (L2)",
+                        "Category": "Littles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:30",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Big 2 (B2)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 4,
+                        "Enrolled": 1,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 25.0
+                },
+                {
+                        "TimeSlot": "17:30",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Middle 2 (M2)",
+                        "Category": "Middles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:45",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "17:45",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Little 1 (L1)",
+                        "Category": "Littles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:00",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Middle 2 (M2)",
+                        "Category": "Middles",
+                        "TotalCapacity": 4,
+                        "Enrolled": 0,
+                        "SpotsOpen": 4,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:00",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:15",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:15",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Middle 1 (M1)",
+                        "Category": "Middles",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:30",
+                        "Camp": "4 Week Camp 2 (04/14 05/07)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                },
+                {
+                        "TimeSlot": "18:30",
+                        "Camp": "4 Week Camp 3 (05/12 06/04)",
+                        "Level": "Big 1 (B1)",
+                        "Category": "Bigs",
+                        "TotalCapacity": 3,
+                        "Enrolled": 0,
+                        "SpotsOpen": 3,
+                        "LessonsScheduled": 1,
+                        "Utilization": 0.0
+                }
+        ]
+};
+
         // Current filter state
         let currentFilters = {
             day: '',
             category: '',
             levels: [] // empty array = all levels
         };
+
+        // View state: 'weekly' | 'camps'
+        let currentView = 'weekly';
 
         // Chart colors
         const CHART_COLORS = {
@@ -9249,6 +10124,12 @@
             categoryFilter.addEventListener('change', (e) => {
                 currentFilters.category = e.target.value;
                 applyFilters();
+            });
+
+            // View switcher
+            const viewFilter = document.getElementById('viewFilter');
+            viewFilter.addEventListener('change', (e) => {
+                switchView(e.target.value);
             });
         }
 
@@ -9364,6 +10245,7 @@
 
         // Apply filters and recalculate analytics
         function applyFilters() {
+            if (currentView === 'camps') { applyFiltersForCamps(); return; }
             let filteredData = [...RAW_DATA];
 
             // Apply filters
@@ -10031,6 +10913,341 @@
             document.getElementById('totalEnrollments').textContent = grandTotal.enrolled.toLocaleString();
             document.getElementById('totalCapacitySubscript').textContent = 'of ' + grandTotal.capacity.toLocaleString() + ' total capacity';
             document.getElementById('totalUtilization').textContent = grandUtil + '%';
+        }
+
+        // =============================================
+        // CAMP VIEW FUNCTIONS
+        // =============================================
+
+        function switchView(view) {
+            currentView = view;
+            currentFilters = { day: '', category: '', levels: [] };
+
+            var dayLabel = document.getElementById('dayFilterLabel');
+            var dayFilter = document.getElementById('dayFilter');
+            var categoryFilter = document.getElementById('categoryFilter');
+            var chartTitle = document.getElementById('dailyChartTitle');
+            var tableTitle = document.getElementById('dailyTableTitle');
+
+            // Clear option lists (keep first "All" option)
+            while (dayFilter.options.length > 1) dayFilter.remove(1);
+            while (categoryFilter.options.length > 1) categoryFilter.remove(1);
+            dayFilter.value = '';
+            categoryFilter.value = '';
+
+            var sourceData = (view === 'camps') ? CAMP_RAW_DATA : RAW_DATA;
+
+            if (view === 'camps') {
+                dayLabel.textContent = 'Camp';
+                dayFilter.options[0].textContent = 'All Camps';
+                chartTitle.textContent = '4 Week Camp Utilization by Camp';
+                tableTitle.textContent = 'Curriculum Level Camp Summary';
+
+                var camps = [...new Set(CAMP_RAW_DATA.map(d => d['Camp']))].sort();
+                camps.forEach(function(camp) {
+                    var opt = document.createElement('option');
+                    opt.value = camp; opt.textContent = camp;
+                    dayFilter.appendChild(opt);
+                });
+            } else {
+                dayLabel.textContent = 'Day of Week';
+                dayFilter.options[0].textContent = 'All Days';
+                chartTitle.textContent = 'Weekly Lesson Utilization by Day';
+                tableTitle.textContent = 'Curriculum Level Daily Summary';
+
+                var dayOrder = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+                var days = [...new Set(RAW_DATA.map(d => d.Day))].sort(function(a,b){ return dayOrder.indexOf(a)-dayOrder.indexOf(b); });
+                days.forEach(function(day) {
+                    var opt = document.createElement('option');
+                    opt.value = day; opt.textContent = day;
+                    dayFilter.appendChild(opt);
+                });
+            }
+
+            // Repopulate category filter from source data
+            var cats = [...new Set(sourceData.map(d => d.Category))].sort();
+            cats.forEach(function(cat) {
+                var opt = document.createElement('option');
+                opt.value = cat; opt.textContent = cat;
+                categoryFilter.appendChild(opt);
+            });
+
+            // Re-init level multi-select
+            var levels = [...new Set(sourceData.map(d => d['Class Level']))].sort();
+            currentFilters.levels = [];
+            initializeLevelMultiSelect(levels);
+
+            applyFilters();
+        }
+
+        function applyFiltersForCamps() {
+            var filteredData = CAMP_RAW_DATA.filter(function(d) { return true; });
+            if (currentFilters.day) {
+                filteredData = filteredData.filter(function(d) { return d['Camp'] === currentFilters.day; });
+            }
+            if (currentFilters.category) {
+                filteredData = filteredData.filter(function(d) { return d.Category === currentFilters.category; });
+            }
+            if (currentFilters.levels.length > 0) {
+                filteredData = filteredData.filter(function(d) { return currentFilters.levels.includes(d['Class Level']); });
+            }
+            var analytics = recalculateCampAnalytics(filteredData);
+            updateCampChart(analytics.campSummary);
+            updateTimeChart(analytics.timeslotSummary);
+            updateLevelChart(analytics.levelSummary);
+            createCampTable(analytics.campLevelMatrix);
+            createCampTimeTable(analytics.timeslotCampLevelMatrix);
+        }
+
+        function recalculateCampAnalytics(data) {
+            // campSummary
+            var campMap = {};
+            data.forEach(function(d) {
+                var camp = d['Camp'] || (d['Camp Name'] + ' (' + d['Date Range'] + ')');
+                if (!campMap[camp]) campMap[camp] = {camp:camp, capacity:0, enrolled:0, spotsOpen:0, lessons:0};
+                campMap[camp].capacity += d['Total Capacity'];
+                campMap[camp].enrolled += d['Enrolled'];
+                campMap[camp].spotsOpen += d['Spots Left'];
+                campMap[camp].lessons += 1;
+            });
+            var campSummary = Object.values(campMap).sort(function(a,b){return a.camp.localeCompare(b.camp);}).map(function(m) {
+                return {Camp:m.camp, TotalCapacity:m.capacity, Enrolled:m.enrolled, SpotsOpen:m.spotsOpen, LessonsScheduled:m.lessons,
+                    Utilization:m.capacity>0?(m.enrolled/m.capacity*100).toFixed(1):'0.0'};
+            });
+
+            // timeslotSummary
+            var slotMap = {};
+            data.forEach(function(d) {
+                var s = d.TimeSlot;
+                if (!slotMap[s]) slotMap[s] = {capacity:0, enrolled:0, spotsOpen:0, lessons:0};
+                slotMap[s].capacity += d['Total Capacity'];
+                slotMap[s].enrolled += d['Enrolled'];
+                slotMap[s].spotsOpen += d['Spots Left'];
+                slotMap[s].lessons += 1;
+            });
+            var timeslotSummary = Object.keys(slotMap).sort().map(function(slot) {
+                var t = slotMap[slot];
+                return {TimeSlot:slot, TotalCapacity:t.capacity, Enrolled:t.enrolled, SpotsOpen:t.spotsOpen, LessonsScheduled:t.lessons,
+                    Utilization:t.capacity>0?(t.enrolled/t.capacity*100).toFixed(1):'0.0'};
+            });
+
+            // levelSummary
+            var lvlMap = {};
+            data.forEach(function(d) {
+                var lv = d['Class Level'];
+                if (!lvlMap[lv]) lvlMap[lv] = {level:lv, category:d.Category, capacity:0, enrolled:0, spotsOpen:0, lessons:0};
+                lvlMap[lv].capacity += d['Total Capacity'];
+                lvlMap[lv].enrolled += d['Enrolled'];
+                lvlMap[lv].spotsOpen += d['Spots Left'];
+                lvlMap[lv].lessons += 1;
+            });
+            var levelSummary = Object.values(lvlMap).sort(function(a,b){return a.level.localeCompare(b.level);}).map(function(m) {
+                return {Level:m.level, Category:m.category, TotalCapacity:m.capacity, Enrolled:m.enrolled, SpotsOpen:m.spotsOpen, LessonsScheduled:m.lessons,
+                    Utilization:m.capacity>0?(m.enrolled/m.capacity*100).toFixed(1):'0.0'};
+            });
+
+            // campLevelMatrix
+            var clMap = {};
+            data.forEach(function(d) {
+                var camp = d['Camp'] || (d['Camp Name'] + ' (' + d['Date Range'] + ')');
+                var k = camp + '||' + d['Class Level'];
+                if (!clMap[k]) clMap[k] = {camp:camp, level:d['Class Level'], category:d.Category, capacity:0, enrolled:0, spotsOpen:0, lessons:0};
+                clMap[k].capacity += d['Total Capacity'];
+                clMap[k].enrolled += d['Enrolled'];
+                clMap[k].spotsOpen += d['Spots Left'];
+                clMap[k].lessons += 1;
+            });
+            var campLevelMatrix = Object.values(clMap).sort(function(a,b){return a.camp.localeCompare(b.camp)||a.level.localeCompare(b.level);}).map(function(m) {
+                return {Camp:m.camp, Level:m.level, Category:m.category, TotalCapacity:m.capacity, Enrolled:m.enrolled, SpotsOpen:m.spotsOpen, LessonsScheduled:m.lessons,
+                    Utilization:m.capacity>0?(m.enrolled/m.capacity*100).toFixed(1):'0.0'};
+            });
+
+            // timeslotCampLevelMatrix
+            var tclMap = {};
+            data.forEach(function(d) {
+                var camp = d['Camp'] || (d['Camp Name'] + ' (' + d['Date Range'] + ')');
+                var k = d.TimeSlot + '||' + camp + '||' + d['Class Level'];
+                if (!tclMap[k]) tclMap[k] = {slot:d.TimeSlot, camp:camp, level:d['Class Level'], category:d.Category, capacity:0, enrolled:0, spotsOpen:0, lessons:0};
+                tclMap[k].capacity += d['Total Capacity'];
+                tclMap[k].enrolled += d['Enrolled'];
+                tclMap[k].spotsOpen += d['Spots Left'];
+                tclMap[k].lessons += 1;
+            });
+            var timeslotCampLevelMatrix = Object.values(tclMap).sort(function(a,b){return a.slot.localeCompare(b.slot)||a.camp.localeCompare(b.camp)||a.level.localeCompare(b.level);}).map(function(m) {
+                return {TimeSlot:m.slot, Camp:m.camp, Level:m.level, Category:m.category, TotalCapacity:m.capacity, Enrolled:m.enrolled, SpotsOpen:m.spotsOpen, LessonsScheduled:m.lessons,
+                    Utilization:m.capacity>0?(m.enrolled/m.capacity*100).toFixed(1):'0.0'};
+            });
+
+            return {campSummary, timeslotSummary, levelSummary, campLevelMatrix, timeslotCampLevelMatrix};
+        }
+
+        function updateCampChart(data) {
+            if (charts.dailyChart) charts.dailyChart.destroy();
+            var ctx = document.getElementById('dailyChart').getContext('2d');
+            charts.dailyChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.map(function(d){ return d.Camp; }),
+                    datasets: [
+                        {label:'Utilization', data:data.map(function(d){return parseFloat(d.Utilization);}), backgroundColor:CHART_COLORS.utilization, yAxisID:'y', order:2},
+                        {label:'Enrolled', data:data.map(function(d){return d.Enrolled;}), borderColor:CHART_COLORS.lessons, backgroundColor:'transparent', type:'line', yAxisID:'y1', order:1, borderWidth:2},
+                        {label:'Total Capacity', data:data.map(function(d){return d.TotalCapacity;}), borderColor:CHART_COLORS.capacity, backgroundColor:'transparent', type:'line', yAxisID:'y1', order:0, borderWidth:2}
+                    ]
+                },
+                options: {
+                    responsive:true, maintainAspectRatio:true, aspectRatio:2,
+                    interaction:{mode:'index', intersect:false},
+                    plugins:{
+                        legend:{display:true, position:'top', align:'end'},
+                        tooltip:{callbacks:{label:function(context){
+                            var l = context.dataset.label || '';
+                            if(l) l += ': ';
+                            if(context.dataset.yAxisID === 'y') l += context.parsed.y.toFixed(1) + '%';
+                            else l += context.parsed.y;
+                            return l;
+                        }}}
+                    },
+                    scales:{
+                        y:{type:'linear', position:'left', beginAtZero:true, max:110, title:{display:true, text:'Utilization (%)'}, ticks:{callback:function(v){return v+'%';}}},
+                        y1:{type:'linear', position:'right', beginAtZero:true, title:{display:true, text:'Enrolled / Capacity'}, grid:{drawOnChartArea:false}}
+                    }
+                }
+            });
+        }
+
+        function createCampTable(matrix) {
+            var camps = [...new Set(matrix.map(function(m){return m.Camp;}))].sort();
+            var html = '<thead><tr>';
+            html += '<th>Camp</th><th>Level</th><th>Category</th>';
+            html += '<th class="sub-header">Slots</th><th class="sub-header">Capacity</th><th class="sub-header">Enrolled</th><th class="sub-header">Spots Left</th><th class="sub-header">Utilization</th>';
+            html += '</tr></thead><tbody>';
+
+            camps.forEach(function(camp) {
+                var campRows = matrix.filter(function(m){return m.Camp===camp;}).sort(function(a,b){return a.Level.localeCompare(b.Level);});
+                campRows.forEach(function(row, idx) {
+                    html += '<tr>';
+                    if (idx === 0) {
+                        html += '<td rowspan="' + campRows.length + '" style="background:#edf2f7;font-weight:600;vertical-align:middle">' + camp + '</td>';
+                    }
+                    html += '<td>' + row.Level + '</td>';
+                    html += '<td>' + row.Category + '</td>';
+                    html += '<td>' + row.LessonsScheduled + '</td>';
+                    html += '<td>' + row.TotalCapacity + '</td>';
+                    html += '<td>' + row.Enrolled + '</td>';
+                    html += '<td>' + row.SpotsOpen + '</td>';
+                    html += '<td class="util-cell ' + getUtilClass(row.Utilization) + '">' + parseFloat(row.Utilization).toFixed(1) + '%</td>';
+                    html += '</tr>';
+                });
+                // Camp subtotal row
+                var totCap = campRows.reduce(function(s,r){return s+r.TotalCapacity;},0);
+                var totEnr = campRows.reduce(function(s,r){return s+r.Enrolled;},0);
+                var totSpo = campRows.reduce(function(s,r){return s+r.SpotsOpen;},0);
+                var totLes = campRows.reduce(function(s,r){return s+r.LessonsScheduled;},0);
+                var totUtil = totCap>0?(totEnr/totCap*100).toFixed(1):'0.0';
+                html += '<tr class="slot-subtotal-row">';
+                html += '<td colspan="2" style="font-style:italic">Camp Total</td><td></td>';
+                html += '<td><strong>' + totLes + '</strong></td><td><strong>' + totCap + '</strong></td>';
+                html += '<td><strong>' + totEnr + '</strong></td><td><strong>' + totSpo + '</strong></td>';
+                html += '<td class="util-cell ' + getUtilClass(totUtil) + '"><strong>' + totUtil + '%</strong></td></tr>';
+            });
+
+            // Grand total
+            var gCap = matrix.reduce(function(s,r){return s+r.TotalCapacity;},0);
+            var gEnr = matrix.reduce(function(s,r){return s+r.Enrolled;},0);
+            var gSpo = matrix.reduce(function(s,r){return s+r.SpotsOpen;},0);
+            var gLes = matrix.reduce(function(s,r){return s+r.LessonsScheduled;},0);
+            var gUtil = gCap>0?(gEnr/gCap*100).toFixed(1):'0.0';
+            html += '<tr class="grand-total-row"><td colspan="3" style="text-align:left;padding-left:10px">Grand Total</td>';
+            html += '<td><strong>' + gLes + '</strong></td><td><strong>' + gCap + '</strong></td>';
+            html += '<td><strong>' + gEnr + '</strong></td><td><strong>' + gSpo + '</strong></td>';
+            html += '<td class="util-cell ' + getUtilClass(gUtil) + '"><strong>' + gUtil + '%</strong></td></tr>';
+            html += '</tbody>';
+
+            document.getElementById('dailyTable').innerHTML = html;
+            // Update headline modals
+            document.getElementById('totalEnrollments').textContent = gEnr.toLocaleString();
+            document.getElementById('totalCapacitySubscript').textContent = 'of ' + gCap.toLocaleString() + ' total capacity';
+            document.getElementById('totalUtilization').textContent = gUtil + '%';
+        }
+
+        function createCampTimeTable(matrix) {
+            var camps = [...new Set(matrix.map(function(m){return m.Camp;}))].sort();
+            var slots = [...new Set(matrix.map(function(m){return m.TimeSlot;}))].sort();
+            var numCols = camps.length + 1;
+
+            var html = '<thead><tr><th class="level-col time-col">Start Time</th><th class="level-col level-name-col">Level</th>';
+            camps.forEach(function(camp) { html += '<th colspan="4" class="day-header">' + camp + '</th>'; });
+            html += '<th colspan="4" class="day-header">Total</th></tr>';
+            html += '<tr><th class="level-col time-col"></th><th class="level-col level-name-col"></th>';
+            for (var i = 0; i < numCols; i++) {
+                html += '<th class="sub-header">Slots</th><th class="sub-header">Cap</th><th class="sub-header">Enr</th><th class="sub-header">Util</th>';
+            }
+            html += '</tr></thead><tbody>';
+
+            slots.forEach(function(slot) {
+                var slotData = matrix.filter(function(m){return m.TimeSlot===slot;});
+                if (!slotData.length) return;
+                var slotLevels = [...new Set(slotData.map(function(m){return m.Level;}))].sort();
+                var slotTot = {lessons:0, capacity:0, enrolled:0};
+                var slotCampTot = {};
+                camps.forEach(function(c){ slotCampTot[c] = {lessons:0, capacity:0, enrolled:0}; });
+
+                slotLevels.forEach(function(level, idx) {
+                    html += '<tr>';
+                    if (idx === 0) {
+                        html += '<td rowspan="' + (slotLevels.length+1) + '" style="background:#edf2f7;font-weight:600;vertical-align:middle">' + slot + '</td>';
+                    }
+                    html += '<td class="level-name-cell">' + level + '</td>';
+                    var totL=0, totC=0, totE=0;
+                    camps.forEach(function(camp) {
+                        var d = slotData.find(function(m){return m.Level===level && m.Camp===camp;});
+                        if (d) {
+                            totL+=d.LessonsScheduled; totC+=d.TotalCapacity; totE+=d.Enrolled;
+                            slotCampTot[camp].lessons+=d.LessonsScheduled;
+                            slotCampTot[camp].capacity+=d.TotalCapacity;
+                            slotCampTot[camp].enrolled+=d.Enrolled;
+                            html += '<td>' + d.LessonsScheduled + '</td><td>' + d.TotalCapacity + '</td><td>' + d.Enrolled + '</td>';
+                            html += '<td class="util-cell ' + getUtilClass(d.Utilization) + '">' + parseFloat(d.Utilization).toFixed(1) + '%</td>';
+                        } else { html += '<td>-</td><td>-</td><td>-</td><td>-</td>'; }
+                    });
+                    slotTot.lessons+=totL; slotTot.capacity+=totC; slotTot.enrolled+=totE;
+                    var tu = totC>0?(totE/totC*100).toFixed(1):'0.0';
+                    html += '<td><strong>'+totL+'</strong></td><td><strong>'+totC+'</strong></td><td><strong>'+totE+'</strong></td>';
+                    html += '<td class="util-cell '+getUtilClass(tu)+'"><strong>'+tu+'%</strong></td></tr>';
+                });
+
+                // Slot subtotal row
+                html += '<tr class="slot-subtotal-row"><td class="level-name-cell" style="font-weight:600;font-style:italic">' + slot + ' Total</td>';
+                camps.forEach(function(camp) {
+                    var ct = slotCampTot[camp];
+                    var cu = ct.capacity>0?(ct.enrolled/ct.capacity*100).toFixed(1):'0.0';
+                    html += '<td><strong>'+ct.lessons+'</strong></td><td><strong>'+ct.capacity+'</strong></td><td><strong>'+ct.enrolled+'</strong></td>';
+                    html += '<td class="util-cell '+getUtilClass(cu)+'"><strong>'+cu+'%</strong></td>';
+                });
+                var su = slotTot.capacity>0?(slotTot.enrolled/slotTot.capacity*100).toFixed(1):'0.0';
+                html += '<td><strong>'+slotTot.lessons+'</strong></td><td><strong>'+slotTot.capacity+'</strong></td><td><strong>'+slotTot.enrolled+'</strong></td>';
+                html += '<td class="util-cell '+getUtilClass(su)+'"><strong>'+su+'%</strong></td></tr>';
+            });
+
+            // Grand total
+            var gL=0, gC=0, gE=0;
+            matrix.forEach(function(m){gL+=m.LessonsScheduled; gC+=m.TotalCapacity; gE+=m.Enrolled;});
+            html += '<tr class="grand-total-row"><td colspan="2" style="text-align:left;padding-left:10px">Grand Total</td>';
+            camps.forEach(function(camp) {
+                var ct = matrix.filter(function(m){return m.Camp===camp;});
+                var cL=ct.reduce(function(s,m){return s+m.LessonsScheduled;},0);
+                var cC=ct.reduce(function(s,m){return s+m.TotalCapacity;},0);
+                var cE=ct.reduce(function(s,m){return s+m.Enrolled;},0);
+                var cU=cC>0?(cE/cC*100).toFixed(1):'0.0';
+                html += '<td><strong>'+cL+'</strong></td><td><strong>'+cC+'</strong></td><td><strong>'+cE+'</strong></td>';
+                html += '<td class="util-cell '+getUtilClass(cU)+'"><strong>'+cU+'%</strong></td>';
+            });
+            var gU=gC>0?(gE/gC*100).toFixed(1):'0.0';
+            html += '<td><strong>'+gL+'</strong></td><td><strong>'+gC+'</strong></td><td><strong>'+gE+'</strong></td>';
+            html += '<td class="util-cell '+getUtilClass(gU)+'"><strong>'+gU+'%</strong></td></tr>';
+            html += '</tbody>';
+
+            document.getElementById('timeTable').innerHTML = html;
         }
 
         // Initialize
