@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FOFNIntel - FOSS Inventory Dashboards</title>
+  <title>FOFNIntel - Swim School Inventory Dashboards</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f4f8; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-    .container { text-align: center; padding: 40px 20px; }
+    .container { text-align: center; padding: 40px 20px; max-width: 1100px; }
     h1 { font-size: 2rem; color: #1a365d; margin-bottom: 8px; }
     p.sub { color: #4a5568; margin-bottom: 40px; font-size: 1.1rem; }
-    .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
-    a.card { display: block; background: #fff; border-radius: 12px; padding: 32px 40px; text-decoration: none; color: #2d3748; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.15s, box-shadow 0.15s; min-width: 260px; }
+    h3.section { text-align: left; color: #2d3748; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase; margin: 32px 0 16px; padding-left: 4px; }
+    .cards { display: flex; gap: 24px; flex-wrap: wrap; justify-content: flex-start; }
+    a.card { display: block; background: #fff; border-radius: 12px; padding: 28px 36px; text-decoration: none; color: #2d3748; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.15s, box-shadow 0.15s; min-width: 260px; text-align: left; }
     a.card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-    a.card h2 { font-size: 1.3rem; margin-bottom: 8px; color: #2b6cb0; }
-    a.card span { color: #718096; font-size: 0.95rem; }
+    a.card h2 { font-size: 1.2rem; margin-bottom: 6px; color: #2b6cb0; }
+    a.card span { color: #718096; font-size: 0.9rem; }
+    a.card.competitor { border-left: 4px solid #dd6b20; }
+    a.card.competitor h2 { color: #c05621; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>FOFNIntel</h1>
-    <p class="sub">FOSS Swim School Inventory Dashboards</p>
+    <p class="sub">Swim School Inventory Dashboards</p>
+
+    <h3 class="section">FOSS Locations</h3>
     <div class="cards">
       <a class="card" href="northglenn.html">
         <h2>Northglenn, CO</h2>
@@ -29,6 +34,14 @@
       <a class="card" href="ofallon.html">
         <h2>O'Fallon, MO</h2>
         <span>View utilization dashboard &rarr;</span>
+      </a>
+    </div>
+
+    <h3 class="section">Competitive Intel</h3>
+    <div class="cards">
+      <a class="card competitor" href="coswimschool.html">
+        <h2>CO Swim School</h2>
+        <span>iClass Pro portal &rarr;</span>
       </a>
     </div>
   </div>
