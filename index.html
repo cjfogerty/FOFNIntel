@@ -23,14 +23,13 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       margin: 32px 0 16px;
-      padding-left: 4px;
       border-left: 4px solid #2b6cb0;
       padding-left: 12px;
     }
     h3.section.intel { border-left-color: #dd6b20; }
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
       gap: 18px;
     }
     a.card {
@@ -61,7 +60,7 @@
       flex-wrap: wrap;
       margin-bottom: 14px;
     }
-    .card-stats { display: flex; flex-direction: column; gap: 4px; }
+    .card-stats { display: flex; flex-direction: column; gap: 5px; }
     .session-pill {
       font-size: 0.7rem;
       padding: 3px 9px;
@@ -77,7 +76,9 @@
     .meta-date { font-size: 0.75rem; color: #718096; }
     .meta-num { font-size: 0.88rem; color: #2d3748; }
     .meta-soft { color: #a0aec0; font-weight: 400; }
-    .util { font-size: 0.82rem; font-weight: 600; }
+    .meta-proj { font-size: 0.78rem; color: #4a5568; }
+    .meta-proj strong { color: #2d3748; font-weight: 600; }
+    .util { font-size: 0.82rem; font-weight: 600; margin-top: 2px; }
     .util-low  { color: #c05621; }
     .util-mid  { color: #2c5282; }
     .util-high { color: #22543d; }
@@ -111,6 +112,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>379</strong> enrolled <span class="meta-soft">/ 1,132 seats</span></span>
+          <span class="meta-proj">Projected: <strong>906</strong> (42% of target)</span>
           <span class="util util-low">33.5% utilized</span>
         </div>
       </a>
@@ -122,6 +124,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>348</strong> enrolled <span class="meta-soft">/ 899 seats</span></span>
+          <span class="meta-proj">Projected: <strong>719</strong> (48% of target)</span>
           <span class="util util-low">38.7% utilized</span>
         </div>
       </a>
@@ -133,6 +136,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>2,039</strong> enrolled <span class="meta-soft">/ 2,727 seats</span></span>
+          <span class="meta-proj">Projected: <strong>2,182</strong> (93% of target)</span>
           <span class="util util-high">74.8% utilized</span>
         </div>
       </a>
@@ -144,6 +148,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1,085</strong> enrolled <span class="meta-soft">/ 1,403 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,122</strong> (97% of target)</span>
           <span class="util util-high">77.3% utilized</span>
         </div>
       </a>
@@ -155,6 +160,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>781</strong> enrolled <span class="meta-soft">/ 1,038 seats</span></span>
+          <span class="meta-proj">Projected: <strong>830</strong> (94% of target)</span>
           <span class="util util-high">75.2% utilized</span>
         </div>
       </a>
@@ -166,6 +172,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>430</strong> enrolled <span class="meta-soft">/ 675 seats</span></span>
+          <span class="meta-proj">Projected: <strong>540</strong> (80% of target)</span>
           <span class="util util-mid">63.7% utilized</span>
         </div>
       </a>
@@ -177,6 +184,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1,041</strong> enrolled <span class="meta-soft">/ 1,782 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,426</strong> (73% of target)</span>
           <span class="util util-mid">58.4% utilized</span>
         </div>
       </a>
@@ -188,6 +196,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>586</strong> enrolled <span class="meta-soft">/ 1,139 seats</span></span>
+          <span class="meta-proj">Projected: <strong>911</strong> (64% of target)</span>
           <span class="util util-mid">51.4% utilized</span>
         </div>
       </a>
@@ -199,6 +208,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>962</strong> enrolled <span class="meta-soft">/ 1,861 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,489</strong> (65% of target)</span>
           <span class="util util-mid">51.7% utilized</span>
         </div>
       </a>
@@ -210,6 +220,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1,408</strong> enrolled <span class="meta-soft">/ 2,492 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,994</strong> (71% of target)</span>
           <span class="util util-mid">56.5% utilized</span>
         </div>
       </a>
@@ -221,6 +232,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>821</strong> enrolled <span class="meta-soft">/ 1,370 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,096</strong> (75% of target)</span>
           <span class="util util-mid">59.9% utilized</span>
         </div>
       </a>
@@ -232,6 +244,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1,064</strong> enrolled <span class="meta-soft">/ 1,950 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,560</strong> (68% of target)</span>
           <span class="util util-mid">54.6% utilized</span>
         </div>
       </a>
@@ -242,8 +255,9 @@
           <span class="meta-date">Updated May 28, 2026</span>
         </div>
         <div class="card-stats">
-          <span class="meta-num meta-soft">— enrolled data unavailable</span>
-          <span class="util util-na">no enrollment data</span>
+          <span class="meta-num"><strong>550</strong> enrolled <span class="meta-soft">/ 1,459 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,167</strong> (47% of target)</span>
+          <span class="util util-low">37.7% utilized</span>
         </div>
       </a>
       <a class="card foss-card" href="highland_park.html">
@@ -254,6 +268,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>333</strong> enrolled <span class="meta-soft">/ 743 seats</span></span>
+          <span class="meta-proj">Projected: <strong>594</strong> (56% of target)</span>
           <span class="util util-low">44.8% utilized</span>
         </div>
       </a>
@@ -265,6 +280,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>767</strong> enrolled <span class="meta-soft">/ 1,434 seats</span></span>
+          <span class="meta-proj">Projected: <strong>1,147</strong> (67% of target)</span>
           <span class="util util-mid">53.5% utilized</span>
         </div>
       </a>
@@ -276,6 +292,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>346</strong> enrolled <span class="meta-soft">/ 872 seats</span></span>
+          <span class="meta-proj">Projected: <strong>698</strong> (50% of target)</span>
           <span class="util util-low">39.7% utilized</span>
         </div>
       </a>
