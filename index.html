@@ -18,6 +18,23 @@
     a.card span { color: #718096; font-size: 0.9rem; }
     a.card.competitor { border-left: 4px solid #dd6b20; }
     a.card.competitor h2 { color: #c05621; }
+  
+    .card-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 4px 0 12px; }
+    .card-stats { display: flex; flex-direction: column; gap: 6px; }
+    .session-pill { font-size: 0.72rem; font-weight: 600; padding: 3px 9px; border-radius: 999px; letter-spacing: 0.02em; }
+    .session-pill.sess-summer { background: #fef3c7; color: #92400e; }
+    .session-pill.sess-spring { background: #d1fae5; color: #065f46; }
+    .session-pill.sess-other  { background: #e5e7eb; color: #374151; }
+    .meta-date { font-size: 0.78rem; color: #718096; }
+    .meta-num { font-size: 0.88rem; color: #2d3748; }
+    .meta-soft { color: #a0aec0; font-weight: 400; }
+    .util { font-size: 0.82rem; font-weight: 600; }
+    .util-low  { color: #c05621; }
+    .util-mid  { color: #2c5282; }
+    .util-high { color: #22543d; }
+    .util-na   { color: #a0aec0; font-style: italic; font-weight: 500; }
+    a.foss-card { min-width: 280px; max-width: 320px; padding: 22px 26px; }
+    a.foss-card h2 { margin-bottom: 4px; font-size: 1.1rem; }
   </style>
 </head>
 <body>
@@ -27,71 +44,183 @@
 
     <h3 class="section">FOSS Locations</h3>
     <div class="cards">
-      <a class="card" href="northglenn.html">
+      <a class="card foss-card" href="northglenn.html">
         <h2>Northglenn, CO</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>379</strong> enrolled <span class="meta-soft">/ 1,132 seats</span></span>
+          <span class="util util-low">33.5% utilized</span>
+        </div>
       </a>
-      <a class="card" href="ofallon.html">
+      <a class="card foss-card" href="ofallon.html">
         <h2>O'Fallon, MO</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>348</strong> enrolled <span class="meta-soft">/ 899 seats</span></span>
+          <span class="util util-low">38.7% utilized</span>
+        </div>
       </a>
-      <a class="card" href="libertyville.html">
-        <h2>Libertyville, IL</h2>
-        <span>View utilization dashboard &rarr;</span>
-      </a>
-      <a class="card" href="lakeview.html">
+      <a class="card foss-card" href="lakeview.html">
         <h2>Lakeview, IL</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-spring">Spring 2026</span>
+          <span class="meta-date">Updated March 11, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>2,039</strong> enrolled <span class="meta-soft">/ 2,727 seats</span></span>
+          <span class="util util-high">74.8% utilized</span>
+        </div>
       </a>
-      <a class="card" href="niles.html">
+      <a class="card foss-card" href="libertyville.html">
+        <h2>Libertyville, IL</h2>
+        <div class="card-meta">
+          <span class="session-pill sess-spring">Spring 2026</span>
+          <span class="meta-date">Updated April 3, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>1,085</strong> enrolled <span class="meta-soft">/ 1,403 seats</span></span>
+          <span class="util util-high">77.3% utilized</span>
+        </div>
+      </a>
+      <a class="card foss-card" href="niles.html">
         <h2>Niles, IL</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-spring">Spring 2026</span>
+          <span class="meta-date">Updated April 3, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>781</strong> enrolled <span class="meta-soft">/ 1,038 seats</span></span>
+          <span class="util util-high">75.2% utilized</span>
+        </div>
       </a>
-      <a class="card" href="westminster.html">
+      <a class="card foss-card" href="westminster.html">
         <h2>Westminster, CO</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-spring">Spring 2026</span>
+          <span class="meta-date">Updated April 20, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>430</strong> enrolled <span class="meta-soft">/ 675 seats</span></span>
+          <span class="util util-mid">63.7% utilized</span>
+        </div>
       </a>
-      <a class="card" href="chanhassen.html">
+      <a class="card foss-card" href="chanhassen.html">
         <h2>Chanhassen, MN</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>1,041</strong> enrolled <span class="meta-soft">/ 1,782 seats</span></span>
+          <span class="util util-mid">58.4% utilized</span>
+        </div>
       </a>
-      <a class="card" href="stlouispark.html">
+      <a class="card foss-card" href="stlouispark.html">
         <h2>St. Louis Park, MN</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>586</strong> enrolled <span class="meta-soft">/ 1,139 seats</span></span>
+          <span class="util util-mid">51.4% utilized</span>
+        </div>
       </a>
-      <a class="card" href="woodbury.html">
+      <a class="card foss-card" href="woodbury.html">
         <h2>Woodbury, MN</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>962</strong> enrolled <span class="meta-soft">/ 1,861 seats</span></span>
+          <span class="util util-mid">51.7% utilized</span>
+        </div>
       </a>
-      <a class="card" href="maple_grove.html">
+      <a class="card foss-card" href="maple_grove.html">
         <h2>Maple Grove, MN</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>1,408</strong> enrolled <span class="meta-soft">/ 2,492 seats</span></span>
+          <span class="util util-mid">56.5% utilized</span>
+        </div>
       </a>
-      <a class="card" href="sun_prairie.html">
+      <a class="card foss-card" href="sun_prairie.html">
         <h2>Sun Prairie, WI</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>821</strong> enrolled <span class="meta-soft">/ 1,370 seats</span></span>
+          <span class="util util-mid">59.9% utilized</span>
+        </div>
       </a>
-      <a class="card" href="richfield.html">
+      <a class="card foss-card" href="richfield.html">
         <h2>Richfield/Edina, MN</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 27, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>1,064</strong> enrolled <span class="meta-soft">/ 1,950 seats</span></span>
+          <span class="util util-mid">54.6% utilized</span>
+        </div>
       </a>
-      <a class="card" href="highland_park.html">
-        <h2>Highland Park, IL</h2>
-        <span>View utilization dashboard &rarr;</span>
-      </a>
-      <a class="card" href="western_springs.html">
-        <h2>Western Springs, IL</h2>
-        <span>View utilization dashboard &rarr;</span>
-      </a>
-      <a class="card" href="glenview.html">
-        <h2>Glenview, IL</h2>
-        <span>View utilization dashboard &rarr;</span>
-      </a>
-      <a class="card" href="blaine.html">
+      <a class="card foss-card" href="blaine.html">
         <h2>Blaine, MN</h2>
-        <span>View utilization dashboard &rarr;</span>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 28, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num">— enrolled</span>
+          <span class="util util-na">no enrollment data</span>
+        </div>
       </a>
-    </div>
+      <a class="card foss-card" href="highland_park.html">
+        <h2>Highland Park, IL</h2>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 28, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>333</strong> enrolled <span class="meta-soft">/ 743 seats</span></span>
+          <span class="util util-low">44.8% utilized</span>
+        </div>
+      </a>
+      <a class="card foss-card" href="western_springs.html">
+        <h2>Western Springs, IL</h2>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 28, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>767</strong> enrolled <span class="meta-soft">/ 1,434 seats</span></span>
+          <span class="util util-mid">53.5% utilized</span>
+        </div>
+      </a>
+      <a class="card foss-card" href="glenview.html">
+        <h2>Glenview, IL</h2>
+        <div class="card-meta">
+          <span class="session-pill sess-summer">Summer 2026</span>
+          <span class="meta-date">Updated May 28, 2026</span>
+        </div>
+        <div class="card-stats">
+          <span class="meta-num"><strong>346</strong> enrolled <span class="meta-soft">/ 872 seats</span></span>
+          <span class="util util-low">39.7% utilized</span>
+        </div>
+      </a>
+        </div>
 
     <h3 class="section">Competitive Intel</h3>
     <div class="cards">
