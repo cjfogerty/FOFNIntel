@@ -17,8 +17,11 @@ Card fields (methodology mirrors update_dashboard.py):
                      card's "Updated <date>" always matches the dashboard it links to.
 """
 import csv
+import json
+import os
 import re
 import sys
+from datetime import datetime
 
 TARGET_FILL = 0.80
 
@@ -56,6 +59,59 @@ def util_class(util):
 def date_from_location_html(html):
     m = re.search(r'Data extracted:\s*([A-Z][a-z]+ \d{1,2}, \d{4})', html)
     return m.group(1) if m else None
+
+
+
+PILL_SEASONS = {'spring', 'summer', 'fall', 'winter'}
+
+
+def _fmt_range(start, end):
+    try:
+        a = datetime.strptime(start, '%Y-%m-%d').strftime('%b %-d')
+        b = datetime.strptime(end, '%Y-%m-%d').strftime('%b %-d')
+        return '%s \u2013 %s' % (a, b)  # en dash
+    except (ValueError, TypeError):
+        return None
+
+
+def season_pill(index_path, slug):
+    """Return (label, css_suffix, date_range) for the session this location is
+    currently showing. Source of truth is the location's latest history snapshot
+    (the session the data was actually pulled for, e.g. "Summer 2026"), which
+    append_history.infer_session() sets from each session's enrollment-open
+    (catalog_from) date -- so it flips to the new session as soon as the catalog
+    opens, even before the calendar rolls over. Falls back to the live calendar.
+    """
+    repo = os.path.dirname(os.path.abspath(index_path))
+    try:
+        from append_history import SESSIONS, infer_session
+    except Exception:
+        SESSIONS, infer_session = [], None
+
+    label = None
+    hist_path = os.path.join(repo, 'history', '%s.json' % slug)
+    try:
+        with open(hist_path, encoding='utf-8') as f:
+            snaps = json.load(f).get('snapshots', [])
+        if snaps:
+            label = snaps[-1].get('session')
+    except (OSError, ValueError):
+        pass
+    if not label and infer_session:
+        label = infer_session()
+    if not label:
+        return None
+
+    suffix = 'other'
+    first = label.split()[0].lower() if label.split() else ''
+    if first in PILL_SEASONS:
+        suffix = first
+    date_range = None
+    for sess in SESSIONS:
+        if sess.get('name') == label:
+            date_range = _fmt_range(sess.get('start'), sess.get('end'))
+            break
+    return label, suffix, date_range
 
 
 def update_index_card(index_path, slug, csv_path, location_html_path):
@@ -97,6 +153,16 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
         r'<span class="util util-(?:low|mid|high)">[\d.]+% utilized</span>',
         '<span class="util util-%s">%.1f%% utilized</span>' % (util_class(stats['util']), stats['util']),
         block, count=1)
+
+    sp = season_pill(index_path, slug)
+    if sp:
+        label, suffix, date_range = sp
+        dates_html = (' <span class="pill-dates">\u00b7 %s</span>' % date_range) if date_range else ''
+        new_pill = '<span class="session-pill sess-%s"><strong>%s</strong>%s</span>' % (suffix, label, dates_html)
+        block = re.sub(
+            r'<span class="session-pill sess-[a-z]+"><strong>[^<]*</strong>'
+            r'(?: <span class="pill-dates">[^<]*</span>)?</span>',
+            lambda m: new_pill, block, count=1)
 
     if block == orig:
         return False, 'card found but no fields matched for %s' % slug
