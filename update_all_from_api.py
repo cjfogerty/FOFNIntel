@@ -56,6 +56,12 @@ def main():
         if r.returncode == 0:
             updated.append(slug)
             print(f'  OK  {slug}' + ('  (+camps)' if has_camp else ''))
+            try:
+                from update_index import update_index_card
+                iok, imsg = update_index_card(os.path.join(repo, 'index.html'), slug, csv_path, html_path)
+                print('       index card: ' + imsg)
+            except Exception as e:
+                print('       index card ERR: ' + str(e))
         else:
             errors.append((slug, r.stderr.strip()[:200]))
             print(f'  ERR {slug}: {r.stderr.strip()[:200]}')

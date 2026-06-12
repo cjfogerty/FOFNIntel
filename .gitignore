@@ -1,0 +1,6 @@
+# Local mockup/demo artifacts — not deployed
+mockup/
+
+# OS / Python noise
+.DS_Store
+__pycache__/

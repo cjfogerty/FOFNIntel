@@ -91,10 +91,20 @@
     return h12 + ':' + (m < 10 ? '0' : '') + m + ' ' + ap;
   }
 
+  // Preview lessons (intro/trial classes) ride in the weekly catalog under
+  // sessionType "Preview". Label them as their own levels ("Preview <level>")
+  // so dashboards can track preview slots vs enrolled separately.
+  function isPreview(cls) {
+    var s = ((cls.sessionTypeCode || '') + ' ' + (cls.sessionTypeCategory || '') + ' ' +
+             (cls.sessionName || '')).toLowerCase();
+    return s.indexOf('preview') >= 0;
+  }
+
   function levelLabel(cls) {
-    if (cls.accessTypeCode === 'P') return 'Private Lesson (PV)';
-    var nm = LEVEL_NAMES[cls.levelId];
-    return nm || ('Level ' + cls.levelId); // visible flag if a level is unmapped
+    var preview = isPreview(cls);
+    if (cls.accessTypeCode === 'P') return preview ? 'Preview Private (PRE)' : 'Private Lesson (PV)';
+    var nm = LEVEL_NAMES[cls.levelId] || ('Level ' + cls.levelId); // visible flag if unmapped
+    return preview ? 'Preview ' + nm : nm;
   }
 
   // A class is a 4-Week Camp if sessionTypeId === 2 (sessionTypeCode "4 Week Camp",
@@ -202,7 +212,7 @@
     return api('/Classes/SelectClasses/v2', 'POST', body).then(function (resp) {
       // Dedup classes by classId across all students[] entries, then split
       // weekly (Once a Week + Preview) from 4-Week Camps.
-      var seen = {}, weeklyRows = [], campRows = [];
+      var seen = {}, weeklyRows = [], campRows = [], previewCount = 0;
       var students = resp.students || [];
       for (var s = 0; s < students.length; s++) {
         var classes = students[s].classes || [];
@@ -210,6 +220,7 @@
           var cl = classes[c];
           if (seen[cl.classId]) continue;
           seen[cl.classId] = true;
+          if (isPreview(cl)) previewCount++;
           if (isCamp(cl)) { campRows.push(campToRow(cl)); }
           else { weeklyRows.push(classToRow(cl)); }
         }
@@ -222,6 +233,7 @@
         availableSessionTypes: resp.availableSessionTypes || [],
         weeklyCount: weeklyRows.length,
         campCount: campRows.length,
+        previewCount: previewCount,
         csv: rowsToCsv(weeklyRows, WEEKLY_HEADER),
         campCsv: campRows.length ? rowsToCsv(campRows, CAMP_HEADER) : null
       };
@@ -248,10 +260,11 @@
             }
             out.meta[slug] = { facilityId: fid, name: res.facilityName,
                                quarter: res.sessionQuarter, year: res.sessionYear,
-                               weekly: res.weeklyCount, camps: res.campCount };
+                               weekly: res.weeklyCount, camps: res.campCount,
+                               previews: res.previewCount };
             console.log('[FOSS-API] ' + slug + ': ' + res.weeklyCount + ' weekly + ' +
-                        res.campCount + ' camp classes (' + res.sessionQuarter + ' ' +
-                        res.sessionYear + ')');
+                        res.campCount + ' camp classes, ' + res.previewCount +
+                        ' previews (' + res.sessionQuarter + ' ' + res.sessionYear + ')');
           }).catch(function (err) {
             out.errors.push({ facilityId: fid, error: String(err) });
             console.log('[FOSS-API] ERROR facility ' + fid + ': ' + err);

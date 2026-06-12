@@ -22,6 +22,7 @@ from collections import defaultdict
 # === CATEGORY MAPPING ===
 # Maps class level prefixes to BBSS program categories
 CATEGORY_MAP = {
+    "Preview": "Previews",  # must be first: prefix-matched before Little/Big/etc.
     "Backfloat Baby": "Backfloat Baby",
     "Little": "Littles",
     "Middle": "Middles",
@@ -443,7 +444,11 @@ def update_html(html_path, raw_data, analytics, location_name=None, camp_raw_dat
     with open(html_path, 'r', encoding='utf-8') as f:
         content = f.read()
 
-    now = datetime.now()
+    try:
+        from zoneinfo import ZoneInfo
+        now = datetime.now(ZoneInfo("America/Chicago"))  # stamp all dates/times in Central
+    except Exception:
+        now = datetime.now()
     today = now.strftime("%b %-d, %Y")
     timestamp_short = now.strftime("%b %-d, %Y, %-I:%M %p")   # e.g. "Mar 11, 2026, 11:59 AM"
     timestamp_long  = now.strftime("%B %-d, %Y at %-I:%M %p")  # e.g. "March 11, 2026 at 11:59 AM"
@@ -615,6 +620,18 @@ def main():
     print(f"Updating HTML: {html_file}")
     update_html(html_file, raw_data, analytics, location,
                 camp_raw_data=camp_raw_data, camp_analytics=camp_analytics)
+
+    # Append this pull to the enrollment history (history/<slug>.json + .js),
+    # which feeds the "Enrollment Over Time" panel on each dashboard.
+    try:
+        from append_history import append_snapshot
+        slug = os.path.splitext(os.path.basename(html_file))[0]
+        history_dir = os.path.join(os.path.dirname(os.path.abspath(html_file)), 'history')
+        snap = append_snapshot(slug, location or slug, raw_data, history_dir)
+        print(f"  - history snapshot {snap['date']} ({snap['session']}): "
+              f"{snap['totals']['enrolled']} enrolled, {snap['totals']['utilization']}% util")
+    except Exception as e:
+        print(f"  ! history append failed (dashboard still updated): {e}")
 
     print("Done!")
 
