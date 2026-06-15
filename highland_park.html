@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foss Swim School Highland Park, IL - Weekly Utilization Dashboard (Jun 15, 2026, 10:18 AM)</title>
+    <title>Foss Swim School Highland Park, IL - Weekly Utilization Dashboard (Jun 15, 2026, 11:06 AM)</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
     <script src="history/highland_park.js"></script>
     <style>
+        .back-home {
+            display: inline-block;
+            margin-bottom: 12px;
+            color: #2b6cb0;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .back-home:hover { text-decoration: underline; }
+
         * {
             margin: 0;
             padding: 0;
@@ -422,15 +432,16 @@
 <body>
     <div class="dashboard">
         <div class="header">
+            <a href="index.html" class="back-home">&larr; All FOSS Locations</a>
             <h1>🏊 Foss Swim School Highland Park, IL - Weekly Utilization Dashboard</h1>
-            <div class="extraction-time">Data extracted: June 15, 2026 at 10:18 AM</div>
-            <div class="session-info"><strong>Summer 2026 Session:</strong> Jun 15 – Aug 30, 2026 &nbsp;•&nbsp; Enrollment opened 5/12/26 &nbsp;•&nbsp; Includes Once-a-Week + 4-Week Camps 1-3 (Tue/Thu Jun 16 – Aug 27) &nbsp;•&nbsp; Excludes 2-Week Camps</div>
+            <div class="extraction-time">Data extracted: June 15, 2026 at 11:06 AM</div>
+            <div class="session-info"><strong>Summer 2026 Session:</strong> Jun 15 – Aug 30, 2026 &nbsp;•&nbsp; Enrollment opened 5/12/26 &nbsp;•&nbsp; Includes Once-a-Week + 4-Week Camps</div>
             <div class="filters">
                 <div class="filter-group">
                     <label>View</label>
                     <select id="viewFilter">
                         <option value="weekly">Weekly Classes</option>
-                        <option value="camps">4 Week Camps</option>
+                        <option value="camps">Camps (2 &amp; 4 Week)</option>
                     </select>
                 </div>
                 <div class="filter-group" id="dayFilterGroup">
@@ -6714,7 +6725,7 @@
             if (view === 'camps') {
                 dayLabel.textContent = 'Camp';
                 dayFilter.options[0].textContent = 'All Camps';
-                chartTitle.textContent = '4 Week Camp Utilization by Camp';
+                chartTitle.textContent = 'Camp Utilization by Camp';
                 tableTitle.textContent = 'Curriculum Level Camp Summary';
 
                 var camps = [...new Set(CAMP_RAW_DATA.map(d => d['Camp']))].sort();

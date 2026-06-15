@@ -83,6 +83,17 @@
     .util-mid  { color: #2c5282; }
     .util-high { color: #22543d; }
     .util-na   { color: #a0aec0; font-style: italic; font-weight: 500; }
+    .meta-camp { font-size: 0.82rem; color: #4a5568; }
+    .meta-camp strong { color: #2d3748; font-weight: 600; }
+    .chart-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 22px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+    }
+    .chart-wrap { position: relative; width: 100%; height: 440px; }
+    .chart-legend-note { font-size: 0.75rem; color: #718096; margin-top: 10px; }
     a.card.competitor { border-left: 4px solid #dd6b20; }
     a.card.competitor h2 { color: #c05621; }
     a.card.competitor .competitor-tag {
@@ -94,6 +105,7 @@
       .cards { grid-template-columns: 1fr; }
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -112,6 +124,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>482</strong> enrolled <span class="meta-soft">/ 1,018 seats</span></span>
+          <span class="meta-camp">Camps: <strong>32</strong> enrolled <span class="meta-soft">/ 94 seats</span></span>
           <span class="meta-proj">Projected: <strong>814</strong> (59% of target)</span>
           <span class="util util-low">47.3% utilized</span>
         </div>
@@ -124,6 +137,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>444</strong> enrolled <span class="meta-soft">/ 731 seats</span></span>
+          <span class="meta-camp">Camps: <strong>9</strong> enrolled <span class="meta-soft">/ 37 seats</span></span>
           <span class="meta-proj">Projected: <strong>585</strong> (76% of target)</span>
           <span class="util util-mid">60.7% utilized</span>
         </div>
@@ -136,6 +150,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1261</strong> enrolled <span class="meta-soft">/ 1,831 seats</span></span>
+          <span class="meta-camp">Camps: <strong>56</strong> enrolled <span class="meta-soft">/ 126 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,465</strong> (86% of target)</span>
           <span class="util util-mid">68.9% utilized</span>
         </div>
@@ -148,6 +163,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>594</strong> enrolled <span class="meta-soft">/ 926 seats</span></span>
+          <span class="meta-camp">Camps: <strong>16</strong> enrolled <span class="meta-soft">/ 92 seats</span></span>
           <span class="meta-proj">Projected: <strong>741</strong> (80% of target)</span>
           <span class="util util-mid">64.1% utilized</span>
         </div>
@@ -160,6 +176,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>509</strong> enrolled <span class="meta-soft">/ 850 seats</span></span>
+          <span class="meta-camp">Camps: <strong>29</strong> enrolled <span class="meta-soft">/ 81 seats</span></span>
           <span class="meta-proj">Projected: <strong>680</strong> (75% of target)</span>
           <span class="util util-mid">59.9% utilized</span>
         </div>
@@ -172,6 +189,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>253</strong> enrolled <span class="meta-soft">/ 529 seats</span></span>
+          <span class="meta-camp">Camps: <strong>5</strong> enrolled <span class="meta-soft">/ 37 seats</span></span>
           <span class="meta-proj">Projected: <strong>423</strong> (60% of target)</span>
           <span class="util util-low">47.8% utilized</span>
         </div>
@@ -184,6 +202,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1057</strong> enrolled <span class="meta-soft">/ 1,509 seats</span></span>
+          <span class="meta-camp">Camps: <strong>188</strong> enrolled <span class="meta-soft">/ 514 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,207</strong> (88% of target)</span>
           <span class="util util-high">70.0% utilized</span>
         </div>
@@ -196,6 +215,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>599</strong> enrolled <span class="meta-soft">/ 958 seats</span></span>
+          <span class="meta-camp">Camps: <strong>49</strong> enrolled <span class="meta-soft">/ 204 seats</span></span>
           <span class="meta-proj">Projected: <strong>766</strong> (78% of target)</span>
           <span class="util util-mid">62.5% utilized</span>
         </div>
@@ -208,6 +228,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1069</strong> enrolled <span class="meta-soft">/ 1,585 seats</span></span>
+          <span class="meta-camp">Camps: <strong>128</strong> enrolled <span class="meta-soft">/ 367 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,268</strong> (84% of target)</span>
           <span class="util util-mid">67.4% utilized</span>
         </div>
@@ -220,6 +241,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1494</strong> enrolled <span class="meta-soft">/ 2,083 seats</span></span>
+          <span class="meta-camp">Camps: <strong>229</strong> enrolled <span class="meta-soft">/ 622 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,666</strong> (90% of target)</span>
           <span class="util util-high">71.7% utilized</span>
         </div>
@@ -232,6 +254,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>848</strong> enrolled <span class="meta-soft">/ 1,228 seats</span></span>
+          <span class="meta-camp">Camps: <strong>26</strong> enrolled <span class="meta-soft">/ 83 seats</span></span>
           <span class="meta-proj">Projected: <strong>982</strong> (86% of target)</span>
           <span class="util util-mid">69.1% utilized</span>
         </div>
@@ -244,6 +267,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1102</strong> enrolled <span class="meta-soft">/ 1,710 seats</span></span>
+          <span class="meta-camp">Camps: <strong>116</strong> enrolled <span class="meta-soft">/ 272 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,368</strong> (81% of target)</span>
           <span class="util util-mid">64.4% utilized</span>
         </div>
@@ -256,6 +280,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>1159</strong> enrolled <span class="meta-soft">/ 1,726 seats</span></span>
+          <span class="meta-camp">Camps: <strong>199</strong> enrolled <span class="meta-soft">/ 537 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,381</strong> (84% of target)</span>
           <span class="util util-mid">67.1% utilized</span>
         </div>
@@ -268,6 +293,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>349</strong> enrolled <span class="meta-soft">/ 572 seats</span></span>
+          <span class="meta-camp">Camps: <strong>14</strong> enrolled <span class="meta-soft">/ 63 seats</span></span>
           <span class="meta-proj">Projected: <strong>458</strong> (76% of target)</span>
           <span class="util util-mid">61.0% utilized</span>
         </div>
@@ -280,6 +306,7 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>857</strong> enrolled <span class="meta-soft">/ 1,214 seats</span></span>
+          <span class="meta-camp">Camps: <strong>25</strong> enrolled <span class="meta-soft">/ 137 seats</span></span>
           <span class="meta-proj">Projected: <strong>971</strong> (88% of target)</span>
           <span class="util util-high">70.6% utilized</span>
         </div>
@@ -292,11 +319,64 @@
         </div>
         <div class="card-stats">
           <span class="meta-num"><strong>562</strong> enrolled <span class="meta-soft">/ 867 seats</span></span>
+          <span class="meta-camp">Camps: <strong>19</strong> enrolled <span class="meta-soft">/ 80 seats</span></span>
           <span class="meta-proj">Projected: <strong>694</strong> (81% of target)</span>
           <span class="util util-mid">64.8% utilized</span>
         </div>
       </a>
     </div>
+
+    <h3 class="section">Enrollment by Location</h3>
+    <div class="chart-card">
+      <div class="chart-wrap"><canvas id="enrollChart"></canvas></div>
+      <div class="chart-legend-note">Total enrolled (weekly classes + camps), highest on the left. Updates automatically with each weekly inventory pull.</div>
+    </div>
+    <script id="fossEnrollData" type="application/json">{"blaine": {"name": "Blaine, MN", "weekly": 1159, "camp": 199}, "chanhassen": {"name": "Chanhassen, MN", "weekly": 1057, "camp": 188}, "glenview": {"name": "Glenview, IL", "weekly": 562, "camp": 19}, "highland_park": {"name": "Highland Park, IL", "weekly": 349, "camp": 14}, "lakeview": {"name": "Lakeview, IL", "weekly": 1261, "camp": 56}, "libertyville": {"name": "Libertyville, IL", "weekly": 594, "camp": 16}, "maple_grove": {"name": "Maple Grove, MN", "weekly": 1494, "camp": 229}, "niles": {"name": "Niles, IL", "weekly": 509, "camp": 29}, "northglenn": {"name": "Northglenn, CO", "weekly": 482, "camp": 32}, "ofallon": {"name": "O'Fallon, MO", "weekly": 444, "camp": 9}, "richfield": {"name": "Richfield/Edina, MN", "weekly": 1102, "camp": 116}, "stlouispark": {"name": "St. Louis Park, MN", "weekly": 599, "camp": 49}, "sun_prairie": {"name": "Sun Prairie, WI", "weekly": 848, "camp": 26}, "western_springs": {"name": "Western Springs, IL", "weekly": 857, "camp": 25}, "westminster": {"name": "Westminster, CO", "weekly": 253, "camp": 5}, "woodbury": {"name": "Woodbury, MN", "weekly": 1069, "camp": 128}}</script>
+    <script>
+      (function () {
+        var el = document.getElementById('fossEnrollData');
+        if (!el || !window.Chart) return;
+        var store;
+        try { store = JSON.parse(el.textContent); } catch (e) { return; }
+        var rows = Object.keys(store).map(function (k) {
+          var d = store[k] || {};
+          var weekly = +d.weekly || 0, camp = +d.camp || 0;
+          return { name: d.name || k, weekly: weekly, camp: camp, total: weekly + camp };
+        }).sort(function (a, b) { return b.total - a.total; });  // highest -> lowest, left to right
+
+        new Chart(document.getElementById('enrollChart'), {
+          type: 'bar',
+          data: {
+            labels: rows.map(function (r) { return r.name; }),
+            datasets: [
+              { label: 'Weekly classes', data: rows.map(function (r) { return r.weekly; }),
+                backgroundColor: '#2b6cb0', stack: 'enroll' },
+              { label: 'Camps', data: rows.map(function (r) { return r.camp; }),
+                backgroundColor: '#dd6b20', stack: 'enroll' }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top' },
+              tooltip: {
+                callbacks: {
+                  footer: function (items) {
+                    var t = items.reduce(function (s, it) { return s + it.parsed.y; }, 0);
+                    return 'Total enrolled: ' + t;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: { stacked: true, ticks: { maxRotation: 90, minRotation: 45, autoSkip: false } },
+              y: { stacked: true, beginAtZero: true, title: { display: true, text: 'Students enrolled' } }
+            }
+          }
+        });
+      })();
+    </script>
 
     <h3 class="section intel">Competitive Intel</h3>
     <div class="cards">

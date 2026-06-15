@@ -26,17 +26,28 @@ from datetime import datetime
 TARGET_FILL = 0.80
 
 
-def compute_stats(csv_path):
+def _sum_csv(path):
     enrolled = seats = 0
-    with open(csv_path, newline='', encoding='utf-8') as f:
-        for r in csv.DictReader(f):
-            try:
-                enrolled += int(r['Enrolled'])
-                seats += int(r['Total Capacity'])
-            except (ValueError, KeyError, TypeError):
-                continue
+    try:
+        with open(path, newline='', encoding='utf-8') as f:
+            for r in csv.DictReader(f):
+                try:
+                    enrolled += int(r['Enrolled'])
+                    seats += int(r['Total Capacity'])
+                except (ValueError, KeyError, TypeError):
+                    continue
+    except OSError:
+        return 0, 0
+    return enrolled, seats
+
+
+def compute_stats(csv_path):
+    enrolled, seats = _sum_csv(csv_path)
     if seats <= 0:
         return None
+    # Camp enrollment from the sibling camp CSV (foss_api_campcsv_<slug>.csv).
+    camp_path = csv_path.replace('foss_api_csv_', 'foss_api_campcsv_')
+    camp_enrolled, camp_seats = _sum_csv(camp_path) if camp_path != csv_path else (0, 0)
     projected = round(TARGET_FILL * seats)
     pct = round(enrolled / projected * 100) if projected > 0 else 0
     return {
@@ -45,7 +56,27 @@ def compute_stats(csv_path):
         'util': round(enrolled / seats * 100, 1),
         'projected': projected,
         'pct': pct,
+        'camp_enrolled': camp_enrolled,
+        'camp_seats': camp_seats,
     }
+
+
+def update_enroll_store(html, slug, name, weekly, camp):
+    """Update the homepage enrollment chart's JSON data store for one location.
+    The store is a <script id="fossEnrollData" type="application/json">{...}</script>
+    block read by the stacked-bar chart; we json.loads it, set this slug's entry,
+    and json.dumps it back so the chart always reflects the latest pull."""
+    m = re.search(
+        r'(<script id="fossEnrollData" type="application/json">)([\s\S]*?)(</script>)',
+        html)
+    if not m:
+        return html  # store not present (older index.html); nothing to sync
+    try:
+        data = json.loads(m.group(2))
+    except ValueError:
+        data = {}
+    data[slug] = {'name': name, 'weekly': weekly, 'camp': camp}
+    return html[:m.start(2)] + json.dumps(data, ensure_ascii=False) + html[m.end(2):]
 
 
 def util_class(util):
@@ -154,6 +185,17 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
         '<span class="util util-%s">%.1f%% utilized</span>' % (util_class(stats['util']), stats['util']),
         block, count=1)
 
+    # Camp enrollment line: update if present, else insert after the weekly meta-num line.
+    camp_html = ('<span class="meta-camp">Camps: <strong>%d</strong> enrolled '
+                 '<span class="meta-soft">/ %s seats</span></span>'
+                 % (stats['camp_enrolled'], '{:,}'.format(stats['camp_seats'])))
+    if 'class="meta-camp"' in block:
+        block = re.sub(r'<span class="meta-camp">[\s\S]*?</span></span>',
+                       lambda m: camp_html, block, count=1)
+    else:
+        block = re.sub(r'(<span class="meta-num">[\s\S]*?</span></span>)',
+                       lambda m: m.group(1) + '\n          ' + camp_html, block, count=1)
+
     sp = season_pill(index_path, slug)
     if sp:
         label, suffix, date_range = sp
@@ -166,8 +208,14 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
 
     if block == orig:
         return False, 'card found but no fields matched for %s' % slug
+    new_html = html[:i] + block + html[j:]
+    # Keep the homepage enrollment chart's data store in sync for this location.
+    name_m = re.search(r'<h2>([^<]*)</h2>', block)
+    loc_name = name_m.group(1).strip() if name_m else slug
+    new_html = update_enroll_store(new_html, slug, loc_name,
+                                   stats['enrolled'], stats['camp_enrolled'])
     with open(index_path, 'w', encoding='utf-8') as f:
-        f.write(html[:i] + block + html[j:])
+        f.write(new_html)
     return True, '%s -> %d/%s seats, %.1f%% util, proj %s (%d%% of target)%s' % (
         slug, stats['enrolled'], seats_str, stats['util'], proj_str, stats['pct'],
         '' if date else '  [date unchanged: none found]')

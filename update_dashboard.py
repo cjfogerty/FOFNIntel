@@ -439,10 +439,60 @@ def compute_analytics(raw_data):
         "timeslotDayLevelMatrix": ts_day_level_matrix,
     }
 
+def camp_session_clause(camp_raw_data):
+    """Build an accurate 'Includes ...' clause for the session-info line based on
+    which camp types are actually present in the data (2-Week and/or 4-Week)."""
+    types = set()
+    for r in (camp_raw_data or []):
+        nm = r.get("Camp Name", "")
+        if "2 Week" in nm:
+            types.add("2-Week")
+        if "4 Week" in nm:
+            types.add("4-Week")
+    ordered = [t for t in ("4-Week", "2-Week") if t in types]
+    if not ordered:
+        return "Includes Once-a-Week classes"
+    return "Includes Once-a-Week + " + " &amp; ".join(ordered) + " Camps"
+
+
 def update_html(html_path, raw_data, analytics, location_name=None, camp_raw_data=None, camp_analytics=None):
     """Replace ANALYTICS and RAW_DATA in the HTML file."""
     with open(html_path, 'r', encoding='utf-8') as f:
         content = f.read()
+
+    # --- Camp labelling: 2-Week camps live in CAMP_RAW_DATA alongside 4-Week;
+    #     make the UI say so instead of the stale "4 Week Camps" wording. ---
+    content = content.replace(
+        '<option value="camps">4 Week Camps</option>',
+        '<option value="camps">Camps (2 &amp; 4 Week)</option>')
+    content = content.replace(
+        "chartTitle.textContent = '4 Week Camp Utilization by Camp';",
+        "chartTitle.textContent = 'Camp Utilization by Camp';")
+    # Rewrite the session-info camp clause to match the camp types actually present.
+    content = re.sub(r'Includes Once-a-Week[^<]*',
+                     camp_session_clause(camp_raw_data), content)
+
+    # --- Back-to-home link (idempotent): link on each dashboard back to the
+    #     master/home page with the location cards. ---
+    if '.back-home' not in content:
+        back_css = (
+            '\n        .back-home {\n'
+            '            display: inline-block;\n'
+            '            margin-bottom: 12px;\n'
+            '            color: #2b6cb0;\n'
+            '            text-decoration: none;\n'
+            '            font-size: 14px;\n'
+            '            font-weight: 600;\n'
+            '        }\n'
+            '        .back-home:hover { text-decoration: underline; }\n'
+        )
+        content = content.replace('<style>', '<style>' + back_css, 1)
+    if 'class="back-home"' not in content:
+        content = re.sub(
+            r'(\n[ \t]*)(<h1>)',
+            lambda m: m.group(1) + '<a href="index.html" class="back-home">&larr; All FOSS Locations</a>'
+                      + m.group(1) + m.group(2),
+            content, count=1)
 
     try:
         from zoneinfo import ZoneInfo
