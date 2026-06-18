@@ -35,7 +35,14 @@
     {studentId:1223485,levelId:18},{studentId:1223925,levelId:14},{studentId:1223947,levelId:17},
     {studentId:1223935,levelId:15},{studentId:1223928,levelId:34},{studentId:1223946,levelId:19},
     {studentId:1223936,levelId:33},{studentId:289154,levelId:31},{studentId:1223943,levelId:32},
-    {studentId:1223942,levelId:30}
+    {studentId:1223942,levelId:30},
+    // --- FIX 2026-06-18: cover the FULL level ladder. SelectClasses/v2 only returns a
+    //     level's full catalog when that levelId is explicitly requested; without these,
+    //     M1(9), L3(7), L4(8), B3(16), BB4(4), M5(13) were almost entirely missing
+    //     (e.g. Richfield was undercounting ~339 enrolled / 131 group classes).
+    //     Duplicate studentId is fine — the API honors each entry's levelId independently.
+    {studentId:1223472,levelId:4},{studentId:1223472,levelId:7},{studentId:1223472,levelId:8},
+    {studentId:1223472,levelId:9},{studentId:1223472,levelId:13},{studentId:1223472,levelId:16}
   ];
 
   // --- facilityId -> dashboard slug (the 16 currently in FOFNIntel) ----------
