@@ -236,7 +236,7 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
         block, count=1)
 
     # Camp enrollment line: update if present, else insert after the weekly meta-num line.
-    camp_html = ('<span class="meta-camp">Camps: <strong>%d</strong> enrolled '
+    camp_html = ('<span class="meta-camp">Clinics: <strong>%d</strong> enrolled '
                  '<span class="meta-soft">/ %s seats</span></span>'
                  % (stats['camp_enrolled'], '{:,}'.format(stats['camp_seats'])))
     if 'class="meta-camp"' in block:

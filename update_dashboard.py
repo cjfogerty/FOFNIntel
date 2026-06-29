@@ -82,6 +82,7 @@ def load_camp_csv(filepath):
                 enrolled = 0
 
             camp_name = r.get('Camp Name', '').strip()
+            camp_name = camp_name.replace('Camp', 'Clinic')  # display term
             date_range = r.get('Date Range', '').strip()
             class_level = r.get('Class Level', '').strip()
             time_str = r.get('Time', '').strip()
@@ -452,7 +453,7 @@ def camp_session_clause(camp_raw_data):
     ordered = [t for t in ("4-Week", "2-Week") if t in types]
     if not ordered:
         return "Includes Once-a-Week classes"
-    return "Includes Once-a-Week + " + " &amp; ".join(ordered) + " Camps"
+    return "Includes Once-a-Week + " + " &amp; ".join(ordered) + " Clinics"
 
 
 def update_html(html_path, raw_data, analytics, location_name=None, camp_raw_data=None, camp_analytics=None):
@@ -462,15 +463,23 @@ def update_html(html_path, raw_data, analytics, location_name=None, camp_raw_dat
 
     # --- Camp labelling: 2-Week camps live in CAMP_RAW_DATA alongside 4-Week;
     #     make the UI say so instead of the stale "4 Week Camps" wording. ---
-    content = content.replace(
-        '<option value="camps">4 Week Camps</option>',
-        '<option value="camps">Camps (2 &amp; 4 Week)</option>')
-    content = content.replace(
-        "chartTitle.textContent = '4 Week Camp Utilization by Camp';",
-        "chartTitle.textContent = 'Camp Utilization by Camp';")
-    # Rewrite the session-info camp clause to match the camp types actually present.
+    # --- Terminology: present "Clinic" to users (data keys stay "Camp"). Idempotent. ---
+    content = re.sub(r'<option value="camps">[^<]*</option>',
+                     '<option value="camps">Clinics (2 &amp; 4 Week)</option>', content)
+    content = re.sub(r"chartTitle\.textContent = '[^']*Utilization by Camps?';",
+                     "chartTitle.textContent = 'Clinic Utilization by Clinic';", content)
+    content = content.replace("dayLabel.textContent = 'Camp';", "dayLabel.textContent = 'Clinic';")
+    content = content.replace("dayFilter.options[0].textContent = 'All Camps';",
+                              "dayFilter.options[0].textContent = 'All Clinics';")
+    content = content.replace("tableTitle.textContent = 'Curriculum Level Camp Summary';",
+                              "tableTitle.textContent = 'Curriculum Level Clinic Summary';")
+    content = content.replace("html += '<th>Camp</th>", "html += '<th>Clinic</th>")
+    content = content.replace(">Camp Total</td>", ">Clinic Total</td>")
+    # Rewrite the session-info clause to match the clinic types actually present.
     content = re.sub(r'Includes Once-a-Week[^<]*',
                      camp_session_clause(camp_raw_data), content)
+    # Relabel camp product-name VALUES for display (keys unchanged).
+    content = content.replace('Week Camp', 'Week Clinic')
 
     # --- Back-to-home link (idempotent): link on each dashboard back to the
     #     master/home page with the location cards. ---
