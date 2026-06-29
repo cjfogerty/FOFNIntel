@@ -25,6 +25,16 @@ from datetime import datetime
 
 TARGET_FILL = 0.80
 
+# Category mapping + day abbreviations for the homepage chart's filter pivot.
+try:
+    from update_dashboard import get_category
+except Exception:
+    def get_category(_lvl):
+        return 'Other'
+
+DAY_ABBR = {'Sunday': 'Sun', 'Monday': 'Mon', 'Tuesday': 'Tue', 'Wednesday': 'Wed',
+            'Thursday': 'Thu', 'Friday': 'Fri', 'Saturday': 'Sat'}
+
 
 def _sum_csv(path):
     enrolled = seats = 0
@@ -61,11 +71,51 @@ def compute_stats(csv_path):
     }
 
 
-def update_enroll_store(html, slug, name, weekly, camp):
+def _pivot_accumulate(path, view, agg):
+    """Sum Enrolled/Total Capacity into agg keyed by (view, day-tuple, level)."""
+    try:
+        with open(path, newline='', encoding='utf-8-sig') as f:
+            for r in csv.DictReader(f):
+                try:
+                    e = int(r['Enrolled']); s = int(r['Total Capacity'])
+                except (ValueError, KeyError, TypeError):
+                    continue
+                lvl = (r.get('Class Level') or '').strip()
+                cat = get_category(lvl)
+                if view == 'weekly':
+                    d = (r.get('Day') or '').strip()
+                    days = [DAY_ABBR.get(d, d[:3])] if d else []
+                else:  # camps carry a multi-day field like "Mon/Wed"
+                    raw = (r.get('Days') or '').strip()
+                    days = [x.strip()[:3] for x in re.split(r'[/,]', raw) if x.strip()] if raw else []
+                key = (view, tuple(days), lvl)
+                a = agg.get(key)
+                if a is None:
+                    a = {'v': view, 'd': list(days), 'lvl': lvl, 'cat': cat, 'e': 0, 's': 0}
+                    agg[key] = a
+                a['e'] += e
+                a['s'] += s
+    except OSError:
+        pass
+
+
+def build_pivot(weekly_csv):
+    """Per-location filterable breakdown for the homepage chart: a list of
+    {v, d:[days], lvl, cat, e:enrolled, s:seats} over the weekly + camp CSVs."""
+    agg = {}
+    _pivot_accumulate(weekly_csv, 'weekly', agg)
+    camp_csv = weekly_csv.replace('foss_api_csv_', 'foss_api_campcsv_')
+    if camp_csv != weekly_csv and os.path.exists(camp_csv):
+        _pivot_accumulate(camp_csv, 'camp', agg)
+    return list(agg.values())
+
+
+def update_enroll_store(html, slug, entry):
     """Update the homepage enrollment chart's JSON data store for one location.
-    The store is a <script id="fossEnrollData" type="application/json">{...}</script>
-    block read by the stacked-bar chart; we json.loads it, set this slug's entry,
-    and json.dumps it back so the chart always reflects the latest pull."""
+    `entry` is the per-location object the filterable chart reads:
+      {name, weekly, camp, pivot: [{v,d,lvl,cat,e,s}, ...]}
+    We json.loads the store, set this slug's entry, and json.dumps it back so the
+    chart (bars + utilization line + filters) always reflects the latest pull."""
     m = re.search(
         r'(<script id="fossEnrollData" type="application/json">)([\s\S]*?)(</script>)',
         html)
@@ -75,7 +125,7 @@ def update_enroll_store(html, slug, name, weekly, camp):
         data = json.loads(m.group(2))
     except ValueError:
         data = {}
-    data[slug] = {'name': name, 'weekly': weekly, 'camp': camp}
+    data[slug] = entry
     return html[:m.start(2)] + json.dumps(data, ensure_ascii=False) + html[m.end(2):]
 
 
@@ -212,8 +262,13 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
     # Keep the homepage enrollment chart's data store in sync for this location.
     name_m = re.search(r'<h2>([^<]*)</h2>', block)
     loc_name = name_m.group(1).strip() if name_m else slug
-    new_html = update_enroll_store(new_html, slug, loc_name,
-                                   stats['enrolled'], stats['camp_enrolled'])
+    pivot = build_pivot(csv_path)
+    new_html = update_enroll_store(new_html, slug, {
+        'name': loc_name,
+        'weekly': stats['enrolled'],
+        'camp': stats['camp_enrolled'],
+        'pivot': pivot,
+    })
     with open(index_path, 'w', encoding='utf-8') as f:
         f.write(new_html)
     return True, '%s -> %d/%s seats, %.1f%% util, proj %s (%d%% of target)%s' % (
