@@ -465,7 +465,8 @@ def build(slug):
 SLUGS = ['blaine', 'chanhassen', 'glenview', 'highland_park', 'lakeview',
          'libertyville', 'maple_grove', 'niles', 'northglenn', 'ofallon',
          'richfield', 'stlouispark', 'sun_prairie', 'western_springs',
-         'westminster', 'woodbury']
+         'westminster', 'woodbury',
+         'south_barrington']
 
 if __name__ == '__main__':
     args = sys.argv[1:]

@@ -50,7 +50,7 @@
     5:'blaine', 2:'chanhassen', 31:'glenview', 8:'highland_park', 10:'lakeview',
     9:'libertyville', 3:'maple_grove', 12:'niles', 35:'northglenn', 18:'ofallon',
     23:'richfield', 1:'stlouispark', 22:'sun_prairie', 29:'western_springs',
-    34:'westminster', 6:'woodbury'
+    34:'westminster', 6:'woodbury', 11:'south_barrington'
   };
 
   // --- levelId -> display name (CSV "Class Level"). MUST match the prefixes

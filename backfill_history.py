@@ -30,6 +30,7 @@ SLUGS = {
     'ofallon': "O'Fallon, MO", 'richfield': 'Richfield/Edina, MN', 'stlouispark': 'St. Louis Park, MN',
     'sun_prairie': 'Sun Prairie, WI', 'western_springs': 'Western Springs, IL',
     'westminster': 'Westminster, CO', 'woodbury': 'Woodbury, MN',
+    'south_barrington': 'South Barrington, IL',
 }
 
 # Session calendar. catalog_from = the date this session's catalog became the
