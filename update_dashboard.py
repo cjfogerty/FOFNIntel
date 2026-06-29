@@ -494,6 +494,16 @@ def update_html(html_path, raw_data, analytics, location_name=None, camp_raw_dat
                       + m.group(1) + m.group(2),
             content, count=1)
 
+    # --- Level-name cells: force left alignment (idempotent). The first row of
+    #     each timeslot group puts the rowspan time cell at :first-child, which
+    #     pushes the level cell to 2nd child where `tbody td {text-align:center}`
+    #     applies -- making it look centered while every other row is left. ---
+    if 'level-name-cell-fix' not in content and '.level-name-cell {\n' in content:
+        content = content.replace(
+            '.level-name-cell {\n',
+            '.level-name-cell {\n            text-align: left !important; /* level-name-cell-fix */\n',
+            1)
+
     try:
         from zoneinfo import ZoneInfo
         now = datetime.now(ZoneInfo("America/Chicago"))  # stamp all dates/times in Central
