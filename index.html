@@ -451,7 +451,7 @@
               { type: 'bar', label: 'Weekly classes', data: [], backgroundColor: '#2b6cb0', stack: 'enroll', yAxisID: 'y', order: 3 },
               { type: 'bar', label: 'Camps', data: [], backgroundColor: '#dd6b20', stack: 'enroll', yAxisID: 'y', order: 3 },
               { type: 'line', label: 'Utilization %', data: [], borderColor: '#2f855a', backgroundColor: '#2f855a', yAxisID: 'y1', order: 1, tension: 0.3, pointRadius: 3, pointHoverRadius: 5, spanGaps: true, borderWidth: 2 },
-              { type: 'line', label: 'Capacity (slots)', data: [], borderColor: '#718096', backgroundColor: '#718096', borderDash: [6, 4], yAxisID: 'y', order: 0, tension: 0.3, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2 }
+              { type: 'line', label: 'Capacity (slots)', data: [], borderColor: '#718096', backgroundColor: '#718096', borderDash: [6, 4], yAxisID: 'yCap', order: 0, tension: 0.3, pointRadius: 0, pointHoverRadius: 4, borderWidth: 2 }
             ]
           },
           options: {
@@ -472,8 +472,9 @@
             },
             scales: {
               x: { stacked: true, ticks: { maxRotation: 90, minRotation: 45, autoSkip: false } },
-              y: { stacked: true, beginAtZero: true, position: 'left', title: { display: true, text: 'Students enrolled' } },
-              y1: { position: 'right', beginAtZero: true, max: 100, grid: { drawOnChartArea: false }, title: { display: true, text: 'Utilization %' }, ticks: { callback: function (v) { return v + '%'; } } }
+              y: { stacked: true, beginAtZero: true, position: 'left', title: { display: true, text: 'Students (enrolled vs capacity)' } },
+              y1: { position: 'right', beginAtZero: true, max: 100, grid: { drawOnChartArea: false }, title: { display: true, text: 'Utilization %' }, ticks: { callback: function (v) { return v + '%'; } } },
+              yCap: { position: 'left', display: false, stacked: false, beginAtZero: true, min: 0, grid: { drawOnChartArea: false } }
             }
           }
         });
@@ -485,6 +486,10 @@
           chart.data.datasets[1].data = rows.map(function (r) { return r.camp; });
           chart.data.datasets[2].data = rows.map(function (r) { return r.util; });
           chart.data.datasets[3].data = rows.map(function (r) { return r.seats; });
+          var maxCap = rows.reduce(function (mx, r) { return Math.max(mx, r.seats || 0); }, 0);
+          var m = maxCap > 0 ? Math.ceil(maxCap * 1.05 / 100) * 100 : 10;
+          chart.options.scales.y.max = m;
+          chart.options.scales.yCap.max = m;
           chart.update();
         }
 
