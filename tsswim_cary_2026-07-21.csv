@@ -1,0 +1,428 @@
+Day,Time,Class Level,Time Range,Spots Left,Total Capacity,Enrolled,Student:Teacher Ratio,Class Type,Instructor,Age Range,Next Available
+Monday,4:00 PM,4 / 5 Year / Semi Private,4:00 PM – 4:30 PM,1,,,,Semi-Private,Ryan W,4y-5y,2026-07-27
+Monday,4:00 PM,4 / 5 Year / Semi-Private,4:00 PM – 4:30 PM,1,,,,Semi-Private,Anika K,4y-5y,2026-07-27
+Monday,4:00 PM,6 / 7 Year / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Everett S,6y-7y,2026-07-27
+Monday,4:00 PM,6 / 7 Year / Semi-Private,4:00 PM – 4:30 PM,2,,,,Semi-Private,Jess P,6y-7y,2026-07-27
+Monday,4:00 PM,Sibling-Friend Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Rhiannon C,4y-99y,2026-07-27
+Monday,4:30 PM,10 & Up / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Everett S,10y-15y,2026-07-27
+Monday,4:30 PM,10 & Up / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Anika K,10y-15y,2026-07-27
+Monday,4:30 PM,4 / 5 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Anthony C,4y-5y,2026-07-27
+Monday,4:30 PM,4 / 5 Year / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Jess P,4y-5y,2026-07-27
+Monday,4:30 PM,Competitive Stroke / Group,4:30 PM – 5:00 PM,5,,,,Group,Brandon M,8y-75y,2026-07-27
+Monday,4:30 PM,Private Any Age,4:30 PM – 5:00 PM,0,1,1,1:1,Private,Ryan W,3y-99y,2026-07-27
+Monday,5:00 PM,6 / 7 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Anthony C,6y-7y,2026-07-27
+Monday,5:00 PM,8 / 9 Year / Semi-Private,5:00 PM – 5:30 PM,1,,,,Semi-Private,Rhiannon C,7y-9y,2026-07-27
+Monday,5:00 PM,Competitive Stroke / Group,5:00 PM – 5:30 PM,0,,,,Group,Brandon M,8y-15y,2026-07-27
+Monday,5:00 PM,Private Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,Anika K,8y-9y,2026-07-27
+Monday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-27
+Monday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-27
+Monday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Anthony C,10y-15y,2026-07-27
+Monday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Jess P,10y-16y,2026-07-27
+Monday,5:30 PM,6 / 7 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Everett S,6y-7y,2026-07-27
+Monday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-27
+Monday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Anika K,4y-99y,2026-07-27
+Monday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Rhiannon C,3y-16y,2026-07-27
+Monday,5:30 PM,Technique & Conditioning 1 / Group,5:30 PM – 6:30 PM,1,,,,Group,Brandon M,8y-17y,2026-07-27
+Monday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,1,,,,Semi-Private,Anika K,10y-15y,2026-07-27
+Monday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Rhiannon C,9y-16y,2026-07-27
+Monday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Jess P,10y-15y,2026-07-27
+Monday,6:00 PM,6 / 7 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Ryan W,5y-7y,2026-07-27
+Monday,6:00 PM,6 / 7 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Everett S,6y-7y,2026-07-27
+Monday,6:00 PM,Private Any Age,6:00 PM – 6:30 PM,0,1,1,1:1,Private,Anthony C,3y-99y,2026-07-27
+Monday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Anika K,10y-15y,2026-07-27
+Monday,6:30 PM,4 / 5 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Jess P,4y-5y,2026-07-27
+Monday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Anthony C,6y-7y,2026-07-27
+Monday,6:30 PM,8 / 9 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Rhiannon C,7y-9y,2026-07-27
+Monday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Everett S,4y-16y,2026-07-27
+Monday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-27
+Monday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Brandon M,4y-74y,2026-07-27
+Monday,7:00 PM,6 / 7 Year / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Ryan W,6y-7y,2026-07-27
+Monday,7:00 PM,8 / 9 Year / Semi-Private,7:00 PM – 7:30 PM,1,,,,Semi-Private,Everett S,7y-8y,2026-07-27
+Monday,7:00 PM,Adult Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Brandon M,18y-87y,2026-07-27
+Monday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Anthony C,4y-99y,2026-07-27
+Monday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Anika K,3y-99y,2026-07-27
+Monday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,2,,,,Semi-Private,Rhiannon C,4y-12y,2026-07-27
+Monday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Jess P,4y-99y,2026-07-27
+Monday,7:30 PM,10 & Up / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Anika K,10y-15y,2026-07-27
+Monday,7:30 PM,10 & Up / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Brandon M,10y-15y,2026-07-27
+Monday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,Jess P,4y-16y,2026-07-27
+Monday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,1,1,0,1:1,Private,Ryan W,3y-99y,2026-07-27
+Monday,7:30 PM,Private Any Age (Sibling Class Makeup 7 / 20),7:30 PM – 8:00 PM,1,1,0,1:1,Private,Anthony C,3y-99y,2026-07-27
+Monday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Rhiannon C,4y-99y,2026-07-27
+Monday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-27
+Monday,8:00 PM,10 & Up / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Jess P,10y-99y,2026-07-27
+Monday,8:00 PM,8 / 9 Year / Semi-Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,Rhiannon C,7y-9y,2026-07-27
+Monday,8:00 PM,Adult Class / Semi-Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,Ryan W,18y-99y,2026-07-27
+Monday,8:00 PM,Competitive Stroke / Group,8:00 PM – 8:30 PM,4,,,,Group,Brandon M,8y-16y,2026-07-27
+Monday,8:00 PM,Private Any Age,8:00 PM – 8:30 PM,0,1,1,1:1,Private,Anthony C,3y-77y,2026-07-27
+Monday,8:00 PM,Private Any Age,8:00 PM – 8:30 PM,0,1,1,1:1,Private,Anika K,3y-99y,2026-07-27
+Tuesday,4:00 PM,4 / 5 Year / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Anika K,4y-5y,2026-07-21
+Tuesday,4:00 PM,4 / 5 Year / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Brandon M,4y-5y,2026-07-21
+Tuesday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,James D,4y-99y,2026-07-21
+Tuesday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Rhiannon C,3y-99y,2026-07-21
+Tuesday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Kevin R,3y-100y,2026-07-21
+Tuesday,4:00 PM,Sibling-Friend Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-21
+Tuesday,4:30 PM,10 & Up / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Kevin R,9y-16y,2026-07-21
+Tuesday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Rhiannon C,6y-7y,2026-07-21
+Tuesday,4:30 PM,8 / 9 Year / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Anika K,8y-9y,2026-07-21
+Tuesday,4:30 PM,8 / 9 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Everett S,8y-9y,2026-07-21
+Tuesday,4:30 PM,Sibling-Friends Class / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,James D,4y-10y,2026-07-21
+Tuesday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Brandon M,10y-15y,2026-07-21
+Tuesday,5:00 PM,6 / 7 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Rhiannon C,5y-7y,2026-07-21
+Tuesday,5:00 PM,8 / 9 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Anika K,3y-19y,2026-07-21
+Tuesday,5:00 PM,Private Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,Everett S,3y-99y,2026-07-21
+Tuesday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,James D,4y-16y,2026-07-21
+Tuesday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Brandon M,9y-15y,2026-07-21
+Tuesday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Kevin R,10y-15y,2026-07-21
+Tuesday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,James D,10y-15y,2026-07-21
+Tuesday,5:30 PM,4 / 5 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Rhiannon C,4y-5y,2026-07-21
+Tuesday,5:30 PM,6 / 7 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Anika K,6y-7y,2026-07-21
+Tuesday,5:30 PM,6 / 7 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Everett S,6y-7y,2026-07-21
+Tuesday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Rhiannon C,9y-16y,2026-07-21
+Tuesday,6:00 PM,6 / 7 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Everett S,6y-7y,2026-07-21
+Tuesday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Anika K,8y-9y,2026-07-21
+Tuesday,6:00 PM,Competitive Stroke / Group,6:00 PM – 6:30 PM,3,,,,Group,Kevin R,8y-15y,2026-07-21
+Tuesday,6:00 PM,Private Any Age,6:00 PM – 6:30 PM,0,1,1,1:1,Private,Brandon M,3y-99y,2026-07-21
+Tuesday,6:00 PM,Sibling-Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,James D,4y-19y,2026-07-21
+Tuesday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Kevin R,10y-16y,2026-07-21
+Tuesday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,James D,10y-15y,2026-07-21
+Tuesday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Everett S,10y-15y,2026-07-21
+Tuesday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Anika K,5y-7y,2026-07-21
+Tuesday,6:30 PM,8 / 9 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Brandon M,8y-9y,2026-07-21
+Tuesday,6:30 PM,8 / 9 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Rhiannon C,8y-9y,2026-07-21
+Tuesday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Everett S,10y-15y,2026-07-21
+Tuesday,7:00 PM,6 / 7 Year / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Anika K,6y-7y,2026-07-21
+Tuesday,7:00 PM,8 / 9 Year / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Brandon M,8y-9y,2026-07-21
+Tuesday,7:00 PM,Private Any Age,7:00 PM – 7:30 PM,0,1,1,1:1,Private,James D,3y-99y,2026-07-21
+Tuesday,7:00 PM,Private Any Age,7:00 PM – 7:30 PM,0,1,1,1:1,Private,Rhiannon C,3y-99y,2026-07-21
+Tuesday,7:00 PM,Technique & Conditioning 1 / Group,7:00 PM – 8:00 PM,1,,,,Group,Kevin R,8y-17y,2026-07-21
+Tuesday,7:30 PM,10 & Up / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Anika K,10y-15y,2026-07-21
+Tuesday,7:30 PM,4 / 5 Year / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Everett S,4y-5y,2026-07-21
+Tuesday,7:30 PM,6 / 7 Year / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Brandon M,6y-7y,2026-07-21
+Tuesday,7:30 PM,Adult Class / Semi Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Rhiannon C,18y-99y,2026-07-21
+Tuesday,8:00 PM,10 & Up / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Brandon M,10y-15y,2026-07-21
+Tuesday,8:00 PM,Adult Class / Semi-Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,Kevin R,8y-72y,2026-07-21
+Tuesday,8:00 PM,Adult Class / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Everett S,18y-99y,2026-07-21
+Tuesday,8:00 PM,Adult Class / Semi-Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,James D,18y-99y,2026-07-21
+Tuesday,8:00 PM,Sibling-Friend Class / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Anika K,4y-99y,2026-07-21
+Wednesday,10:30 AM,Private Any Age,10:30 AM – 11:00 AM,0,1,1,1:1,Private,Sydney R,3y-99y,2026-07-22
+Wednesday,11:00 AM,Private Any Age,11:00 AM – 11:30 AM,0,1,1,1:1,Private,Sydney R,3y-99y,2026-07-22
+Wednesday,12:00 PM,Adult Class / Semi-Private,12:00 PM – 12:30 PM,2,,,,Semi-Private,Sydney R,18y-99y,2026-07-22
+Wednesday,12:30 PM,4 / 5 Year / Semi-Private,12:30 PM – 1:00 PM,1,,,,Semi-Private,Sydney R,3y-4y,2026-07-22
+Wednesday,1:00 PM,Private Any Age,1:00 PM – 1:30 PM,1,1,0,1:1,Private,Sydney R,4y-5y,2026-07-22
+Wednesday,1:30 PM,Private Any Age,1:30 PM – 2:00 PM,0,1,1,1:1,Private,Sydney R,3y-99y,2026-07-22
+Wednesday,4:00 PM,10 & Up / Semi-Private,4:00 PM – 4:30 PM,1,,,,Semi-Private,Kevin R,10y-16y,2026-07-22
+Wednesday,4:00 PM,Adult Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",16y-68y,2026-07-22
+Wednesday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Everett S,3y-99y,2026-07-22
+Wednesday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Ryan W,3y-99y,2026-07-22
+Wednesday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Anthony C,3y-99y,2026-07-22
+Wednesday,4:30 PM,4 / 5 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Everett S,4y-5y,2026-07-22
+Wednesday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Anthony C,6y-7y,2026-07-22
+Wednesday,4:30 PM,6 / 7 Year / Semi-Private (Sibling Class Makeup 7 / 22),4:30 PM – 5:00 PM,0,,,,Semi-Private,Ryan W,6y-7y,2026-07-22
+Wednesday,4:30 PM,Sibling-Friend Class / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Kevin R,8y-16y,2026-07-22
+Wednesday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Ryan W,10y-16y,2026-07-22
+Wednesday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Megan Z,9y-16y,2026-07-22
+Wednesday,5:00 PM,6 / 7 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Anthony C,6y-7y,2026-07-22
+Wednesday,5:00 PM,Competitive Stroke / Group,5:00 PM – 5:30 PM,4,,,,Group,Kevin R,8y-14y,2026-07-22
+Wednesday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Everett S,4y-16y,2026-07-22
+Wednesday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",4y-99y,2026-07-22
+Wednesday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Megan Z,9y-15y,2026-07-22
+Wednesday,5:30 PM,4 / 5 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",4y-5y,2026-07-22
+Wednesday,5:30 PM,6 / 7 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Ryan W,6y-7y,2026-07-22
+Wednesday,5:30 PM,8 / 9 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Sydney R,8y-9y,2026-07-22
+Wednesday,5:30 PM,Competitive Stroke / Group,5:30 PM – 6:00 PM,0,,,,Group,Kevin R,8y-15y,2026-07-22
+Wednesday,5:30 PM,Private Any Age (Sibling Makeup 7 / 29),5:30 PM – 6:00 PM,0,1,1,1:1,Private,Anthony C,3y-16y,2026-07-22
+Wednesday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-22
+Wednesday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Ryan W,10y-16y,2026-07-22
+Wednesday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Anthony C,7y-9y,2026-07-22
+Wednesday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Everett S,7y-9y,2026-07-22
+Wednesday,6:00 PM,Competitive Stroke / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Kevin R,8y-16y,2026-07-22
+Wednesday,6:00 PM,Private Any Age,6:00 PM – 6:30 PM,0,1,1,1:1,Private,"Jess P, Shonte M",3y-99y,2026-07-22
+Wednesday,6:00 PM,Sibling-Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Megan Z,3y-99y,2026-07-22
+Wednesday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Anthony C,10y-15y,2026-07-22
+Wednesday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",10y-15y,2026-07-22
+Wednesday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Sydney R,6y-7y,2026-07-22
+Wednesday,6:30 PM,8 / 9 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Megan Z,8y-9y,2026-07-22
+Wednesday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-22
+Wednesday,6:30 PM,Technique & Conditioning 2 / Group,6:30 PM – 7:30 PM,2,,,,Group,Kevin R,8y-19y,2026-07-22
+Wednesday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Sydney R,10y-15y,2026-07-22
+Wednesday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",9y-13y,2026-07-22
+Wednesday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Ryan W,9y-15y,2026-07-22
+Wednesday,7:00 PM,4 / 5 Year / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-22
+Wednesday,7:30 PM,10 & Up / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Megan Z,10y-15y,2026-07-22
+Wednesday,7:30 PM,Adult Class / Semi-Private,7:30 PM – 8:00 PM,1,,,,Semi-Private,Anthony C,18y-99y,2026-07-22
+Wednesday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,Sydney R,4y-99y,2026-07-22
+Wednesday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,Ryan W,3y-99y,2026-07-22
+Wednesday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,"Jess P, Shonte M",3y-80y,2026-07-22
+Wednesday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-22
+Wednesday,7:30 PM,Technique & Conditioning 1 / Group,7:30 PM – 8:30 PM,3,,,,Group,Kevin R,8y-17y,2026-07-22
+Wednesday,8:00 PM,10 & Up / Semi-Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,"Jess P, Shonte M",10y-15y,2026-07-22
+Wednesday,8:00 PM,10 & Up / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Sydney R,10y-16y,2026-07-22
+Wednesday,8:00 PM,Adult Class / Semi-Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,Ryan W,18y-99y,2026-07-22
+Wednesday,8:00 PM,Sibling-Friend Class / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Everett S,3y-99y,2026-07-22
+Thursday,4:00 PM,10 & Up / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Kevin R,9y-15y,2026-07-23
+Thursday,4:00 PM,Private,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Ryan W,3y-99y,2026-07-23
+Thursday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Brandon M,3y-99y,2026-07-23
+Thursday,4:00 PM,Sibling-Friend Class / Semi Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Kalani B,4y-99y,2026-07-23
+Thursday,4:00 PM,Sibling-Friend Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Anthony C,4y-99y,2026-07-23
+Thursday,4:30 PM,10 & Up / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Ryan W,9y-16y,2026-07-23
+Thursday,4:30 PM,10 & Up / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Kevin R,10y-15y,2026-07-23
+Thursday,4:30 PM,10 & Up / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Brandon M,10y-15y,2026-07-23
+Thursday,4:30 PM,4 / 5 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Sydney R,4y-5y,2026-07-23
+Thursday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,2,,,,Semi-Private,Anthony C,6y-7y,2026-07-23
+Thursday,4:30 PM,Sibling-Friend Class / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Kalani B,4y-99y,2026-07-23
+Thursday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,1,,,,Semi-Private,Anthony C,9y-16y,2026-07-23
+Thursday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Brandon M,10y-15y,2026-07-23
+Thursday,5:00 PM,6 / 7 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Ryan W,6y-7y,2026-07-23
+Thursday,5:00 PM,6 / 7 Year Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Kalani B,5y-7y,2026-07-23
+Thursday,5:00 PM,8 / 9 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Skyler B,8y-9y,2026-07-23
+Thursday,5:00 PM,Private Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,Sydney R,4y-99y,2026-07-23
+Thursday,5:30 PM,4 / 5 Year / Semi Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Anthony C,4y-5y,2026-07-23
+Thursday,5:30 PM,4 / 5 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Sydney R,4y-5y,2026-07-23
+Thursday,5:30 PM,8 / 9 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Kalani B,8y-9y,2026-07-23
+Thursday,5:30 PM,Competitive Stroke / Group,5:30 PM – 6:00 PM,4,,,,Group,Kevin R,8y-12y,2026-07-23
+Thursday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Brandon M,4y-16y,2026-07-23
+Thursday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Brandon M,9y-15y,2026-07-23
+Thursday,6:00 PM,6 / 7 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Skyler B,6y-7y,2026-07-23
+Thursday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,2,,,,Semi-Private,Anthony C,8y-9y,2026-07-23
+Thursday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Sydney R,6y-7y,2026-07-23
+Thursday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,1,,,,Semi-Private,Ryan W,8y-9y,2026-07-23
+Thursday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Kalani B,7y-9y,2026-07-23
+Thursday,6:00 PM,Technique & Conditioning 2 / Group,6:00 PM – 7:00 PM,5,,,,Group,Kevin R,8y-16y,2026-07-23
+Thursday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Anthony C,9y-15y,2026-07-23
+Thursday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,2,,,,Semi-Private,Kalani B,10y-15y,2026-07-23
+Thursday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,1,,,,Semi-Private,Skyler B,9y-15y,2026-07-23
+Thursday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Ryan W,6y-7y,2026-07-23
+Thursday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Sydney R,10y-15y,2026-07-23
+Thursday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Brandon M,4y-99y,2026-07-23
+Thursday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Kalani B,9y-16y,2026-07-23
+Thursday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Anthony C,10y-15y,2026-07-23
+Thursday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,1,,,,Semi-Private,Sydney R,10y-15y,2026-07-23
+Thursday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,1,,,,Semi-Private,Skyler B,10y-15y,2026-07-23
+Thursday,7:00 PM,Sibling- Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-23
+Thursday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Brandon M,4y-99y,2026-07-23
+Thursday,7:00 PM,Technique & Conditioning 1 / Group,7:00 PM – 8:00 PM,2,,,,Group,Kevin R,8y-17y,2026-07-23
+Thursday,7:30 PM,10 & Up / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Sydney R,10y-15y,2026-07-23
+Thursday,7:30 PM,6 / 7 Year / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Skyler B,6y-7y,2026-07-23
+Thursday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-23
+Thursday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Brandon M,4y-99y,2026-07-23
+Thursday,8:00 PM,10 & Up / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Kalani B,10y-15y,2026-07-23
+Thursday,8:00 PM,10 & Up / Semi-Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,Skyler B,10y-16y,2026-07-23
+Thursday,8:00 PM,Adult Class / Semi -Private,8:00 PM – 8:30 PM,1,,,,Semi-Private,Ryan W,6y-75y,2026-07-23
+Thursday,8:00 PM,Adult Class / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Kevin R,18y-99y,2026-07-23
+Thursday,8:00 PM,Private Any Age,8:00 PM – 8:30 PM,0,1,1,1:1,Private,Brandon M,3y-88y,2026-07-23
+Thursday,8:00 PM,Sibling-Friend Class / Semi-Private,8:00 PM – 8:30 PM,0,,,,Semi-Private,Sydney R,4y-99y,2026-07-23
+Friday,10:00 AM,10 & Up Year / Semi-Private,10:00 AM – 10:30 AM,1,,,,Semi-Private,James D,10y-16y,2026-07-24
+Friday,10:00 AM,Private Any Age,10:00 AM – 10:30 AM,1,1,0,1:1,Private,Kevin R,9y-99y,2026-07-24
+Friday,10:30 AM,Private Any Age,10:30 AM – 11:00 AM,0,1,1,1:1,Private,Kevin R,10y-99y,2026-07-24
+Friday,10:30 AM,Private Any Age,10:30 AM – 11:00 AM,0,1,1,1:1,Private,James D,3y-99y,2026-07-24
+Friday,11:00 AM,10 & Up / Semi-Private,11:00 AM – 11:30 AM,1,,,,Semi-Private,Kevin R,10y-15y,2026-07-24
+Friday,11:00 AM,Adult Class / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,James D,3y-88y,2026-07-24
+Friday,11:30 AM,Private Any Age,11:30 AM – 12:00 PM,0,1,1,1:1,Private,James D,3y-99y,2026-07-24
+Friday,12:00 PM,Private Any Age,12:00 PM – 12:30 PM,0,1,1,1:1,Private,Kevin R,16y-75y,2026-07-24
+Friday,12:00 PM,Special Needs / Private,12:00 PM – 12:30 PM,0,1,1,1:1,Private,James D,3y-99y,2026-07-24
+Friday,12:30 PM,Private Any Age,12:30 PM – 1:00 PM,1,1,0,1:1,Private,Kevin R,4y-99y,2026-07-24
+Friday,1:00 PM,4 / 5 Year / Semi-Private,1:00 PM – 1:30 PM,1,,,,Semi-Private,James D,4y-5y,2026-07-24
+Friday,4:00 PM,10 & Up / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",10y-16y,2026-07-24
+Friday,4:00 PM,6 / 7 Year / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Ryan W,6y-7y,2026-07-24
+Friday,4:00 PM,Sibling-Friend Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,James D,4y-99y,2026-07-24
+Friday,4:00 PM,Sibling-Friend Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Skyler B,4y-99y,2026-07-24
+Friday,4:00 PM,Special Needs / Private,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Rhiannon C,3y-99y,2026-07-24
+Friday,4:30 PM,10 & Up / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,"Jess P, Shonte M",10y-15y,2026-07-24
+Friday,4:30 PM,4 / 5 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Rhiannon C,4y-16y,2026-07-24
+Friday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Ryan W,6y-7y,2026-07-24
+Friday,4:30 PM,8 / 9 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Skyler B,7y-9y,2026-07-24
+Friday,4:30 PM,8 / 9 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,James D,8y-9y,2026-07-24
+Friday,4:30 PM,8 / 9 Year / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Kevin R,7y-9y,2026-07-24
+Friday,4:30 PM,Private Any Age,4:30 PM – 5:00 PM,0,1,1,1:1,Private,Anthony C,3y-99y,2026-07-24
+Friday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,1,,,,Semi-Private,Ryan W,4y-99y,2026-07-24
+Friday,5:00 PM,6 / 7 Year / Semi -Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Anthony C,6y-7y,2026-07-24
+Friday,5:00 PM,8 / 9 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",8y-9y,2026-07-24
+Friday,5:00 PM,Private Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,Skyler B,4y-99y,2026-07-24
+Friday,5:00 PM,Private Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,James D,6y-7y,2026-07-24
+Friday,5:00 PM,Private Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,Rhiannon C,3y-99y,2026-07-24
+Friday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Kevin R,4y-99y,2026-07-24
+Friday,5:30 PM,6 / 7 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Skyler B,6y-7y,2026-07-24
+Friday,5:30 PM,8 / 9 Year / Semi-Private,5:30 PM – 6:00 PM,1,,,,Semi-Private,Anthony C,8y-9y,2026-07-24
+Friday,5:30 PM,8 / 9 Year / Semi-Private,5:30 PM – 6:00 PM,1,,,,Semi-Private,Ryan W,8y-9y,2026-07-24
+Friday,5:30 PM,Private Any Age,5:30 PM – 6:00 PM,0,1,1,1:1,Private,James D,15y-99y,2026-07-24
+Friday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Rhiannon C,4y-99y,2026-07-24
+Friday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",4y-99y,2026-07-24
+Friday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",10y-15y,2026-07-24
+Friday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,James D,4y-99y,2026-07-24
+Friday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Kevin R,8y-9y,2026-07-24
+Friday,6:00 PM,8 / 9 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Rhiannon C,8y-9y,2026-07-24
+Friday,6:00 PM,Adult Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Skyler B,18y-99y,2026-07-24
+Friday,6:00 PM,Private Any Age,6:00 PM – 6:30 PM,0,1,1,1:1,Private,Anthony C,3y-99y,2026-07-24
+Friday,6:00 PM,Sibling-Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-24
+Friday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Rhiannon C,6y-7y,2026-07-24
+Friday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Anthony C,6y-7y,2026-07-24
+Friday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Skyler B,3y-99y,2026-07-24
+Friday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,1,,,,Semi-Private,"Jess P, Shonte M",5y-6y,2026-07-24
+Friday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Ryan W,4y-16y,2026-07-24
+Friday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,James D,8y-18y,2026-07-24
+Friday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Kevin R,7y-15y,2026-07-24
+Friday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Anthony C,9y-15y,2026-07-24
+Friday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,1,,,,Semi-Private,Ryan W,9y-15y,2026-07-24
+Friday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Kevin R,10y-15y,2026-07-24
+Friday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,2,,,,Semi-Private,Skyler B,9y-16y,2026-07-24
+Friday,7:00 PM,6 / 7 Year / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,James D,6y-7y,2026-07-24
+Friday,7:00 PM,Competitive Stroke / Group,7:00 PM – 7:30 PM,3,,,,Group,Rhiannon C,8y-16y,2026-07-24
+Friday,7:00 PM,Private Any Age,7:00 PM – 7:30 PM,0,1,1,1:1,Private,"Jess P, Shonte M",3y-99y,2026-07-24
+Friday,7:30 PM,10 & Up / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",10y-15y,2026-07-24
+Friday,7:30 PM,4 / 5 Year / Semi-Private,7:30 PM – 8:00 PM,2,,,,Semi-Private,Ryan W,4y-5y,2026-07-24
+Friday,7:30 PM,8 / 9 Year / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Kevin R,7y-9y,2026-07-24
+Friday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Skyler B,4y-16y,2026-07-24
+Friday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Anthony C,3y-99y,2026-07-24
+Friday,7:30 PM,Sibling-Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,James D,4y-99y,2026-07-24
+Friday,7:30 PM,Technique & Conditioning 1 / Group,7:30 PM – 8:30 PM,0,,,,Group,Rhiannon C,8y-20y,2026-07-24
+Saturday,8:00 AM,Adult Group Class,8:00 AM – 9:00 AM,0,,,,Group,"Brandon M, Everett S",17y-99y,2026-07-25
+Saturday,9:00 AM,6 / 7 Year / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Kalani B,5y-7y,2026-07-25
+Saturday,9:00 AM,8 / 9 Year / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Rhiannon C,7y-9y,2026-07-25
+Saturday,9:00 AM,8 / 9 Year / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Brandon M,7y-9y,2026-07-25
+Saturday,9:00 AM,8 / 9 Year / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Everett S,7y-9y,2026-07-25
+Saturday,9:00 AM,Adult Class / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Anthony C,15y-75y,2026-07-25
+Saturday,9:00 AM,Private Any Age,9:00 AM – 9:30 AM,0,1,1,1:1,Private,Ryan W,3y-99y,2026-07-25
+Saturday,9:30 AM,8 / 9 Year / Semi-Private,9:30 AM – 10:00 AM,0,,,,Semi-Private,Ryan W,7y-9y,2026-07-25
+Saturday,9:30 AM,Adult Class / Semi-Private,9:30 AM – 10:00 AM,0,,,,Semi-Private,Everett S,18y-99y,2026-07-25
+Saturday,9:30 AM,Private Any Age,9:30 AM – 10:00 AM,0,1,1,1:1,Private,Kalani B,4y-99y,2026-07-25
+Saturday,9:30 AM,Sibling-Friend Class / Semi-Private,9:30 AM – 10:00 AM,0,,,,Semi-Private,Anthony C,4y-99y,2026-07-25
+Saturday,9:30 AM,Sibling-Friend Class / Semi-Private,9:30 AM – 10:00 AM,0,,,,Semi-Private,Rhiannon C,4y-99y,2026-07-25
+Saturday,9:30 AM,Sibling-Friend Class / Semi-Private,9:30 AM – 10:00 AM,0,,,,Semi-Private,Brandon M,4y-99y,2026-07-25
+Saturday,10:00 AM,10 & Up / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Everett S,10y-15y,2026-07-25
+Saturday,10:00 AM,4 / 5 Year / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Kalani B,4y-5y,2026-07-25
+Saturday,10:00 AM,6 / 7 Year / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Sydney R,6y-7y,2026-07-25
+Saturday,10:00 AM,Parent & Toddler (19-36 Months) / Group Class,10:00 AM – 10:30 AM,1,,,,Group,Rhiannon C,1y-3y,2026-07-25
+Saturday,10:00 AM,Private Any Age,10:00 AM – 10:30 AM,0,1,1,1:1,Private,Brandon M,3y-99y,2026-07-25
+Saturday,10:00 AM,Private Any Age,10:00 AM – 10:30 AM,0,1,1,1:1,Private,Ryan W,4y-15y,2026-07-25
+Saturday,10:00 AM,Sibling-Friend Class / Semi Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Anthony C,4y-99y,2026-07-25
+Saturday,10:30 AM,10 & Up / Semi-Private,10:30 AM – 11:00 AM,1,,,,Semi-Private,Ryan W,10y-15y,2026-07-25
+Saturday,10:30 AM,4 / 5 Year / Semi-Private,10:30 AM – 11:00 AM,0,,,,Semi-Private,Anthony C,4y-5y,2026-07-25
+Saturday,10:30 AM,4 / 5 Year / Semi-Private,10:30 AM – 11:00 AM,0,,,,Semi-Private,Rhiannon C,4y-5y,2026-07-25
+Saturday,10:30 AM,Private Any Age,10:30 AM – 11:00 AM,0,1,1,1:1,Private,Kalani B,4y-99y,2026-07-25
+Saturday,10:30 AM,Private Any Age,10:30 AM – 11:00 AM,0,1,1,1:1,Private,Brandon M,3y-99y,2026-07-25
+Saturday,10:30 AM,Sibling-Friend Class / Semi-Private,10:30 AM – 11:00 AM,0,,,,Semi-Private,Everett S,4y-16y,2026-07-25
+Saturday,10:30 AM,Sibling-Friend Class / Semi-Private,10:30 AM – 11:00 AM,0,,,,Semi-Private,Sydney R,4y-99y,2026-07-25
+Saturday,11:00 AM,10 & Up / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Brandon M,10y-15y,2026-07-25
+Saturday,11:00 AM,10 & Up / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Rhiannon C,10y-16y,2026-07-25
+Saturday,11:00 AM,4 / 5 Year / Semi-Private,11:00 AM – 11:30 PM,0,,,,Semi-Private,Sydney R,4y-5y,2026-07-25
+Saturday,11:00 AM,Private Any Age,11:00 AM – 11:30 AM,0,1,1,1:1,Private,Everett S,3y-75y,2026-07-25
+Saturday,11:00 AM,Private Any Age,11:00 AM – 11:30 AM,0,1,1,1:1,Private,Ryan W,3y-99y,2026-07-25
+Saturday,11:00 AM,Private Any Age,11:00 AM – 11:30 AM,0,1,1,1:1,Private,Anthony C,4y-5y,2026-07-25
+Saturday,11:00 AM,Sibling-Friend Class / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Kalani B,4y-99y,2026-07-25
+Saturday,11:30 AM,10 & Up / Semi-Private,11:30 AM – 12:00 PM,0,,,,Semi-Private,Kalani B,10y-14y,2026-07-25
+Saturday,11:30 AM,Private Any Age,11:30 AM – 12:00 PM,0,1,1,1:1,Private,Brandon M,3y-99y,2026-07-25
+Saturday,11:30 AM,Private Any Age,11:30 AM – 12:00 PM,0,1,1,1:1,Private,Ryan W,4y-16y,2026-07-25
+Saturday,11:30 AM,Sibling-Friend Class / Semi-Private,11:30 AM – 12:00 PM,0,,,,Semi-Private,Anthony C,4y-16y,2026-07-25
+Saturday,11:30 AM,Sibling-Friend Class / Semi-Private,11:30 AM – 12:00 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-25
+Saturday,11:30 AM,Special Needs / Private,11:30 AM – 12:00 PM,0,1,1,1:1,Private,Rhiannon C,3y-99y,2026-07-25
+Saturday,11:30 AM,Toddler Transition Class / Semi-Private,11:30 AM – 12:00 PM,0,,,,Semi-Private,Sydney R,2y-3y,2026-07-25
+Saturday,12:00 PM,10 & Up / Semi-Private,12:00 PM – 12:30 PM,0,,,,Semi-Private,Brandon M,10y-15y,2026-07-25
+Saturday,12:00 PM,8 / 9 Year / Semi-Private,12:00 PM – 12:30 PM,0,,,,Semi-Private,Anthony C,8y-9y,2026-07-25
+Saturday,12:00 PM,8 / 9 Year / Semi-Private,12:00 PM – 12:30 PM,1,,,,Semi-Private,Ryan W,8y-9y,2026-07-25
+Saturday,12:00 PM,Private Any Age,12:00 PM – 12:30 PM,0,1,1,1:1,Private,Sydney R,3y-99y,2026-07-25
+Saturday,12:00 PM,Sibling-Friend Class / Semi-Private,12:00 PM – 12:30 PM,0,,,,Semi-Private,Kalani B,4y-99y,2026-07-25
+Saturday,12:00 PM,Sibling-Friend Class / Semi-Private,12:00 PM – 12:30 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-25
+Saturday,12:30 PM,10 & Up / Semi-Private,12:30 PM – 1:00 PM,0,,,,Semi-Private,Brandon M,10y-16y,2026-07-25
+Saturday,12:30 PM,8 / 9 Year / Semi-Private,12:30 PM – 1:00 PM,0,,,,Semi-Private,Ryan W,7y-9y,2026-07-25
+Saturday,12:30 PM,Private Any Age,12:30 PM – 1:00 PM,0,1,1,1:1,Private,Sydney R,3y-99y,2026-07-25
+Saturday,12:30 PM,Sibling-Friend Class / Semi-Private,12:30 PM – 1:00 PM,0,,,,Semi-Private,Anthony C,4y-99y,2026-07-25
+Saturday,12:30 PM,Sibling-Friend Class / Semi-Private,12:30 PM – 1:00 PM,0,,,,Semi-Private,Kalani B,4y-99y,2026-07-25
+Saturday,12:30 PM,Special Needs / Private,12:30 PM – 1:00 PM,0,1,1,1:1,Private,Everett S,3y-99y,2026-07-25
+Saturday,1:30 PM,10 & Up / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Kalani B,10y-16y,2026-07-25
+Saturday,1:30 PM,6 / 7 Year / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Everett S,6y-7y,2026-07-25
+Saturday,1:30 PM,Competitive Stroke / Group,1:30 PM – 2:00 PM,4,,,,Group,Rhiannon C,8y-15y,2026-07-25
+Saturday,1:30 PM,Private Any Age,1:30 PM – 2:00 PM,0,1,1,1:1,Private,Brandon M,3y-99y,2026-07-25
+Saturday,1:30 PM,Sibling-Friend Class / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Ryan W,4y-16y,2026-07-25
+Saturday,2:00 PM,10 & Up / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Ryan W,10y-16y,2026-07-25
+Saturday,2:00 PM,10 & Up / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Kalani B,10y-15y,2026-07-25
+Saturday,2:00 PM,10 & Up / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Everett S,10y-12y,2026-07-25
+Saturday,2:00 PM,6 / 7 Year / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Brandon M,6y-7y,2026-07-25
+Saturday,2:00 PM,Private Any Age,2:00 PM – 2:30 PM,0,1,1,1:1,Private,Rhiannon C,3y-99y,2026-07-25
+Saturday,2:00 PM,Sibling-Friend Class / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Sydney R,3y-99y,2026-07-25
+Saturday,2:30 PM,10 & Up / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Everett S,10y-14y,2026-07-25
+Saturday,2:30 PM,8 / 9 Year / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Sydney R,7y-9y,2026-07-25
+Saturday,2:30 PM,Sibling-Friend Class / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Rhiannon C,4y-15y,2026-07-25
+Saturday,2:30 PM,Sibling-Friend Class / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Kalani B,4y-99y,2026-07-25
+Saturday,2:30 PM,Sibling-Friend Class / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Brandon M,4y-99y,2026-07-25
+Sunday,9:00 AM,8 / 9 Year / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Everett S,7y-9y,2026-07-26
+Sunday,9:00 AM,Sibling-Friend Class / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Anika K,4y-16y,2026-07-26
+Sunday,9:30 AM,8 / 9 Year / Semi-Private,9:30 AM – 10:00 AM,0,,,,Semi-Private,Anika K,8y-9y,2026-07-26
+Sunday,9:30 AM,Private Any Age,9:30 AM – 10:00 AM,0,1,1,1:1,Private,Everett S,3y-88y,2026-07-26
+Sunday,10:00 AM,4 / 5 Year / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Everett S,4y-5y,2026-07-26
+Sunday,10:00 AM,Adult Class / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Kevin R,15y-65y,2026-07-26
+Sunday,10:00 AM,Parent & Toddler (19-36 Months) / Group Class,10:00 AM – 10:30 AM,3,,,,Group,Sydney R,1y-3y,2026-07-26
+Sunday,10:00 AM,Sibling-Friend Class / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Anika K,4y-16y,2026-07-26
+Sunday,10:00 AM,Sibling-Friend Class / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Ella L,4y-99y,2026-07-26
+Sunday,10:30 AM,6 / 7 Year / Semi-Private,10:30 AM – 11:00 AM,0,,,,Semi-Private,Sydney R,5y-7y,2026-07-26
+Sunday,10:30 AM,8 / 9 Year / Semi-Private,10:30 AM – 11:00 AM,1,,,,Semi-Private,Anika K,7y-9y,2026-07-26
+Sunday,10:30 AM,8 / 9 Year / Semi-Private,10:30 AM – 11:00 AM,1,,,,Semi-Private,Ella L,4y-99y,2026-07-26
+Sunday,10:30 AM,Competitive Stroke / Group,10:30 AM – 11:00 AM,6,,,,Group,Kevin R,8y-15y,2026-07-26
+Sunday,10:30 AM,Sibling-Friend Class / Semi-Private,10:30 AM – 11:00 AM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-26
+Sunday,11:00 AM,4 / 5 Year / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Sydney R,4y-5y,2026-07-26
+Sunday,11:00 AM,Private Any Age,11:00 AM – 11:30 AM,0,1,1,1:1,Private,Everett S,3y-99y,2026-07-26
+Sunday,11:00 AM,Sibling-Friend Class / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Anika K,4y-16y,2026-07-26
+Sunday,11:00 AM,Technique & Conditioning 1 / Group,11:00 AM – 12:00 PM,1,,,,Group,Kevin R,8y-21y,2026-07-26
+Sunday,11:30 AM,6 / 7 Year / Semi-Private,11:30 AM – 12:00 PM,0,,,,Semi-Private,Anika K,5y-7y,2026-07-26
+Sunday,11:30 AM,6 / 7 Year / Semi-Private,11:30 AM – 12:00 PM,0,,,,Semi-Private,Everett S,6y-7y,2026-07-26
+Sunday,12:00 PM,6 / 7 Year / Semi-Private,12:00 PM – 12:30 PM,0,,,,Semi-Private,Anika K,6y-7y,2026-07-26
+Sunday,12:00 PM,6 / 7 Year / Semi-Private,12:00 PM – 12:30 PM,0,,,,Semi-Private,Sydney R,5y-7y,2026-07-26
+Sunday,12:00 PM,Private Any Age,12:00 PM – 12:30 PM,0,1,1,1:1,Private,Everett S,3y-99y,2026-07-26
+Sunday,12:00 PM,Technique & Conditioning 2 / Group,12:00 PM – 1:00 PM,6,,,,Group,Kevin R,8y-18y,2026-07-26
+Sunday,12:30 PM,Parent & Baby (6-18 Months) / Group Class,12:30 PM – 1:00 PM,4,,,,Group,Sydney R,1y,2026-07-26
+Sunday,12:30 PM,Sibling-Friend Class / Semi-Private,12:30 PM – 1:00 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-26
+Sunday,1:00 PM,10 & Up / Semi-Private,1:00 PM – 1:30 PM,0,,,,Semi-Private,Kevin R,10y-16y,2026-07-26
+Sunday,1:00 PM,4 / 5 Year / Semi-Private,1:00 PM – 1:30 PM,1,,,,Semi-Private,Sydney R,4y-99y,2026-07-26
+Sunday,1:00 PM,4 / 5 Year / Semi-Private,1:00 PM – 1:30 PM,0,,,,Semi-Private,Ryan W,4y-6y,2026-07-26
+Sunday,1:00 PM,Private Any Age,1:00 PM – 1:30 PM,0,1,1,1:1,Private,James D,3y-99y,2026-07-26
+Sunday,1:00 PM,Private Any Age,1:00 PM – 1:30 PM,0,1,1,1:1,Private,Kalani B,4y-15y,2026-07-26
+Sunday,1:00 PM,Private Any Age,1:00 PM – 1:30 PM,0,1,1,1:1,Private,"Jess P, Shonte M",3y-99y,2026-07-26
+Sunday,1:00 PM,Sibling-Friend Class / Semi-Private,1:00 PM – 1:30 PM,0,,,,Semi-Private,Anika K,4y-99y,2026-07-26
+Sunday,1:00 PM,Sibling-Friend Class / Semi-Private,1:00 PM – 1:30 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-26
+Sunday,1:30 PM,10 & Up / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Sydney R,10y-15y,2026-07-26
+Sunday,1:30 PM,10 & Up / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Kalani B,8y-9y,2026-07-26
+Sunday,1:30 PM,10 & Up Year / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Ryan W,10y-16y,2026-07-26
+Sunday,1:30 PM,6 / 7 Year / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Anika K,6y-7y,2026-07-26
+Sunday,1:30 PM,8 / 9 Year / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,James D,8y-9y,2026-07-26
+Sunday,1:30 PM,Sibling-Friend Class / Semi Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Everett S,4y-99y,2026-07-26
+Sunday,1:30 PM,Sibling-Friend Class / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",4y-99y,2026-07-26
+Sunday,2:00 PM,10 & Up / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Sydney R,9y-15y,2026-07-26
+Sunday,2:00 PM,10 & Up / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Kevin R,10y-15y,2026-07-26
+Sunday,2:00 PM,4 / 5 Year / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Kalani B,4y-5y,2026-07-26
+Sunday,2:00 PM,4 / 5 Year / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",4y-5y,2026-07-26
+Sunday,2:00 PM,Private Any Age,2:00 PM – 2:30 PM,0,1,1,1:1,Private,Ryan W,3y-99y,2026-07-26
+Sunday,2:00 PM,Sibling-Friend Class / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,James D,4y-99y,2026-07-26
+Sunday,2:30 PM,10 & Up / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,James D,10y-15y,2026-07-26
+Sunday,2:30 PM,Adult Class / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Ryan W,18y-99y,2026-07-26
+Sunday,2:30 PM,Sibling-Friend Class / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",4y-99y,2026-07-26
+Sunday,2:30 PM,Sibling-Friend Class / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Kalani B,4y-99y,2026-07-26
+Sunday,2:30 PM,Technique & Conditioning 1 / Private,2:30 PM – 3:00 PM,0,1,1,1:1,Private,Kevin R,8y-18y,2026-07-26
+Sunday,3:00 PM,Adult Class / Semi-Private,3:00 PM – 3:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",18y-99y,2026-07-26
+Sunday,3:00 PM,Parent & Toddler (19-36 Months) / Group Class,3:00 PM – 3:30 PM,4,,,,Group,Sydney R,1y-3y,2026-07-26
+Sunday,3:00 PM,Private Any Age,3:00 PM – 3:30 PM,0,1,1,1:1,Private,Kevin R,3y-99y,2026-07-26
+Sunday,3:00 PM,Sibling-Friend Class / Semi-Private,3:00 PM – 3:30 PM,0,,,,Semi-Private,Ryan W,4y-16y,2026-07-26
+Sunday,3:00 PM,Sibling-Friend Class / Semi-Private,3:00 PM – 3:30 PM,0,,,,Semi-Private,James D,4y-16y,2026-07-26
+Sunday,3:30 PM,4 / 5 Year / Semi-Private,3:30 PM – 4:00 PM,0,,,,Semi-Private,James D,4y-5y,2026-07-26
+Sunday,3:30 PM,6 / 7 Year / Semi-Private,3:30 PM – 4:00 PM,1,,,,Semi-Private,"Jess P, Shonte M",6y-7y,2026-07-26
+Sunday,3:30 PM,Private Any Age,3:30 PM – 4:00 PM,0,1,1,1:1,Private,Kevin R,10y-99y,2026-07-26
+Sunday,4:00 PM,10 & Up / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Ryan W,9y-15y,2026-07-26
+Sunday,4:00 PM,6 / 7 Year / Semi-Private,4:00 PM – 4:30 PM,1,,,,Semi-Private,Kalani B,5y-7y,2026-07-26
+Sunday,4:00 PM,8 / 9 Year / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Sydney R,8y-9y,2026-07-26
+Sunday,4:00 PM,8 / 9 Year / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Kevin R,8y-9y,2026-07-26
+Sunday,4:00 PM,Special Needs / Private,4:00 PM – 4:30 PM,0,1,1,1:1,Private,James D,4y-99y,2026-07-26
+Sunday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,James D,6y-7y,2026-07-26
+Sunday,4:30 PM,8 / 9 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",8y-9y,2026-07-26
+Sunday,4:30 PM,8 / 9 Year / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Ryan W,8y-9y,2026-07-26
+Sunday,4:30 PM,Adult Class / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Kalani B,18y-99y,2026-07-26
+Sunday,4:30 PM,Sibling-Friend Class / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Kevin R,4y-99y,2026-07-26
+Sunday,5:00 PM,4 / 5 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Kalani B,4y-5y,2026-07-26
+Sunday,5:00 PM,Competitive Stroke / Group,5:00 PM – 5:30 PM,4,,,,Group,Kevin R,8y-14y,2026-07-26
+Sunday,5:00 PM,Private Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,"Jess P, Shonte M",3y-99y,2026-07-26
+Sunday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Ryan W,4y-99y,2026-07-26
+Sunday,5:00 PM,Special Needs / Private,5:00 PM – 5:30 PM,0,1,1,1:1,Private,James D,4y-99y,2026-07-26
+Sunday,5:30 PM,6 / 7 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,"Jess P, Shonte M",6y-7y,2026-07-26
+Sunday,5:30 PM,Adult Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Ryan W,18y-99y,2026-07-26
+Sunday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Kalani B,3y-16y,2026-07-26
+Sunday,6:00 PM,Private Any Age,6:00 PM – 6:30 PM,0,1,1,1:1,Private,Kalani B,3y-99y,2026-07-26
+Sunday,6:00 PM,Sibling-Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,"Jess P, Shonte M",4y-99y,2026-07-26
+Sunday,6:00 PM,Sibling-Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Ryan W,4y-16y,2026-07-26

@@ -1,0 +1,130 @@
+Day,Time,Class Level,Time Range,Spots Left,Total Capacity,Enrolled,Student:Teacher Ratio,Class Type,Instructor,Age Range,Next Available
+Monday,4:00 PM,4 / 5 Year / Semi-Private,4:00 PM – 4:30 PM,1,,,,Semi-Private,Joey S,4y-5y,2026-07-27
+Monday,4:00 PM,Private / Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Skyler B,99y,2026-07-27
+Monday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Lilly F,2y-99y,2026-07-27
+Monday,4:30 PM,4 / 5 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Skyler B,4y-5y,2026-07-27
+Monday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Lilly F,6y-7y,2026-07-27
+Monday,4:30 PM,Special Needs / Private,4:30 PM – 5:00 PM,0,1,1,1:1,Private,Joey S,3y-12y,2026-07-27
+Monday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,1,,,,Semi-Private,Lilly F,10y-15y,2026-07-27
+Monday,5:00 PM,8 / 9 Year / Semi-Private,5:00 PM – 5:30 PM,1,,,,Semi-Private,Joey S,8y-9y,2026-07-27
+Monday,5:00 PM,8 / 9 Year / Semi-Private,5:00 PM – 5:30 PM,2,,,,Semi-Private,Skyler B,8y-9y,2026-07-27
+Monday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,1,,,,Semi-Private,Joey S,10y-15y,2026-07-27
+Monday,5:30 PM,10 & Up / Semi-Private,5:30 PM – 6:00 PM,1,,,,Semi-Private,Lilly F,10y-16y,2026-07-27
+Monday,5:30 PM,4 / 5 Year / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Skyler B,4y-5y,2026-07-27
+Monday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Skyler B,10y-15y,2026-07-27
+Monday,6:00 PM,4 / 5 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Joey S,4y-5y,2026-07-27
+Monday,6:00 PM,Parent & Baby / Toddler (6-36 Months) / Group Class,6:00 PM – 6:30 PM,3,,,,Group,Lilly F,6mo-3y,2026-07-27
+Monday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,1,,,,Semi-Private,Skyler B,6y-7y,2026-07-27
+Monday,6:30 PM,6 / 7 Year / Semi-Private,6:30 PM – 7:00 PM,1,,,,Semi-Private,Joey S,6y-7y,2026-07-27
+Monday,7:00 PM,Adult Class / Semi-Private,7:00 PM – 7:30 PM,1,,,,Semi-Private,Lilly F,15y-99y,2026-07-27
+Monday,7:00 PM,Adult Group Class,7:00 PM – 8:00 PM,1,,,,Group,"Joey S, Skyler B",16y-99y,2026-07-27
+Tuesday,4:00 PM,4 / 5 Year / Semi-Private,4:00 PM – 4:30 PM,1,,,,Semi-Private,Karla F,3y-5y,2026-07-21
+Tuesday,4:00 PM,6 / 7 Year / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Lilly F,6y-7y,2026-07-21
+Tuesday,4:00 PM,Sibling-Friend Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Kayla G,4y-16y,2026-07-21
+Tuesday,4:30 PM,4 / 5 Year / Semi-Private,4:30 PM – 5:00 PM,2,,,,Semi-Private,Karla F,3y-5y,2026-07-21
+Tuesday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,1,,,,Semi-Private,Kayla G,6y-7y,2026-07-21
+Tuesday,4:30 PM,Private Any Age,4:30 PM – 5:00 PM,0,1,1,1:1,Private,Lilly F,3y-99y,2026-07-21
+Tuesday,5:00 PM,Adult Class / Semi-Private,5:00 PM – 5:30 PM,1,,,,Semi-Private,Lilly F,18y-75y,2026-07-21
+Tuesday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Karla F,3y-99y,2026-07-21
+Tuesday,5:00 PM,Sibling-Friend Class / Semi-Private (Private Makeup 7 / 28),5:00 PM – 5:30 PM,0,,,,Semi-Private,Kayla G,4y-15y,2026-07-21
+Tuesday,5:30 PM,Adult Class / Semi-Private,5:30 PM – 6:00 PM,2,,,,Semi-Private,Kayla G,18y-99y,2026-07-21
+Tuesday,5:30 PM,Private Any Age,5:30 PM – 6:00 PM,0,1,1,1:1,Private,Karla F,4y-16y,2026-07-21
+Tuesday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Lilly F,4y-5y,2026-07-21
+Tuesday,6:00 PM,4 / 5 Year / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Karla F,3y-5y,2026-07-21
+Tuesday,6:00 PM,Private Any Age,6:00 PM – 6:30 PM,0,1,1,1:1,Private,Lilly F,3y-99y,2026-07-21
+Tuesday,6:00 PM,Sibling-Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Kayla G,4y-15y,2026-07-21
+Tuesday,6:30 PM,10 & Up / Semi-Private,6:30 PM – 7:00 PM,2,,,,Semi-Private,Karla F,9y-15y,2026-07-21
+Tuesday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Kayla G,4y-16y,2026-07-21
+Tuesday,7:00 PM,10 & Up / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Kayla G,10y-16y,2026-07-21
+Tuesday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Karla F,3y-94y,2026-07-21
+Tuesday,7:00 PM,Special Needs / Private,7:00 PM – 7:30 PM,0,1,1,1:1,Private,Lilly F,9y-15y,2026-07-21
+Tuesday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,Lilly F,3y-99y,2026-07-21
+Tuesday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,Kayla G,3y-9y,2026-07-21
+Tuesday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,Karla F,3y-99y,2026-07-21
+Wednesday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Hannah N,3y-99y,2026-07-22
+Wednesday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Hannah N,6y-7y,2026-07-22
+Wednesday,4:30 PM,Sibling-Friend Class / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Lilly F,4y-16y,2026-07-22
+Wednesday,5:00 PM,10 & Up / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Lilly F,10y-15y,2026-07-22
+Wednesday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Hannah N,4y-99y,2026-07-22
+Wednesday,5:30 PM,4 / 5 Year / Semi-Private,5:30 PM – 6:00 PM,2,,,,Semi-Private,Hannah N,4y-5y,2026-07-22
+Wednesday,5:30 PM,Adult Class / Semi-Private,5:30 PM – 6:00 PM,1,,,,Semi-Private,Lilly F,14y-65y,2026-07-22
+Wednesday,6:00 PM,4 / 5 Year / Semi-Private,6:00 PM – 6:30 PM,1,,,,Semi-Private,Lilly F,4y-99y,2026-07-22
+Wednesday,6:00 PM,Sibling-Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Hannah N,4y-99y,2026-07-22
+Wednesday,6:30 PM,4 / 5 Year / Semi-Private,6:30 PM – 7:00 PM,1,,,,Semi-Private,Hannah N,4y-5y,2026-07-22
+Wednesday,6:30 PM,Private Any Age,6:30 PM – 7:00 PM,0,1,1,1:1,Private,Lilly F,3y-99y,2026-07-22
+Wednesday,7:00 PM,Adult Class / Semi-Private,7:00 PM – 7:30 PM,1,,,,Semi-Private,Hannah N,18y-75y,2026-07-22
+Wednesday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Lilly F,4y-99y,2026-07-22
+Wednesday,7:30 PM,4 / 5 Year / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Hannah N,4y-5y,2026-07-22
+Wednesday,7:30 PM,6 / 7 Year / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Lilly F,6y-7y,2026-07-22
+Thursday,10:00 AM,Adult Class / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Stefany Z,18y-75y,2026-07-23
+Thursday,10:30 AM,4 / 5 Year / Semi-Private,10:30 AM – 11:00 AM,1,,,,Semi-Private,Stefany Z,4y-5y,2026-07-23
+Thursday,11:00 AM,Adult Class / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Stefany Z,18y-99y,2026-07-23
+Thursday,11:30 AM,4 / 5 Year / Semi-Private,11:30 AM – 12:00 PM,1,,,,Semi-Private,Stefany Z,4y-5y,2026-07-23
+Thursday,4:00 PM,Adult Class / Semi-Private,4:00 PM – 4:30 PM,0,,,,Semi-Private,Kayla G,16y-99y,2026-07-23
+Thursday,4:00 PM,Private Any Age,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Karla F,3y-99y,2026-07-23
+Thursday,4:00 PM,Private Any Age (Makeups Only From 6 / 25-7 / 23),4:00 PM – 4:30 PM,0,1,1,1:1,Private,Julie W,4y-77y,2026-07-23
+Thursday,4:30 PM,Private Any Age (Makeups Only From 6 / 25-7 / 23),4:30 PM – 5:00 PM,0,1,1,1:1,Private,Julie W,4y-99y,2026-07-23
+Thursday,4:30 PM,Private Any Age (Makeups Only From 6 / 25-7 / 23),4:30 PM – 5:00 PM,0,1,1,1:1,Private,Kayla G,4y-99y,2026-07-23
+Thursday,4:30 PM,Sibling-Friend Class / Semi-Private,4:30 PM – 5:00 PM,2,,,,Semi-Private,Karla F,3y-16y,2026-07-23
+Thursday,5:00 PM,4 / 5 Year / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Kayla G,4y-5y,2026-07-23
+Thursday,5:00 PM,Parent & Baby / Toddler (6-36 Months) / Group Class,5:00 PM – 5:30 PM,3,,,,Group,Julie W,6mo-3y,2026-07-23
+Thursday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Karla F,3y-99y,2026-07-23
+Thursday,5:30 PM,Private Any Age,5:30 PM – 6:00 PM,0,1,1,1:1,Private,Kayla G,3y-99y,2026-07-23
+Thursday,5:30 PM,Private Any Age,5:30 PM – 6:00 PM,0,1,1,1:1,Private,Julie W,3y-99y,2026-07-23
+Thursday,5:30 PM,Sibling-Friend Class / Semi-Private,5:30 PM – 6:00 PM,0,,,,Semi-Private,Karla F,4y-16y,2026-07-23
+Thursday,6:00 PM,10 & Up / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Kayla G,10y-15y,2026-07-23
+Thursday,6:00 PM,Private Any Age,6:00 PM – 6:30 PM,0,1,1,1:1,Private,Karla F,3y-99y,2026-07-23
+Thursday,6:00 PM,Sibling - Friend Class / Semi-Private,6:00 PM – 6:30 PM,0,,,,Semi-Private,Julie W,4y-99y,2026-07-23
+Thursday,6:30 PM,Private Any Age,6:30 PM – 7:00 PM,0,1,1,1:1,Private,Julie W,4y-99y,2026-07-23
+Thursday,6:30 PM,Sibling-Friend / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Kayla G,4y-99y,2026-07-23
+Thursday,6:30 PM,Sibling-Friend Class / Semi-Private,6:30 PM – 7:00 PM,0,,,,Semi-Private,Karla F,3y-99y,2026-07-23
+Thursday,7:00 PM,Sibling-Friend / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Karla F,4y-16y,2026-07-23
+Thursday,7:00 PM,Sibling-Friend Class / Semi-Private,7:00 PM – 7:30 PM,0,,,,Semi-Private,Kayla G,4y-17y,2026-07-23
+Thursday,7:30 PM,Adult Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Karla F,15y-99y,2026-07-23
+Thursday,7:30 PM,Private Any Age,7:30 PM – 8:00 PM,0,1,1,1:1,Private,Kayla G,3y-75y,2026-07-23
+Thursday,7:30 PM,Sibling - Friend Class / Semi-Private,7:30 PM – 8:00 PM,0,,,,Semi-Private,Julie W,4y-99y,2026-07-23
+Saturday,9:00 AM,Sibling - Friend Class / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Skyler B,4y-99y,2026-07-25
+Saturday,9:00 AM,Sibling - Friend Class / Semi-Private,9:00 AM – 9:30 AM,0,,,,Semi-Private,Hannah N,4y-99y,2026-07-25
+Saturday,9:30 AM,8 / 9 Year / Semi-Private,9:30 AM – 10:00 AM,1,,,,Semi-Private,Skyler B,8y-9y,2026-07-25
+Saturday,9:30 AM,Sibling - Friend Class / Semi-Private,9:30 AM – 10:00 AM,0,,,,Semi-Private,Hannah N,4y-99y,2026-07-25
+Saturday,10:00 AM,4 / 5 Year / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Hannah N,4y-5y,2026-07-25
+Saturday,10:00 AM,6 / 7 Year / Semi-Private,10:00 AM – 10:30 AM,0,,,,Semi-Private,Joey S,5y-7y,2026-07-25
+Saturday,10:00 AM,Special Needs / Private,10:00 AM – 10:30 AM,0,1,1,1:1,Private,Skyler B,4y-16y,2026-07-25
+Saturday,10:30 AM,6 / 7 Year / Semi-Private,10:30 AM – 11:00 AM,1,,,,Semi-Private,Skyler B,6y-7y,2026-07-25
+Saturday,10:30 AM,8 / 9 Year / Semi-Private,10:30 AM – 11:00 AM,0,,,,Semi-Private,Hannah N,7y-9y,2026-07-25
+Saturday,10:30 AM,Private Any Age,10:30 AM – 11:00 AM,0,1,1,1:1,Private,Joey S,3y-99y,2026-07-25
+Saturday,11:00 AM,4 / 5 Year / Semi-Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Joey S,4y-5y,2026-07-25
+Saturday,11:00 AM,Parent & Baby / Toddler (6-36 Months) / Group Class,11:00 AM – 11:30 AM,2,,,,Group,Hannah N,6mo-3y,2026-07-25
+Saturday,11:00 AM,Sibling-Friend Class / Semi -Private,11:00 AM – 11:30 AM,0,,,,Semi-Private,Skyler B,4y-99y,2026-07-25
+Saturday,11:30 AM,10 & Up / Semi-Private,11:30 AM – 12:00 PM,1,,,,Semi-Private,Skyler B,10y-16y,2026-07-25
+Saturday,11:30 AM,8 / 9 Year / Semi-Private,11:30 AM – 12:00 PM,0,,,,Semi-Private,Joey S,8y-9y,2026-07-25
+Saturday,11:30 AM,Parent & Baby / Toddler (6-36 Months) / Group Class,11:30 AM – 12:00 PM,3,,,,Group,Hannah N,6mo-3y,2026-07-25
+Saturday,12:00 PM,10 & Up Semi-Private Class,12:00 PM – 12:30 PM,1,,,,Semi-Private,Hannah N,10y-99y,2026-07-25
+Saturday,12:00 PM,Adult Private Class,12:00 PM – 12:30 PM,0,1,1,1:1,Private,Skyler B,16y-90y,2026-07-25
+Saturday,12:00 PM,Special Needs / Private (4 / 5 Semi-Private Makeup 7 / 25),12:00 PM – 12:30 PM,0,,,,Semi-Private,Joey S,7y-14y,2026-07-25
+Saturday,1:00 PM,4 / 5 Year / Semi-Private,1:00 PM – 1:30 PM,0,,,,Semi-Private,Hannah N,4y-5y,2026-07-25
+Saturday,1:00 PM,Private Any Age,1:00 PM – 1:30 PM,1,1,0,1:1,Private,Skyler B,3y-99y,2026-07-25
+Saturday,1:30 PM,4 / 5 Year / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Hannah N,4y-5y,2026-07-25
+Saturday,2:00 PM,4 / 5 Year / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Skyler B,4y-5y,2026-07-25
+Saturday,2:00 PM,Private Any Age,2:00 PM – 2:30 PM,0,1,1,1:1,Private,Hannah N,3y-99y,2026-07-25
+Saturday,2:30 PM,8 / 9 Year / Semi-Private (6 / 7 Semi-Pri Makeup 7 / 11),2:30 PM – 3:00 PM,2,,,,Semi-Private,Skyler B,7y-9y,2026-07-25
+Saturday,2:30 PM,Sibling-Friend Class / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Hannah N,4y-16y,2026-07-25
+Sunday,1:00 PM,Sibling-Friend Class,1:00 PM – 1:30 PM,0,,,,,Karla F,4y-16y,2026-07-26
+Sunday,1:00 PM,Sibling-Friend Class / Semi-Private,1:00 PM – 1:30 PM,0,,,,Semi-Private,Julie W,3y-99y,2026-07-26
+Sunday,1:30 PM,10 & Up / Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Karla F,10y-16y,2026-07-26
+Sunday,1:30 PM,Sibling / Friend Semi-Private,1:30 PM – 2:00 PM,0,,,,Semi-Private,Julie W,4y-18y,2026-07-26
+Sunday,2:00 PM,8 / 9 Year / Semi-Private,2:00 PM – 2:30 PM,0,,,,Semi-Private,Karla F,8y-9y,2026-07-26
+Sunday,2:00 PM,Private Any Age,2:00 PM – 2:30 PM,0,1,1,1:1,Private,Julie W,3y-99y,2026-07-26
+Sunday,2:30 PM,10 & Up / Semi-Private,2:30 PM – 3:00 PM,0,,,,Semi-Private,Julie W,10y-15y,2026-07-26
+Sunday,2:30 PM,Private Any Age,2:30 PM – 3:00 PM,0,1,1,1:1,Private,Karla F,3y-99y,2026-07-26
+Sunday,3:00 PM,Adult Class / Semi-Private,3:00 PM – 3:30 PM,0,,,,Semi-Private,Julie W,15y-99y,2026-07-26
+Sunday,3:00 PM,Sibling-Friend Class / Semi-Private,3:00 PM – 3:30 PM,0,,,,Semi-Private,Karla F,4y-16y,2026-07-26
+Sunday,3:30 PM,Sibling / Friend Semi-Private,3:30 PM – 4:00 PM,0,,,,Semi-Private,Karla F,3y-16y,2026-07-26
+Sunday,3:30 PM,Special Needs / Private,3:30 PM – 4:00 PM,0,1,1,1:1,Private,Julie W,2y-15y,2026-07-26
+Sunday,4:00 PM,Special Needs / Private,4:00 PM – 4:30 PM,0,1,1,1:1,Private,Julie W,1y-88y,2026-07-26
+Sunday,4:30 PM,6 / 7 Year / Semi-Private,4:30 PM – 5:00 PM,0,,,,Semi-Private,Karla F,6y-7y,2026-07-26
+Sunday,4:30 PM,Parent & Baby / Toddler (6-36 Months) / Group Class,4:30 PM – 5:00 PM,0,,,,Group,Julie W,6mo-3y,2026-07-26
+Sunday,5:00 PM,Private / Any Age,5:00 PM – 5:30 PM,0,1,1,1:1,Private,Julie W,1y-99y,2026-07-26
+Sunday,5:00 PM,Sibling-Friend Class / Semi-Private,5:00 PM – 5:30 PM,0,,,,Semi-Private,Karla F,4y-99y,2026-07-26
+Sunday,5:30 PM,8 / 9 Year / Semi-Private,5:30 PM – 6:00 PM,1,,,,Semi-Private,Julie W,8y-9y,2026-07-26
+Sunday,5:30 PM,Special Needs Private,5:30 PM – 6:00 PM,0,1,1,1:1,Private,Karla F,4y-99y,2026-07-26
