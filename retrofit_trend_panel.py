@@ -66,6 +66,7 @@ TREND_HTML = """
                 <span style="letter-spacing:1px;">&#9679;&middot;&middot;&middot;&middot; pre-season pull (enrollment open, session not started)</span>
                 <span style="opacity:0.55;">&#9472;&#9472;&#9472; last value held (session still operating, no newer pull)</span>
                 <span id="trendSimKey" style="display:none;">&#9472; &#9472; simulated demo pull</span>
+                <span style="color:#b7791f;">&#9472;&#9472; target (80&ndash;85% of Fall seats offered)</span>
             </div>
             <div class="chart-title" style="font-size:14px;margin-top:22px;margin-bottom:10px;">Biggest movers since previous pull <span style="font-weight:400;color:#718096;" id="trendMoversRange"></span></div>
             <table id="trendMoversTable"></table>
@@ -113,6 +114,11 @@ TREND_JS = r"""
         // Session calendar: name -> {start, end, catalog_from}
         const SESSION_META = {};
         (H.sessions || []).forEach(s => { SESSION_META[s.name] = s; });
+
+        // Enrollment targets: session name -> {totalSeats, targetLow, targetHigh, targetMid, targetLowPct, targetHighPct, targetDate}
+        // Populated from a live pull of the session's posted class capacity
+        // (Total Slots) before/at enrollment open — see fall_2026_targets.json.
+        const TARGETS = H.targets || {};
 
         // Pre-parse "Day|HH:MM|Level" slot keys once.
         const SNAPS = H.snapshots.map(s => {
@@ -189,6 +195,31 @@ TREND_JS = r"""
             }
         };
 
+        // Vertical "target check-in" markers (e.g. Fall 2026 Oct-5 goal date).
+        let targetMarkers = [];
+        const targetMarkerPlugin = {
+            id: 'targetMarker',
+            afterDatasetsDraw(chart) {
+                const x = chart.scales && chart.scales.x, area = chart.chartArea, ctx = chart.ctx;
+                if (!x || !area) return;
+                targetMarkers.forEach(m => {
+                    if (m.index < 0) return;
+                    const px = x.getPixelForValue(m.index);
+                    if (!(px >= area.left - 1 && px <= area.right + 1)) return;
+                    ctx.save();
+                    ctx.strokeStyle = 'rgba(214,158,46,0.65)';
+                    ctx.setLineDash([3, 3]);
+                    ctx.beginPath(); ctx.moveTo(px, area.top); ctx.lineTo(px, area.bottom); ctx.stroke();
+                    ctx.setLineDash([]);
+                    ctx.fillStyle = '#b7791f';
+                    ctx.font = '600 11px -apple-system, BlinkMacSystemFont, sans-serif';
+                    ctx.textAlign = 'right';
+                    ctx.fillText(m.label, px - 5, area.top + 12);
+                    ctx.restore();
+                });
+            }
+        };
+
         let trendChart = null;
 
         window.updateTrendChart = function () {
@@ -232,6 +263,19 @@ TREND_JS = r"""
                 if (carryEnd > lastPull) dateSet.add(carryEnd);
                 if (meta.start >= pulls[0].date && meta.start <= GLOBAL_MAX_DATE) dateSet.add(meta.start);
             });
+            // A session can have zero pulls yet still show its target line/marker
+            // (e.g. Fall 2026 before the season starts) — anchor the axis on the
+            // session's start/end even with no data pulls in view yet.
+            if (by === 'total') {
+                inViewSessions.forEach(name => {
+                    const tgt = TARGETS[name];
+                    const meta = SESSION_META[name];
+                    if (!tgt || !tgt.totalSeats || !meta) return;
+                    dateSet.add(tgt.targetDate);
+                    dateSet.add(meta.start);
+                    dateSet.add(meta.end);
+                });
+            }
             const axisDates = [...dateSet].sort();
             const labels = axisDates.map(fmtDate);
 
@@ -242,6 +286,16 @@ TREND_JS = r"""
                 const idx = axisDates.indexOf(meta.start);
                 if (idx >= 0) sessionMarkers.push({ index: idx, label: name + ' session starts' });
             });
+
+            targetMarkers = [];
+            if (by === 'total') {
+                inViewSessions.forEach(name => {
+                    const tgt = TARGETS[name];
+                    if (!tgt || !tgt.totalSeats) return;
+                    const idx = axisDates.indexOf(tgt.targetDate);
+                    if (idx >= 0) targetMarkers.push({ index: idx, label: 'Target check-in ' + fmtDate(tgt.targetDate) });
+                });
+            }
 
             const metricLabel = metric === 'util' ? 'Utilization %' : (metric === 'open' ? 'Open Spots' : 'Enrolled');
             const suffix = metric === 'util' ? '%' : '';
@@ -312,6 +366,49 @@ TREND_JS = r"""
                 });
             });
 
+            // Target/goal line(s) — flat reference at the assumed fill rate
+            // (80-85% of the seats FOSS posted for that session), shown only
+            // for the "Total" grouping so it doesn't fragment into per-level
+            // noise. Independent of whether real pulls exist yet for the
+            // session, so the goal is visible as soon as a season's capacity
+            // has been pulled, even pre-enrollment.
+            if (by === 'total') {
+                inViewSessions.forEach(name => {
+                    const tgt = TARGETS[name];
+                    const meta = SESSION_META[name];
+                    if (!tgt || !tgt.totalSeats || !meta) return;
+                    let tgtValue, bandLabel;
+                    if (metric === 'util') {
+                        tgtValue = +(tgt.targetMid / tgt.totalSeats * 100).toFixed(1);
+                        bandLabel = Math.round(tgt.targetLowPct * 100) + '–' + Math.round(tgt.targetHighPct * 100) + '%';
+                    } else if (metric === 'open') {
+                        tgtValue = tgt.totalSeats - tgt.targetMid;
+                        bandLabel = (tgt.totalSeats - tgt.targetHigh) + '–' + (tgt.totalSeats - tgt.targetLow) + ' open';
+                    } else {
+                        tgtValue = tgt.targetMid;
+                        bandLabel = tgt.targetLow + '–' + tgt.targetHigh + ' enrolled';
+                    }
+                    const data = axisDates.map(d => (d >= meta.start && d <= meta.end) ? tgtValue : null);
+                    if (!data.some(v => v !== null)) return;
+                    datasets.push({
+                        label: 'Target (' + Math.round(tgt.targetLowPct * 100) + '–' + Math.round(tgt.targetHighPct * 100) + '% of ' + tgt.totalSeats + ' seats by ' + fmtDate(tgt.targetDate) + ')',
+                        data,
+                        borderColor: '#d69e2e',
+                        backgroundColor: '#d69e2e',
+                        borderWidth: 2,
+                        borderDash: [6, 3],
+                        pointRadius: 0,
+                        pointHoverRadius: 4,
+                        tension: 0,
+                        spanGaps: false,
+                        order: -1,
+                        _isTarget: true,
+                        _targetBand: bandLabel,
+                        _targetAsOf: tgt.asOf
+                    });
+                });
+            }
+
             // Destroy whatever chart currently owns the canvas (not just our
             // reference) so a failed render can never wedge the canvas.
             const canvas = document.getElementById('trendChart');
@@ -320,7 +417,7 @@ TREND_JS = r"""
             trendChart = new Chart(canvas.getContext('2d'), {
                 type: 'line',
                 data: { labels, datasets },
-                plugins: [sessionStartPlugin],
+                plugins: [sessionStartPlugin, targetMarkerPlugin],
                 options: {
                     responsive: true, maintainAspectRatio: false, animation: false,
                     interaction: { mode: 'index', intersect: false },
@@ -337,6 +434,9 @@ TREND_JS = r"""
                                     const v = ctx.parsed.y;
                                     if (v === null) return null;
                                     const ds = ctx.dataset;
+                                    if (ds._isTarget) {
+                                        return ds.label + ': ' + v + suffix + '  (band ' + ds._targetBand + ', capacity as of ' + ds._targetAsOf + ')';
+                                    }
                                     const k = ds._kinds[ctx.dataIndex];
                                     const d = axisDates[ctx.dataIndex];
                                     let note = '';
@@ -437,6 +537,41 @@ TREND_JS = r"""
     </script>
 """
 
+def upgrade(slug):
+    """Re-inject the trend HTML legend + JS block into an already-retrofitted
+    dashboard, replacing the old versions in place. Idempotent: skips files
+    that already carry the current 'targetMarker' plugin marker."""
+    path = os.path.join(REPO, f'{slug}.html')
+    with open(path, encoding='utf-8') as f:
+        html = f.read()
+
+    if 'id="trendCard"' not in html:
+        print(f'  skip {slug}: no trend panel present yet (run build() first)')
+        return False
+    if "id: 'targetMarker'" in html:
+        print(f'  skip {slug}: already upgraded')
+        return False
+
+    # Replace the trend HTML block (card + legend + controls + movers table).
+    html_pat = re.compile(
+        r'<div class="chart-card trend-card" id="trendCard">.*?'
+        r'<table id="trendMoversTable"></table>\s*</div>', re.S)
+    html2, n1 = html_pat.subn(TREND_HTML.strip('\n'), html, count=1)
+
+    # Replace the trend <script> block.
+    js_pat = re.compile(
+        r'<script>\s*\(function \(\) \{\s*if \(typeof ENROLLMENT_HISTORY.*?\}\)\(\);\s*</script>', re.S)
+    html3, n2 = js_pat.subn(TREND_JS.strip('\n'), html2, count=1)
+
+    if not (n1 and n2):
+        raise SystemExit(f'{slug}: upgrade anchor not found: html={n1} js={n2}')
+
+    with open(path, 'w', encoding='utf-8') as f:
+        f.write(html3)
+    print(f'  OK   {slug} (upgraded)')
+    return True
+
+
 def build(slug):
     path = os.path.join(REPO, f'{slug}.html')
     with open(path, encoding='utf-8') as f:
@@ -488,9 +623,13 @@ SLUGS = ['blaine', 'chanhassen', 'glenview', 'highland_park', 'lakeview',
 
 if __name__ == '__main__':
     args = sys.argv[1:]
+    upgrading = '--upgrade-targets' in args
+    if upgrading:
+        args = [a for a in args if a != '--upgrade-targets']
     slugs = SLUGS if '--all' in args else [a for a in args if a in SLUGS]
     if not slugs:
         print(__doc__)
         sys.exit(1)
-    done = sum(build(s) for s in slugs)
+    fn = upgrade if upgrading else build
+    done = sum(fn(s) for s in slugs)
     print(f'{done} dashboards updated, {len(slugs) - done} skipped')
