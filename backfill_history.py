@@ -31,6 +31,24 @@ SLUGS = {
     'sun_prairie': 'Sun Prairie, WI', 'western_springs': 'Western Springs, IL',
     'westminster': 'Westminster, CO', 'woodbury': 'Woodbury, MN',
     'south_barrington': 'South Barrington, IL',
+    'savage': 'Savage, MN',
+    'st_paul': 'St. Paul, MN',
+    'elmwood_park': 'Elmwood Park, IL',
+    'plymouth': 'Plymouth, MN',
+    'fargo': 'Fargo, ND',
+    'ankeny': 'Ankeny, IA',
+    'ballwin': 'Ballwin, MO',
+    'st_charles': 'St. Charles, MO',
+    'vadnais_heights': 'Vadnais Heights, MN',
+    'rock_hill': 'Rock Hill, MO',
+    'burnsville': 'Burnsville, MN',
+    'creve_coeur': 'Creve Coeur, MO',
+    'apple_valley': 'Apple Valley, MN',
+    'bolingbrook': 'Bolingbrook, IL',
+    'castle_rock': 'Castle Rock, CO',
+    'lone_tree': 'Lone Tree, CO',
+    'parker': 'Parker, CO',
+    'otsego': 'Otsego, MN',
 }
 
 # Session calendar. catalog_from = the date this session's catalog became the
@@ -39,6 +57,7 @@ SLUGS = {
 SESSIONS = [
     {"name": "Spring 2026", "start": "2026-03-16", "end": "2026-06-14", "catalog_from": "2026-01-01"},
     {"name": "Summer 2026", "start": "2026-06-15", "end": "2026-08-30", "catalog_from": "2026-05-12"},
+    {"name": "Fall 2026", "start": "2026-08-31", "end": "2026-11-29", "catalog_from": "2026-08-04"},
 ]
 
 CATEGORY_MAP = {

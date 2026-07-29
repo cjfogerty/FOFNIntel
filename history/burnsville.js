@@ -1,0 +1,1 @@
+const ENROLLMENT_HISTORY = {"location":"Burnsville, MN","slug":"burnsville","sessions":[{"name":"Spring 2026","start":"2026-03-16","end":"2026-06-14","catalog_from":"2026-01-01"},{"name":"Summer 2026","start":"2026-06-15","end":"2026-08-30","catalog_from":"2026-05-12"}],"snapshots":[]};

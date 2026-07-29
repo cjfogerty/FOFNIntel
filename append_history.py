@@ -26,6 +26,7 @@ from datetime import datetime
 SESSIONS = [
     {"name": "Spring 2026", "start": "2026-03-16", "end": "2026-06-14", "catalog_from": "2026-01-01"},
     {"name": "Summer 2026", "start": "2026-06-15", "end": "2026-08-30", "catalog_from": "2026-05-12"},
+    {"name": "Fall 2026", "start": "2026-08-31", "end": "2026-11-29", "catalog_from": "2026-08-04"},
 ]
 
 def infer_session(d=None):

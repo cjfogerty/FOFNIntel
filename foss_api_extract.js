@@ -50,7 +50,7 @@
     5:'blaine', 2:'chanhassen', 31:'glenview', 8:'highland_park', 10:'lakeview',
     9:'libertyville', 3:'maple_grove', 12:'niles', 35:'northglenn', 18:'ofallon',
     23:'richfield', 1:'stlouispark', 22:'sun_prairie', 29:'western_springs',
-    34:'westminster', 6:'woodbury', 11:'south_barrington'
+    34:'westminster', 6:'woodbury', 11:'south_barrington', 4:'savage', 7:'st_paul', 15:'elmwood_park', 16:'plymouth', 19:'fargo', 20:'ankeny', 21:'ballwin', 24:'st_charles', 25:'vadnais_heights', 26:'rock_hill', 27:'burnsville', 28:'creve_coeur', 30:'apple_valley', 32:'bolingbrook', 36:'castle_rock', 37:'lone_tree', 38:'parker', 39:'otsego'
   };
 
   // --- levelId -> display name (CSV "Class Level"). MUST match the prefixes

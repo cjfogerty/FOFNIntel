@@ -466,7 +466,25 @@ SLUGS = ['blaine', 'chanhassen', 'glenview', 'highland_park', 'lakeview',
          'libertyville', 'maple_grove', 'niles', 'northglenn', 'ofallon',
          'richfield', 'stlouispark', 'sun_prairie', 'western_springs',
          'westminster', 'woodbury',
-         'south_barrington']
+         'south_barrington',
+         'savage',
+         'st_paul',
+         'elmwood_park',
+         'plymouth',
+         'fargo',
+         'ankeny',
+         'ballwin',
+         'st_charles',
+         'vadnais_heights',
+         'rock_hill',
+         'burnsville',
+         'creve_coeur',
+         'apple_valley',
+         'bolingbrook',
+         'castle_rock',
+         'lone_tree',
+         'parker',
+         'otsego']
 
 if __name__ == '__main__':
     args = sys.argv[1:]
