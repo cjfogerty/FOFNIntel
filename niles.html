@@ -438,6 +438,13 @@
             <div class="extraction-time">Data extracted: July 19, 2026 at 11:25 PM</div>
             <div class="session-info"><strong>Summer 2026 Session:</strong> Jun 15 – Aug 30, 2026 &nbsp;•&nbsp; Enrollment opened 5/12/26 &nbsp;•&nbsp; Includes Once-a-Week + 4-Week Clinics</div>
             <div class="filters">
+                <div class="filter-group" id="sessionFilterGroup">
+                    <label>Session</label>
+                    <select id="mainSessionFilter">
+                        <option value="summer">Summer 2026 &mdash; Weekly Classes</option>
+                        <option value="fall">Fall 2026 &mdash; Pre-Season</option>
+                    </select>
+                </div>
                 <div class="filter-group">
                     <label>View</label>
                     <select id="viewFilter">
@@ -489,7 +496,13 @@
             </div>
         </div>
 
-                <div class="chart-card trend-card" id="trendCard">
+        <div class="chart-card" id="fallPreseasonPanel" style="display:none;">
+            <div class="chart-title">Fall 2026 &mdash; Pre-Season</div>
+            <div id="fallPreseasonBody" style="font-size:0.92rem;color:#4a5568;line-height:1.6;">Loading&hellip;</div>
+            <div style="font-size:0.75rem;color:#a0aec0;margin-top:10px;">Fall enrollment opened Aug 4, 2026. Per-class weekly detail (day/category/level breakdowns) isn&rsquo;t available yet for Fall &mdash; this panel shows the aggregate seats/enrollment pulled so far. The trend chart below already tracks Fall over time; switch its Session selector to &ldquo;Fall 2026&rdquo; to see the ramp.</div>
+        </div>
+
+                        <div class="chart-card trend-card" id="trendCard">
             <div class="chart-title">📈 Enrollment Over Time <span style="font-weight:400;color:#718096;">— one point per data pull</span><span class="sim-badge" id="trendSimBadge" style="display:none;">includes simulated future pulls (mockup demo)</span></div>
             <div class="trend-controls">
                 <div class="filter-group">
@@ -11068,7 +11081,7 @@
         init();
     </script>
 
-        <script>
+            <script>
     (function () {
         if (typeof ENROLLMENT_HISTORY === 'undefined') return;
         const H = ENROLLMENT_HISTORY;
@@ -11208,7 +11221,7 @@
                     ctx.fillStyle = '#b7791f';
                     ctx.font = '600 11px -apple-system, BlinkMacSystemFont, sans-serif';
                     ctx.textAlign = 'right';
-                    ctx.fillText(m.label, px - 5, area.top + 12);
+                    ctx.fillText(m.label, px - 5, area.top + 26);
                     ctx.restore();
                 });
             }
@@ -11530,5 +11543,46 @@
     })();
     </script>
 
+
+    <script>
+    (function () {
+        var HIDE_SELECTORS = ['.filters .filter-group:not(#sessionFilterGroup)', '.headline-modals', '.chart-grid', '.chart-card.full-width', '.table-card'];
+        function setFall(isFall) {
+            HIDE_SELECTORS.forEach(function (sel) {
+                document.querySelectorAll(sel).forEach(function (el) { el.style.display = isFall ? 'none' : ''; });
+            });
+            var panel = document.getElementById('fallPreseasonPanel');
+            if (panel) panel.style.display = isFall ? '' : 'none';
+        }
+        function renderFallPanel() {
+            var body = document.getElementById('fallPreseasonBody');
+            if (!body) return;
+            if (typeof ENROLLMENT_HISTORY === 'undefined') { body.textContent = 'No Fall data available yet for this location.'; return; }
+            var H = ENROLLMENT_HISTORY;
+            var tgt = (H.targets || {})['Fall 2026'];
+            var snaps = (H.snapshots || []).filter(function (s) { return s.session === 'Fall 2026'; });
+            snaps.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+            var latest = snaps[0];
+            if (!latest && !tgt) { body.textContent = 'No Fall data available yet for this location.'; return; }
+            var parts = [];
+            if (latest) {
+                var t = latest.totals || {};
+                parts.push('<strong>' + (t.enrolled || 0).toLocaleString() + '</strong> enrolled of <strong>' + (t.capacity || 0).toLocaleString() + '</strong> seats offered so far (' + (t.utilization != null ? t.utilization : '--') + '% utilization), as of ' + latest.date + '.');
+            } else {
+                parts.push('Fall catalog not yet posted for this location as of the latest pull.');
+            }
+            if (tgt) {
+                parts.push('Target: ' + Math.round(tgt.targetLowPct * 100) + '&ndash;' + Math.round(tgt.targetHighPct * 100) + '% of ' + (tgt.totalSeats || 0).toLocaleString() + ' total Fall seats (&asymp; ' + (tgt.targetLow || 0).toLocaleString() + '&ndash;' + (tgt.targetHigh || 0).toLocaleString() + ' enrolled) by ' + tgt.targetDate + '.');
+            }
+            body.innerHTML = parts.join(' ');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var sel = document.getElementById('mainSessionFilter');
+            if (!sel) return;
+            renderFallPanel();
+            sel.addEventListener('change', function () { setFall(sel.value === 'fall'); });
+        });
+    })();
+    </script>
 </body>
 </html>

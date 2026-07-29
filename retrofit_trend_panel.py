@@ -214,7 +214,7 @@ TREND_JS = r"""
                     ctx.fillStyle = '#b7791f';
                     ctx.font = '600 11px -apple-system, BlinkMacSystemFont, sans-serif';
                     ctx.textAlign = 'right';
-                    ctx.fillText(m.label, px - 5, area.top + 12);
+                    ctx.fillText(m.label, px - 5, area.top + 26);
                     ctx.restore();
                 });
             }
@@ -548,9 +548,10 @@ def upgrade(slug):
     if 'id="trendCard"' not in html:
         print(f'  skip {slug}: no trend panel present yet (run build() first)')
         return False
-    if "id: 'targetMarker'" in html:
-        print(f'  skip {slug}: already upgraded')
-        return False
+
+    # Always re-apply (not gated on a marker string) so iterating on
+    # TREND_HTML/TREND_JS and re-running --upgrade-targets keeps every
+    # dashboard in sync with the current source, not just the first pass.
 
     # Replace the trend HTML block (card + legend + controls + movers table).
     html_pat = re.compile(
