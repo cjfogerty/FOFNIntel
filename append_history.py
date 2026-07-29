@@ -86,7 +86,13 @@ def append_snapshot(slug, location, raw_data, history_dir, session=None, now=Non
 
     snap = build_snapshot(raw_data, session=session, now=now)
     hist["sessions"] = SESSIONS  # keep the calendar current
-    hist["snapshots"] = [s for s in hist["snapshots"] if s["date"] != snap["date"]]
+    # Dedup on (date, session) rather than date alone: during a session
+    # transition (e.g. Aug 2026, Summer still running while Fall ramps up
+    # pre-enrollment) the same calendar date can legitimately carry one
+    # snapshot per in-flight session. Re-running the same day+session still
+    # overwrites cleanly.
+    hist["snapshots"] = [s for s in hist["snapshots"]
+                          if not (s["date"] == snap["date"] and s["session"] == snap["session"])]
     hist["snapshots"].append(snap)
     hist["snapshots"].sort(key=lambda s: s["date"])
 

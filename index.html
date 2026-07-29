@@ -71,7 +71,23 @@
     .session-pill strong { font-weight: 700; }
     .session-pill.sess-summer { background: #fef3c7; color: #92400e; }
     .session-pill.sess-spring { background: #d1fae5; color: #065f46; }
+    .session-pill.sess-fall   { background: #ffedd5; color: #9a3412; }
     .session-pill.sess-other  { background: #e5e7eb; color: #374151; }
+    .card-tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+    .card-tab {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: #edf2f7;
+      color: #4a5568;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.1s ease, color 0.1s ease;
+    }
+    .card-tab:hover { background: #e2e8f0; }
+    .card-tab.is-active { background: #2b6cb0; color: #fff; }
+    .card-panel[hidden] { display: none; }
     .pill-dates { font-weight: 400; opacity: 0.8; }
     .meta-date { font-size: 0.75rem; color: #718096; }
     .meta-num { font-size: 0.88rem; color: #2d3748; }
@@ -137,443 +153,998 @@
       <p class="sub">Swim School Inventory Dashboards</p>
     </header>
 
+    <script>
+    function fossTab(evt, el) {
+      evt.preventDefault();
+      evt.stopPropagation();
+      var card = el.closest('.card');
+      if (!card) return false;
+      var tab = el.getAttribute('data-tab');
+      card.querySelectorAll('.card-tab').forEach(function (t) {
+        t.classList.toggle('is-active', t === el);
+      });
+      card.querySelectorAll('.card-panel').forEach(function (p) {
+        p.hidden = (p.getAttribute('data-panel') !== tab);
+      });
+      return false;
+    }
+    </script>
     <h3 class="section">FOSS Locations</h3>
     <div class="cards">
       <a class="card foss-card" href="northglenn.html">
         <h2>Northglenn, CO</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>872</strong> enrolled <span class="meta-soft">/ 1,191 seats</span></span>
           <span class="meta-camp">Clinics: <strong>30</strong> enrolled <span class="meta-soft">/ 78 seats</span></span>
           <span class="meta-proj">Projected: <strong>953</strong> (92% of target)</span>
           <span class="util util-high">73.2% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>1</strong> enrolled <span class="meta-soft">/ 1,387 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,109&ndash;1,178</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="ofallon.html">
         <h2>O'Fallon, MO</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>707</strong> enrolled <span class="meta-soft">/ 901 seats</span></span>
           <span class="meta-camp">Clinics: <strong>14</strong> enrolled <span class="meta-soft">/ 38 seats</span></span>
           <span class="meta-proj">Projected: <strong>721</strong> (98% of target)</span>
           <span class="util util-high">78.5% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>51</strong> enrolled <span class="meta-soft">/ 940 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>752&ndash;799</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">5.4% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="lakeview.html">
         <h2>Lakeview, IL</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1870</strong> enrolled <span class="meta-soft">/ 2,270 seats</span></span>
           <span class="meta-camp">Clinics: <strong>70</strong> enrolled <span class="meta-soft">/ 121 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,816</strong> (103% of target)</span>
           <span class="util util-high">82.4% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>65</strong> enrolled <span class="meta-soft">/ 2,956 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,364&ndash;2,512</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">2.2% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="libertyville.html">
         <h2>Libertyville, IL</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>924</strong> enrolled <span class="meta-soft">/ 1,160 seats</span></span>
           <span class="meta-camp">Clinics: <strong>28</strong> enrolled <span class="meta-soft">/ 77 seats</span></span>
           <span class="meta-proj">Projected: <strong>928</strong> (100% of target)</span>
           <span class="util util-high">79.7% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>1</strong> enrolled <span class="meta-soft">/ 1,440 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,152&ndash;1,224</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="niles.html">
         <h2>Niles, IL</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>858</strong> enrolled <span class="meta-soft">/ 1,069 seats</span></span>
           <span class="meta-camp">Clinics: <strong>28</strong> enrolled <span class="meta-soft">/ 73 seats</span></span>
           <span class="meta-proj">Projected: <strong>855</strong> (100% of target)</span>
           <span class="util util-high">80.3% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>27</strong> enrolled <span class="meta-soft">/ 1,199 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>959&ndash;1,019</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">2.3% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="westminster.html">
         <h2>Westminster, CO</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>374</strong> enrolled <span class="meta-soft">/ 484 seats</span></span>
           <span class="meta-camp">Clinics: <strong>10</strong> enrolled <span class="meta-soft">/ 38 seats</span></span>
           <span class="meta-proj">Projected: <strong>387</strong> (97% of target)</span>
           <span class="util util-high">77.3% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>2</strong> enrolled <span class="meta-soft">/ 668 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>534&ndash;567</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.3% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="chanhassen.html">
         <h2>Chanhassen, MN</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1630</strong> enrolled <span class="meta-soft">/ 1,917 seats</span></span>
           <span class="meta-camp">Clinics: <strong>161</strong> enrolled <span class="meta-soft">/ 253 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,534</strong> (106% of target)</span>
           <span class="util util-high">85.0% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>31</strong> enrolled <span class="meta-soft">/ 2,920 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,336&ndash;2,482</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">1.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="stlouispark.html">
         <h2>St. Louis Park, MN</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>903</strong> enrolled <span class="meta-soft">/ 1,143 seats</span></span>
           <span class="meta-camp">Clinics: <strong>69</strong> enrolled <span class="meta-soft">/ 151 seats</span></span>
           <span class="meta-proj">Projected: <strong>914</strong> (99% of target)</span>
           <span class="util util-high">79.0% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>13</strong> enrolled <span class="meta-soft">/ 2,148 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,718&ndash;1,825</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.6% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="woodbury.html">
         <h2>Woodbury, MN</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1738</strong> enrolled <span class="meta-soft">/ 2,037 seats</span></span>
           <span class="meta-camp">Clinics: <strong>118</strong> enrolled <span class="meta-soft">/ 221 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,630</strong> (107% of target)</span>
           <span class="util util-high">85.3% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>20</strong> enrolled <span class="meta-soft">/ 2,990 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,392&ndash;2,541</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.7% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="maple_grove.html">
         <h2>Maple Grove, MN</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>2353</strong> enrolled <span class="meta-soft">/ 2,631 seats</span></span>
           <span class="meta-camp">Clinics: <strong>298</strong> enrolled <span class="meta-soft">/ 538 seats</span></span>
           <span class="meta-proj">Projected: <strong>2,105</strong> (112% of target)</span>
           <span class="util util-high">89.4% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>16</strong> enrolled <span class="meta-soft">/ 3,804 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>3,043&ndash;3,233</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.4% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="sun_prairie.html">
         <h2>Sun Prairie, WI</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1235</strong> enrolled <span class="meta-soft">/ 1,547 seats</span></span>
           <span class="meta-camp">Clinics: <strong>36</strong> enrolled <span class="meta-soft">/ 79 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,238</strong> (100% of target)</span>
           <span class="util util-high">79.8% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>13</strong> enrolled <span class="meta-soft">/ 1,995 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,596&ndash;1,695</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.7% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="richfield.html">
         <h2>Richfield/Edina, MN</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1708</strong> enrolled <span class="meta-soft">/ 2,115 seats</span></span>
           <span class="meta-camp">Clinics: <strong>83</strong> enrolled <span class="meta-soft">/ 172 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,692</strong> (101% of target)</span>
           <span class="util util-high">80.8% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>28</strong> enrolled <span class="meta-soft">/ 3,439 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,751&ndash;2,923</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.8% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="blaine.html">
         <h2>Blaine, MN</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1911</strong> enrolled <span class="meta-soft">/ 2,183 seats</span></span>
           <span class="meta-camp">Clinics: <strong>179</strong> enrolled <span class="meta-soft">/ 370 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,746</strong> (109% of target)</span>
           <span class="util util-high">87.5% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>22</strong> enrolled <span class="meta-soft">/ 3,004 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,403&ndash;2,553</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.7% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="highland_park.html">
         <h2>Highland Park, IL</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>534</strong> enrolled <span class="meta-soft">/ 694 seats</span></span>
           <span class="meta-camp">Clinics: <strong>15</strong> enrolled <span class="meta-soft">/ 39 seats</span></span>
           <span class="meta-proj">Projected: <strong>555</strong> (96% of target)</span>
           <span class="util util-high">76.9% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>20</strong> enrolled <span class="meta-soft">/ 1,219 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>975&ndash;1,036</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">1.6% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="western_springs.html">
         <h2>Western Springs, IL</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1312</strong> enrolled <span class="meta-soft">/ 1,596 seats</span></span>
           <span class="meta-camp">Clinics: <strong>24</strong> enrolled <span class="meta-soft">/ 74 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,277</strong> (103% of target)</span>
           <span class="util util-high">82.2% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>3</strong> enrolled <span class="meta-soft">/ 2,025 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,620&ndash;1,721</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="glenview.html">
         <h2>Glenview, IL</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>874</strong> enrolled <span class="meta-soft">/ 1,091 seats</span></span>
           <span class="meta-camp">Clinics: <strong>20</strong> enrolled <span class="meta-soft">/ 58 seats</span></span>
           <span class="meta-proj">Projected: <strong>873</strong> (100% of target)</span>
           <span class="util util-high">80.1% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>19</strong> enrolled <span class="meta-soft">/ 1,527 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,221&ndash;1,297</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">1.2% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="south_barrington.html">
         <h2>South Barrington, IL</h2>
-        <div class="card-meta">
+        <div class="card-tabs">
+          <span class="card-tab is-active" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
+        </div>
+        <div class="card-panel" data-panel="summer">
+          <div class="card-meta">
           <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
           <span class="meta-date">Updated July 19, 2026</span>
         </div>
-        <div class="card-stats">
+          <div class="card-stats">
           <span class="meta-num"><strong>1151</strong> enrolled <span class="meta-soft">/ 1,318 seats</span></span>
           <span class="meta-camp">Clinics: <strong>49</strong> enrolled <span class="meta-soft">/ 118 seats</span></span>
           <span class="meta-proj">Projected: <strong>1,054</strong> (109% of target)</span>
           <span class="util util-high">87.3% utilized</span>
         </div>
+        </div>
+        <div class="card-panel" data-panel="fall" hidden>
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>14</strong> enrolled <span class="meta-soft">/ 1,578 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,262&ndash;1,341</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.9% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
+        </div>
       </a>
       <a class="card foss-card" href="savage.html">
         <h2>Savage, MN</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 1,083 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>866&ndash;920</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.0% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="st_paul.html">
         <h2>St. Paul, MN</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>6</strong> enrolled <span class="meta-soft">/ 2,076 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,660&ndash;1,764</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.3% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="elmwood_park.html">
         <h2>Elmwood Park, IL</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>28</strong> enrolled <span class="meta-soft">/ 2,807 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,245&ndash;2,385</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">1.0% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="plymouth.html">
         <h2>Plymouth, MN</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>28</strong> enrolled <span class="meta-soft">/ 2,517 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,013&ndash;2,139</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">1.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="fargo.html">
         <h2>Fargo, ND</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>3</strong> enrolled <span class="meta-soft">/ 1,464 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,171&ndash;1,244</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.2% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="ankeny.html">
         <h2>Ankeny, IA</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>37</strong> enrolled <span class="meta-soft">/ 1,367 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,093&ndash;1,161</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">2.7% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="ballwin.html">
         <h2>Ballwin, MO</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>36</strong> enrolled <span class="meta-soft">/ 1,488 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,190&ndash;1,264</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">2.4% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="st_charles.html">
         <h2>St. Charles, MO</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>25</strong> enrolled <span class="meta-soft">/ 1,032 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>825&ndash;877</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">2.4% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="vadnais_heights.html">
         <h2>Vadnais Heights, MN</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>19</strong> enrolled <span class="meta-soft">/ 2,816 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>2,252&ndash;2,393</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.7% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="rock_hill.html">
         <h2>Rock Hill, MO</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>14</strong> enrolled <span class="meta-soft">/ 2,006 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,604&ndash;1,705</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.7% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="burnsville.html">
         <h2>Burnsville, MN</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>1</strong> enrolled <span class="meta-soft">/ 752 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>601&ndash;639</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="creve_coeur.html">
         <h2>Creve Coeur, MO</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>7</strong> enrolled <span class="meta-soft">/ 1,277 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,021&ndash;1,085</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.5% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="apple_valley.html">
         <h2>Apple Valley, MN</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>5</strong> enrolled <span class="meta-soft">/ 1,414 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,131&ndash;1,201</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.4% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="bolingbrook.html">
         <h2>Bolingbrook, IL</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>13</strong> enrolled <span class="meta-soft">/ 1,136 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>908&ndash;965</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">1.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="castle_rock.html">
         <h2>Castle Rock, CO</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>1</strong> enrolled <span class="meta-soft">/ 1,256 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>1,004&ndash;1,067</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.1% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="lone_tree.html">
         <h2>Lone Tree, CO</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 892 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>713&ndash;758</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">0.0% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="parker.html">
         <h2>Parker, CO</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Pulled Jul 29, 2026 &middot; opens Aug 4</span>
+          </div>
+          <div class="card-stats">
+            <span class="meta-num"><strong>256</strong> enrolled <span class="meta-soft">/ 966 seats posted</span></span>
+            <span class="meta-proj">Target: <strong>772&ndash;821</strong> by Oct 5 (80&ndash;85% of seats)</span>
+            <span class="util util-low">26.5% utilized <span class="meta-soft">&mdash; pre-enrollment ramp</span></span>
+          </div>
         </div>
       </a>
       <a class="card foss-card" href="otsego.html">
         <h2>Otsego, MN</h2>
-        <div class="card-meta">
-          <span class="session-pill sess-summer"><strong>Summer 2026</strong> <span class="pill-dates">· Jun 15 – Aug 30</span></span>
-          <span class="meta-date">Updated —</span>
+        <div class="card-tabs">
+          <span class="card-tab" data-tab="summer" onclick="return fossTab(event,this)">Summer</span>
+          <span class="card-tab is-active" data-tab="fall" onclick="return fossTab(event,this)">Fall</span>
         </div>
-        <div class="card-stats">
-          <span class="meta-num"><strong>0</strong> enrolled <span class="meta-soft">/ 0 seats</span></span>
-          <span class="meta-proj">Projected: <strong>0</strong> (0% of target)</span>
-          <span class="util util-low">0.0% utilized</span>
+        <div class="card-panel" data-panel="summer" hidden>
+          <div class="card-meta">
+            <span class="meta-date">Not tracked this session</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Added to inventory Jul 29, 2026 &mdash; no Summer data</span>
+          </div>
+        </div>
+        <div class="card-panel" data-panel="fall">
+          <div class="card-meta">
+            <span class="session-pill sess-fall"><strong>Fall 2026</strong> <span class="pill-dates">&middot; Aug 31 &ndash; Nov 29</span></span>
+            <span class="meta-date">Not posted yet</span>
+          </div>
+          <div class="card-stats">
+            <span class="util util-na">Fall catalog not posted yet &mdash; check back after Aug 4</span>
+          </div>
         </div>
       </a>
     </div>
