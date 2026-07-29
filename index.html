@@ -211,10 +211,14 @@
           <label for="fLevel">Specific Level</label>
           <select id="fLevel"></select>
         </div>
+        <div class="filter-group">
+          <label for="fSort">Sort By</label>
+          <select id="fSort"></select>
+        </div>
       </div>
       <div class="chart-legend-note" id="fSessionNote" style="margin-bottom:12px;"></div>
       <div class="chart-wrap"><canvas id="enrollChart"></canvas></div>
-      <div class="chart-legend-note" id="chartNote">Each bar’s full height is a location’s deployed capacity (enrolled + open slots): solid = enrolled, faded = remaining open; blue = weekly classes, orange = clinics. Clinics are hidden by default — click the legend (or use the View filter) to show them. The green line is utilization (enrolled &divide; deployed capacity, right axis). Filter by view, day, curriculum category, or level; bars re-sort by enrollment. Shows each location’s latest pulled data (mixed sessions once Fall pulls begin).</div>
+      <div class="chart-legend-note" id="chartNote">Each bar’s full height is a location’s deployed capacity (enrolled + open slots): solid = enrolled, faded = remaining open; blue = weekly classes, orange = clinics. Clinics are hidden by default — click the legend (or use the View filter) to show them. The green line is utilization (enrolled &divide; deployed capacity, right axis). The dashed purple line is target enrollment, set at 85% of deployed capacity (left axis, same scale as the bars). Filter by view, day, curriculum category, or level; use Sort By to re-order bars by enrollment, utilization, target enrollment, capacity, or name. Shows each location’s latest pulled data (mixed sessions once Fall pulls begin).</div>
       </div>
       <div id="overTimePanel" hidden>
       <div class="chart-filters">
@@ -282,7 +286,8 @@
         }
 
         var fSession = document.getElementById('fSession'), fView = document.getElementById('fView'),
-            fDay = document.getElementById('fDay'), fCat = document.getElementById('fCat'), fLevel = document.getElementById('fLevel');
+            fDay = document.getElementById('fDay'), fCat = document.getElementById('fCat'), fLevel = document.getElementById('fLevel'),
+            fSort = document.getElementById('fSort');
         var fSessionNote = document.getElementById('fSessionNote');
         function opt(val, label) { var o = document.createElement('option'); o.value = val; o.textContent = label; return o; }
 
@@ -292,6 +297,16 @@
         fView.appendChild(opt('all', 'All (Weekly + Clinics)'));
         fView.appendChild(opt('weekly', 'Weekly Classes'));
         fView.appendChild(opt('camp', 'Clinics'));
+
+        var SORT_OPTIONS = [
+          { val: 'enrolled', label: 'Enrollment Volume' },
+          { val: 'util', label: 'Utilization %' },
+          { val: 'target', label: 'Target Enrollment (85% capacity)' },
+          { val: 'seats', label: 'Deployed Capacity' },
+          { val: 'name', label: 'Location Name (A–Z)' }
+        ];
+        SORT_OPTIONS.forEach(function (o) { fSort.appendChild(opt(o.val, o.label)); });
+        fSort.value = 'enrolled';
 
         function updateSessionNote() {
           var v = fSession.value;
@@ -363,9 +378,15 @@
             });
             var enr = wE + cE, seats = wS + cS;
             out.push({ name: nameForSlug(slug, sessionVal), wE: wE, wOpen: Math.max(wS - wE, 0), cE: cE, cOpen: Math.max(cS - cE, 0),
-                       enrolled: enr, seats: seats, util: seats > 0 ? Math.round(enr / seats * 1000) / 10 : null });
+                       enrolled: enr, seats: seats, util: seats > 0 ? Math.round(enr / seats * 1000) / 10 : null,
+                       target: Math.round(seats * 0.85) });
           });
-          out.sort(function (a, b) { return b.enrolled - a.enrolled; });
+          var sortKey = fSort.value || 'enrolled';
+          if (sortKey === 'name') {
+            out.sort(function (a, b) { return a.name < b.name ? -1 : (a.name > b.name ? 1 : 0); });
+          } else {
+            out.sort(function (a, b) { return (b[sortKey] == null ? -1 : b[sortKey]) - (a[sortKey] == null ? -1 : a[sortKey]); });
+          }
           return out;
         }
 
@@ -377,6 +398,7 @@
               { type: 'bar', label: 'Weekly deployed capacity', data: [], backgroundColor: 'rgba(43,108,176,0.28)', stack: 'cap', yAxisID: 'y', order: 3 },
               { type: 'bar', label: 'Clinic enrolled', data: [], backgroundColor: '#dd6b20', stack: 'cap', yAxisID: 'y', order: 3, hidden: true },
               { type: 'bar', label: 'Clinic deployed capacity', data: [], backgroundColor: 'rgba(221,107,32,0.30)', stack: 'cap', yAxisID: 'y', order: 3, hidden: true },
+              { type: 'line', label: 'Target enrollment (85% capacity)', data: [], borderColor: '#805ad5', backgroundColor: '#805ad5', yAxisID: 'y', order: 2, tension: 0, pointRadius: 0, pointHoverRadius: 4, spanGaps: true, borderWidth: 2, borderDash: [6, 4], fill: false },
               { type: 'line', label: 'Utilization %', data: [], borderColor: '#2f855a', backgroundColor: '#2f855a', yAxisID: 'y1', order: 1, tension: 0.3, pointRadius: 3, pointHoverRadius: 5, spanGaps: true, borderWidth: 2 }
             ]
           },
@@ -405,7 +427,7 @@
                     var enr = 0, cap = 0;
                     items.forEach(function (it) {
                       var l = it.dataset.label || '';
-                      if (l.indexOf('Utilization') === 0) return;
+                      if (l.indexOf('Utilization') === 0 || l.indexOf('Target enrollment') === 0) return;
                       cap += it.parsed.y || 0;
                       if (l.indexOf('enrolled') >= 0) enr += it.parsed.y || 0;
                     });
@@ -429,7 +451,8 @@
           chart.data.datasets[1].data = rows.map(function (r) { return r.wOpen; });
           chart.data.datasets[2].data = rows.map(function (r) { return r.cE; });
           chart.data.datasets[3].data = rows.map(function (r) { return r.cOpen; });
-          chart.data.datasets[4].data = rows.map(function (r) { return r.util; });
+          chart.data.datasets[4].data = rows.map(function (r) { return r.target; });
+          chart.data.datasets[5].data = rows.map(function (r) { return r.util; });
           chart.update();
         }
 
@@ -445,6 +468,7 @@
         fDay.addEventListener('change', render);
         fCat.addEventListener('change', function () { buildLevels(); render(); });
         fLevel.addEventListener('change', render);
+        fSort.addEventListener('change', render);
         applyViewVisibility();
         render();
       })();
