@@ -110,12 +110,15 @@ def build_pivot(weekly_csv):
     return list(agg.values())
 
 
-def update_enroll_store(html, slug, entry):
+def update_enroll_store(html, slug, session, entry):
     """Update the homepage enrollment chart's JSON data store for one location.
-    `entry` is the per-location object the filterable chart reads:
-      {name, weekly, camp, pivot: [{v,d,lvl,cat,e,s}, ...]}
-    We json.loads the store, set this slug's entry, and json.dumps it back so the
-    chart (bars + utilization line + filters) always reflects the latest pull."""
+    Store shape is session-keyed so each location's real per-class breakdown is
+    retained per session instead of being overwritten on the next pull:
+      {slug: {session_name: {name, weekly, camp, pivot: [{v,d,lvl,cat,e,s}, ...]}}}
+    `session` is the full session name this pull's data belongs to (e.g. "Summer
+    2026", from season_pill()). We json.loads the store, set this slug+session's
+    entry, and json.dumps it back so the By Location chart's Session filter and
+    "Avg. Weekly Lessons — All Tracked Sessions" view stay in sync with every pull."""
     m = re.search(
         r'(<script id="fossEnrollData" type="application/json">)([\s\S]*?)(</script>)',
         html)
@@ -125,7 +128,11 @@ def update_enroll_store(html, slug, entry):
         data = json.loads(m.group(2))
     except ValueError:
         data = {}
-    data[slug] = entry
+    if not isinstance(data.get(slug), dict) or 'pivot' in data.get(slug, {}):
+        # migrate a legacy flat entry (or missing slug) to the session-keyed shape
+        data[slug] = {}
+    if session:
+        data[slug][session] = entry
     return html[:m.start(2)] + json.dumps(data, ensure_ascii=False) + html[m.end(2):]
 
 
@@ -263,7 +270,8 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
     name_m = re.search(r'<h2>([^<]*)</h2>', block)
     loc_name = name_m.group(1).strip() if name_m else slug
     pivot = build_pivot(csv_path)
-    new_html = update_enroll_store(new_html, slug, {
+    session_name = sp[0] if sp else None
+    new_html = update_enroll_store(new_html, slug, session_name, {
         'name': loc_name,
         'weekly': stats['enrolled'],
         'camp': stats['camp_enrolled'],
