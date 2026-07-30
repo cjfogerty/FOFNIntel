@@ -1,4 +1,4 @@
-name: Refresh Barron competitor dashboard
+name: Refresh Barron competitor dashboards
 
 on:
   schedule:
@@ -21,32 +21,57 @@ jobs:
           pip install -r requirements-barron.txt
           playwright install --with-deps chromium
 
-      - name: Extract Barron class catalog
+      - name: Extract + build each Barron location
         env:
           BARRON_EMAIL: ${{ secrets.BARRON_EMAIL }}
           BARRON_PASSWORD: ${{ secrets.BARRON_PASSWORD }}
-        run: python3 barron_extract.py --out barron_raw.json
+        run: |
+          set -e
+          DATE="$(date -u +%Y-%m-%d)"
+          # org_id|slug|title|location -- each location is its own Jackrabbit org,
+          # same Barron login (email+password) but a separately-created parent account.
+          # Add South County here once that account exists:
+          #   555555|barron_southcounty|Barron Sports Center|South County, MO
+          ENTITIES=(
+            "544652|barron_ofallon|Barron Swim School|O'Fallon, MO"
+            "555050|barron_ballwin|Barron Sports Center|Ballwin, MO"
+          )
+          FAILED=0
+          for entity in "${ENTITIES[@]}"; do
+            IFS='|' read -r ORG_ID SLUG TITLE LOCATION <<< "$entity"
+            echo "::group::$SLUG (org $ORG_ID)"
+            if python3 barron_extract.py --org-id "$ORG_ID" --out "${SLUG}_raw.json"; then
+              python3 build_barron_dashboard.py "${SLUG}_raw.json" \
+                --title "$TITLE" --location "$LOCATION" --slug "$SLUG" --date "$DATE"
+            else
+              echo "::warning::extraction failed for $SLUG (org $ORG_ID)"
+              FAILED=1
+            fi
+            echo "::endgroup::"
+          done
+          echo "any_failed=$FAILED" >> "$GITHUB_ENV"
 
-      - name: Upload login-failure screenshot
-        if: failure()
+      - name: Upload login-failure screenshots
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: barron-login-failure
-          path: barron_login_failure.png
+          name: barron-login-failures
+          path: barron_login_failure_*.png
           if-no-files-found: ignore
-
-      - name: Build dashboard
-        run: python3 build_barron_dashboard.py barron_raw.json --date "$(date -u +%Y-%m-%d)"
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add barron.html
+          git add barron_*.html
           if git diff --cached --quiet; then
-            echo "No changes to barron.html"
+            echo "No changes to commit"
           else
-            git commit -m "Auto-refresh Barron dashboard $(date -u +%Y-%m-%d)"
+            git commit -m "Auto-refresh Barron dashboards $(date -u +%Y-%m-%d)"
             git pull --rebase origin main
             git push
           fi
+
+      - name: Fail the run if any location's extraction failed
+        if: env.any_failed == '1'
+        run: exit 1

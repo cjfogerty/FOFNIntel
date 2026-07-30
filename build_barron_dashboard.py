@@ -322,6 +322,7 @@ def main():
     ap.add_argument("json_path")
     ap.add_argument("--title", default="Barron Swim School")
     ap.add_argument("--location", default="O'Fallon, MO")
+    ap.add_argument("--slug", default="barron_ofallon", help="output filename stem -> <slug>.html")
     ap.add_argument("--date", default="")
     ap.add_argument("--out", default=os.path.dirname(os.path.abspath(__file__)))
     a = ap.parse_args()
@@ -338,7 +339,7 @@ def main():
             .replace("__META__", json.dumps(meta))
             .replace("__DATA__", json.dumps(data, separators=(",", ":")))
             .replace("__LEVELS__", json.dumps(levels)))
-    outfn = os.path.join(a.out, "barron.html")
+    outfn = os.path.join(a.out, a.slug + ".html")
     with open(outfn, "w") as f:
         f.write(html)
     print("wrote", outfn, "(%d KB, %d classes)" % (len(html) // 1024, len(data)))
