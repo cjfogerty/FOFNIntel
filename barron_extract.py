@@ -22,11 +22,13 @@ import json
 import os
 import sys
 
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 ORG_ID = "544652"
 LOGIN_URL = f"https://app.jackrabbitclass.com/jr4.0/ParentPortal/Login?OrgID={ORG_ID}"
 API_PATH = f"/jr4.0/ParentPortal/GetClassesForEnroll?OrgID={ORG_ID}"
+ERROR_SELECTORS = ".validation-summary-errors, .field-validation-error, .alert-danger, [class*='error']"
 
 
 def fetch_classes(page):
@@ -56,16 +58,32 @@ def main():
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
-        page = browser.new_page()
-        page.goto(LOGIN_URL, wait_until="networkidle")
+        page = browser.new_page(viewport={"width": 1400, "height": 1000})
+        page.goto(LOGIN_URL, wait_until="domcontentloaded")
+        page.wait_for_selector("#UserName", timeout=15000)
         page.fill("#UserName", email)
         page.fill("#Password", password)
         page.click("button:has-text('SIGN IN')")
-        page.wait_for_load_state("networkidle")
 
-        if "Login" in page.url:
+        try:
+            page.wait_for_url(lambda url: "Login" not in url, timeout=20000)
+        except PlaywrightTimeoutError:
+            errors = [
+                t.strip()
+                for t in page.locator(ERROR_SELECTORS).all_inner_texts()
+                if t.strip()
+            ]
+            shot_path = "barron_login_failure.png"
+            try:
+                page.screenshot(path=shot_path)
+            except Exception:
+                shot_path = None
             browser.close()
-            sys.exit("Login did not redirect away from the login page -- check credentials")
+            detail = "; ".join(errors) if errors else "no on-page error text found"
+            sys.exit(
+                "Login did not redirect away from the login page after 20s. "
+                "On-page message(s): %s. Screenshot: %s" % (detail, shot_path)
+            )
 
         classes = fetch_classes(page)
         browser.close()

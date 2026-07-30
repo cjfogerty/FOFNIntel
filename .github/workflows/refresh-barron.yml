@@ -27,6 +27,14 @@ jobs:
           BARRON_PASSWORD: ${{ secrets.BARRON_PASSWORD }}
         run: python3 barron_extract.py --out barron_raw.json
 
+      - name: Upload login-failure screenshot
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: barron-login-failure
+          path: barron_login_failure.png
+          if-no-files-found: ignore
+
       - name: Build dashboard
         run: python3 build_barron_dashboard.py barron_raw.json --date "$(date -u +%Y-%m-%d)"
 
