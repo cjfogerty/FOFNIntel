@@ -61,6 +61,15 @@ jobs:
           path: barron_login_failure_*.png
           if-no-files-found: ignore
 
+      - name: Upload raw extraction JSON (debugging)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: barron-raw-json
+          path: barron_*_raw.json
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
