@@ -46,9 +46,12 @@ PROGRAM_MAP = {
 }
 LEVEL_PREFIX_RE = re.compile(r"^(Swim|Gym|Dance|Ninja)\s*-\s*", re.I)
 
-# Every Barron location this pipeline covers, so each generated page can offer an
-# in-page switcher instead of sending the user back to the FOFNIntel hub. Keep in
-# sync with the ENTITIES list in .github/workflows/refresh-barron.yml.
+# Reference copy of the Barron sibling list -- the workflow passes this exact
+# JSON via --locations-json for each of the 3 Barron builds so their in-page
+# switcher shows all 3. Not read by this script directly; keep in sync with
+# the ENTITIES list in .github/workflows/refresh-barron.yml. Single-location
+# competitors (e.g. Bear Paddle) omit --locations-json entirely and get a
+# 1-entry default that auto-hides the switcher.
 BARRON_LOCATIONS = [
     {"slug": "barron_ofallon", "title": "Barron Swim School", "location": "O'Fallon, MO"},
     {"slug": "barron_ballwin", "title": "Barron Sports Center", "location": "Ballwin, MO"},
@@ -270,7 +273,7 @@ function money(n){return "$"+Math.round(n).toLocaleString();}
 function revenueByDay(data, pct){
   const byDay={}; DAY_ORDER.forEach(d=>byDay[d]=0); let total=0;
   data.forEach(c=>{
-    if(!/Classes$/.test(c.sessionType||"")||c.tuition==null||!c.awls||!c.day)return;
+    if(!/Classes/.test(c.sessionType||"")||c.tuition==null||!c.awls||!c.day)return;
     const occRevenue=(c.tuition/WEEKS_PER_MONTH)*c.awls*(pct/100);
     byDay[c.day]+=occRevenue; total+=occRevenue;
   });
@@ -417,6 +420,11 @@ function initLocationSwitcher(){
     fLocation.add(new Option(label, loc.slug, loc.slug===CURRENT_SLUG, loc.slug===CURRENT_SLUG));
   });
   fLocation.onchange=()=>{ if(fLocation.value!==CURRENT_SLUG) window.location.href=fLocation.value+".html"; };
+  // Single-location competitors (e.g. Bear Paddle) get a 1-entry list -- hide
+  // the switcher entirely since there's nowhere else to jump to.
+  if(BARRON_LOCATIONS.length<=1){
+    fLocation.closest(".filter-group").style.display="none";
+  }
 }
 
 function initFilters(){
@@ -453,6 +461,10 @@ def main():
     ap.add_argument("--slug", default="barron_ofallon", help="output filename stem -> <slug>.html")
     ap.add_argument("--date", default="")
     ap.add_argument("--out", default=os.path.dirname(os.path.abspath(__file__)))
+    ap.add_argument("--locations-json", default=None,
+                     help='JSON list of {"slug","title","location"} for the in-page switcher. '
+                          "Defaults to just this page (switcher auto-hides for a single entry) -- "
+                          "pass the full sibling list for a multi-location competitor like Barron.")
     a = ap.parse_args()
 
     with open(a.json_path) as f:
@@ -460,6 +472,8 @@ def main():
     data = build_records(classes)
     levels = LEVEL_ORDER + sorted({r["level"] for r in data if r["level"] not in LEVEL_ORDER})
     meta = {"title": a.title, "date": a.date or "(undated)"}
+    locations = (json.loads(a.locations_json) if a.locations_json
+                 else [{"slug": a.slug, "title": a.title, "location": a.location}])
     html = (TEMPLATE
             .replace("__TITLE__", a.title)
             .replace("__LOCATION__", a.location)
@@ -467,7 +481,7 @@ def main():
             .replace("__META__", json.dumps(meta))
             .replace("__DATA__", json.dumps(data, separators=(",", ":")))
             .replace("__LEVELS__", json.dumps(levels))
-            .replace("__BARRON_LOCATIONS__", json.dumps(BARRON_LOCATIONS))
+            .replace("__BARRON_LOCATIONS__", json.dumps(locations))
             .replace("__SLUG__", json.dumps(a.slug)))
     outfn = os.path.join(a.out, a.slug + ".html")
     with open(outfn, "w") as f:

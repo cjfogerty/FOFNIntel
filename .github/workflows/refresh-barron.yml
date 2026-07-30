@@ -1,4 +1,4 @@
-name: Refresh Barron competitor dashboards
+name: Refresh Jackrabbit competitor dashboards (Barron + Bear Paddle)
 
 on:
   schedule:
@@ -24,27 +24,39 @@ jobs:
           pip install -r requirements-barron.txt
           playwright install --with-deps chromium
 
-      - name: Extract + build each Barron location
+      - name: Extract + build each location
         env:
           BARRON_EMAIL: ${{ secrets.BARRON_EMAIL }}
           BARRON_PASSWORD: ${{ secrets.BARRON_PASSWORD }}
         run: |
           set -e
           DATE="$(date -u +%Y-%m-%d)"
-          # org_id|slug|title|location -- each location is its own Jackrabbit org,
-          # same Barron login (email+password) but a separately-created parent account.
+          BARRON_JSON=$(python3 -c "import json,build_barron_dashboard as b; print(json.dumps(b.BARRON_LOCATIONS))")
+          # org_id|slug|title|location|loc_filter|group
+          #   loc_filter: only needed when one Jackrabbit org covers multiple physical
+          #     locations (e.g. Bear Paddle) -- keeps just that location's classes.
+          #   group: "barron" gets the full Barron sibling list passed as its in-page
+          #     location switcher; "solo" gets no --locations-json (defaults to itself,
+          #     switcher auto-hides). Same login (email+password) works across all of
+          #     these -- each is just a separately-created parent account per org.
           ENTITIES=(
-            "544652|barron_ofallon|Barron Swim School|O'Fallon, MO"
-            "555050|barron_ballwin|Barron Sports Center|Ballwin, MO"
-            "528941|barron_southcounty|Barron Swim School|South County, MO"
+            "544652|barron_ofallon|Barron Swim School|O'Fallon, MO||barron"
+            "555050|barron_ballwin|Barron Sports Center|Ballwin, MO||barron"
+            "528941|barron_southcounty|Barron Swim School|South County, MO||barron"
+            "499027|bearpaddle_bloomingdale|Bear Paddle Swim School & Clubhouse|Bloomingdale, IL|Bear Paddle Bloomingdale|solo"
           )
           FAILED=0
+          > generated_slugs.txt
           for entity in "${ENTITIES[@]}"; do
-            IFS='|' read -r ORG_ID SLUG TITLE LOCATION <<< "$entity"
+            IFS='|' read -r ORG_ID SLUG TITLE LOCATION LOCFILTER GROUP <<< "$entity"
             echo "::group::$SLUG (org $ORG_ID)"
-            if python3 barron_extract.py --org-id "$ORG_ID" --out "${SLUG}_raw.json"; then
-              python3 build_barron_dashboard.py "${SLUG}_raw.json" \
-                --title "$TITLE" --location "$LOCATION" --slug "$SLUG" --date "$DATE"
+            EXTRACT_ARGS=(--org-id "$ORG_ID" --out "${SLUG}_raw.json")
+            if [ -n "$LOCFILTER" ]; then EXTRACT_ARGS+=(--loc-filter "$LOCFILTER"); fi
+            if python3 barron_extract.py "${EXTRACT_ARGS[@]}"; then
+              BUILD_ARGS=(--title "$TITLE" --location "$LOCATION" --slug "$SLUG" --date "$DATE")
+              if [ "$GROUP" = "barron" ]; then BUILD_ARGS+=(--locations-json "$BARRON_JSON"); fi
+              python3 build_barron_dashboard.py "${SLUG}_raw.json" "${BUILD_ARGS[@]}"
+              echo "$SLUG.html" >> generated_slugs.txt
             else
               echo "::warning::extraction failed for $SLUG (org $ORG_ID)"
               FAILED=1
@@ -55,7 +67,7 @@ jobs:
           echo "pull_date=$DATE" >> "$GITHUB_ENV"
 
       - name: Stamp homepage timestamps
-        run: python3 update_competitor_timestamps.py --barron-date "${{ env.pull_date }}"
+        run: python3 update_competitor_timestamps.py --pull-date "${{ env.pull_date }}"
 
       - name: Upload login-failure screenshots
         if: always()
@@ -70,7 +82,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: barron-raw-json
-          path: barron_*_raw.json
+          path: |
+            barron_*_raw.json
+            bearpaddle_*_raw.json
           if-no-files-found: ignore
           retention-days: 7
 
@@ -78,11 +92,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add barron_*.html index.html
+          git add $(cat generated_slugs.txt) index.html
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Auto-refresh Barron dashboards $(date -u +%Y-%m-%d)"
+            git commit -m "Auto-refresh Jackrabbit competitor dashboards $(date -u +%Y-%m-%d)"
             git pull --rebase origin main
             git push
           fi

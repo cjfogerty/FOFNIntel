@@ -5,5 +5,7 @@ mockup/
 .DS_Store
 __pycache__/
 
-# Raw Barron extraction output — regenerated each refresh, not committed
-barron_raw.json
+# Raw Jackrabbit extraction output — regenerated each refresh, not committed
+barron_*_raw.json
+bearpaddle_*_raw.json
+generated_slugs.txt

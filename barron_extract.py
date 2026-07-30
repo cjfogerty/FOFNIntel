@@ -21,7 +21,12 @@ Env vars required:
   BARRON_EMAIL     -- parent portal login email / user id
   BARRON_PASSWORD  -- parent portal login password
 
+Some orgs (e.g. Bear Paddle) run many physical locations under one Jackrabbit
+OrgID, distinguished only by each class's locName -- pass --loc-filter to keep
+just one location's classes in the output.
+
 Usage: python3 barron_extract.py --org-id 544652 --out barron_ofallon_raw.json
+       python3 barron_extract.py --org-id 499027 --loc-filter "Bear Paddle Bloomingdale" --out bearpaddle_bloomingdale_raw.json
 """
 import argparse
 import json
@@ -52,7 +57,8 @@ def fetch_classes(page, org_id):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--org-id", required=True, help="Jackrabbit OrgID for this Barron location")
+    ap.add_argument("--org-id", required=True, help="Jackrabbit OrgID for this location/account")
+    ap.add_argument("--loc-filter", default=None, help="keep only classes whose locName exactly matches this")
     ap.add_argument("--out", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "barron_raw.json"))
     a = ap.parse_args()
 
@@ -94,6 +100,13 @@ def main():
 
         classes = fetch_classes(page, a.org_id)
         browser.close()
+
+    if a.loc_filter:
+        before = len(classes)
+        classes = [c for c in classes if c.get("locName") == a.loc_filter]
+        print("filtered %d -> %d classes for locName=%r" % (before, len(classes), a.loc_filter))
+        if not classes:
+            sys.exit("--loc-filter %r matched 0 classes -- check the exact locName spelling" % a.loc_filter)
 
     with open(a.out, "w") as f:
         json.dump(classes, f)
