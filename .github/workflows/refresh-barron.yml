@@ -33,11 +33,10 @@ jobs:
           DATE="$(date -u +%Y-%m-%d)"
           # org_id|slug|title|location -- each location is its own Jackrabbit org,
           # same Barron login (email+password) but a separately-created parent account.
-          # Add South County here once that account exists:
-          #   555555|barron_southcounty|Barron Sports Center|South County, MO
           ENTITIES=(
             "544652|barron_ofallon|Barron Swim School|O'Fallon, MO"
             "555050|barron_ballwin|Barron Sports Center|Ballwin, MO"
+            "528941|barron_southcounty|Barron Swim School|South County, MO"
           )
           FAILED=0
           for entity in "${ENTITIES[@]}"; do
