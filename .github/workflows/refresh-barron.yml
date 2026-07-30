@@ -1,0 +1,44 @@
+name: Refresh Barron competitor dashboard
+
+on:
+  schedule:
+    # Mondays 12:00 UTC (7am CT / 6am CDT) -- matches the other weekly FOFNIntel-style pulls
+    - cron: "0 12 * * 1"
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Playwright
+        run: |
+          pip install -r requirements-barron.txt
+          playwright install --with-deps chromium
+
+      - name: Extract Barron class catalog
+        env:
+          BARRON_EMAIL: ${{ secrets.BARRON_EMAIL }}
+          BARRON_PASSWORD: ${{ secrets.BARRON_PASSWORD }}
+        run: python3 barron_extract.py --out barron_raw.json
+
+      - name: Build dashboard
+        run: python3 build_barron_dashboard.py barron_raw.json --date "$(date -u +%Y-%m-%d)"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add barron.html
+          if git diff --cached --quiet; then
+            echo "No changes to barron.html"
+          else
+            git commit -m "Auto-refresh Barron dashboard $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push
+          fi

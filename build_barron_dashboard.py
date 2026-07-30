@@ -1,51 +1,32 @@
 #!/usr/bin/env python3
 """
-Build a Goldfish-style Schedule & Level Analysis dashboard for Barron Swim School
-(O'Fallon, MO) from a manually-exported CSV (Barron's site has no public API, unlike
-the iClass Pro competitors — see build_iclass_dashboard.py).
+Build a Goldfish-style Schedule & Instructor Analysis dashboard for Barron Swim
+School (O'Fallon, MO) from the Jackrabbit Class parent-portal JSON — see
+barron_extract.py, which logs in and pulls this JSON on a schedule (Barron has no
+public API like the iClass Pro competitors — see build_iclass_dashboard.py).
 
-Source CSV columns: Class Name, Status, Spots Left, Age Range (Enrollment),
-Session Type, Time, Days, Location, Tuition, Instructor:Student Ratio,
-Program Age Range, Frequency/Duration
+Source: one JSON array of class objects from GetClassesForEnroll, each with
+instructor name, category1/2/3, per-weekday meeting flags (dayMon..daySun) and
+per-weekday capacity (monOpen..sunOpen -- constant across a class's single
+meeting day; NOT open-spot counts despite the name), "openings" (numeric string
+of current open spots, or the literal "Wait List" when the class is full), and
+"isWaitlist" (bool).
 
-No instructor names or total capacity are published — capacity is DERIVED from the
-Instructor:Student Ratio (e.g. "4:1" -> capacity 4 students per class). Day of week
-is parsed from the Class Name (the CSV's own Days column reuses "T" for both
-Tuesday and Thursday, so it can't be trusted).
-
-Usage: python3 build_barron_dashboard.py barron_swim_classes_with_ratios.csv --date 2026-07-30
+Usage: python3 build_barron_dashboard.py barron_raw.json --date 2026-07-30
 """
-import csv, re, json, argparse, os
+import re, json, argparse, os
 
 LEVEL_ORDER = [
     "Parent & Tot I", "Parent & Tot II", "Little Junior", "Kinder Junior",
     "Beginner", "Advanced Junior", "Intermediate", "Intermediate II",
-    "Advanced", "Elite Junior", "Elite Junior II", "Swim Abilities Waitlist",
+    "Advanced", "Elite Junior", "Elite Junior II", "SwimAbilities",
 ]
-DAY_RE = re.compile(r"\b(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\b")
-DAY_FULL = {"Mon": "Monday", "Tue": "Tuesday", "Wed": "Wednesday", "Thu": "Thursday",
-            "Fri": "Friday", "Sat": "Saturday", "Sun": "Sunday"}
-
-
-def parse_ratio(ratio):
-    """returns (capacity, type)"""
-    m = re.match(r"^\s*(\d+)\s*:\s*1", ratio or "")
-    if not m:
-        return 0, "Other"
-    n = int(m.group(1))
-    if n == 1:
-        return 1, "Private"
-    if n == 2:
-        return 2, "Semi-Private"
-    return n, "Group"
-
-
-def level_of(name):
-    if "Fall Swim Meet" in name:
-        return "Special Event"
-    lvl = DAY_RE.split(name, maxsplit=1)[0]
-    lvl = re.sub(r"\s*-\s*$", "", lvl).strip()
-    return lvl or "Other"
+DAY_FIELDS = [
+    ("dayMon", "monOpen", "Monday"), ("dayTue", "tueOpen", "Tuesday"),
+    ("dayWed", "wedOpen", "Wednesday"), ("dayThu", "thuOpen", "Thursday"),
+    ("dayFri", "friOpen", "Friday"), ("daySat", "satOpen", "Saturday"),
+    ("daySun", "sunOpen", "Sunday"),
+]
 
 
 def to12h(t):
@@ -53,32 +34,39 @@ def to12h(t):
     return (m.group(1) + ":" + m.group(2) + " " + m.group(3).upper()) if m else ""
 
 
-def build_records(rows):
+def level_of(c):
+    if c.get("session") == "Special Activities":
+        return "Special Event"
+    lvl = re.sub(r"^Swim\s*-\s*", "", c.get("category3") or "").strip()
+    lvl = lvl.replace(" and ", " & ")
+    return lvl or "Other"
+
+
+def build_records(classes):
     recs = []
-    for r in rows:
-        name = r["Class Name"].strip()
-        cap, ctype = parse_ratio(r.get("Instructor:Student Ratio", ""))
+    for c in classes:
+        day = next((full for flag, _, full in DAY_FIELDS if c.get(flag)), "")
+        cap = next((c.get(openf) or 0 for flag, openf, _ in DAY_FIELDS if c.get(flag)), 0)
+        cap = int(cap)
+        is_wait = bool(c.get("isWaitlist"))
         try:
-            spots_left = int(r.get("Spots Left") or 0)
-        except ValueError:
-            spots_left = 0
-        enrolled = max(cap - spots_left, 0) if cap else 0
-        dmatch = DAY_RE.search(name)
-        day = DAY_FULL.get(dmatch.group(1)) if dmatch else ""
-        start = to12h((r.get("Time") or "").split("-")[0])
+            openings = 0 if is_wait else int(c.get("openings") or 0)
+        except (TypeError, ValueError):
+            openings = 0
+        enrolled = max(cap - openings, 0) if cap else 0
         recs.append({
-            "name": name,
-            "level": level_of(name),
-            "type": ctype,
+            "name": (c.get("className") or "").strip(),
+            "level": level_of(c),
             "capacity": cap,
-            "openings": spots_left,
+            "openings": openings,
             "awls": enrolled,
-            "status": r.get("Status", ""),
+            "status": "Wait List" if is_wait else "Open",
             "day": day,
-            "time": start,
-            "sessionType": r.get("Session Type", ""),
-            "tuition": r.get("Tuition", ""),
-            "ageRange": r.get("Program Age Range", ""),
+            "time": to12h(c.get("startTime")),
+            "instructor": c.get("instructor") or "",
+            "sessionType": c.get("session") or "",
+            "tuition": c.get("tuitionFee"),
+            "ageRange": c.get("ageRange") or "",
         })
     return recs
 
@@ -139,6 +127,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 
 <div class="tabs">
   <button class="tab active" data-v="grid">📅 Schedule Grid</button>
+  <button class="tab" data-v="inst">👥 Instructors</button>
   <button class="tab" data-v="level">📊 Summary by Level</button>
   <button class="tab" data-v="roster">📋 Full Class List</button>
 </div>
@@ -164,6 +153,21 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div style="overflow:auto"><table id="gridTable"></table></div>
 </section>
 
+<section class="view" id="inst">
+  <div class="controls">
+    <label>Sort By <select id="iSort">
+      <option value="classes">Total Classes</option>
+      <option value="name">Name</option>
+    </select></label>
+  </div>
+  <div class="summary teal">
+    <div><div class="lbl">Total Instructors</div><div class="val" id="iCount">0</div></div>
+    <div><div class="lbl">Total Classes</div><div class="val" id="iClasses">0</div></div>
+    <div><div class="lbl">Avg Classes / Instructor</div><div class="val" id="iAvg">0</div></div>
+  </div>
+  <table id="instTable"></table>
+</section>
+
 <section class="view" id="level">
   <div class="summary blue">
     <div><div class="lbl">Total Capacity*</div><div class="val" id="lCap">0</div></div>
@@ -183,12 +187,11 @@ TEMPLATE = r"""<!DOCTYPE html>
 </section>
 
 <div class="note">
-  Source: Barron Swim School public class catalog (manually exported) · pulled __DATE__.
-  <b>*Capacity, Enrolled and Utilization are derived</b> from the published
-  Instructor:Student ratio (e.g. 4:1 &rarr; capacity 4) since Barron does not publish
-  capacity/enrolled directly. Enrolled = Capacity − Spots Left. Utilization colors:
-  green ≥75%, amber 50–74%, red &lt;50%. Day of week is parsed from the class name
-  (the source Days column reuses the same letter for Tuesday/Thursday).
+  Source: Barron Swim School Jackrabbit Class parent portal (authenticated) · pulled __DATE__.
+  <b>*Capacity is the class's published per-day-of-week slot count</b> (Jackrabbit does not
+  label it "capacity" directly, but it holds constant whether or not the class is full).
+  Enrolled = Capacity − Open Spots (0 once a class is wait-listed). Utilization colors:
+  green ≥75%, amber 50–74%, red &lt;50%.
 </div>
 
 <script>
@@ -251,15 +254,34 @@ function renderGrid(){
   document.getElementById("gridTable").innerHTML=head+body;
 }
 
+function renderInst(){
+  const sortBy=document.getElementById("iSort").value, map={};
+  DATA.forEach(c=>{if(!c.instructor)return;
+    const i=map[c.instructor]||(map[c.instructor]={name:c.instructor,total:0,days:new Set(),levels:{}});
+    i.total++;if(c.day)i.days.add(c.day);i.levels[c.level]=(i.levels[c.level]||0)+1;});
+  let list=Object.values(map);
+  list.sort((a,b)=>sortBy==="name"?a.name.localeCompare(b.name):b.total-a.total);
+  document.getElementById("iCount").textContent=list.length;
+  const totClasses=sum(list,i=>i.total);
+  document.getElementById("iClasses").textContent=totClasses;
+  document.getElementById("iAvg").textContent=list.length?Math.round(totClasses/list.length):0;
+  let html=`<tr><th>Instructor</th><th class="c">Classes</th><th>Days</th><th>Levels Taught</th></tr>`;
+  list.forEach(i=>{
+    const days=DAY_ORDER.filter(d=>i.days.has(d)).join(", ");
+    const chips=Object.keys(i.levels).map(l=>`${l} (${i.levels[l]})`).join(", ");
+    html+=`<tr><td><b>${i.name}</b></td><td class="c">${i.total}</td><td>${days}</td><td>${chips}</td></tr>`;});
+  document.getElementById("instTable").innerHTML=html;
+}
+
 function renderRoster(){
   const st=document.getElementById("rStatus").value;
   const rows=DATA.filter(c=>!st||c.status===st).map(c=>
-    `<tr><td>${c.name}</td><td>${c.level}</td><td>${c.day||"—"}</td><td>${c.time||"—"}</td>
+    `<tr><td>${c.name}</td><td>${c.level}</td><td>${c.instructor||"—"}</td><td>${c.day||"—"}</td><td>${c.time||"—"}</td>
      <td class="c"><span class="pill ${c.status==="Open"?"open":"wait"}">${c.status}</span></td>
      <td class="r">${c.openings}</td><td class="r">${c.capacity||"—"}</td>
-     <td class="r">${c.tuition}</td></tr>`).join("");
+     <td class="r">${c.tuition!=null?"$"+c.tuition.toFixed(2):"—"}</td></tr>`).join("");
   document.getElementById("rosterTable").innerHTML=
-    `<tr><th>Class</th><th>Level</th><th>Day</th><th>Time</th><th class="c">Status</th>
+    `<tr><th>Class</th><th>Level</th><th>Instructor</th><th>Day</th><th>Time</th><th class="c">Status</th>
      <th class="r">Spots Left</th><th class="r">Capacity*</th><th class="r">Tuition</th></tr>`+rows;
 }
 
@@ -270,10 +292,11 @@ function initFilters(){
   LEVEL_ORDER.filter(l=>DATA.some(c=>c.level===l)).forEach(l=>fl.add(new Option(l,l)));
   fd.onchange=fl.onchange=renderGrid;
   document.getElementById("rStatus").onchange=renderRoster;
+  document.getElementById("iSort").onchange=renderInst;
 }
 function exportCSV(){
-  const hdr=["Class","Level","Day","Time","Status","Spots Left","Capacity*","Tuition"];
-  const rows=DATA.map(c=>[c.name,c.level,c.day,c.time,c.status,c.openings,c.capacity,c.tuition]);
+  const hdr=["Class","Level","Instructor","Day","Time","Status","Spots Left","Capacity*","Tuition"];
+  const rows=DATA.map(c=>[c.name,c.level,c.instructor,c.day,c.time,c.status,c.openings,c.capacity,c.tuition]);
   const esc=v=>{v=String(v==null?"":v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;};
   const csv=[hdr.join(",")].concat(rows.map(r=>r.map(esc).join(","))).join("\n");
   const a=document.createElement("a");
@@ -287,7 +310,7 @@ document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{
   t.classList.add("active");document.getElementById(t.dataset.v).classList.add("active");});
 document.getElementById("csvBtn").onclick=exportCSV;
 document.getElementById("locLine").textContent=`Location: __LOCATION__ · ${DATA.length} total classes · __DATE__`;
-initFilters();renderGrid();renderLevel();renderRoster();
+initFilters();renderGrid();renderInst();renderLevel();renderRoster();
 </script>
 </body>
 </html>
@@ -296,16 +319,16 @@ initFilters();renderGrid();renderLevel();renderRoster();
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("csv_path")
+    ap.add_argument("json_path")
     ap.add_argument("--title", default="Barron Swim School")
     ap.add_argument("--location", default="O'Fallon, MO")
     ap.add_argument("--date", default="")
     ap.add_argument("--out", default=os.path.dirname(os.path.abspath(__file__)))
     a = ap.parse_args()
 
-    with open(a.csv_path, newline="") as f:
-        rows = list(csv.DictReader(f))
-    data = build_records(rows)
+    with open(a.json_path) as f:
+        classes = json.load(f)
+    data = build_records(classes)
     levels = LEVEL_ORDER + sorted({r["level"] for r in data if r["level"] not in LEVEL_ORDER})
     meta = {"title": a.title, "date": a.date or "(undated)"}
     html = (TEMPLATE
