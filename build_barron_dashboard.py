@@ -46,6 +46,15 @@ PROGRAM_MAP = {
 }
 LEVEL_PREFIX_RE = re.compile(r"^(Swim|Gym|Dance|Ninja)\s*-\s*", re.I)
 
+# Every Barron location this pipeline covers, so each generated page can offer an
+# in-page switcher instead of sending the user back to the FOFNIntel hub. Keep in
+# sync with the ENTITIES list in .github/workflows/refresh-barron.yml.
+BARRON_LOCATIONS = [
+    {"slug": "barron_ofallon", "title": "Barron Swim School", "location": "O'Fallon, MO"},
+    {"slug": "barron_ballwin", "title": "Barron Sports Center", "location": "Ballwin, MO"},
+    {"slug": "barron_southcounty", "title": "Barron Swim School", "location": "South County, MO"},
+]
+
 
 def to12h(t):
     m = re.match(r"^\s*(\d{1,2}):(\d{2})\s*([AaPp][Mm])\s*", str(t or ""))
@@ -167,6 +176,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     <h1>🏊 __TITLE__ — __LOCATION__</h1>
     <div class="pull-time">Data pulled __DATE__ &middot; <span id="hCount">0</span> classes</div>
     <div class="filters">
+      <div class="filter-group"><label>Location</label><select id="fLocation"></select></div>
       <div class="filter-group"><label>Program</label><select id="fProgram"><option value="">All Programs</option></select></div>
       <div class="filter-group"><label>Day of Week</label><select id="fDay"><option value="">All Days</option></select></div>
       <div class="filter-group"><label>Level</label><select id="fLevel"><option value="">All Levels</option></select></div>
@@ -242,6 +252,8 @@ TEMPLATE = r"""<!DOCTYPE html>
 const META = __META__;
 const DATA = __DATA__;
 const LEVEL_ORDER = __LEVELS__;
+const BARRON_LOCATIONS = __BARRON_LOCATIONS__;
+const CURRENT_SLUG = __SLUG__;
 const DAY_ORDER = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 const WEEKS_PER_MONTH = 4.33;
 let dayChart, levelChart, revenueChart;
@@ -398,6 +410,15 @@ function renderAll(){
   renderLevelTable(data);renderInstTable(data);renderRoster(data);
 }
 
+function initLocationSwitcher(){
+  const fLocation=document.getElementById("fLocation");
+  BARRON_LOCATIONS.forEach(loc=>{
+    const label=`${loc.title} — ${loc.location}`;
+    fLocation.add(new Option(label, loc.slug, loc.slug===CURRENT_SLUG, loc.slug===CURRENT_SLUG));
+  });
+  fLocation.onchange=()=>{ if(fLocation.value!==CURRENT_SLUG) window.location.href=fLocation.value+".html"; };
+}
+
 function initFilters(){
   const fProgram=document.getElementById("fProgram");
   [...new Set(DATA.map(c=>c.program))].sort().forEach(p=>fProgram.add(new Option(p,p)));
@@ -417,7 +438,7 @@ function initFilters(){
   }
 }
 
-initFilters();renderAll();
+initLocationSwitcher();initFilters();renderAll();
 </script>
 </body>
 </html>
@@ -445,7 +466,9 @@ def main():
             .replace("__DATE__", a.date or "(undated)")
             .replace("__META__", json.dumps(meta))
             .replace("__DATA__", json.dumps(data, separators=(",", ":")))
-            .replace("__LEVELS__", json.dumps(levels)))
+            .replace("__LEVELS__", json.dumps(levels))
+            .replace("__BARRON_LOCATIONS__", json.dumps(BARRON_LOCATIONS))
+            .replace("__SLUG__", json.dumps(a.slug)))
     outfn = os.path.join(a.out, a.slug + ".html")
     with open(outfn, "w") as f:
         f.write(html)
