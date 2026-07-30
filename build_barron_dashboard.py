@@ -58,7 +58,9 @@ def program_of(c):
 
 
 def level_of(c):
-    if c.get("session") == "Special Activities":
+    # Ballwin's session field is program-prefixed ("Dance Classes", "Swim Activities")
+    # rather than O'Fallon/South County's plain "Classes"/"Special Activities".
+    if (c.get("session") or "").endswith("Activities"):
         return "Special Event"
     lvl = LEVEL_PREFIX_RE.sub("", c.get("category3") or "").strip()
     lvl = lvl.replace(" and ", " & ")
@@ -116,10 +118,15 @@ TEMPLATE = r"""<!DOCTYPE html>
   .filter-group label{font-size:11px;font-weight:600;color:#4a5568;text-transform:uppercase;letter-spacing:.5px}
   select{padding:8px 12px;border:2px solid #e2e8f0;border-radius:6px;font-size:13px;background:#fff;cursor:pointer;min-width:160px}
   select:hover,select:focus{outline:none;border-color:#5b4a9f}
-  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:20px}
-  .stat-card{background:#fff;padding:20px 25px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.05);text-align:center}
-  .stat-card .val{font-size:32px;font-weight:700;color:#5b4a9f}
+  .slider-group{display:flex;flex-direction:column;gap:5px;min-width:220px}
+  .slider-row{display:flex;align-items:center;gap:10px}
+  .slider-row input[type=range]{flex:1;accent-color:#5b4a9f}
+  .slider-row .pct-val{font-size:13px;font-weight:700;color:#5b4a9f;min-width:38px;text-align:right}
+  .stat-row{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-bottom:20px}
+  .stat-card{background:#fff;padding:18px 16px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.05);text-align:center}
+  .stat-card .val{font-size:26px;font-weight:700;color:#5b4a9f}
   .stat-card .val.wait{color:#c05621}
+  .stat-card .val.rev{color:#2f855a}
   .stat-card .sub{font-size:12px;color:#a0aec0;margin-top:2px}
   .stat-card .lbl{font-size:11px;font-weight:600;color:#718096;text-transform:uppercase;letter-spacing:.5px;margin-top:6px}
   .chart-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:20px}
@@ -148,7 +155,9 @@ TEMPLATE = r"""<!DOCTYPE html>
   .badge-program{display:inline-block;background:#edf2f7;color:#4a5568;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:600}
   .heat-none{background:#edf2f7}.heat-1{background:#c6e0ff}.heat-2{background:#8fc1ff}.heat-3{background:#4d94ff;color:#fff}.heat-4{background:#0066cc;color:#fff}
   .note{max-width:1000px;margin:14px auto 0;font-size:12px;color:#718096;line-height:1.5}
-  @media (max-width:1100px){.stat-row{grid-template-columns:repeat(2,1fr)}.chart-grid{grid-template-columns:1fr}}
+  @media (max-width:1300px){.stat-row{grid-template-columns:repeat(3,1fr)}}
+  @media (max-width:1100px){.chart-grid{grid-template-columns:1fr}}
+  @media (max-width:700px){.stat-row{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -163,12 +172,21 @@ TEMPLATE = r"""<!DOCTYPE html>
       <div class="filter-group"><label>Level</label><select id="fLevel"><option value="">All Levels</option></select></div>
       <div class="filter-group"><label>Status</label><select id="fStatus"><option value="">Open + Wait List</option><option value="Open">Open Only</option><option value="Wait List">Wait List Only</option></select></div>
       <div class="filter-group"><label>Instructor</label><select id="fInstructor"><option value="">All Instructors</option></select></div>
+      <div class="slider-group">
+        <label>% of Revenue Collected</label>
+        <div class="slider-row">
+          <input type="range" id="fCollectPct" min="75" max="100" step="1" value="100">
+          <span class="pct-val" id="fCollectPctVal">100%</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="stat-row">
     <div class="stat-card"><div class="val" id="sClasses">0</div><div class="lbl">Classes Shown</div></div>
+    <div class="stat-card"><div class="val" id="sEnroll">0</div><div class="lbl">Est. Enrollment</div><div class="sub" id="sEnrollSub">of 0 capacity*</div></div>
     <div class="stat-card"><div class="val" id="sUtil">0%</div><div class="lbl">Utilization</div><div class="sub" id="sUtilSub">0 of 0 capacity*</div></div>
+    <div class="stat-card"><div class="val rev" id="sRevenue">$0</div><div class="lbl">Est. Weekly Revenue</div><div class="sub" id="sRevenueSub">at 100% collected</div></div>
     <div class="stat-card"><div class="val" id="sOpen">0</div><div class="lbl">Open Spots Right Now</div></div>
     <div class="stat-card"><div class="val wait" id="sWait">0</div><div class="lbl">Wait-Listed Classes</div></div>
   </div>
@@ -181,6 +199,10 @@ TEMPLATE = r"""<!DOCTYPE html>
     <div class="chart-card">
       <div class="chart-title">Utilization by Level</div>
       <div class="chart-wrap"><canvas id="levelChart"></canvas></div>
+    </div>
+    <div class="chart-card full-width">
+      <div class="chart-title">Est. Revenue by Day of Week</div>
+      <div class="chart-wrap"><canvas id="revenueChart"></canvas></div>
     </div>
   </div>
 
@@ -204,6 +226,14 @@ TEMPLATE = r"""<!DOCTYPE html>
     <b>*Capacity</b> is the class's published per-day-of-week slot count (Jackrabbit doesn't
     label it "capacity" directly, but it holds constant whether or not the class is full).
     Enrolled = Capacity − Open Spots (treated as 0 once a class is wait-listed).
+    <b>Est. Revenue</b> treats each class's listed tuition as a monthly recurring fee
+    per enrolled student (Barron bills weekly lessons monthly), derives a per-lesson
+    rate by dividing by 4.33 weeks/month, then multiplies by enrollment to estimate
+    the revenue generated each time that class meets — summed by day of week for one
+    week. One-time items (swim meets, special activities) are excluded since their
+    listed price isn't a recurring weekly fee. The "% of Revenue Collected" slider
+    scales every revenue figure down to account for discounts, scholarships, and
+    multi-class family pricing that the listed tuition doesn't reflect.
     All filters above apply across every chart and table on this page.
   </div>
 </div>
@@ -213,7 +243,8 @@ const META = __META__;
 const DATA = __DATA__;
 const LEVEL_ORDER = __LEVELS__;
 const DAY_ORDER = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-let dayChart, levelChart;
+const WEEKS_PER_MONTH = 4.33;
+let dayChart, levelChart, revenueChart;
 
 const sum = (arr,f)=>arr.reduce((a,c)=>a+f(c),0);
 function utilClass(u){
@@ -221,6 +252,18 @@ function utilClass(u){
   if(u>=40)return"util-40-60";if(u>=20)return"util-20-40";return"util-0-20";
 }
 function heatClass(n){if(!n)return"heat-none";if(n<=2)return"heat-1";if(n<=4)return"heat-2";if(n<=6)return"heat-3";return"heat-4";}
+function money(n){return "$"+Math.round(n).toLocaleString();}
+// Only "Classes" session-type rows carry a recurring weekly tuition; swim meets /
+// special activities are one-time fees and would overstate a "weekly" estimate.
+function revenueByDay(data, pct){
+  const byDay={}; DAY_ORDER.forEach(d=>byDay[d]=0); let total=0;
+  data.forEach(c=>{
+    if(!/Classes$/.test(c.sessionType||"")||c.tuition==null||!c.awls||!c.day)return;
+    const occRevenue=(c.tuition/WEEKS_PER_MONTH)*c.awls*(pct/100);
+    byDay[c.day]+=occRevenue; total+=occRevenue;
+  });
+  return {byDay,total};
+}
 
 function filtered(){
   const program=document.getElementById("fProgram").value;
@@ -242,10 +285,30 @@ function renderStats(data){
   const cap=sum(data,c=>c.capacity), awls=sum(data,c=>c.awls), open=sum(data,c=>c.openings);
   const wait=data.filter(c=>c.status==="Wait List").length;
   const util=cap?(awls/cap*100):0;
+  document.getElementById("sEnroll").textContent=awls;
+  document.getElementById("sEnrollSub").textContent=`of ${cap} capacity*`;
   document.getElementById("sUtil").textContent=util.toFixed(1)+"%";
   document.getElementById("sUtilSub").textContent=`${awls} of ${cap} capacity*`;
   document.getElementById("sOpen").textContent=open;
   document.getElementById("sWait").textContent=wait;
+}
+
+function renderRevenue(data){
+  const pct=+document.getElementById("fCollectPct").value;
+  document.getElementById("fCollectPctVal").textContent=pct+"%";
+  const {byDay,total}=revenueByDay(data,pct);
+  document.getElementById("sRevenue").textContent=money(total);
+  document.getElementById("sRevenueSub").textContent=`at ${pct}% collected (${money(revenueByDay(data,100).total)} at 100%)`;
+  const labels=DAY_ORDER.filter(d=>byDay[d]>0);
+  const vals=labels.map(d=>+byDay[d].toFixed(2));
+  if(revenueChart)revenueChart.destroy();
+  revenueChart=new Chart(document.getElementById("revenueChart"),{
+    type:"bar",
+    data:{labels,datasets:[{label:"Est. Revenue",data:vals,backgroundColor:"#2f855a"}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{tooltip:{callbacks:{label:ctx=>money(ctx.parsed.y)}}},
+      scales:{y:{title:{display:true,text:"Est. Revenue ($)"},ticks:{callback:v=>money(v)}}}}
+  });
 }
 
 function renderDayChart(data){
@@ -331,7 +394,7 @@ function renderRoster(data){
 
 function renderAll(){
   const data=filtered();
-  renderStats(data);renderDayChart(data);renderLevelChart(data);
+  renderStats(data);renderDayChart(data);renderLevelChart(data);renderRevenue(data);
   renderLevelTable(data);renderInstTable(data);renderRoster(data);
 }
 
@@ -346,6 +409,7 @@ function initFilters(){
   const fInstructor=document.getElementById("fInstructor");
   [...new Set(DATA.map(c=>c.instructor).filter(Boolean))].sort().forEach(i=>fInstructor.add(new Option(i,i)));
   [fProgram,fDay,fLevel,document.getElementById("fStatus"),fInstructor].forEach(el=>el.onchange=renderAll);
+  document.getElementById("fCollectPct").oninput=()=>renderRevenue(filtered());
   // Ballwin-style multi-program locations: hide the Program filter entirely when
   // there's only one program (O'Fallon / South County are pure swim).
   if(new Set(DATA.map(c=>c.program)).size<=1){
