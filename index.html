@@ -27,6 +27,46 @@
       padding-left: 12px;
     }
     h3.section.intel { border-left-color: #dd6b20; }
+    details.foss-collapse { margin: 32px 0 16px; }
+    summary.section-summary {
+      color: #2d3748;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-left: 4px solid #2b6cb0;
+      padding-left: 12px;
+      margin: 0 0 16px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      user-select: none;
+    }
+    summary.section-summary::-webkit-details-marker { display: none; }
+    summary.section-summary::before {
+      content: "▶";
+      font-size: 0.7em;
+      color: #718096;
+      transition: transform 0.15s ease;
+    }
+    details.foss-collapse[open] > summary.section-summary::before { transform: rotate(90deg); }
+    summary.section-summary:hover { color: #2b6cb0; }
+    .section-count { color: #a0aec0; font-weight: 400; letter-spacing: normal; text-transform: none; }
+    .last-updated {
+      display: block;
+      font-size: 0.68rem;
+      color: #a0aec0;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+    .multi-links .loc-name .last-updated {
+      display: inline;
+      margin: 0 0 0 6px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      color: #a0aec0;
+    }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
@@ -660,7 +700,8 @@
     </script>
 
 
-    <h3 class="section">FOSS Locations</h3>
+    <details class="foss-collapse">
+      <summary class="section-summary">FOSS Locations <span class="section-count">(35)</span></summary>
     <div class="cards">
       <a class="card foss-card" href="northglenn.html">
         <h2>Northglenn, CO</h2>
@@ -1639,28 +1680,32 @@
         </div>
       </a>
     </div>
+    </details>
 
     <h3 class="section intel">Competitive Intel</h3>
     <div class="cards">
       <a class="card competitor" href="coswimschool.html">
         <h2>CO Swim School</h2>
         <span class="competitor-tag">iClass Pro portal &rarr;</span>
+      <span class="last-updated" data-file="coswimschool.html">Last updated: 2026-06-29</span>
       </a>
       <a class="card competitor" href="littlekickers.html">
         <h2>Little Kickers Swim School</h2>
         <span class="competitor-tag">iClass Pro portal &rarr;</span>
+      <span class="last-updated" data-file="littlekickers.html">Last updated: 2026-06-29</span>
       </a>
       <a class="card competitor" href="tsswim.html">
         <h2>TS Swim <span style="font-weight:400;font-size:13px;color:#9e9e9e">Cary &amp; N. Raleigh, NC</span></h2>
         <span class="competitor-tag">iClass Pro portal &rarr;</span>
+      <span class="last-updated" data-file="tsswim.html">Last updated: 2026-07-21</span>
       </a>
       <div class="card competitor">
         <h2>Barron <span style="font-weight:400;font-size:13px;color:#9e9e9e">3 locations</span></h2>
         <span class="competitor-tag">Class catalog &rarr;</span>
         <div class="multi-links">
-          <a href="barron_ofallon.html"><span class="loc-name">O'Fallon, MO</span><span class="loc-arrow">&rarr;</span></a>
-          <a href="barron_ballwin.html"><span class="loc-name">Ballwin, MO</span><span class="loc-arrow">&rarr;</span></a>
-          <a href="barron_southcounty.html"><span class="loc-name">South County, MO</span><span class="loc-arrow">&rarr;</span></a>
+          <a href="barron_ofallon.html"><span class="loc-name">O'Fallon, MO <span class="last-updated" data-file="barron_ofallon.html">2026-07-30</span></span><span class="loc-arrow">&rarr;</span></a>
+          <a href="barron_ballwin.html"><span class="loc-name">Ballwin, MO <span class="last-updated" data-file="barron_ballwin.html">2026-07-30</span></span><span class="loc-arrow">&rarr;</span></a>
+          <a href="barron_southcounty.html"><span class="loc-name">South County, MO <span class="last-updated" data-file="barron_southcounty.html">2026-07-30</span></span><span class="loc-arrow">&rarr;</span></a>
         </div>
       </div>
     </div>

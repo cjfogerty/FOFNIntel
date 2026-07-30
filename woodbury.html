@@ -438,6 +438,11 @@
             <div class="extraction-time">Data extracted: July 19, 2026 at 11:25 PM</div>
             <div class="session-info"><strong>Summer 2026 Session:</strong> Jun 15 – Aug 30, 2026 &nbsp;•&nbsp; Enrollment opened 5/12/26 &nbsp;•&nbsp; Includes Once-a-Week + 4-Week &amp; 2-Week Clinics</div>
             <div class="filters">
+                <div class="filter-group" id="locationSwitcherGroup">
+                    <label>Location</label>
+                    <select id="locationSwitcher"></select>
+                </div>
+                
                 <div class="filter-group" id="sessionFilterGroup">
                     <label>Session</label>
                     <select id="mainSessionFilter">
@@ -18971,6 +18976,25 @@
             if (!sel) return;
             renderFallPanel();
             sel.addEventListener('change', function () { setFall(sel.value === 'fall'); });
+        });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var LOCATIONS = [{"slug": "northglenn", "name": "Northglenn, CO"}, {"slug": "ofallon", "name": "O'Fallon, MO"}, {"slug": "lakeview", "name": "Lakeview, IL"}, {"slug": "libertyville", "name": "Libertyville, IL"}, {"slug": "niles", "name": "Niles, IL"}, {"slug": "westminster", "name": "Westminster, CO"}, {"slug": "chanhassen", "name": "Chanhassen, MN"}, {"slug": "stlouispark", "name": "St. Louis Park, MN"}, {"slug": "woodbury", "name": "Woodbury, MN"}, {"slug": "maple_grove", "name": "Maple Grove, MN"}, {"slug": "sun_prairie", "name": "Sun Prairie, WI"}, {"slug": "richfield", "name": "Richfield/Edina, MN"}, {"slug": "blaine", "name": "Blaine, MN"}, {"slug": "highland_park", "name": "Highland Park, IL"}, {"slug": "western_springs", "name": "Western Springs, IL"}, {"slug": "glenview", "name": "Glenview, IL"}, {"slug": "south_barrington", "name": "South Barrington, IL"}, {"slug": "savage", "name": "Savage, MN"}, {"slug": "st_paul", "name": "St. Paul, MN"}, {"slug": "elmwood_park", "name": "Elmwood Park, IL"}, {"slug": "plymouth", "name": "Plymouth, MN"}, {"slug": "fargo", "name": "Fargo, ND"}, {"slug": "ankeny", "name": "Ankeny, IA"}, {"slug": "ballwin", "name": "Ballwin, MO"}, {"slug": "st_charles", "name": "St. Charles, MO"}, {"slug": "vadnais_heights", "name": "Vadnais Heights, MN"}, {"slug": "rock_hill", "name": "Rock Hill, MO"}, {"slug": "burnsville", "name": "Burnsville, MN"}, {"slug": "creve_coeur", "name": "Creve Coeur, MO"}, {"slug": "apple_valley", "name": "Apple Valley, MN"}, {"slug": "bolingbrook", "name": "Bolingbrook, IL"}, {"slug": "castle_rock", "name": "Castle Rock, CO"}, {"slug": "lone_tree", "name": "Lone Tree, CO"}, {"slug": "parker", "name": "Parker, CO"}, {"slug": "otsego", "name": "Otsego, MN"}];
+        var CURRENT = "woodbury";
+        var sel = document.getElementById('locationSwitcher');
+        if (!sel) return;
+        LOCATIONS.forEach(function(loc) {
+            var opt = document.createElement('option');
+            opt.value = loc.slug;
+            opt.textContent = loc.name;
+            if (loc.slug === CURRENT) opt.selected = true;
+            sel.appendChild(opt);
+        });
+        sel.addEventListener('change', function() {
+            if (sel.value !== CURRENT) window.location.href = sel.value + '.html';
         });
     })();
     </script>
