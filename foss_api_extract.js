@@ -21,8 +21,12 @@
   var API_BASE = 'https://api-account.fossswimschool.com/api';
   var TOKEN_KEY = 'ffa_access_token';
 
-  // --- seasonId: discovered live (see getCurrentSeasonId). Fallback constant: ---
-  var FALLBACK_SEASON_ID = 99; // Summer 2026 (sessionYear 2026)
+  // --- seasonId: SelectClasses/v2 does NOT auto-correct a stale seasonId — it just
+  //     echoes back whatever is sent, even for an ended season (returns 0 classes).
+  //     getCurrentSeasonId() below is a probe, not real discovery: bump this constant
+  //     every quarter (see WEEKLY_RUN.md) or the pipeline will silently record zeros.
+  //     2026-08-05: 99 (Summer 2026) had ended; 100 (Fall 2026) is current.
+  var FALLBACK_SEASON_ID = 100; // Fall 2026 (sessionYear 2026)
 
   // --- Standing student/level array: casts the widest net across all distinct
   //     levels so SelectClasses/v2 returns the FULL catalog per facility.
@@ -201,16 +205,51 @@
   var WEEKLY_HEADER = ['Day','Time','Class Level','Time Range','Spots Left','Total Capacity','Enrolled','Student:Teacher Ratio'];
   var CAMP_HEADER = ['Camp Name','Date Range','Days','Time','Class Level','Time Range','Spots Left','Total Capacity','Enrolled','Student:Teacher Ratio'];
 
-  function getCurrentSeasonId(facilityId) {
-    // Auto-discover the current seasonId so the script survives quarter rollover.
-    // SelectClasses/v2 echoes back the seasonId it resolved; we do a probe call
-    // with the fallback, read resp.seasonId, and use whatever the server returns.
-    var body = { facilityId: facilityId, seasonId: FALLBACK_SEASON_ID, students: STUDENTS.slice(0,1) };
+  function probeSeasonId(facilityId, seasonId) {
+    var body = { facilityId: facilityId, seasonId: seasonId, students: STUDENTS.slice(0,1) };
     return api('/Classes/SelectClasses/v2', 'POST', body).then(function (resp) {
-      var sid = (resp && resp.seasonId) ? resp.seasonId : FALLBACK_SEASON_ID;
-      console.log('[FOSS-API] Using seasonId ' + sid + ' (' +
-                  (resp.sessionQuarter || '?') + ' ' + (resp.sessionYear || '?') + ')');
-      return sid;
+      // "Once a Week" absent from availableSessionTypes means this season's weekly
+      // registration has closed (ended season) — a single leftover camp class can
+      // still exist there, so classCount alone is NOT a reliable liveness signal.
+      var types = resp.availableSessionTypes || [];
+      var weeklyOpen = types.some(function (t) { return t.sessionTypeCode === 'Once a Week'; });
+      return { sid: (resp && resp.seasonId) || seasonId, quarter: resp.sessionQuarter,
+               year: resp.sessionYear, weeklyOpen: weeklyOpen };
+    });
+  }
+
+  // SelectClasses/v2 does NOT auto-correct a stale/ended seasonId — it just echoes
+  // it back (with weekly registration closed). So: probe FALLBACK_SEASON_ID first;
+  // if its weekly registration is closed, walk forward up to 4 seasonIds looking for
+  // the next live one and warn loudly (this self-heals a missed quarterly bump, but
+  // FALLBACK_SEASON_ID should still be updated in the source — see the comment above
+  // its declaration).
+  function getCurrentSeasonId(facilityId) {
+    return probeSeasonId(facilityId, FALLBACK_SEASON_ID).then(function (r) {
+      if (r.weeklyOpen) {
+        console.log('[FOSS-API] Using seasonId ' + r.sid + ' (' + r.quarter + ' ' + r.year + ')');
+        return r.sid;
+      }
+      console.warn('[FOSS-API] WARNING: FALLBACK_SEASON_ID ' + FALLBACK_SEASON_ID +
+                    ' (' + r.quarter + ' ' + r.year + ') has weekly registration closed — ' +
+                    'probing forward. Update FALLBACK_SEASON_ID in foss_api_extract.js!');
+      var chain = Promise.resolve(null);
+      for (var i = 1; i <= 4; i++) {
+        (function (candidate) {
+          chain = chain.then(function (found) {
+            if (found) return found;
+            return probeSeasonId(facilityId, candidate).then(function (r2) {
+              if (r2.weeklyOpen) {
+                console.warn('[FOSS-API] Auto-recovered: using seasonId ' + r2.sid +
+                            ' (' + r2.quarter + ' ' + r2.year + ') instead.');
+                return r2.sid;
+              }
+              return null;
+            });
+          });
+        })(FALLBACK_SEASON_ID + i);
+      }
+      return chain.then(function (found) { return found || FALLBACK_SEASON_ID; });
     }).catch(function () { return FALLBACK_SEASON_ID; });
   }
 

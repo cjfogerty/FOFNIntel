@@ -38,6 +38,14 @@ enrollment-open date. The dashboards' "Enrollment Over Time" panel uses this
 calendar for its session selector, pre-season (dotted) styling, and
 held-value carry-forward at session changeover.
 
+Also bump `FALLBACK_SEASON_ID` in **foss_api_extract.js** to the new season's
+id (seasonIds increment by 1 each quarter — Winter/Spring/Summer/Fall). The
+API does NOT auto-correct a stale seasonId; it just returns 0 classes for an
+ended season, which silently records zeros into `history/` if unnoticed. The
+script now probes forward and warns in the console if it has to self-heal
+(2026-08-05 incident: 99/Summer was stale, 100/Fall was current), but don't
+rely on that — fix the constant.
+
 ## One-time tools (already run, kept for reference)
 
 - `backfill_history.py --all` — rebuilds `history/` from git history.
