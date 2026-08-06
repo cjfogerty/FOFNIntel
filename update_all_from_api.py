@@ -88,6 +88,16 @@ def main():
     print(f'\n{len(updated)} updated, {len(skipped)} skipped, {len(errors)} errors')
     if skipped:
         for s, why in skipped: print(f'  skip {s}: {why}')
+
+    if updated:
+        try:
+            from build_agg_chart import build_series, update_index_html
+            series = build_series(repo)
+            aok, amsg = update_index_html(os.path.join(repo, 'index.html'), series)
+            print('\naggregate chart: ' + amsg if aok else '\naggregate chart ERR: ' + amsg)
+        except Exception as e:
+            print('\naggregate chart ERR: ' + str(e))
+
     if errors:
         sys.exit(1)
 
