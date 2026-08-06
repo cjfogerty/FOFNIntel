@@ -91,9 +91,11 @@ def main():
 
     if updated:
         try:
-            from build_agg_chart import build_series, update_index_html
+            from build_agg_chart import build_series, find_core_slugs, update_index_html
             series = build_series(repo)
-            aok, amsg = update_index_html(os.path.join(repo, 'index.html'), series)
+            core_slugs = find_core_slugs(repo)
+            series_core = build_series(repo, only_slugs=set(core_slugs))
+            aok, amsg = update_index_html(os.path.join(repo, 'index.html'), series, series_core, core_slugs)
             print('\naggregate chart: ' + amsg if aok else '\naggregate chart ERR: ' + amsg)
         except Exception as e:
             print('\naggregate chart ERR: ' + str(e))
