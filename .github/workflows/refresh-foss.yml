@@ -1,0 +1,58 @@
+name: Weekly FOSS inventory update (API v8)
+
+on:
+  schedule:
+    # Mondays 13:00 UTC (8am CT / 7am CDT) -- one hour after the Barron/Bear Paddle
+    # refresh (refresh-barron.yml, 12:00 UTC) since both touch index.html; the
+    # commit step below still rebase-retries in case they overlap anyway.
+    - cron: "0 13 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-foss.txt
+
+      - name: Extract FOSS class catalog (all facilities)
+        id: extract
+        continue-on-error: true
+        env:
+          FOSS_EMAIL: ${{ secrets.FOSS_EMAIL }}
+          FOSS_PASSWORD: ${{ secrets.FOSS_PASSWORD }}
+        run: python3 foss_api_extract.py _foss_csv
+
+      - name: Update dashboards + history from extracted CSVs
+        id: update
+        if: always()
+        continue-on-error: true
+        run: python3 update_all_from_api.py _foss_csv
+
+      - name: Commit and push if changed
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          rm -rf _foss_csv
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Weekly inventory update (API v8) - $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Fail the run if extraction or update had errors
+        if: steps.extract.outcome == 'failure' || steps.update.outcome == 'failure'
+        run: exit 1
