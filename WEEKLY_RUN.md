@@ -1,8 +1,16 @@
-# Weekly FOSS Inventory Update — Runbook
+# FOSS Inventory Update — Runbook
 
-Canonical steps for the weekly extraction + dashboard update. (June 2026: the
+Canonical steps for the extraction + dashboard update. (June 2026: the
 pipeline now also records an enrollment-history snapshot per location on every
 run — no extra steps, but the commit must include `history/`.)
+
+**Automated runs (Aug 2026):** `.github/workflows/refresh-foss.yml` runs this
+whole pipeline daily via GitHub Actions (13:00 UTC), with no dependency on a
+local machine or browser — `foss_api_extract.py` logs in directly against the
+`Authentication/Login` API and drives the same extraction as step 1 below.
+The manual steps below (`foss_api_extract.js` via Claude in Chrome) are still
+useful for one-off/ad-hoc runs or debugging, but are no longer how the regular
+refresh happens.
 
 ## Steps
 
