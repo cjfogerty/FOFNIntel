@@ -108,6 +108,18 @@ def main():
         except Exception as e:
             print('\nsession freeze ERR: ' + str(e))
 
+        # Regenerate the homepage cards + Enrollment Overview store from the
+        # dashboards and history/, so the homepage can't drift from the location
+        # pages the way it did through Aug 2026 (see rebuild_index.py).
+        try:
+            from rebuild_index import rebuild as rebuild_index_cards
+            changed, notes = rebuild_index_cards(os.path.join(repo, 'index.html'))
+            print('\nhomepage rebuild: %d cards' % len(changed))
+            for n in notes:
+                print('  ' + n)
+        except Exception as e:
+            print('\nhomepage rebuild ERR: ' + str(e))
+
         try:
             from build_agg_chart import build_series, find_core_slugs, update_index_html
             series = build_series(repo)

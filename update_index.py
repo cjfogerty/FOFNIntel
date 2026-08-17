@@ -263,9 +263,14 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
             r'(?: <span class="pill-dates">[^<]*</span>)?</span>',
             lambda m: new_pill, block, count=1)
 
-    if block == orig:
-        return False, 'card found but no fields matched for %s' % slug
-    new_html = html[:i] + block + html[j:]
+    # NB: the chart store update below must NOT sit behind an early return for an
+    # unchanged card. It used to, and the hand-authored pre-season panels don't
+    # match the regexes above, so 17 locations' chart bars sat frozen on their
+    # 2026-08-05 values while their own dashboards moved on (Ballwin: homepage
+    # 520 vs. dashboard 714 on 2026-08-17). rebuild_index.py regenerates cards
+    # from data and is the real fix; this keeps the incremental path honest too.
+    card_stale = block == orig
+    new_html = html if card_stale else html[:i] + block + html[j:]
     # Keep the homepage enrollment chart's data store in sync for this location.
     name_m = re.search(r'<h2>([^<]*)</h2>', block)
     loc_name = name_m.group(1).strip() if name_m else slug
@@ -279,9 +284,10 @@ def update_index_card(index_path, slug, csv_path, location_html_path):
     })
     with open(index_path, 'w', encoding='utf-8') as f:
         f.write(new_html)
-    return True, '%s -> %d/%s seats, %.1f%% util, proj %s (%d%% of target)%s' % (
+    return True, '%s -> %d/%s seats, %.1f%% util, proj %s (%d%% of target)%s%s' % (
         slug, stats['enrolled'], seats_str, stats['util'], proj_str, stats['pct'],
-        '' if date else '  [date unchanged: none found]')
+        '' if date else '  [date unchanged: none found]',
+        '  [card fields did not match; chart store synced]' if card_stale else '')
 
 
 if __name__ == '__main__':

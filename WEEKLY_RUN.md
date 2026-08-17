@@ -78,6 +78,29 @@ Symptom this prevents: a Fall KPI (370) sitting above a Summer trend line
 ending at 707, with the header still claiming "Summer 2026 Session" — the
 state every dashboard was in from the 2026-08-05 rollover until 2026-08-17.
 
+## Homepage (index.html)
+
+Three things on the homepage are generated, and all three run automatically at
+the end of `update_all_from_api.py`:
+
+- `update_index.py` — incremental per-location card patch (runs per slug).
+- `rebuild_index.py` — regenerates every card **and** the Enrollment Overview
+  store (`<script id="fossEnrollData">`) from each `<slug>.html` plus
+  `history/`. Run it standalone any time the homepage looks out of step with a
+  location page: `python3 rebuild_index.py`.
+- `build_agg_chart.py` — the Total Enrollment Over Time blob.
+
+`update_index.py` patches cards with regexes and used to `return` on an
+unchanged card *before* writing the chart store, so any card whose markup
+didn't match (every location added after the original cohort — their
+hand-authored Fall panels say "seats posted" / "Target: N–M by Oct 5") silently
+stopped updating the chart too. On 2026-08-17 Ballwin's dashboard read 714
+while the homepage chart still had its 2026-08-05 value of 520; 17 of 35
+locations were stale, and the cohort's *Summer* tab was being overwritten with
+Fall numbers. `rebuild_index.py` builds from data instead, so it can't drift;
+cards are emitted live-session-first so the incremental patcher still lands on
+the live panel between rebuilds.
+
 ## One-time tools (already run, kept for reference)
 
 - `backfill_history.py --all` — rebuilds `history/` from git history.
