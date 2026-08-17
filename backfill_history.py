@@ -98,6 +98,11 @@ def parse_extraction_dt(html, commit_iso):
     return datetime.fromisoformat(commit_iso).replace(tzinfo=None)
 
 def parse_session(html, dt):
+    # Only older revisions carry a literal session name here. Since
+    # retrofit_session_freeze.py the header is filled in by JS from
+    # ENROLLMENT_HISTORY (it used to go stale at every quarter rollover), so
+    # revisions from Aug 2026 on fall through to the SESSIONS calendar below --
+    # which is the same rule append_history.infer_session() uses live.
     m = re.search(r'session-info"><strong>([A-Za-z]+ \d{4}) Session', html)
     if m:
         return m.group(1)

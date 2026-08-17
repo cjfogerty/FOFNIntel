@@ -28,9 +28,40 @@ from append_history import SESSIONS
 # broad coverage) rather than hardcoding slugs, so the cohort is self-maintaining.
 CORE_SEASON = 'Summer 2026'
 
+# Once FOSS closes a session to new enrollment it stops returning that session's
+# classes, so the last pull or two of a session can come back badly short (e.g.
+# Westminster lost 23 of its 24 Sunday Summer classes between the 2026-07-16 and
+# 2026-07-19 pulls -- 581 seats down to 484). Summing those raw would show a fake
+# enrollment drop at the tail of every session. A pull returning less than this
+# share of the prior pull's seats is treated as truncated and the prior pull's
+# totals are carried forward for that date instead. Mirrors TRUNC_RATIO in
+# retrofit_session_freeze.py, which freezes the per-location "final" the same way.
+TRUNC_RATIO = 0.95
+
 
 def _history_files(repo):
     return sorted(glob.glob(os.path.join(repo, 'history', '*.json')))
+
+
+def _carry_forward_truncated(snaps):
+    """Yield (session, date, enrolled, capacity) with session-close truncation
+    repaired by holding the last complete pull's totals."""
+    ordered = sorted(snaps, key=lambda s: (s.get('session') or '', s.get('date') or ''))
+    last_good = {}  # session -> (enrolled, capacity)
+    for snap in ordered:
+        session, date = snap.get('session'), snap.get('date')
+        totals = snap.get('totals') or {}
+        enrolled, capacity = totals.get('enrolled'), totals.get('capacity')
+        if not session or not date or enrolled is None or capacity is None:
+            continue
+        if enrolled == 0 and capacity == 0:
+            continue  # failed/empty pull for this location that day -- don't count it
+        prev = last_good.get(session)
+        if prev and capacity < prev[1] * TRUNC_RATIO:
+            yield session, date, prev[0], prev[1]
+            continue
+        last_good[session] = (enrolled, capacity)
+        yield session, date, enrolled, capacity
 
 
 def find_core_slugs(repo):
@@ -64,16 +95,7 @@ def build_series(repo, only_slugs=None):
                 hist = json.load(f)
         except (OSError, ValueError):
             continue
-        for snap in hist.get('snapshots', []):
-            session = snap.get('session')
-            date = snap.get('date')
-            totals = snap.get('totals') or {}
-            enrolled = totals.get('enrolled')
-            capacity = totals.get('capacity')
-            if not session or not date or enrolled is None or capacity is None:
-                continue
-            if enrolled == 0 and capacity == 0:
-                continue  # failed/empty pull for this location that day -- don't count it
+        for session, date, enrolled, capacity in _carry_forward_truncated(hist.get('snapshots', [])):
             key = (session, date)
             b = buckets.setdefault(key, {'enrolled': 0, 'capacity': 0, 'locations': 0})
             b['enrolled'] += enrolled

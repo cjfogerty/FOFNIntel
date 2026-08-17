@@ -90,6 +90,24 @@ def main():
         for s, why in skipped: print(f'  skip {s}: {why}')
 
     if updated:
+        # Re-assert session labelling + the frozen past-session panel. Idempotent,
+        # and cheap insurance: when FOSS rolls the catalog to the next season the
+        # dashboard body silently becomes that season's data, and without this the
+        # page keeps the previous season's hardcoded header (that is how a Fall KPI
+        # of 370 ended up over a Summer trend line ending at 707 in Aug 2026).
+        try:
+            from retrofit_session_freeze import apply as apply_session_freeze
+            failures = []
+            for slug in updated:
+                ok, msg = apply_session_freeze(slug)
+                if not ok:
+                    failures.append(f'{slug}: {msg}')
+            print('\nsession freeze: %d/%d dashboards' % (len(updated) - len(failures), len(updated)))
+            for f in failures:
+                print('  ERR ' + f)
+        except Exception as e:
+            print('\nsession freeze ERR: ' + str(e))
+
         try:
             from build_agg_chart import build_series, find_core_slugs, update_index_html
             series = build_series(repo)

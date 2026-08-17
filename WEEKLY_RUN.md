@@ -54,6 +54,30 @@ script now probes forward and warns in the console if it has to self-heal
 (2026-08-05 incident: 99/Summer was stale, 100/Fall was current), but don't
 rely on that — fix the constant.
 
+## Session rollover: what the dashboards do on their own
+
+The dashboard body (KPI cards, charts, tables) is always the session the
+extractor pulled that morning — when FOSS rolls the catalog, the body follows
+it. `retrofit_session_freeze.py` (run automatically at the end of
+`update_all_from_api.py`) makes the page say so: the header line, the KPI
+"Fall 2026 · live" tag, and the Session dropdown are all filled in the browser
+from `history/<slug>.js`, so a rollover relabels itself with no code change.
+
+**Past sessions are frozen, never re-derived.** Once FOSS closes a session to
+new enrollment it stops returning that session's classes, so a later pull comes
+back short — Westminster's Summer seats fell 581 → 484 between the 2026-07-16
+and 2026-07-19 pulls because 23 of its 24 Sunday classes dropped out of the
+catalog. Selecting a past session shows its last **complete** pull out of
+`history/`: totals, day and category breakdowns, and a note if a truncated
+later pull was skipped. `TRUNC_RATIO` (0.95) in `retrofit_session_freeze.py`
+and `build_agg_chart.py` is what flags a pull as truncated; the homepage
+aggregate carries the last complete totals forward for those dates so the
+tail of each session doesn't show a fake dip.
+
+Symptom this prevents: a Fall KPI (370) sitting above a Summer trend line
+ending at 707, with the header still claiming "Summer 2026 Session" — the
+state every dashboard was in from the 2026-08-05 rollover until 2026-08-17.
+
 ## One-time tools (already run, kept for reference)
 
 - `backfill_history.py --all` — rebuilds `history/` from git history.
