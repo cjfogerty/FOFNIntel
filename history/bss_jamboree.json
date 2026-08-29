@@ -12,13 +12,13 @@
  "snapshots": [
   {
    "date": "2026-08-29",
-   "ts": "2026-08-29T14:10",
+   "ts": "2026-08-29T14:52",
    "label": "Aug 29",
    "session": "Continuous enrollment",
    "totals": {
-    "enrolled": 15,
-    "capacity": 113,
-    "utilization": 13.3
+    "enrolled": 17,
+    "capacity": 115,
+    "utilization": 14.8
    },
    "slots": {
     "Thu|7:00pm - 7:30pm|Adult 1": [
@@ -122,12 +122,12 @@
      4
     ],
     "Thu|4:00pm - 4:30pm|Turtle 2": [
-     0,
-     4
+     1,
+     5
     ],
     "Thu|6:00pm - 6:30pm|Turtle 2": [
-     0,
-     4
+     1,
+     5
     ],
     "Sat|9:00am - 9:30am|Young Adult 1": [
      2,

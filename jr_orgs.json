@@ -21,7 +21,9 @@
       "validation": "Confirmed against san-diego-temecula-valley, which returned 548999 -- matching the OrgID in the regv2.asp registration link Casey already had.",
       "territory_index": "britishswimschool.com/locations/us/ lists every territory slug, but it is long enough that WebFetch truncates it mid-Illinois. Needs Chrome or curl to enumerate slugs beyond that point.",
       "warning": "Territory membership does NOT follow geography. The San Diego org covers pools up in Irvine. Always take membership from the territory page's own pool list, never from distance clustering.",
-      "loc_codes": "The per-location Loc code (e.g. 24KM = 24 Hour Fitness Kearny Mesa) appears in regv2.asp registration links and in the portal's location dropdown; resolve at extract time."
+      "loc_codes": "The per-location Loc code (e.g. 24KM = 24 Hour Fitness Kearny Mesa) appears in regv2.asp registration links and in the portal's location dropdown; resolve at extract time.",
+      "pool_id_discovery": "DEFINITIVE METHOD, found 2026-08-29. Every British pool page carries its own location code in the assessment link: britishswimschool.com/<territory>/location/<pool-slug>/ contains a 'Take Swim Assessment' link of the form /find-a-lesson/?pool_id=<CODE>. That CODE is exactly the value the openings feed wants as &loc=. Read it off the page instead of guessing -- the codes are 6-char abbreviations with unpredictable letter drops: Wexford is WOOLND (transposed from the obvious WOODLN), Valencia is STBARN, Gibsonia is WILDWD, Kingsley is KINGSL. Fifteen guessed variants for Wexford all missed before the pool page gave it up in one fetch. NOTE britishswimschool.com 403s curl (bot protection) -- use WebFetch for the pool page; app.jackrabbitclass.com has no such block.",
+      "published_ratios": "British publishes its own class ratios on each pool page: Group 1:4 or 1:6, Semi-Private 1:2, Private 1:1, Barracuda swim team groups of 8. This independently confirms the derived-capacity model and explains the max_open=13 outlier seen during calibration (Barracuda is a swim team, not a lesson)."
     },
     "bearpaddle_other_loc_codes": {
       "FLO": "Florence, KY",
@@ -72,9 +74,9 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 383,
-            "derived_capacity": 488,
-            "est_utilization_pct": 78.5,
+            "est_enrolled": 382,
+            "derived_capacity": 487,
+            "est_utilization_pct": 78.4,
             "classes": 141,
             "classes_waitlisted": 71,
             "capacity_basis": "observed_max_only",
@@ -104,9 +106,9 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 422,
-            "derived_capacity": 530,
-            "est_utilization_pct": 79.6,
+            "est_enrolled": 419,
+            "derived_capacity": 527,
+            "est_utilization_pct": 79.5,
             "classes": 160,
             "classes_waitlisted": 90,
             "capacity_basis": "observed_max_only",
@@ -216,9 +218,9 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 603,
-            "derived_capacity": 731,
-            "est_utilization_pct": 82.5,
+            "est_enrolled": 591,
+            "derived_capacity": 718,
+            "est_utilization_pct": 82.3,
             "classes": 209,
             "classes_waitlisted": 113,
             "capacity_basis": "observed_max_only",
@@ -240,8 +242,8 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 453,
-            "derived_capacity": 553,
+            "est_enrolled": 452,
+            "derived_capacity": 552,
             "est_utilization_pct": 81.9,
             "classes": 163,
             "classes_waitlisted": 100,
@@ -352,9 +354,9 @@
             }
           ],
           "measured": {
-            "est_enrolled": 68,
-            "derived_capacity": 108,
-            "est_utilization_pct": 63.0,
+            "est_enrolled": 72,
+            "derived_capacity": 112,
+            "est_utilization_pct": 64.3,
             "classes": 36,
             "classes_waitlisted": 18,
             "capacity_basis": "published_ratio+observed_max",
@@ -376,9 +378,9 @@
             }
           ],
           "measured": {
-            "est_enrolled": 124,
-            "derived_capacity": 212,
-            "est_utilization_pct": 58.5,
+            "est_enrolled": 129,
+            "derived_capacity": 217,
+            "est_utilization_pct": 59.4,
             "classes": 57,
             "classes_waitlisted": 22,
             "capacity_basis": "published_ratio+observed_max",
@@ -400,9 +402,9 @@
             }
           ],
           "measured": {
-            "est_enrolled": 144,
-            "derived_capacity": 342,
-            "est_utilization_pct": 42.1,
+            "est_enrolled": 155,
+            "derived_capacity": 353,
+            "est_utilization_pct": 43.9,
             "classes": 79,
             "classes_waitlisted": 8,
             "capacity_basis": "published_ratio+observed_max",
@@ -493,9 +495,9 @@
           ],
           "loc_filter": "['24MKTP']",
           "measured": {
-            "est_enrolled": 15,
-            "derived_capacity": 113,
-            "est_utilization_pct": 13.3,
+            "est_enrolled": 17,
+            "derived_capacity": 115,
+            "est_utilization_pct": 14.8,
             "classes": 28,
             "classes_waitlisted": 2,
             "capacity_basis": "published_ratio+observed_max",
@@ -934,46 +936,73 @@
       "locations": [
         {
           "slug": "bss_wexford",
-          "loc_filter": null,
+          "loc_filter": "WOOLND",
           "lma_site_name": "British Swim School - Woodlands Foundation Wexford",
           "city": "Wexford",
           "state": "PA",
-          "status": "needs_account",
+          "status": "live",
           "note": "Directly relevant to the Wexford vs Cranberry competitive brief.",
           "bbss": [
             {
               "location": "Cranberry Township",
               "distance_mi": 3.9
             }
-          ]
+          ],
+          "measured": {
+            "est_enrolled": 199,
+            "derived_capacity": 353,
+            "est_utilization_pct": 56.4,
+            "classes": 81,
+            "classes_waitlisted": 21,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
         },
         {
           "slug": "bss_valencia",
-          "loc_filter": null,
+          "loc_filter": "STBARN",
           "lma_site_name": "British Swim School - St. Barnabas Crystal Conservatories Valencia",
           "city": "Valencia",
           "state": "PA",
-          "status": "needs_account",
+          "status": "live",
           "bbss": [
             {
               "location": "Cranberry Township",
               "distance_mi": 9.48
             }
-          ]
+          ],
+          "measured": {
+            "est_enrolled": 95,
+            "derived_capacity": 186,
+            "est_utilization_pct": 51.1,
+            "classes": 43,
+            "classes_waitlisted": 11,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
         },
         {
           "slug": "bss_gibsonia",
-          "loc_filter": null,
+          "loc_filter": "WILDWD",
           "lma_site_name": "British Swim School - Wildwood Hampton Township",
           "city": "Gibsonia",
           "state": "PA",
-          "status": "needs_account",
+          "status": "live",
           "bbss": [
             {
               "location": "Cranberry Township",
               "distance_mi": 9.89
             }
-          ]
+          ],
+          "measured": {
+            "est_enrolled": 140,
+            "derived_capacity": 232,
+            "est_utilization_pct": 60.3,
+            "classes": 54,
+            "classes_waitlisted": 16,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
         }
       ]
     },
@@ -1270,9 +1299,9 @@
             }
           ],
           "measured": {
-            "est_enrolled": 65,
-            "derived_capacity": 117,
-            "est_utilization_pct": 55.6,
+            "est_enrolled": 70,
+            "derived_capacity": 122,
+            "est_utilization_pct": 57.4,
             "classes": 28,
             "classes_waitlisted": 4,
             "capacity_basis": "published_ratio+observed_max",

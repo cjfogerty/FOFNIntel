@@ -12,12 +12,12 @@
  "snapshots": [
   {
    "date": "2026-08-29",
-   "ts": "2026-08-29T14:10",
+   "ts": "2026-08-29T14:52",
    "label": "Aug 29",
    "session": "Continuous enrollment",
    "totals": {
-    "enrolled": 453,
-    "capacity": 553,
+    "enrolled": 452,
+    "capacity": 552,
     "utilization": 81.9
    },
    "slots": {
@@ -462,8 +462,8 @@
      4
     ],
     "Mon|7:00pm - 7:30pm|Panda 5": [
-     4,
-     4
+     3,
+     3
     ],
     "Wed|4:30pm - 5:00pm|Polar 2": [
      2,

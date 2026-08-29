@@ -158,12 +158,31 @@ SITES = [
          location="Chandler, AZ", lma="British Swim School - EoS Fitness Chandler Ray and Rural"),
     dict(brand="British", org="548617", name_code=["LIFE"], slug="bss_gilbert_lauren",
          location="Gilbert, AZ", lma="British Swim School - Lauren's Institute Gilbert"),
+
+    # --- British Pittsburgh: the one org with NO code in its class names -----
+    # Class names here are bare ("Adult - 6:30pm"), so this org must be split
+    # with &loc= like Bear Paddle. Codes are 6-char abbreviations and are NOT
+    # guessable -- Wexford is WOOLND, with the letters transposed from the
+    # obvious WOODLN. See _meta.pool_id_discovery in jr_orgs.json for the
+    # reliable way to read them off British's own site.
+    dict(brand="British", org="517761", loc="WOOLND", slug="bss_wexford",
+         location="Wexford, PA", lma="British Swim School - Woodlands Foundation Wexford",
+         note="Feeds the Wexford vs Cranberry competitive brief."),
+    dict(brand="British", org="517761", loc="STBARN", slug="bss_valencia",
+         location="Valencia, PA",
+         lma="British Swim School - St. Barnabas Crystal Conservatories Valencia"),
+    dict(brand="British", org="517761", loc="WILDWD", slug="bss_gibsonia",
+         location="Gibsonia, PA", lma="British Swim School - Wildwood Hampton Township"),
 ]
 
-# Brand-published instructor ratios. British states 4:1 for survival classes and
-# 6:1 for Tadpole / Stroke Development on its own site. No public ratio was
-# found for Bear Paddle, so it falls through to observed-max only.
-PUBLISHED_RATIO = {"British": {"_default": 4, "Tadpole": 6}}
+# Brand-published instructor ratios. British's own pool pages publish these
+# directly (e.g. /pittsburgh/location/woodlands-foundation-wexford/):
+#   Group 1:4 or 1:6 | Semi-Private 1:2 | Private 1:1 | Barracuda swim team 8
+# Tadpole / Stroke Development are the 1:6 group; Barracuda is a swim team and
+# is much larger, which is what produced the odd max_open=13 seen during
+# calibration. No public ratio was found for Bear Paddle, so it falls through
+# to observed-max only.
+PUBLISHED_RATIO = {"British": {"_default": 4, "Tadpole": 6, "Barracuda": 8}}
 
 # Only real lesson sessions count. This MUST be a blocklist, not an allowlist:
 # session strings are wildly inconsistent between orgs -- Bear Paddle uses

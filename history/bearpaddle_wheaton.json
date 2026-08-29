@@ -12,13 +12,13 @@
  "snapshots": [
   {
    "date": "2026-08-29",
-   "ts": "2026-08-29T14:10",
+   "ts": "2026-08-29T14:52",
    "label": "Aug 29",
    "session": "Continuous enrollment",
    "totals": {
-    "enrolled": 422,
-    "capacity": 530,
-    "utilization": 79.6
+    "enrolled": 419,
+    "capacity": 527,
+    "utilization": 79.5
    },
    "slots": {
     "Mon|5:30pm - 6:00pm|Teddy Intro": [
@@ -502,12 +502,12 @@
      4
     ],
     "Tue|5:30pm - 6:00pm|Panda 5": [
-     3,
-     4
+     2,
+     3
     ],
     "Mon|6:00pm - 6:30pm|Panda 5": [
-     4,
-     4
+     3,
+     3
     ],
     "Tue|4:00pm - 4:30pm|Special Needs Private": [
      1,
@@ -518,8 +518,8 @@
      1
     ],
     "Wed|4:45pm - 5:15pm|Panda 5": [
-     4,
-     4
+     3,
+     3
     ],
     "Mon|5:00pm - 5:30pm|Polar 1": [
      3,

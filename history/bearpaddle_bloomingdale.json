@@ -12,13 +12,13 @@
  "snapshots": [
   {
    "date": "2026-08-29",
-   "ts": "2026-08-29T14:10",
+   "ts": "2026-08-29T14:52",
    "label": "Aug 29",
    "session": "Continuous enrollment",
    "totals": {
-    "enrolled": 383,
-    "capacity": 488,
-    "utilization": 78.5
+    "enrolled": 382,
+    "capacity": 487,
+    "utilization": 78.4
    },
    "slots": {
     "Tue|4:15pm - 4:45pm|Teddy Advanced": [
@@ -354,8 +354,8 @@
      4
     ],
     "Mon|5:30pm - 6:00pm|Panda 5": [
-     3,
-     4
+     2,
+     3
     ],
     "Sun|11:30am - 12:00pm|Polar 3": [
      2,

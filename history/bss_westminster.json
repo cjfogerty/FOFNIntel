@@ -12,13 +12,13 @@
  "snapshots": [
   {
    "date": "2026-08-29",
-   "ts": "2026-08-29T14:10",
+   "ts": "2026-08-29T14:52",
    "label": "Aug 29",
    "session": "Continuous enrollment",
    "totals": {
-    "enrolled": 65,
-    "capacity": 117,
-    "utilization": 55.6
+    "enrolled": 70,
+    "capacity": 122,
+    "utilization": 57.4
    },
    "slots": {
     "Sun|3:45pm - 4:15pm|Swimboree": [
@@ -106,24 +106,24 @@
      4
     ],
     "Sun|1:00pm - 1:30pm|Turtle 2": [
-     3,
-     4
+     4,
+     5
     ],
     "Sun|2:15pm - 2:45pm|Turtle 2": [
-     3,
-     4
+     4,
+     5
     ],
     "Sun|3:45pm - 4:15pm|Turtle 2": [
-     3,
-     4
+     4,
+     5
     ],
     "Tue|5:45pm - 6:15pm|Turtle 2": [
-     3,
-     4
+     4,
+     5
     ],
     "Tue|6:45pm - 7:15pm|Turtle 2": [
-     3,
-     4
+     4,
+     5
     ],
     "Sun|4:15pm - 5:00pm|Adult Level 1": [
      4,
