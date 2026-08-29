@@ -1,0 +1,410 @@
+{
+ "location": "Bensalem, PA",
+ "slug": "bss_bensalem",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-08-29",
+   "end": "2099-12-31",
+   "catalog_from": "2026-08-29"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-08-29",
+   "ts": "2026-08-29T14:10",
+   "label": "Aug 29",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 268,
+    "capacity": 370,
+    "utilization": 72.4
+   },
+   "slots": {
+    "Mon|7:30pm - 8:00pm|Adult 1 LAB 7:30pm Mon": [
+     7,
+     8
+    ],
+    "Thu|7:30pm - 8:00pm|Adult 1 LAB 7:30pm Thu": [
+     8,
+     8
+    ],
+    "Sat|1:00pm - 1:30pm|Adult 1/2 LAB 1:00pm Sat (Station 6)": [
+     4,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Adult 2/3 LAB 7:30pm Tue": [
+     4,
+     4
+    ],
+    "Tue|8:00pm - 8:30pm|Adult/YA (family) LAB 8:00pm Tue": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Barracuda LAB 5:30pm Thu": [
+     1,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Barracuda LAB 6:00pm Tue": [
+     1,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Barracuda LAB 7:00pm Wed (Station 6)": [
+     2,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Minnow LAB 10:00am Sat (Station 3)": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Minnow LAB 11:00am Sat (Station 4)": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Minnow LAB 12:00pm Sat (Station 4)": [
+     4,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Minnow LAB 4:30pm Mon": [
+     4,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow LAB 5:00pm Thu (Station 2)": [
+     4,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Minnow LAB 5:00pm Tue": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow LAB 5:30pm Mon": [
+     3,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Minnow LAB 5:30pm Tue": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Minnow LAB 6:30pm Mon": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Minnow LAB 6:30pm Thu (Station 3)": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Minnow LAB 6:30pm Tue": [
+     3,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Minnow LAB 9:30am Sat (Station 2)": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Private (T2) LAB 5:30pm Mon": [
+     0,
+     1
+    ],
+    "Mon|4:00pm - 4:30pm|Private LAB 4:00pm Mon": [
+     1,
+     1
+    ],
+    "Wed|5:00pm - 5:30pm|Private LAB 5:00pm Wed": [
+     1,
+     1
+    ],
+    "Wed|7:30pm - 8:00pm|Private LAB 7:30pm Wed": [
+     1,
+     1
+    ],
+    "Mon|8:00pm - 8:30pm|Private LAB 8:00pm Mon": [
+     1,
+     1
+    ],
+    "Sat|10:30am - 11:00am|Seahorse LAB 10:30am Sat (Station 3)": [
+     4,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Seahorse LAB 4:30pm Thu": [
+     2,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Seahorse LAB 6:00pm Mon": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Shark 1 LAB 12:00pm Sat (Station 7)": [
+     4,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Shark 1 LAB 4:30pm Thu": [
+     2,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Shark 1 LAB 4:30pm Tue": [
+     0,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Shark 1 LAB 5:00pm Wed": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Shark 1 LAB 6:00pm Mon": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Shark 1 LAB 6:30pm Tue": [
+     1,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Shark 1 LAB 6:30pm Wed (Station 6)": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Shark 1 LAB 7:00pm Thu (Station 7)": [
+     2,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Shark 1/2 LAB 12:30pm Sat (Station 7)": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Shark 1/2 LAB 6:30pm Mon": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Shark 2 LAB 6:00pm Thu (Station 1)": [
+     1,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Shark 2 LAB 7:00pm Mon": [
+     1,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Shark 2 LAB 7:00pm Tue": [
+     1,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Starfish LAB 4:00pm Mon": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish LAB 4:30pm Mon": [
+     2,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Starfish LAB 4:30pm Wed": [
+     4,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Starfish LAB 5:00pm Mon": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Starfish LAB 6:00pm Thu (Station 3)": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Starfish LAB 7:00pm Mon": [
+     1,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Starfish LAB 9:30am Sat (Station 3)": [
+     3,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Starfish/Minnow LAB 11:30am Sat (Station 3)": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Starfish/Minnow LAB 5:30pm Wed": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Starfish/Minnow LAB 6:00pm Wed": [
+     4,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Swimboree LAB 10:00am Sat (Station 1)": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Tadpole LAB 5:00pm Mon": [
+     3,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Tadpole LAB 9:30am Sat (Station 1)": [
+     0,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Tadpole/Swimboree LAB 10:30am Sat (Station 1)": [
+     1,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Turtle 1 LAB 10:00am Sat (Station 5)": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 1 LAB 10:30am Sat (Station 5)": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 1 LAB 11:00am Sat (Station 5)": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 LAB 11:30am Sat": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 1 LAB 12:00pm Sat (Station 5)": [
+     4,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 1 LAB 4:30pm Mon": [
+     3,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Turtle 1 LAB 4:30pm Tue": [
+     4,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 LAB 5:00pm Mon": [
+     3,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Turtle 1 LAB 5:00pm Tue": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle 1 LAB 5:30pm Thu (Station 5)": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Turtle 1 LAB 6:00pm Mon": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 1 LAB 6:00pm Thu": [
+     4,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 1 LAB 6:00pm Tue": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle 1 LAB 6:00pm Wed (Station 5)": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Turtle 1 LAB 7:00pm Mon": [
+     2,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Turtle 1 LAB 7:00pm Thu (Station 1)": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 2 LAB 11:30am Sat (Station 1)": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 2 LAB 11:00am Sat (Station 1)": [
+     3,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 2 LAB 12:30pm Sat (Station 1)": [
+     2,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Turtle 2 LAB 4:00pm Mon": [
+     0,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Turtle 2 LAB 4:30pm Wed (Station 6)": [
+     0,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle 2 LAB 5:00pm Thu (Station 1)": [
+     0,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Turtle 2 LAB 5:30pm Mon": [
+     2,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Turtle 2 LAB 5:30pm Tue": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle 2 LAB 5:30pm Wed (Station 1)": [
+     3,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 2 LAB 6:30pm Mon": [
+     2,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle 2 LAB 6:30pm Thu (Station 1)": [
+     3,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 2 LAB 6:30pm Wed (Station 1)": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Turtle 2 LAB 7:00pm Thu (Station 5)": [
+     3,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Turtle 2 LAB 7:00pm Tue": [
+     0,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Young Adult LAB 7:30pm Mon": [
+     3,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Young Adult LAB 7:30pm Thu (Station 7)": [
+     3,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|Young Adult LAB 7:30pm Wed": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Minnow LAB 5:30pm Thu (Station 3)": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Shark 1 LAB 6:30pm Thu (Station 7)": [
+     2,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Starfish LAB 1:00pm Sat": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Starfish LAB 12:30pm Sat": [
+     4,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Starfish LAB 7:00pm Wed": [
+     4,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Adult 1 LAB 7:30pm Tue": [
+     3,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Private (Adult) LAB 1:00pm Sat": [
+     1,
+     1
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

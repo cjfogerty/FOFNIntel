@@ -1,0 +1,338 @@
+{
+ "location": "Jenkintown, PA",
+ "slug": "bss_jenkintown",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-08-29",
+   "end": "2099-12-31",
+   "catalog_from": "2026-08-29"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-08-29",
+   "ts": "2026-08-29T14:10",
+   "label": "Aug 29",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 243,
+    "capacity": 284,
+    "utilization": 85.6
+   },
+   "slots": {
+    "Mon|12:30pm - 1:00pm|*Closing after 8/24* Adult 1 AB 12:30pm Mon": [
+     4,
+     4
+    ],
+    "Mon|12:30pm - 1:00pm|*Closing after 8/24* Turtle 1 ABGTN 12:30pm Mon": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Adult 1 AB 1:00pm Sat": [
+     4,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Adult 1 AB 7:30pm Thu": [
+     6,
+     8
+    ],
+    "Sat|1:00pm - 1:30pm|Adult 1 ABGTN 1:00pm Sat": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult 1 ABGTN 7:00pm Thu": [
+     4,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Adult 1 ABGTN 7:30pm Tue": [
+     4,
+     4
+    ],
+    "Thu|8:00pm - 8:30pm|Adult 1 ABGTN 8:00pm Thu": [
+     7,
+     8
+    ],
+    "Tue|7:30pm - 8:00pm|Adult 2 ABGTN 7:30pm Tue": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Family Private AB 10:30am Sat": [
+     1,
+     1
+    ],
+    "Sat|10:30am - 11:00am|Minnow AB 10:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Minnow AB 11:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Minnow AB 12:30pm Sat": [
+     1,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Minnow AB 4:00pm Tue": [
+     4,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow AB 5:00pm Thu": [
+     3,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Minnow ABGTN 5:00pm Tue": [
+     4,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Minnow ABGTN 5:30pm Tue": [
+     4,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Minnow ABGTN 9:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Private (Adult) AB 1:00pm Sat": [
+     1,
+     1
+    ],
+    "Thu|7:00pm - 7:30pm|Private (Min) AB 7:00pm Thu": [
+     1,
+     1
+    ],
+    "Thu|6:00pm - 6:30pm|Private (T1) AB 6:00pm Thu": [
+     1,
+     1
+    ],
+    "Thu|5:30pm - 6:00pm|Private ABGTN 5:30pm Thu": [
+     1,
+     1
+    ],
+    "Sat|10:00am - 10:30am|Seahorse ABGTN 10:00am Sat": [
+     4,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Semi-private AB 4:30pm Tue": [
+     2,
+     2
+    ],
+    "Thu|6:30pm - 7:00pm|Shark 1 AB 6:30pm Thu": [
+     0,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Shark 1 ABGTN 12:30pm Sat": [
+     4,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Shark 1/2 ABGTN 5:00pm Tue": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Shark 1/2 ABGTN 5:30pm Thu": [
+     0,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Star/Minnow ABGTN 10:00am Sat": [
+     4,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Starfish AB 4:30pm Thu": [
+     2,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Starfish AB 6:00pm Tue": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Starfish ABGTN 12:00pm Sat": [
+     4,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Starfish ABGTN 5:00pm Tue": [
+     4,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Starfish ABGTN 9:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Tad/Swim ABGTN 9:30am Sat": [
+     1,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Tadpole ABGTN 4:30pm Tue": [
+     3,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Tadpole/Swimboree ABGTN 10:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 1 AB 11:00am Sat": [
+     3,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 1 AB 10:30am Sat": [
+     3,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle 1 AB 4:30pm Thu": [
+     4,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle 1 AB 5:00pm Thu": [
+     4,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Turtle 1 AB 5:30pm Tue": [
+     3,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 1 AB 6:00pm Tue": [
+     2,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 1 ABGTN 6:00pm Tue": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 1 ABGTN 12:00pm Sat": [
+     4,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Turtle 1 ABGTN 4:30pm Tue": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 1 ABGTN 6:30pm Tue": [
+     4,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Turtle 1 ABGTN 7:00pm Tue": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 2 AB 12:00pm Sat": [
+     4,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle 2 AB 6:30pm Thu": [
+     4,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Turtle 2 AB 7:00pm Tue": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 2 ABGTN 11:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 2 ABGTN 11:30am Sat": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 2 ABGTN 6:30pm Tue": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Young Adult AB 7:00pm Thu": [
+     4,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Young Adult AB 7:30pm Thu": [
+     2,
+     4
+    ],
+    "Thu|8:00pm - 8:30pm|Young Adult ABGTN 8:00pm Thu": [
+     2,
+     4
+    ],
+    "Sat|10:00am - 10:30am|*CLOSING 9/6* Minnow AB 10:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Minnow AB 11:00am Sat": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Minnow ABGTN 5:30pm Thu": [
+     2,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Minnow ABGTN 6:00pm Thu": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Minnow ABGTN 6:30pm Thu": [
+     2,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Minnow ABGTN 7:00pm Tue": [
+     3,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Private ABGTN 11:30am Sat": [
+     1,
+     1
+    ],
+    "Thu|4:30pm - 5:00pm|Private ABGTN 4:30pm Thu": [
+     1,
+     1
+    ],
+    "Tue|4:00pm - 4:30pm|SPV ABGTN 4:00pm Tue": [
+     4,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Starfish ABGTN 4:00pm Tue": [
+     2,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Starfish ABGTN 5:00pm Thu": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Starfish ABGTN 6:00pm Thu": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Starfish/Minnow ABGTN 6:30pm Tue": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 1 ABGTN 12:30pm Sat": [
+     4,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Turtle 2 ABGTN 5:30pm Tue": [
+     4,
+     4
+    ],
+    "Tue|8:00pm - 8:30pm|Adult 1 ABGTN 8:00pm Tue": [
+     3,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Adult 1/2 ABGTN 7:30pm Tue": [
+     4,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Drop In Private ABGTN 7:30pm Thu": [
+     1,
+     1
+    ],
+    "Tue|8:00pm - 8:30pm|Drop In Private ABGTN 8:00pm Tue": [
+     1,
+     1
+    ],
+    "Tue|8:00pm - 8:30pm|Private (Adult) ABGTN 8:00pm Tue": [
+     1,
+     1
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

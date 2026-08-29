@@ -1,0 +1,77 @@
+name: Refresh Jackrabbit competitor enrollment (public feed)
+
+# Reads Jackrabbit's PUBLIC OpeningsJS feed for every site in
+# pull_jackrabbit.py's registry. No parent account, no credentials, no
+# Playwright -- unlike refresh-barron.yml, which logs in because
+# GetClassesForEnroll requires a session. This job needs no secrets at all.
+#
+# Writes history/<slug>.json in the same shape as the FOSS history files, so
+# the LMA's pipeline/refresh_offplatform.py picks the figures up on its own
+# schedule. jackrabbit_enrollment.csv is the flat summary the report-sandbox
+# builder joins against.
+
+on:
+  schedule:
+    # Mondays 12:30 UTC (7:30am CT). Half an hour after refresh-barron.yml so
+    # the two never race on a push to the same branch.
+    - cron: "30 12 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # pull_jackrabbit.py is stdlib-only and shells out to curl, which is
+      # present on ubuntu-latest. Nothing to install.
+      - name: Extract enrollment from the public feed
+        run: python3 pull_jackrabbit.py
+
+      - name: Sync measured figures back into the registry
+        run: python3 sync_registry.py
+
+      - name: Sanity-check the output
+        run: |
+          set -e
+          python3 -m json.tool jr_orgs.json > /dev/null
+          ROWS=$(($(wc -l < jackrabbit_enrollment.csv) - 1))
+          echo "extracted $ROWS sites"
+          # A partial pull is worse than no pull: it would silently drop
+          # competitors out of the LMA. Fail loudly instead of committing it.
+          if [ "$ROWS" -lt 25 ]; then
+            echo "::error::only $ROWS sites extracted, expected >=25 -- refusing to commit"
+            exit 1
+          fi
+
+      - name: Commit
+        run: |
+          set -e
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add history/ jackrabbit_enrollment.csv jr_orgs.json
+          if git diff --staged --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "Refresh Jackrabbit competitor enrollment ($(date -u +%Y-%m-%d))"
+          # The barron job may have pushed between our checkout and now.
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push
+
+      - name: Upload extract on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jackrabbit-extract
+          path: |
+            jackrabbit_enrollment.csv
+            jr_orgs.json
+          if-no-files-found: ignore

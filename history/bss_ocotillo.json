@@ -1,0 +1,246 @@
+{
+ "location": "Chandler, AZ",
+ "slug": "bss_ocotillo",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-08-29",
+   "end": "2099-12-31",
+   "catalog_from": "2026-08-29"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-08-29",
+   "ts": "2026-08-29T14:10",
+   "label": "Aug 29",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 130,
+    "capacity": 218,
+    "utilization": 59.6
+   },
+   "slots": {
+    "Wed|6:00pm - 6:30pm|Adult 2 EOSOCT Wed 6:00pm": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Adult 2 EOSOCT Thurs 6:30pm": [
+     2,
+     4
+    ],
+    "Sun|3:00pm - 3:30pm|Adult 3 EOSOCT Sun 3:00pm": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult 3 EOSOCT Thurs 7:00pm": [
+     2,
+     4
+    ],
+    "Sat|2:00pm - 3:00pm|Barracuda EOSOCT Sat 2:00pm": [
+     0,
+     4
+    ],
+    "Sun|12:00pm - 1:00pm|Barracuda EOSOCT Sun 12:00pm": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 7:00pm|Barracuda EOSOCT Wed 6:00pm": [
+     4,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Dolphin Turtle 1 Group Class EOSOCT Thurs 6:30pm": [
+     3,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Minnow EOSOCT Thurs 4:00pm": [
+     2,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow EOSOCT Thurs 5:00pm": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Minnow EOSOCT Thurs 7:00pm": [
+     1,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Minnow EOSOCT Wed 4:30pm": [
+     2,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Shark 1 EOSOCT Wed 5:30pm": [
+     2,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Shark 1 EOSOCT Sat 1:00pm": [
+     3,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Shark 1 EOSOCT Sat 10:00am": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Shark 1 EOSOCT Sun 12:30pm": [
+     4,
+     4
+    ],
+    "Sun|2:00pm - 2:30pm|Shark 1 EOSOCT Sun 2:00pm": [
+     0,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Shark 1 EOSOCT Thurs 5:30pm": [
+     3,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Shark 1 EOSOCT Wed 6:30pm": [
+     2,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Shark 2 EOSOCT Sat 1:00pm": [
+     0,
+     6
+    ],
+    "Sun|1:00pm - 1:30pm|Shark 2 EOSOCT Sun 1:00pm": [
+     1,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Shark 2 EOSOCT Thurs 6:00pm": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Shark 2 EOSOCT Wed 5:30pm": [
+     0,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish EOSOCT Sat 11:00am": [
+     1,
+     4
+    ],
+    "Sun|2:30pm - 3:00pm|Starfish EOSOCT Sun 2:30pm": [
+     1,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Starfish EOSOCT Thurs 5:00pm": [
+     3,
+     4
+    ],
+    "Wed|3:30pm - 4:00pm|Starfish EOSOCT Wed 3:30pm": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Starfish EOSOCT Wed 6:00pm": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish EOSOCT Wednesday 5:00pm": [
+     3,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Swimboree EOSOCT Sat 10:30am": [
+     4,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Swimboree EOSOCT Thurs 4:00pm": [
+     3,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Swimboree EOSOCT Wed 5:00pm": [
+     3,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Tadpole EOSOCT Sat 10:30am": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 1 EOSOCT Sat 11:00am": [
+     3,
+     4
+    ],
+    "Sun|1:30pm - 2:00pm|Turtle 1 EOSOCT Sun 1:30pm": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 EOSOCT Wed 5:00pm": [
+     3,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Turtle 2 EOSOCT Sat 1:30pm": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 2 EOSOCT Sat 12:30pm": [
+     4,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle 2 EOSOCT Sun 12:00pm": [
+     3,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle 2 EOSOCT Thurs 4:30pm": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle 2 EOSOCT Thurs 5:30pm": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle 2 EOSOCT Wed 5:30pm": [
+     4,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Turtle 2 EOSOCT Wed 7:00pm": [
+     2,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Tadpole EOSOCT Thurs 4:00pm": [
+     1,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Tadpole EOSOCT Wed 5:00pm": [
+     3,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Minnow EOSOCT Sat 11:30am": [
+     2,
+     4
+    ],
+    "Sun|1:30pm - 2:00pm|Minnow EOSOCT Sun 1:30pm": [
+     4,
+     4
+    ],
+    "Sun|2:30pm - 3:00pm|Minnow EOSOCT Sun 2:30pm": [
+     1,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle 1 EOSOCT Thurs 4:30pm": [
+     1,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Adult 1 EOSOCT Sat 1:30pm": [
+     2,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Adult 1 EOSOCT Thurs 6:00pm": [
+     0,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Adult 1 EOSOCT Wed 6:30pm": [
+     1,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Adult 2 EOSOCT Sun 1:00pm": [
+     3,
+     4
+    ],
+    "Sun|2:00pm - 2:30pm|Adult 2 EOSOCT Sun 2:00pm": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

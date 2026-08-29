@@ -1,0 +1,1493 @@
+{
+  "_meta": {
+    "purpose": "Registry of Jackrabbit-Class competitor orgs tracked by FOFNIntel. Replaces the hardcoded ENTITIES bash array in .github/workflows/refresh-barron.yml.",
+    "source": "Location universe derived from report-sandbox html/marketing/local-market-analysis/data/lma_competitor_geo_source.csv (Jackrabbit brands only) joined to lma_competitor_sites.csv for BBSS proximity.",
+    "generated": "2026-08-29",
+    "key_concept": "One Jackrabbit ORG = one parent account. An org can cover many physical locations, selected at extract time with --loc-filter. Never create one account per location.",
+    "credential_model": {
+      "store": "single GitHub Actions secret JR_ACCOUNTS holding a JSON object keyed by org_id",
+      "shape": "{\"499027\": {\"email\": \"...\", \"password\": \"...\"}, ...}",
+      "alias_convention": "cjfogerty+<account_key>@gmail.com  -- real deliverable mailbox, one alias per org so a single org lockout cannot cascade",
+      "note": "This file holds NO credentials. account.alias is the address to use; the password lives only in the secret."
+    },
+    "status_values": {
+      "live": "account exists, extractor runs, dashboard published",
+      "unlocked": "an existing account already covers this location; only needs a workflow entry + --loc-filter. NO new signup required.",
+      "needs_org_id": "location confirmed in LMA but the Jackrabbit OrgID is not yet discovered",
+      "needs_account": "OrgID known, no parent account yet"
+    },
+    "org_id_discovery": {
+      "method": "VALIDATED 2026-08-29. Every British franchise territory page at britishswimschool.com/<territory-slug>/ carries a Parent Portal link in its nav of the form app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=<OrgID>. One page fetch yields the OrgID AND the territory's full pool list. Entirely public -- no account required to discover any of this.",
+      "validation": "Confirmed against san-diego-temecula-valley, which returned 548999 -- matching the OrgID in the regv2.asp registration link Casey already had.",
+      "territory_index": "britishswimschool.com/locations/us/ lists every territory slug, but it is long enough that WebFetch truncates it mid-Illinois. Needs Chrome or curl to enumerate slugs beyond that point.",
+      "warning": "Territory membership does NOT follow geography. The San Diego org covers pools up in Irvine. Always take membership from the territory page's own pool list, never from distance clustering.",
+      "loc_codes": "The per-location Loc code (e.g. 24KM = 24 Hour Fitness Kearny Mesa) appears in regv2.asp registration links and in the portal's location dropdown; resolve at extract time."
+    },
+    "bearpaddle_other_loc_codes": {
+      "FLO": "Florence, KY",
+      "LOU": "Louisville, KY",
+      "SAV": "Savage, MN"
+    },
+    "extraction": {
+      "method": "PUBLIC Jackrabbit OpeningsJS feed -- no parent account required. app.jackrabbitclass.com/jr3.0/Openings/OpeningsJS?OrgID=<org>&loc=<code>. Verified HTTP 200 with data on all 13 orgs tried 2026-08-29. GetClassesForEnroll still 302s to login, but is not needed.",
+      "supersedes": "The authenticated Playwright login in barron_extract.py and the whole per-org parent-account plan this registry was built for.",
+      "extractor": "~/FOFNIntel/pull_jackrabbit.py",
+      "lma_builder": "report-sandbox .../local-market-analysis/pipeline/build_jackrabbit_competitors.py",
+      "caveat": "enrolled is DERIVED (capacity is not published). Validated against the authenticated Bear Paddle Bloomingdale dashboard: 383 derived vs 369 actual (+3.8%), utilization 78.5% vs 78.8% (-0.3pp). Biased slightly high.",
+      "location_splitting": "British encodes the site in the class name (Starfish - 24KM - 3 Tue) so an org feed splits locally. Bear Paddle does NOT -- generic class names, no location column -- so each site needs its own &loc= code. Unknown codes return a clean empty table, so probing is safe."
+    }
+  },
+  "orgs": [
+    {
+      "org_id": "499027",
+      "brand": "Bear Paddle",
+      "territory": "Bear Paddle Swim School & Clubhouse -- single national org covering all 17 locations",
+      "portal": "https://app.jackrabbitclass.com/jr4.0/ParentPortal/Login?OrgID=499027",
+      "account": {
+        "key": "bearpaddle",
+        "alias": "cjfogerty+bearpaddle@gmail.com",
+        "status": "live"
+      },
+      "locations": [
+        {
+          "slug": "bearpaddle_bloomingdale",
+          "loc_filter": "BMD",
+          "lma_site_name": "Bear Paddle Swim School - Bloomingdale",
+          "city": "Bloomingdale",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Glendale Heights",
+              "distance_mi": 2.05
+            },
+            {
+              "location": "Geneva",
+              "distance_mi": 6.13
+            },
+            {
+              "location": "Hoffman Estates",
+              "distance_mi": 7.12
+            }
+          ],
+          "loc_code_verified": "2026-08-29 against the live feed",
+          "measured": {
+            "est_enrolled": 383,
+            "derived_capacity": 488,
+            "est_utilization_pct": 78.5,
+            "classes": 141,
+            "classes_waitlisted": 71,
+            "capacity_basis": "observed_max_only",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bearpaddle_wheaton",
+          "loc_filter": "WTN",
+          "lma_site_name": "Bear Paddle Swim School - Wheaton",
+          "city": "Wheaton",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Geneva",
+              "distance_mi": 2.85
+            },
+            {
+              "location": "Naperville",
+              "distance_mi": 5.84
+            },
+            {
+              "location": "Glendale Heights",
+              "distance_mi": 7.14
+            }
+          ],
+          "loc_code_verified": "2026-08-29 against the live feed",
+          "measured": {
+            "est_enrolled": 422,
+            "derived_capacity": 530,
+            "est_utilization_pct": 79.6,
+            "classes": 160,
+            "classes_waitlisted": 90,
+            "capacity_basis": "observed_max_only",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bearpaddle_woodridge",
+          "loc_filter": "WDR",
+          "lma_site_name": "Bear Paddle Swim School - Woodridge",
+          "city": "Woodridge",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Naperville",
+              "distance_mi": 4.33
+            },
+            {
+              "location": "Geneva",
+              "distance_mi": 7.89
+            }
+          ],
+          "loc_code_verified": "2026-08-29 against the live feed",
+          "measured": {
+            "est_enrolled": 614,
+            "derived_capacity": 698,
+            "est_utilization_pct": 88.0,
+            "classes": 206,
+            "classes_waitlisted": 148,
+            "capacity_basis": "observed_max_only",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bearpaddle_niles",
+          "loc_filter": "NLS",
+          "lma_site_name": "Bear Paddle Swim School - Niles",
+          "city": "Niles",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Niles",
+              "distance_mi": 1.73
+            },
+            {
+              "location": "Wilmette",
+              "distance_mi": 4.72
+            },
+            {
+              "location": "Chicago - North Center",
+              "distance_mi": 5.54
+            },
+            {
+              "location": "Chicago - Lincoln Park",
+              "distance_mi": 7.79
+            }
+          ],
+          "loc_code_verified": "2026-08-29 against the live feed",
+          "measured": {
+            "est_enrolled": 403,
+            "derived_capacity": 491,
+            "est_utilization_pct": 82.1,
+            "classes": 150,
+            "classes_waitlisted": 85,
+            "capacity_basis": "observed_max_only",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bearpaddle_aurora",
+          "loc_filter": "AUR",
+          "lma_site_name": "Bear Paddle Swim School - Aurora",
+          "city": "Aurora",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Naperville",
+              "distance_mi": 5.31
+            }
+          ],
+          "loc_code_verified": "2026-08-29 against the live feed",
+          "measured": {
+            "est_enrolled": 455,
+            "derived_capacity": 560,
+            "est_utilization_pct": 81.2,
+            "classes": 162,
+            "classes_waitlisted": 95,
+            "capacity_basis": "observed_max_only",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bearpaddle_kildeer",
+          "loc_filter": "DPK",
+          "lma_site_name": "Bear Paddle Swim School - Kildeer",
+          "city": "Kildeer",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Buffalo Grove",
+              "distance_mi": 7.36
+            }
+          ],
+          "loc_code_verified": "2026-08-29 against the live feed",
+          "measured": {
+            "est_enrolled": 603,
+            "derived_capacity": 731,
+            "est_utilization_pct": 82.5,
+            "classes": 209,
+            "classes_waitlisted": 113,
+            "capacity_basis": "observed_max_only",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bearpaddle_marlton",
+          "loc_filter": "MRL",
+          "lma_site_name": "Bear Paddle Swim School - Marlton",
+          "city": "Marlton",
+          "state": "NJ",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Cherry Hill",
+              "distance_mi": 7.03
+            }
+          ],
+          "loc_code_verified": "2026-08-29 against the live feed",
+          "measured": {
+            "est_enrolled": 453,
+            "derived_capacity": 553,
+            "est_utilization_pct": 81.9,
+            "classes": 163,
+            "classes_waitlisted": 100,
+            "capacity_basis": "observed_max_only",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "544652",
+      "brand": "Barron",
+      "territory": "Barron Swim School -- O'Fallon (each Barron location is its own org)",
+      "portal": "https://app.jackrabbitclass.com/jr4.0/ParentPortal/Login?OrgID=544652",
+      "account": {
+        "key": "barron",
+        "alias": "cjfogerty+barron@gmail.com",
+        "status": "live"
+      },
+      "locations": [
+        {
+          "slug": "barron_ofallon",
+          "loc_filter": null,
+          "lma_site_name": "Barron Swim School - O'Fallon",
+          "city": "O'Fallon",
+          "state": "MO",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "O'Fallon",
+              "distance_mi": 3.67
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": "555050",
+      "brand": "Barron",
+      "territory": "Barron Sports Center -- Ballwin",
+      "portal": "https://app.jackrabbitclass.com/jr4.0/ParentPortal/Login?OrgID=555050",
+      "account": {
+        "key": "barron",
+        "alias": "cjfogerty+barron@gmail.com",
+        "status": "live"
+      },
+      "note": "Not in the LMA competitor universe (no BBSS pool within range). Tracked for brand context only.",
+      "locations": [
+        {
+          "slug": "barron_ballwin",
+          "loc_filter": null,
+          "lma_site_name": null,
+          "city": "Ballwin",
+          "state": "MO",
+          "status": "live",
+          "bbss": []
+        }
+      ]
+    },
+    {
+      "org_id": "528941",
+      "brand": "Barron",
+      "territory": "Barron Swim School -- South County",
+      "portal": "https://app.jackrabbitclass.com/jr4.0/ParentPortal/Login?OrgID=528941",
+      "account": {
+        "key": "barron",
+        "alias": "cjfogerty+barron@gmail.com",
+        "status": "live"
+      },
+      "note": "Not in the LMA competitor universe. Tracked for brand context only.",
+      "locations": [
+        {
+          "slug": "barron_southcounty",
+          "loc_filter": null,
+          "lma_site_name": null,
+          "city": "St. Louis (South County)",
+          "state": "MO",
+          "status": "live",
+          "bbss": []
+        }
+      ]
+    },
+    {
+      "org_id": "548999",
+      "brand": "British",
+      "territory": "British Swim School -- San Diego / Temecula Valley",
+      "territory_slug": "san-diego-temecula-valley",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=548999",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_sandiego",
+        "alias": "cjfogerty+bsssandiego@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 11 pools total; the 3 below are the LMA targets. Territory reaches from San Diego up into Irvine -- do NOT infer territory membership from geography.",
+      "locations": [
+        {
+          "slug": "bss_kearny_mesa",
+          "loc_filter": "['24KM']",
+          "lma_site_name": "British Swim School - 24 HR Fitness Kearny Mesa",
+          "city": "San Diego",
+          "state": "CA",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "San Diego - Point Loma",
+              "distance_mi": 5.86
+            }
+          ],
+          "measured": {
+            "est_enrolled": 68,
+            "derived_capacity": 108,
+            "est_utilization_pct": 63.0,
+            "classes": 36,
+            "classes_waitlisted": 18,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_utc",
+          "loc_filter": "['UTC']",
+          "lma_site_name": "British Swim School - 24 Hour Fitness UTC",
+          "city": "San Diego",
+          "state": "CA",
+          "status": "live",
+          "note": "Confirmed in this org's pool list (24 Hour Fitness - UTC Mall). Loc code TBD at extract time.",
+          "bbss": [
+            {
+              "location": "San Diego - Point Loma",
+              "distance_mi": 8.37
+            }
+          ],
+          "measured": {
+            "est_enrolled": 124,
+            "derived_capacity": 212,
+            "est_utilization_pct": 58.5,
+            "classes": 57,
+            "classes_waitlisted": 22,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_woodbury",
+          "loc_filter": "['LAFWTC']",
+          "lma_site_name": "British Swim School - LA Fitness Woodbury Town Center",
+          "city": "Irvine",
+          "state": "CA",
+          "status": "live",
+          "note": "CORRECTED 2026-08-29: belongs to the San Diego org, not a separate Orange County org.",
+          "bbss": [
+            {
+              "location": "Tustin",
+              "distance_mi": 3.62
+            }
+          ],
+          "measured": {
+            "est_enrolled": 144,
+            "derived_capacity": 342,
+            "est_utilization_pct": 42.1,
+            "classes": 79,
+            "classes_waitlisted": 8,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "516158",
+      "brand": "British",
+      "territory": "British Swim School -- Oak Brook & Chicago Midway",
+      "territory_slug": "oak-brook-area",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=516158",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_oakbrook",
+        "alias": "cjfogerty+bssoakbrook@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 4 pools (Lyons, Villa Park, Chicago Midway, Oak Lawn); only Villa Park is an LMA target.",
+      "locations": [
+        {
+          "slug": "bss_villa_park",
+          "loc_filter": "['VILLAP']",
+          "lma_site_name": "British Swim School - Oakbrook Terrace/Villa Park",
+          "city": "Villa Park",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Geneva",
+              "distance_mi": 4.56
+            },
+            {
+              "location": "Glendale Heights",
+              "distance_mi": 6.62
+            }
+          ],
+          "measured": {
+            "est_enrolled": 915,
+            "derived_capacity": 1200,
+            "est_utilization_pct": 76.2,
+            "classes": 311,
+            "classes_waitlisted": 174,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "557968",
+      "brand": "British",
+      "territory": "British Swim School -- Palatine / Lake Zurich",
+      "territory_slug": "palatine-lake-zurich",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=557968",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "no_targets"
+      },
+      "note": "Covers LA Fitness Lake Zurich + Grand at Twin Lakes Palatine. Neither is in the LMA universe -- recorded so the slug is not re-checked. The /buffalo-grove/ slug resolves to this same org.",
+      "locations": []
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- Orange County (Jamboree / Orange Village)",
+      "account": {
+        "key": "bss_orangecounty",
+        "alias": "cjfogerty+bssoc@gmail.com",
+        "status": "needs_org_id"
+      },
+      "locations": [
+        {
+          "slug": "bss_jamboree",
+          "lma_site_name": "British Swim School - LA Fitness Jamboree",
+          "city": "Irvine",
+          "state": "CA",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Tustin",
+              "distance_mi": 0.43
+            }
+          ],
+          "loc_filter": "['24MKTP']",
+          "measured": {
+            "est_enrolled": 15,
+            "derived_capacity": 113,
+            "est_utilization_pct": 13.3,
+            "classes": 28,
+            "classes_waitlisted": 2,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_orange_village",
+          "lma_site_name": "British Swim School - 24 HR Fitness Orange Village",
+          "city": "Orange",
+          "state": "CA",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Tustin",
+              "distance_mi": 7.22
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": "521398",
+      "brand": "British",
+      "territory": "British Swim School -- DuPage-Kane",
+      "territory_slug": "dupage",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=521398",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_dupage",
+        "alias": "cjfogerty+bssdupage@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 5 pools; 3 are LMA targets. Note it reaches up to Arlington Heights, which I had wrongly grouped with Skokie under a 'Chicago North' org.",
+      "locations": [
+        {
+          "slug": "bss_naperville_59",
+          "loc_filter": "['LA59']",
+          "lma_site_name": "British Swim School - LA Fitness Naperville Rte 59",
+          "city": "Naperville",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Naperville",
+              "distance_mi": 5.25
+            }
+          ],
+          "measured": {
+            "est_enrolled": 174,
+            "derived_capacity": 243,
+            "est_utilization_pct": 71.6,
+            "classes": 64,
+            "classes_waitlisted": 27,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_carol_stream",
+          "loc_filter": "['HICS']",
+          "lma_site_name": "British Swim School - Holiday Inn & Suites Carol Stream",
+          "city": "Carol Stream",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Glendale Heights",
+              "distance_mi": 2.96
+            },
+            {
+              "location": "Geneva",
+              "distance_mi": 3.97
+            },
+            {
+              "location": "Hoffman Estates",
+              "distance_mi": 9.79
+            }
+          ],
+          "measured": {
+            "est_enrolled": 62,
+            "derived_capacity": 88,
+            "est_utilization_pct": 70.5,
+            "classes": 25,
+            "classes_waitlisted": 12,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_arlington_heights",
+          "loc_filter": "['LAFAH']",
+          "lma_site_name": "British Swim School - LA Fitness Arlington Heights",
+          "city": "Arlington Heights",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Buffalo Grove",
+              "distance_mi": 3.31
+            },
+            {
+              "location": "Hoffman Estates",
+              "distance_mi": 9.43
+            }
+          ],
+          "measured": {
+            "est_enrolled": 72,
+            "derived_capacity": 121,
+            "est_utilization_pct": 59.5,
+            "classes": 32,
+            "classes_waitlisted": 10,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "514856",
+      "brand": "British",
+      "territory": "British Swim School -- Downtown Chicago",
+      "territory_slug": "downtown-chicago",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=514856",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_chicago",
+        "alias": "cjfogerty+bsschicago@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 6 pools; only Skokie is an LMA target, but Skokie alone touches 4 of our pools.",
+      "locations": [
+        {
+          "slug": "bss_skokie",
+          "loc_filter": "['SK']",
+          "lma_site_name": "British Swim School - Skokie",
+          "city": "Skokie",
+          "state": "IL",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Niles",
+              "distance_mi": 3.97
+            },
+            {
+              "location": "Wilmette",
+              "distance_mi": 4.0
+            },
+            {
+              "location": "Chicago - North Center",
+              "distance_mi": 5.06
+            },
+            {
+              "location": "Chicago - Lincoln Park",
+              "distance_mi": 7.51
+            }
+          ],
+          "measured": {
+            "est_enrolled": 288,
+            "derived_capacity": 429,
+            "est_utilization_pct": 67.1,
+            "classes": 107,
+            "classes_waitlisted": 20,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- North Central College Naperville (org TBD)",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "needs_org_id"
+      },
+      "note": "NOT in org 521398's roster despite being in Naperville alongside the Rte 59 site. Separate territory still to identify.",
+      "locations": [
+        {
+          "slug": "bss_naperville_nc",
+          "lma_site_name": "British Swim School - North Central College Naperville",
+          "city": "Naperville",
+          "state": "IL",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Naperville",
+              "distance_mi": 1.81
+            },
+            {
+              "location": "Geneva",
+              "distance_mi": 7.91
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": "526635",
+      "brand": "British",
+      "territory": "British Swim School -- Greater Philadelphia / South Jersey",
+      "territory_slug": "greater-philadelphia-south-jersey",
+      "territory_slug_aliases": [
+        "southjersey",
+        "south-jersey"
+      ],
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=526635",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_philly_sj",
+        "alias": "cjfogerty+bssphillysj@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "HIGHEST-VALUE ACCOUNT. Org covers 5 pools and ALL 5 are LMA targets. Spans the PA/NJ state line -- absorbed what I had wrongly split into separate 'Philadelphia North/Bucks' and 'South New Jersey' territories.",
+      "locations": [
+        {
+          "slug": "bss_richboro",
+          "lma_site_name": "British Swim School - JAG Richboro",
+          "city": "Richboro",
+          "state": "PA",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Warminster",
+              "distance_mi": 4.81
+            },
+            {
+              "location": "Fairless Hills",
+              "distance_mi": 9.71
+            }
+          ],
+          "loc_filter": "['JAG']",
+          "measured": {
+            "est_enrolled": 167,
+            "derived_capacity": 212,
+            "est_utilization_pct": 78.8,
+            "classes": 61,
+            "classes_waitlisted": 32,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_bensalem",
+          "lma_site_name": "British Swim School - LA Fitness Bensalem",
+          "city": "Bensalem",
+          "state": "PA",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Fairless Hills",
+              "distance_mi": 7.54
+            },
+            {
+              "location": "Warminster",
+              "distance_mi": 9.17
+            }
+          ],
+          "loc_filter": "['LAB']",
+          "measured": {
+            "est_enrolled": 268,
+            "derived_capacity": 370,
+            "est_utilization_pct": 72.4,
+            "classes": 97,
+            "classes_waitlisted": 40,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_jenkintown",
+          "lma_site_name": "British Swim School - Abington Club Jenkintown",
+          "city": "Jenkintown",
+          "state": "PA",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Warminster",
+              "distance_mi": 8.47
+            }
+          ],
+          "loc_filter": "['AB', 'ABGTN']",
+          "measured": {
+            "est_enrolled": 243,
+            "derived_capacity": 284,
+            "est_utilization_pct": 85.6,
+            "classes": 79,
+            "classes_waitlisted": 50,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_kleinlife",
+          "lma_site_name": "British Swim School - KleinLife Northeast Philadelphia",
+          "city": "Philadelphia",
+          "state": "PA",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Warminster",
+              "distance_mi": 7.82
+            }
+          ],
+          "loc_filter": "['KL']",
+          "measured": {
+            "est_enrolled": 195,
+            "derived_capacity": 244,
+            "est_utilization_pct": 79.9,
+            "classes": 67,
+            "classes_waitlisted": 34,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_voorhees",
+          "lma_site_name": "British Swim School - Echelon Health and Fitness Voorhees",
+          "city": "Voorhees Township",
+          "state": "NJ",
+          "status": "live",
+          "note": "CORRECTED 2026-08-29: this org, not a separate South NJ org.",
+          "bbss": [
+            {
+              "location": "Cherry Hill",
+              "distance_mi": 6.79
+            }
+          ],
+          "loc_filter": "['EF']",
+          "measured": {
+            "est_enrolled": 255,
+            "derived_capacity": 371,
+            "est_utilization_pct": 68.7,
+            "classes": 118,
+            "classes_waitlisted": 43,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "529182",
+      "brand": "British",
+      "territory": "British Swim School -- North New Jersey",
+      "territory_slug": "north-new-jersey",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=529182",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_nnj",
+        "alias": "cjfogerty+bssnnj@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 9 pools; only North Brunswick is an LMA target. Its roster also lists UFC Fitness Wayne and LA Fitness Parsippany as TEMPORARILY CLOSED -- Wayne is worth noting given our own Wayne pool (Shree Group).",
+      "locations": [
+        {
+          "slug": "bss_north_brunswick",
+          "lma_site_name": "British Swim School - LA Fitness North Brunswick",
+          "city": "North Brunswick",
+          "state": "NJ",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "North Brunswick",
+              "distance_mi": 1.8
+            }
+          ],
+          "loc_filter": "['LAF-NB']",
+          "measured": {
+            "est_enrolled": 89,
+            "derived_capacity": 127,
+            "est_utilization_pct": 70.1,
+            "classes": 36,
+            "classes_waitlisted": 21,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "534221",
+      "brand": "British",
+      "territory": "British Swim School -- North Central New Jersey",
+      "territory_slug": "north-central-new-jersey",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "no_targets"
+      },
+      "note": "Somerset, Springfield, Hillsborough, Pennington, Mercer CCC. None in the LMA universe -- recorded so the slug is not re-checked.",
+      "locations": []
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- Collegeville / Montgomery County PA (org TBD)",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "needs_org_id"
+      },
+      "note": "Collegeville is NOT in org 526635's roster, so it belongs to a separate territory still to be identified.",
+      "locations": [
+        {
+          "slug": "bss_collegeville",
+          "lma_site_name": "British Swim School - Courtyard Marriott Collegeville",
+          "city": "Collegeville",
+          "state": "PA",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Paoli",
+              "distance_mi": 8.23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": "517761",
+      "brand": "British",
+      "territory": "British Swim School -- Pittsburgh",
+      "territory_slug": "pittsburgh",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=517761",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_pittsburgh",
+        "alias": "cjfogerty+bsspgh@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 9 pools; all 3 LMA targets are in it. The territory markets explicitly into Cranberry Township, and its roster carries TWO Wexford entries ('Woodlands Foundation - Wexford' and 'Aqua Active at Woodlands Foundation - Wexford') -- likely two programs at one facility; dedupe at extract time.",
+      "locations": [
+        {
+          "slug": "bss_wexford",
+          "loc_filter": null,
+          "lma_site_name": "British Swim School - Woodlands Foundation Wexford",
+          "city": "Wexford",
+          "state": "PA",
+          "status": "needs_account",
+          "note": "Directly relevant to the Wexford vs Cranberry competitive brief.",
+          "bbss": [
+            {
+              "location": "Cranberry Township",
+              "distance_mi": 3.9
+            }
+          ]
+        },
+        {
+          "slug": "bss_valencia",
+          "loc_filter": null,
+          "lma_site_name": "British Swim School - St. Barnabas Crystal Conservatories Valencia",
+          "city": "Valencia",
+          "state": "PA",
+          "status": "needs_account",
+          "bbss": [
+            {
+              "location": "Cranberry Township",
+              "distance_mi": 9.48
+            }
+          ]
+        },
+        {
+          "slug": "bss_gibsonia",
+          "loc_filter": null,
+          "lma_site_name": "British Swim School - Wildwood Hampton Township",
+          "city": "Gibsonia",
+          "state": "PA",
+          "status": "needs_account",
+          "bbss": [
+            {
+              "location": "Cranberry Township",
+              "distance_mi": 9.89
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": "543485",
+      "brand": "British",
+      "territory": "British Swim School -- Metro Charlotte",
+      "territory_slug": "metro-charlotte",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=543485",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_charlotte",
+        "alias": "cjfogerty+bsscharlotte@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 8 pools spanning NC into Rock Hill SC. 2 of our 4 Charlotte LMA sites are on its active roster; the other 2 are not -- see their flags.",
+      "locations": [
+        {
+          "slug": "bss_ballantyne",
+          "loc_filter": "['LAFBAL']",
+          "lma_site_name": "British Swim School - LA Fitness Ballantyne",
+          "city": "Charlotte",
+          "state": "NC",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Charlotte - Pineville",
+              "distance_mi": 1.3
+            }
+          ],
+          "measured": {
+            "est_enrolled": 206,
+            "derived_capacity": 338,
+            "est_utilization_pct": 60.9,
+            "classes": 105,
+            "classes_waitlisted": 48,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_matthews",
+          "loc_filter": "['HIEMAT']",
+          "lma_site_name": "British Swim School - Matthews",
+          "city": "Matthews",
+          "state": "NC",
+          "status": "live",
+          "note": "Maps to 'Matthews-Holiday Inn Express' on the roster; LMA address 9420 E Independence Blvd matches.",
+          "bbss": [
+            {
+              "location": "Charlotte - Pineville",
+              "distance_mi": 8.25
+            }
+          ],
+          "measured": {
+            "est_enrolled": 21,
+            "derived_capacity": 52,
+            "est_utilization_pct": 40.4,
+            "classes": 14,
+            "classes_waitlisted": 1,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_pineville_matthews",
+          "lma_site_name": "British Swim School - Pineville Matthews Charlotte",
+          "city": "Charlotte",
+          "state": "NC",
+          "status": "roster_absent",
+          "note": "LMA address 1800 Pineville Matthews Rd does not match any entry on org 543485's active roster. Possibly closed, renamed, or absorbed into 'Matthews/Arboretum Providence HS'. VERIFY before counting as a live competitor.",
+          "bbss": [
+            {
+              "location": "Charlotte - Pineville",
+              "distance_mi": 5.15
+            }
+          ]
+        },
+        {
+          "slug": "bss_charlotte_tryon",
+          "lma_site_name": "British Swim School - Embassy Suites Charlotte S. Tryon",
+          "city": "Charlotte",
+          "state": "NC",
+          "status": "live",
+          "note": "CORRECTED 2026-08-29: previously flagged roster_absent from the website. The Jackrabbit feed shows it still running (4 classes, 12 enrolled) -- winding down, not closed. Treat website absence as a prompt to check the feed, never as proof of closure.",
+          "bbss": [
+            {
+              "location": "Charlotte - Pineville",
+              "distance_mi": 6.8
+            }
+          ],
+          "loc_filter": "['EMBTRY']",
+          "measured": {
+            "est_enrolled": 12,
+            "derived_capacity": 16,
+            "est_utilization_pct": 75.0,
+            "classes": 4,
+            "classes_waitlisted": 2,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- Essex/Bergen NJ (org TBD)",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "needs_org_id"
+      },
+      "note": "None of these appear in org 529182's roster, so they sit in one or more further North-NJ territories still to be identified.",
+      "locations": [
+        {
+          "slug": "bss_maplewood",
+          "lma_site_name": "British Swim School - Winchester Gardens Maplewood",
+          "city": "Maplewood",
+          "state": "NJ",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Short Hills",
+              "distance_mi": 4.18
+            }
+          ]
+        },
+        {
+          "slug": "bss_newark",
+          "lma_site_name": "British Swim School - Home2 Suites Newark Route 1&9",
+          "city": "Newark",
+          "state": "NJ",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Short Hills",
+              "distance_mi": 7.52
+            }
+          ]
+        },
+        {
+          "slug": "bss_cliffside_park",
+          "lma_site_name": "British Swim School - Cliffside Park",
+          "city": "Cliffside Park",
+          "state": "NJ",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Paramus",
+              "distance_mi": 9.49
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- Cherry Hill (LIKELY CLOSED -- verify before using)",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "likely_closed"
+      },
+      "note": "DATA-QUALITY FLAG raised 2026-08-29. The LMA carries 'British Swim School - Cherry Hill, 2100 NJ-38' at 0.0 mi from our Cherry Hill pool, and it was the top-priority target in this registry. Evidence it is no longer operating: (a) its pool page britishswimschool.com/southjersey/pools/cherry-hill-la-fitness/ no longer renders a location page and redirects to the territory landing page; (b) Cherry Hill is absent from org 526635's five-pool active roster; (c) that roster's Voorhees entry is marketed as serving Cherry Hill families. Consistent with closure and absorption into Voorhees, but NOT yet confirmed -- verify before acting. If confirmed, the LMA overstates British's presence at our Cherry Hill pool by a full assumed site.",
+      "locations": [
+        {
+          "slug": "bss_cherry_hill",
+          "lma_site_name": "British Swim School - Cherry Hill",
+          "city": "Cherry Hill",
+          "state": "NJ",
+          "status": "likely_closed",
+          "bbss": [
+            {
+              "location": "Cherry Hill",
+              "distance_mi": 0.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": "548617",
+      "brand": "British",
+      "territory": "British Swim School -- The Valley (Phoenix East Valley)",
+      "territory_slug": "the-valley",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=548617",
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": "bss_phoenix",
+        "alias": "cjfogerty+bssphoenix@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "Org covers 4 pools and ALL 3 LMA targets are in it. Clean one-account unlock for the Gilbert market.",
+      "locations": [
+        {
+          "slug": "bss_gilbert_lauren",
+          "loc_filter": "['LIFE']",
+          "lma_site_name": "British Swim School - Lauren's Institute Gilbert",
+          "city": "Gilbert",
+          "state": "AZ",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Gilbert",
+              "distance_mi": 3.47
+            }
+          ],
+          "measured": {
+            "est_enrolled": 9,
+            "derived_capacity": 9,
+            "est_utilization_pct": 100.0,
+            "classes": 3,
+            "classes_waitlisted": 0,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_chandler_ray",
+          "loc_filter": "['EOSRAY']",
+          "lma_site_name": "British Swim School - EoS Fitness Chandler Ray and Rural",
+          "city": "Chandler",
+          "state": "AZ",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Gilbert",
+              "distance_mi": 7.88
+            }
+          ],
+          "measured": {
+            "est_enrolled": 74,
+            "derived_capacity": 162,
+            "est_utilization_pct": 45.7,
+            "classes": 40,
+            "classes_waitlisted": 4,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        },
+        {
+          "slug": "bss_ocotillo",
+          "loc_filter": "['EOSOCT']",
+          "lma_site_name": "British Swim School - EoS Fitness Ocotillo Gilbert",
+          "city": "Chandler",
+          "state": "AZ",
+          "status": "live",
+          "bbss": [
+            {
+              "location": "Gilbert",
+              "distance_mi": 8.86
+            }
+          ],
+          "measured": {
+            "est_enrolled": 130,
+            "derived_capacity": 218,
+            "est_utilization_pct": 59.6,
+            "classes": 54,
+            "classes_waitlisted": 10,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "529897",
+      "brand": "British",
+      "territory": "British Swim School -- Flatirons",
+      "territory_slug": "flatirons",
+      "portal": "https://app.jackrabbitclass.com/jr3.0/ParentPortal/Login?orgId=529897",
+      "org_id_verified": "2026-08-29, from the Westminster pool page nav link",
+      "account": {
+        "key": "bss_flatirons",
+        "alias": "cjfogerty+bssflatirons@gmail.com",
+        "status": "needs_account"
+      },
+      "note": "The /flatirons/ root redirect-loops; fetch a pool page under it instead (e.g. /flatirons/denver-marriott-westminster/). Full roster not yet enumerated.",
+      "locations": [
+        {
+          "slug": "bss_westminster",
+          "loc_filter": "['MRTWST']",
+          "lma_site_name": "British Swim School - Denver Marriott Westminster",
+          "city": "Westminster",
+          "state": "CO",
+          "status": "live",
+          "note": "Relevant to the Northglenn website-verdict report.",
+          "bbss": [
+            {
+              "location": "Northglenn",
+              "distance_mi": 4.35
+            }
+          ],
+          "measured": {
+            "est_enrolled": 65,
+            "derived_capacity": 117,
+            "est_utilization_pct": 55.6,
+            "classes": 28,
+            "classes_waitlisted": 4,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-08-29"
+          }
+        }
+      ]
+    },
+    {
+      "org_id": "548373",
+      "brand": "British",
+      "territory": "British Swim School -- Denver-Central North Colorado",
+      "territory_slug": "denver-central-north-colorado",
+      "territory_slug_aliases": [
+        "south-metro-denver",
+        "south-denver-south-aurora"
+      ],
+      "org_id_verified": "2026-08-29, from the territory page nav link",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "no_targets"
+      },
+      "note": "Roster is 24HF Alameda, Hilton Garden Inn Highlands Ranch, Gold's Gym Greeley, 24HF Fort Collins. None is an LMA target -- see the Centennial flag below.",
+      "locations": []
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- Centennial Super Sport (LIKELY RELOCATED -- verify)",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "roster_absent"
+      },
+      "note": "DATA-QUALITY FLAG raised 2026-08-29. The LMA carries '24 Hour Fitness Centennial Super Sport, 6830 E County Line Rd, Highlands Ranch' at 8.88 mi from our Centennial pool. Both its pool-page URLs redirect to org 548373's territory page, and that facility is absent from the active roster -- which instead lists 'Hilton Garden Inn - Denver / Highlands Ranch, 1050 Plaza Dr'. Reads as a RELOCATION within Highlands Ranch rather than a closure, which would change the distance-to-our-pool figure. Verify and re-geocode before using.",
+      "locations": [
+        {
+          "slug": "bss_centennial",
+          "lma_site_name": "British Swim School - 24 Hour Fitness Centennial Super Sport",
+          "city": "Highlands Ranch",
+          "state": "CO",
+          "status": "roster_absent",
+          "bbss": [
+            {
+              "location": "Centennial",
+              "distance_mi": 8.88
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- Utah",
+      "account": {
+        "key": "bss_utah",
+        "alias": "cjfogerty+bssutah@gmail.com",
+        "status": "needs_org_id"
+      },
+      "locations": [
+        {
+          "slug": "bss_lehi_draper",
+          "lma_site_name": "British Swim School - Lehi-Draper",
+          "city": "Draper",
+          "state": "UT",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Cottonwood Heights",
+              "distance_mi": 6.75
+            },
+            {
+              "location": "Saratoga Springs",
+              "distance_mi": 9.98
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "org_id": null,
+      "brand": "British",
+      "territory": "British Swim School -- singles (each likely its own franchise org)",
+      "account": {
+        "key": null,
+        "alias": null,
+        "status": "needs_org_id"
+      },
+      "note": "One org per site here; split into their own entries as each OrgID is discovered.",
+      "locations": [
+        {
+          "slug": "bss_fairfax",
+          "lma_site_name": "British Swim School - Onelife Fitness Fairfax",
+          "city": "Fairfax",
+          "state": "VA",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Chantilly",
+              "distance_mi": 2.56
+            },
+            {
+              "location": "Fairfax",
+              "distance_mi": 5.23
+            }
+          ]
+        },
+        {
+          "slug": "bss_fishers",
+          "lma_site_name": "British Swim School - LivRite Fitness Fishers",
+          "city": "Fishers",
+          "state": "IN",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Noblesville",
+              "distance_mi": 3.79
+            }
+          ]
+        },
+        {
+          "slug": "bss_buckhead",
+          "lma_site_name": "British Swim School - LA Fitness Lenox/Buckhead",
+          "city": "Atlanta",
+          "state": "GA",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Atlanta - North Druid Hills",
+              "distance_mi": 2.06
+            }
+          ]
+        },
+        {
+          "slug": "bss_allen_fairview",
+          "lma_site_name": "British Swim School - 24 HR Fitness Allen/Fairview",
+          "city": "McKinney",
+          "state": "TX",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Allen",
+              "distance_mi": 5.17
+            }
+          ]
+        },
+        {
+          "slug": "bss_austin_nw",
+          "lma_site_name": "British Swim School - 24 Hour Fitness Austin NW",
+          "city": "Austin",
+          "state": "TX",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Austin - Central",
+              "distance_mi": 5.47
+            }
+          ]
+        },
+        {
+          "slug": "bss_shelby",
+          "lma_site_name": "British Swim School - LA Fitness Shelby",
+          "city": "Shelby Township",
+          "state": "MI",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Sterling Heights",
+              "distance_mi": 8.06
+            }
+          ]
+        },
+        {
+          "slug": "bss_pembroke_pines",
+          "lma_site_name": "British Swim School - Pembroke Pines",
+          "city": "Pembroke Pines",
+          "state": "FL",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Pembroke Pines",
+              "distance_mi": 6.85
+            }
+          ]
+        },
+        {
+          "slug": "bss_north_miami_beach",
+          "lma_site_name": "British Swim School - LA Fitness North Miami Beach",
+          "city": "Miami",
+          "state": "FL",
+          "status": "needs_org_id",
+          "bbss": [
+            {
+              "location": "Pembroke Pines",
+              "distance_mi": 9.37
+            }
+          ]
+        },
+        {
+          "slug": "bss_lawrence_ywca",
+          "lma_site_name": "British Swim School - YWCA Northeastern Massachusetts",
+          "city": "Lawrence",
+          "state": "MA",
+          "status": "deprioritized",
+          "note": "LMA already flags this as a host-facility program with no sizable published schedule -- low value, skip.",
+          "bbss": [
+            {
+              "location": "Methuen",
+              "distance_mi": 1.97
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

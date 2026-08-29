@@ -1,0 +1,1242 @@
+{
+ "location": "Villa Park, IL",
+ "slug": "bss_villa_park",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-08-29",
+   "end": "2099-12-31",
+   "catalog_from": "2026-08-29"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-08-29",
+   "ts": "2026-08-29T14:10",
+   "label": "Aug 29",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 915,
+    "capacity": 1200,
+    "utilization": 76.2
+   },
+   "slots": {
+    "Tue|7:00pm - 7:45pm|Adult Level 1 VILLAP 7:00P Tu": [
+     4,
+     4
+    ],
+    "Mon|7:15pm - 8:00pm|Adult Level 1 VILLAP 7:15P M": [
+     4,
+     4
+    ],
+    "Thu|7:15pm - 8:00pm|Adult Level 1 VILLAP 7:15P Th": [
+     2,
+     4
+    ],
+    "Wed|7:15pm - 8:00pm|Adult Level 1 VILLAP 7:15P W": [
+     4,
+     4
+    ],
+    "Wed|7:45pm - 8:30pm|Adult Level 1 VILLAP 7:45P W": [
+     4,
+     4
+    ],
+    "Thu|7:15pm - 8:00pm|Adult Level 2 VILLAP 7:15P Th": [
+     1,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Starfish VILLAP 6:00P M": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Starfish VILLAP 6:30P M": [
+     4,
+     4
+    ],
+    "Sat|9:15am - 9:45am|Starfish VILLAP 9:15A Sa": [
+     4,
+     4
+    ],
+    "Fri|5:15pm - 5:45pm|Swimboree VILLAP 5:15P Fr": [
+     4,
+     4
+    ],
+    "Mon|6:15pm - 6:45pm|Young Adult 1 VILLAP 6:15P M": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Young Adult 1 VILLAP 6:30P Th": [
+     1,
+     4
+    ],
+    "Tue|6:45pm - 7:15pm|Young Adult 2/3 VILLAP 6:45P Tu": [
+     3,
+     4
+    ],
+    "Mon|3:15pm - 3:45pm|ABA Revolution group VILLAP 3:15P M": [
+     4,
+     4
+    ],
+    "Mon|3:45pm - 4:15pm|ABA Revolution group A VILLAP 3:45P M": [
+     4,
+     4
+    ],
+    "Wed|9:15am - 10:00am|Adult Group VILLAP 9:15A W": [
+     8,
+     8
+    ],
+    "Wed|12:30pm - 1:15pm|Adult Level 1 VILLAP 12:30P W": [
+     4,
+     4
+    ],
+    "Fri|9:15am - 10:00am|Adult Level 1 VILLAP 9:15A F": [
+     2,
+     4
+    ],
+    "Wed|12:45pm - 1:30pm|Adult Level 2 VILLAP 12:45P W": [
+     4,
+     4
+    ],
+    "Fri|9:45am - 10:15am|Adult Private VILLAP 9:45A F": [
+     1,
+     1
+    ],
+    "Sun|11:45am - 12:15pm|Minnow VILLAP 11:45AM Su": [
+     3,
+     4
+    ],
+    "Fri|10:15am - 10:45am|Private VILLAP 10:15A F": [
+     1,
+     1
+    ],
+    "Sun|12:15pm - 12:45pm|Private VILLAP 12:15P Su": [
+     2,
+     2
+    ],
+    "Sun|12:45pm - 1:15pm|Private VILLAP 12:45P Su": [
+     1,
+     1
+    ],
+    "Fri|4:45pm - 5:15pm|Private VILLAP 4:45P F": [
+     1,
+     1
+    ],
+    "Thu|5:45pm - 6:15pm|Private VILLAP 5:45P Th": [
+     2,
+     2
+    ],
+    "Sat|8:45am - 9:15am|Private VILLAP 8:45A Sa": [
+     0,
+     1
+    ],
+    "Sat|9:30am - 10:00am|Private VILLAP 9:30 AM Sat": [
+     1,
+     1
+    ],
+    "Wed|9:30am - 10:00am|Private VILLAP 9:30A W": [
+     1,
+     1
+    ],
+    "Sat|12:30pm - 1:00pm|SAP Private VILLAP 12:30P Sa": [
+     1,
+     1
+    ],
+    "Fri|10:00am - 10:30am|SAP VILLAP 10:00A F": [
+     4,
+     4
+    ],
+    "Sat|11:45am - 12:15pm|SAP VILLAP 11:45A Sa": [
+     4,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|SAP VILLAP 12:00A Su": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|SAP VILLAP 12:00P Sa": [
+     4,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|SAP VILLAP 12:00P Su": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|SAP VILLAP 12:30PM Sa": [
+     4,
+     4
+    ],
+    "Sun|12:45pm - 1:15pm|SAP VILLAP 12:45P Su": [
+     8,
+     8
+    ],
+    "Wed|3:30pm - 4:00pm|SAP VILLAP 3:30P W": [
+     4,
+     4
+    ],
+    "Mon|4:15pm - 4:45pm|SAP VILLAP 4:15P M": [
+     4,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|SAP VILLAP 4:30 Th": [
+     4,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|SAP VILLAP 5:30P F": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|SAP VILLAP 5:30P Th": [
+     4,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|SAP VILLAP 6:00P Tu": [
+     8,
+     8
+    ],
+    "Tue|6:30pm - 7:00pm|SAP VILLAP 6:30P Tu": [
+     4,
+     4
+    ],
+    "Fri|11:30am - 12:00pm|Seahorse VILLAP 11:30A F": [
+     1,
+     4
+    ],
+    "Fri|3:30pm - 4:00pm|Semi Private VILLAP 3:30P F": [
+     2,
+     2
+    ],
+    "Fri|5:45pm - 6:15pm|Shark 2 VILLAP 5:45P F": [
+     0,
+     5
+    ],
+    "Sun|11:45am - 12:15pm|Starfish VILLAP 11:45AM Su": [
+     4,
+     4
+    ],
+    "Sun|12:15pm - 12:45pm|Starfish VILLAP 12:15P Su": [
+     4,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Starfish VILLAP 10:00A Sa": [
+     4,
+     4
+    ],
+    "Sun|10:15am - 10:45am|Starfish VILLAP 10:15A Su": [
+     8,
+     8
+    ],
+    "Wed|10:15am - 10:45am|Starfish VILLAP 10:15A W": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Starfish VILLAP 10:30A Sa": [
+     4,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish VILLAP 10:30A Su": [
+     4,
+     4
+    ],
+    "Sat|11:15am - 11:45am|Starfish VILLAP 11:15A Sa": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Starfish VILLAP 11:30A Sa": [
+     4,
+     4
+    ],
+    "Thu|11:30am - 12:00pm|Starfish VILLAP 11:30A Th": [
+     3,
+     4
+    ],
+    "Sat|11:45am - 12:15pm|Starfish VILLAP 11:45A Sa": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Starfish VILLAP 12:00P Sa": [
+     2,
+     4
+    ],
+    "Sat|12:15pm - 12:45pm|Starfish VILLAP 12:15P Sa": [
+     2,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Starfish VILLAP 4:00P M": [
+     4,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Starfish VILLAP 4:00P Th": [
+     3,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Starfish VILLAP 4:00P Tu": [
+     3,
+     4
+    ],
+    "Fri|4:15pm - 4:45pm|Starfish VILLAP 4:15P F": [
+     3,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish VILLAP 4:30P M": [
+     3,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Starfish VILLAP 4:30P Tu": [
+     8,
+     8
+    ],
+    "Wed|4:30pm - 5:00pm|Starfish VILLAP 4:30P W": [
+     3,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Starfish VILLAP 5:00P F": [
+     3,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Starfish VILLAP 5:00P Th": [
+     4,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Starfish VILLAP 5:00P Tu": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish VILLAP 5:00P W": [
+     3,
+     4
+    ],
+    "Mon|5:15pm - 5:45pm|Starfish VILLAP 5:15P M": [
+     3,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Starfish VILLAP 5:30P Th": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Starfish VILLAP 5:30P W": [
+     4,
+     4
+    ],
+    "Fri|5:45pm - 6:15pm|Starfish VILLAP 5:45P F": [
+     3,
+     4
+    ],
+    "Thu|6:15pm - 6:45pm|Starfish VILLAP 6:15P Th": [
+     4,
+     4
+    ],
+    "Wed|6:15pm - 6:45pm|Starfish VILLAP 6:15P W": [
+     4,
+     4
+    ],
+    "Sun|8:30am - 9:00am|Starfish VILLAP 8:30A Su": [
+     4,
+     4
+    ],
+    "Sun|8:45am - 9:15am|Starfish VILLAP 8:45A Su": [
+     4,
+     4
+    ],
+    "Sun|9:15am - 9:45am|Starfish VILLAP 9:15A Su": [
+     4,
+     4
+    ],
+    "Sun|9:45am - 10:15am|Starfish VILLAP 9:45A Su": [
+     4,
+     4
+    ],
+    "Thu|10:00am - 10:30am|Swimboree VILLAP 10:00A Th": [
+     1,
+     4
+    ],
+    "Sat|10:15am - 10:45am|Swimboree VILLAP 10:15A Sa": [
+     4,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Swimboree VILLAP 11:00A Su": [
+     3,
+     4
+    ],
+    "Wed|11:15am - 11:45am|Swimboree VILLAP 11:15A W": [
+     3,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Swimboree VILLAP 11:30A Su": [
+     1,
+     4
+    ],
+    "Thu|4:15pm - 4:45pm|Swimboree VILLAP 4:15P Th": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Swimboree VILLAP 5:30P M": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Swimboree VILLAP 5:30P W": [
+     4,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Swimboree VILLAP 9:00 Su": [
+     4,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Swimboree VILLAP 9:00A Sa": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Swimboree VILLAP 9:30A Su": [
+     3,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Tadpole VILLAP 10:00A Sa": [
+     2,
+     4
+    ],
+    "Fri|10:30am - 11:00am|Tadpole VILLAP 10:30A F": [
+     0,
+     6
+    ],
+    "Sat|11:15am - 11:45am|Tadpole VILLAP 11:15A Sa": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Tadpole VILLAP 11:30A Su": [
+     0,
+     5
+    ],
+    "Wed|5:15pm - 5:45pm|Tadpole VILLAP 5:15 W": [
+     1,
+     4
+    ],
+    "Mon|5:45pm - 6:15pm|Tadpole VILLAP 5:45P M": [
+     2,
+     4
+    ],
+    "Thu|6:45pm - 7:15pm|Tadpole VILLAP 6:45P Th": [
+     1,
+     4
+    ],
+    "Sat|8:45am - 9:15am|Tadpole VILLAP 8:45A Sa": [
+     4,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Tadpole VILLAP 9:00 Su": [
+     3,
+     4
+    ],
+    "Wed|10:45am - 11:15am|Turtle 1 VILLAP 10:45A W": [
+     3,
+     4
+    ],
+    "Fri|12:00pm - 12:30pm|Turtle 1 VILLAP 12:00P F": [
+     1,
+     4
+    ],
+    "Sat|10:15am - 10:45am|Young Adult 1 VILLAP 10:15P Sa": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Young Adult 1 VILLAP 12:00P Sa": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Young Adult 2/3 VILLAP 11:30A Sa": [
+     2,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Young Adult 1 VILLAP 10:30A Su": [
+     4,
+     4
+    ],
+    "Sat|8:45am - 9:15pm|Young Adult 2/3 VILLAP 8:45AM Sa": [
+     3,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Seahorse VILLAP 10:00A Sa": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Seahorse VILLAP 10:00A Su": [
+     4,
+     4
+    ],
+    "Sat|10:15am - 10:45am|Seahorse VILLAP 10:15A Sa": [
+     3,
+     4
+    ],
+    "Sat|10:45am - 11:15am|Seahorse VILLAP 10:45A Sa": [
+     3,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Seahorse VILLAP 11:00A Su": [
+     4,
+     4
+    ],
+    "Wed|11:00am - 11:30am|Seahorse VILLAP 11:00A W": [
+     3,
+     4
+    ],
+    "Sun|11:45am - 12:15pm|Seahorse VILLAP 11:45A Su": [
+     3,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Seahorse VILLAP 4:00P Tu": [
+     4,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Seahorse VILLAP 5:30P F": [
+     2,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Seahorse VILLAP 5:30P Tu": [
+     4,
+     4
+    ],
+    "Wed|5:45pm - 6:15pm|Seahorse VILLAP 5:45P W": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Seahorse VILLAP 6:00P M": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Seahorse VILLAP 6:00P Th": [
+     4,
+     4
+    ],
+    "Tue|6:15pm - 6:45pm|Seahorse VILLAP 6:15P Tu": [
+     4,
+     4
+    ],
+    "Sun|8:30am - 9:00am|Seahorse VILLAP 8:30A Su": [
+     4,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Seahorse VILLAP 9:00A Su": [
+     3,
+     4
+    ],
+    "Sat|9:15am - 9:45am|Seahorse VILLAP 9:15A Sa": [
+     3,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Seahorse VILLAP 9:30A Sa": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Seahorse VILLAP 9:30A Su": [
+     4,
+     4
+    ],
+    "Wed|10:00am - 10:30am|Tadpole VILLAP 10:00A W": [
+     0,
+     4
+    ],
+    "Tue|7:15pm - 8:00pm|Adult Level 1 VILLAP 7:15P T": [
+     3,
+     4
+    ],
+    "Sat|1:00pm - 2:00pm|Barracuda Swim Team VILLAP 1:00P Sa": [
+     4,
+     4
+    ],
+    "Fri|6:15pm - 7:15pm|Barracuda Swim Team VILLAP 6:15P F": [
+     4,
+     4
+    ],
+    "Mon|6:45pm - 7:45pm|Barracuda Swim Team VILLAP 6:45P M": [
+     3,
+     4
+    ],
+    "Wed|6:45pm - 7:45pm|Barracuda Swim Team VILLAP 6:45P W": [
+     4,
+     4
+    ],
+    "Thu|12:00pm - 12:30pm|Minnow VILLAP 12:00P Th": [
+     4,
+     4
+    ],
+    "Thu|3:45pm - 4:15pm|Minnow VILLAP 3:45P Th": [
+     4,
+     4
+    ],
+    "Tue|5:45pm - 6:15pm|Minnow VILLAP 5:45P Tu": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Minnow VILLAP 6:00P W": [
+     4,
+     4
+    ],
+    "Fri|10:45am - 11:15am|Private VILLAP 10:45A F": [
+     1,
+     1
+    ],
+    "Sat|12:15pm - 12:45pm|Private VILLAP 12:15P Sa": [
+     1,
+     1
+    ],
+    "Sat|11:15am - 11:45am|SAP VILLAP 11:15A Sa": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|SAP VILLAP 6:30P W": [
+     4,
+     4
+    ],
+    "Mon|6:15pm - 6:45pm|Shark 1 VILLAP 6:15P M": [
+     3,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Shark 1 VILLAP 6:30P Tu": [
+     3,
+     4
+    ],
+    "Thu|6:45pm - 7:15pm|Shark 1 VILLAP 6:45P Th": [
+     0,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Shark 2 VILLAP 10:30A Sa": [
+     0,
+     4
+    ],
+    "Sun|10:45am - 11:15am|Shark 2 VILLAP 10:45A Su": [
+     1,
+     4
+    ],
+    "Fri|11:00am - 11:30am|Shark 2 VILLAP 11:00A F": [
+     0,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Shark 2 VILLAP 11:00A Sa": [
+     3,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Shark 2 VILLAP 12:30P Sa": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Shark 2 VILLAP 12:30P Su": [
+     3,
+     4
+    ],
+    "Thu|12:30pm - 1:00pm|Shark 2 VILLAP 12:30P Th": [
+     0,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Shark 2 VILLAP 4:00P W": [
+     2,
+     4
+    ],
+    "Fri|4:15pm - 4:45pm|Shark 2 VILLAP 4:15P F": [
+     0,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Shark 2 VILLAP 5:00P F": [
+     1,
+     4
+    ],
+    "Thu|5:15pm - 5:45pm|Shark 2 VILLAP 5:15P Th": [
+     3,
+     4
+    ],
+    "Thu|5:45pm - 6:15pm|Shark 2 VILLAP 5:45P Th": [
+     0,
+     5
+    ],
+    "Wed|6:15pm - 6:45pm|Shark 2 VILLAP 6:15P W": [
+     1,
+     4
+    ],
+    "Mon|6:45pm - 7:15pm|Shark 2 VILLAP 6:45P M": [
+     4,
+     4
+    ],
+    "Tue|6:45pm - 7:15pm|Shark 2 VILLAP 6:45P Tu": [
+     0,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Starfish VILLAP 5:30P Tu": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 VILLAP 10:00A Su": [
+     4,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle 1 VILLAP 11:00A Su": [
+     4,
+     4
+    ],
+    "Mon|4:45pm - 5:15pm|Turtle 1 VILLAP 4:45P M": [
+     3,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 1 VILLAP 10:30A Sa": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 1 VILLAP 10:30A Su": [
+     4,
+     4
+    ],
+    "Sun|11:15am - 11:45am|Turtle 1 VILLAP 11:15A Su": [
+     4,
+     4
+    ],
+    "Wed|12:00pm - 12:30pm|Turtle 1 VILLAP 12:00P W": [
+     2,
+     4
+    ],
+    "Thu|12:15pm - 12:45pm|Turtle 1 VILLAP 12:15 Th": [
+     2,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Turtle 1 VILLAP 4:00P M": [
+     4,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Turtle 1 VILLAP 4:00P Tu": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Turtle 1 VILLAP 4:00P W": [
+     1,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Turtle 1 VILLAP 4:30P F": [
+     1,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle 1 VILLAP 4:30P Th": [
+     1,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Turtle 1 VILLAP 4:30P W": [
+     2,
+     4
+    ],
+    "Thu|4:45pm - 5:15pm|Turtle 1 VILLAP 4:45P Th": [
+     3,
+     4
+    ],
+    "Tue|4:45pm - 5:15pm|Turtle 1 VILLAP 4:45P Tu": [
+     4,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Turtle 1 VILLAP 5:00P Tu": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 VILLAP 5:00P W": [
+     2,
+     4
+    ],
+    "Mon|5:15pm - 5:45pm|Turtle 1 VILLAP 5:15P M": [
+     4,
+     4
+    ],
+    "Thu|5:15pm - 5:45pm|Turtle 1 VILLAP 5:15P Th": [
+     2,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Turtle 1 VILLAP 5:30P F": [
+     4,
+     4
+    ],
+    "Mon|5:45pm - 6:15pm|Turtle 1 VILLAP 5:45P M": [
+     2,
+     4
+    ],
+    "Wed|5:45pm - 6:15pm|Turtle 1 VILLAP 5:45P W": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 1 VILLAP 6:00P Th": [
+     4,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 1 VILLAP 6:00P Tu": [
+     1,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 1 VILLAP 6:30 W": [
+     2,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 1 VILLAP 6:30P Tu": [
+     2,
+     4
+    ],
+    "Mon|6:45pm - 7:15pm|Turtle 1 VILLAP 6:45P M": [
+     2,
+     4
+    ],
+    "Sun|8:30am - 9:00am|Turtle 1 VILLAP 8:30A Su": [
+     4,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Turtle 1 VILLAP 9:00A Sa": [
+     3,
+     4
+    ],
+    "Fri|9:15am - 9:45am|Turtle 1 VILLAP 9:15A F": [
+     1,
+     4
+    ],
+    "Sun|9:15am - 9:45am|Turtle 1 VILLAP 9:15A Su": [
+     4,
+     4
+    ],
+    "Sat|9:45am - 10:15am|Turtle 1 VILLAP 9:45A Sa": [
+     3,
+     4
+    ],
+    "Fri|11:15am - 11:45am|Turtle 2 VILLAP 11:15A F": [
+     2,
+     4
+    ],
+    "Thu|5:15pm - 5:45pm|Turtle 2 VILLAP 5:15P Th": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle 2 VILLAP 5:30P W": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle 2 VILLAP 6:00P W": [
+     4,
+     4
+    ],
+    "Mon|6:15pm - 6:45pm|Turtle 2 VILLAP 6:15P M": [
+     4,
+     4
+    ],
+    "Thu|6:15pm - 6:45pm|Turtle 2 VILLAP 6:15P Th": [
+     4,
+     4
+    ],
+    "Tue|6:15pm - 6:45pm|Turtle 2 VILLAP 6:15P Tu": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 2 VILLAP 6:30P M": [
+     3,
+     4
+    ],
+    "Fri|4:00pm - 4:30pm|Young Adult 1 VILLAP 4:00P F": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Minnow VILLAP 10:00A Su": [
+     4,
+     4
+    ],
+    "Wed|4:15pm - 4:45pm|Minnow VILLAP 4:15P W": [
+     4,
+     4
+    ],
+    "Thu|6:15pm - 6:45pm|Minnow VILLAP 6:15P Th": [
+     4,
+     4
+    ],
+    "Thu|6:45pm - 7:15pm|Minnow VILLAP 6:45P Th": [
+     4,
+     4
+    ],
+    "Thu|10:30am - 11:00am|Minnow VILLAP 10:30A Th": [
+     1,
+     4
+    ],
+    "Sat|10:45am - 11:15am|Minnow VILLAP 10:45A Sa": [
+     4,
+     4
+    ],
+    "Sun|10:45am - 11:15am|Minnow VILLAP 10:45A Su": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Minnow VILLAP 11:00A Sa": [
+     4,
+     4
+    ],
+    "Thu|11:00am - 11:30am|Minnow VILLAP 11:00A Th": [
+     2,
+     4
+    ],
+    "Sun|11:15am - 11:45am|Minnow VILLAP 11:15A Su": [
+     4,
+     4
+    ],
+    "Thu|11:15am - 11:45am|Minnow VILLAP 11:15A Th": [
+     2,
+     4
+    ],
+    "Sat|11:45am - 12:15pm|Minnow VILLAP 11:45A Sa": [
+     3,
+     4
+    ],
+    "Fri|4:00pm - 4:30pm|Minnow VILLAP 4:00P F": [
+     3,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Minnow VILLAP 4:00P W": [
+     2,
+     4
+    ],
+    "Mon|4:15pm - 4:45pm|Minnow VILLAP 4:15P M": [
+     2,
+     4
+    ],
+    "Thu|4:15pm - 4:45pm|Minnow VILLAP 4:15P Th": [
+     4,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Minnow VILLAP 4:30P F": [
+     3,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Minnow VILLAP 4:30P M": [
+     4,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Minnow VILLAP 4:30P Tu": [
+     3,
+     4
+    ],
+    "Wed|4:45pm - 5:15pm|Minnow VILLAP 4:45P W": [
+     3,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Minnow VILLAP 5:00P M": [
+     4,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow VILLAP 5:00P Th": [
+     4,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Minnow VILLAP 5:00P Tu": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Minnow VILLAP 5:00P W": [
+     4,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Minnow VILLAP 5:30P Tu": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Minnow VILLAP 6:30P Th": [
+     2,
+     4
+    ],
+    "Sun|8:45am - 9:15am|Minnow VILLAP 8:45A Su": [
+     4,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Minnow VILLAP 9:00A Sa": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow VILLAP 9:30 Su": [
+     4,
+     4
+    ],
+    "Sat|9:45am - 10:15am|Minnow VILLAP 9:45A Sa": [
+     4,
+     4
+    ],
+    "Sun|9:45am - 10:15am|Minnow VILLAP 9:45A Su": [
+     4,
+     4
+    ],
+    "Wed|11:45am - 12:15pm|Private VILLAP 11:45A W": [
+     1,
+     1
+    ],
+    "Mon|5:00pm - 5:30pm|SAP VILLAP 5:00P M": [
+     4,
+     4
+    ],
+    "Tue|5:15pm - 5:45pm|SAP VILLAP 5:15P Tu": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|SAP VILLAP 5:30P M": [
+     4,
+     4
+    ],
+    "Sun|11:15am - 11:45am|Shark 1 VILLAP 11:15A Su": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Shark 1 VILLAP 11:30A Sa": [
+     0,
+     4
+    ],
+    "Thu|11:45am - 12:15pm|Shark 1 VILLAP 11:45A Th": [
+     0,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Shark 1 VILLAP 12:00P Su": [
+     4,
+     4
+    ],
+    "Fri|12:15pm - 12:45pm|Shark 1 VILLAP 12:15P F": [
+     0,
+     4
+    ],
+    "Wed|12:15pm - 12:45pm|Shark 1 VILLAP 12:15P W": [
+     0,
+     5
+    ],
+    "Sun|12:30pm - 1:00pm|Shark 1 VILLAP 12:30P Su": [
+     3,
+     4
+    ],
+    "Thu|4:15pm - 4:45pm|Shark 1 VILLAP 4:15P Th": [
+     4,
+     4
+    ],
+    "Tue|4:15pm - 4:45pm|Shark 1 VILLAP 4:15P Tu": [
+     2,
+     4
+    ],
+    "Wed|4:15pm - 4:45pm|Shark 1 VILLAP 4:15P W": [
+     2,
+     4
+    ],
+    "Mon|4:45pm - 5:15pm|Shark 1 VILLAP 4:45P M": [
+     3,
+     4
+    ],
+    "Wed|4:45pm - 5:15pm|Shark 1 VILLAP 4:45P W": [
+     2,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Shark 1 VILLAP 5:00P F": [
+     1,
+     4
+    ],
+    "Fri|5:15pm - 5:45pm|Shark 1 VILLAP 5:15P F": [
+     4,
+     4
+    ],
+    "Tue|5:15pm - 5:45pm|Shark 1 VILLAP 5:15P Tu": [
+     1,
+     4
+    ],
+    "Wed|5:15pm - 5:45pm|Shark 1 VILLAP 5:15P W": [
+     0,
+     5
+    ],
+    "Mon|5:45pm - 6:15pm|Shark 1 VILLAP 5:45P M": [
+     2,
+     4
+    ],
+    "Wed|6:45pm - 7:15pm|Shark 1 VILLAP 6:45P W": [
+     0,
+     5
+    ],
+    "Sun|8:45am - 9:15am|Shark 1 VILLAP 8:45A Su": [
+     4,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Shark 1 VILLAP 9:30A Sa": [
+     4,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Shark 1/2 Hybrid VILLAP 4:30 F": [
+     0,
+     5
+    ],
+    "Fri|5:15pm - 5:45pm|Starfish VILLAP 5:15P F": [
+     4,
+     4
+    ],
+    "Thu|9:45am - 10:15am|Starfish VILLAP 9:45A Th": [
+     4,
+     4
+    ],
+    "Fri|12:30pm - 1:00pm|Turtle 2 VILLAP 12:30P F": [
+     1,
+     4
+    ],
+    "Sun|10:15am - 10:45am|Turtle 2 VILLAP 10:15A Su": [
+     2,
+     4
+    ],
+    "Sat|10:45am - 11:15am|Turtle 2 VILLAP 10:45A Sa": [
+     4,
+     4
+    ],
+    "Sun|10:45am - 11:15am|Turtle 2 VILLAP 10:45A Su": [
+     4,
+     4
+    ],
+    "Thu|10:45am - 11:15am|Turtle 2 VILLAP 10:45a Th": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 2 VILLAP 11:00A Sa": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Turtle 2 VILLAP 11:30A Su": [
+     4,
+     4
+    ],
+    "Wed|11:30am - 12:00pm|Turtle 2 VILLAP 11:30A W": [
+     0,
+     4
+    ],
+    "Fri|11:45am - 12:15pm|Turtle 2 VILLAP 11:45A F": [
+     1,
+     4
+    ],
+    "Sat|12:15pm - 12:45pm|Turtle 2 VILLAP 12:15P Sa": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle 2 VILLAP 12:30P Su": [
+     3,
+     4
+    ],
+    "Thu|3:45pm - 4:15pm|Turtle 2 VILLAP 3:45P Th": [
+     1,
+     4
+    ],
+    "Fri|4:00pm - 4:30pm|Turtle 2 VILLAP 4:00P F": [
+     2,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Turtle 2 VILLAP 4:00P Th": [
+     3,
+     4
+    ],
+    "Mon|4:15pm - 4:45pm|Turtle 2 VILLAP 4:15P M": [
+     4,
+     4
+    ],
+    "Tue|4:15pm - 4:45pm|Turtle 2 VILLAP 4:15P Tu": [
+     4,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Turtle 2 VILLAP 4:30P W": [
+     3,
+     4
+    ],
+    "Fri|4:45pm - 5:15pm|Turtle 2 VILLAP 4:45P F": [
+     3,
+     4
+    ],
+    "Mon|4:45pm - 5:15pm|Turtle 2 VILLAP 4:45P M": [
+     4,
+     4
+    ],
+    "Thu|4:45pm - 5:15pm|Turtle 2 VILLAP 4:45P Th": [
+     8,
+     8
+    ],
+    "Tue|4:45pm - 5:15pm|Turtle 2 VILLAP 4:45P Tu": [
+     4,
+     4
+    ],
+    "Mon|5:15pm - 5:45pm|Turtle 2 VILLAP 5:15P M": [
+     4,
+     4
+    ],
+    "Tue|5:45pm - 6:15pm|Turtle 2 VILLAP 5:45P Tu": [
+     4,
+     4
+    ],
+    "Sat|9:15am - 10:15am|Turtle 2 VILLAP 9:15A Sa": [
+     4,
+     4
+    ],
+    "Sun|9:15am - 9:45am|Turtle 2 VILLAP 9:15A Su": [
+     2,
+     4
+    ],
+    "Thu|9:15am - 9:45am|Turtle 2 VILLAP 9:15a Th": [
+     0,
+     4
+    ],
+    "Sat|9:45am - 10:15am|Turtle 2 VILLAP 9:45A Sa": [
+     3,
+     4
+    ],
+    "Sun|9:45am - 10:15am|Turtle 2 VILLAP 9:45A Su": [
+     2,
+     4
+    ],
+    "Wed|6:45pm - 7:15pm|Young Adult 2/3 VILLAP 6:45P W": [
+     3,
+     4
+    ],
+    "Thu|10:15am - 10:45am|Young Adult 1/2 VILLAP 10:15A Th": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Young Adult Private VILLAP 6:00P W": [
+     1,
+     1
+    ],
+    "Sat|5:45pm - 6:30pm|Adult Level 1 Women Only VILLAP 5:45P Sa": [
+     4,
+     4
+    ],
+    "Sat|5:00pm - 5:45pm|Adult Level 3 Women Only VILLAP 5:00 Sa": [
+     2,
+     4
+    ],
+    "Sat|3:30pm - 4:15pm|Adult Level 1 Women Only VILLAP 3:30P Sa": [
+     4,
+     4
+    ],
+    "Sat|5:00pm - 5:45pm|Adult Level 1 Women Only VILLAP 5:00P Sa": [
+     4,
+     4
+    ],
+    "Sat|4:15pm - 5:00pm|Adult Level 1/2 Women Only VILLAP 4:15P Sa": [
+     4,
+     4
+    ],
+    "Sat|4:15pm - 5:00pm|Adult Level 2 Women Only VILLAP 4:15P Sa": [
+     4,
+     4
+    ],
+    "Sat|5:00pm - 5:45pm|Adult Level 2 Women Only VILLAP 5:00P Sa": [
+     4,
+     4
+    ],
+    "Sat|3:30pm - 4:15pm|Adult Level 3 Women Only VILLAP 3:30P Sa": [
+     4,
+     4
+    ],
+    "Sat|4:15pm - 5:00pm|Adult Level 3 Women Only VILLAP 4:15P Sa": [
+     2,
+     4
+    ],
+    "Sat|5:45pm - 6:15pm|Adult Private Class VILLAP 5:45P Sa": [
+     1,
+     1
+    ],
+    "Sat|5:45pm - 6:30pm|Adult Level 1 Women Only VILLAP 5:45 Sa": [
+     4,
+     4
+    ],
+    "Sat|3:30pm - 4:15pm|Young Adult 1 Women Only VILLAP 3:30 Sa": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

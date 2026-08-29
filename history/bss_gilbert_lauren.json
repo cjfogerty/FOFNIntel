@@ -1,0 +1,42 @@
+{
+ "location": "Gilbert, AZ",
+ "slug": "bss_gilbert_lauren",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-08-29",
+   "end": "2099-12-31",
+   "catalog_from": "2026-08-29"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-08-29",
+   "ts": "2026-08-29T14:10",
+   "label": "Aug 29",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 9,
+    "capacity": 9,
+    "utilization": 100.0
+   },
+   "slots": {
+    "Mon|3:00pm - 3:30pm|Dolphin Group LIFE Mon 3:00pm": [
+     4,
+     4
+    ],
+    "Mon|3:30pm - 4:00pm|Dolphin Private Samuel LIFE Mon 3:30pm": [
+     1,
+     1
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 1 LIFE Mon 4:30pm": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}
