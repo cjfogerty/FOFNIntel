@@ -444,6 +444,445 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 245,
+    "capacity": 372,
+    "utilization": 65.9
+   },
+   "slots": {
+    "Sat|1:30pm - 2:00pm|Adult 1 EF 1:30pm Sat": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult 1 EF 7:00pm Thu": [
+     7,
+     8
+    ],
+    "Thu|7:30pm - 8:00pm|Adult 1 EF 7:30pm Thu": [
+     6,
+     8
+    ],
+    "Wed|7:30pm - 8:00pm|Adult 1 EF 7:30pm Wed": [
+     4,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Adult 1/2 EF 12:30pm Sun": [
+     4,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Adult 2 EF 1:30pm Sat": [
+     2,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Adult 2 EF 7:00pm Tue": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Barracuda EF 10:30am Sun": [
+     2,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Barracuda EF 5:30pm Tue": [
+     0,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Barracuda EF 7:00pm Thu": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Drop In Private EF 6:00pm Wed": [
+     1,
+     1
+    ],
+    "Sun|10:00am - 10:30am|Minnow EF 10:00am Sun": [
+     1,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Minnow EF 11:00am Sat": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Minnow EF 12:00pm Sat": [
+     3,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Minnow EF 4:30pm Tue": [
+     3,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow EF 5:00pm Thu": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Minnow EF 5:00pm Wed": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Minnow EF 5:30pm Wed": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Minnow EF 6:00pm Thu": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow EF 9:30am Sun": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Private EF 1:00pm Sat": [
+     1,
+     2
+    ],
+    "Sat|1:30pm - 2:00pm|Private EF 1:30pm Sat": [
+     0,
+     1
+    ],
+    "Sun|10:00am - 10:30am|Private EF 10:00am Sun": [
+     2,
+     2
+    ],
+    "Sat|10:30am - 11:00am|Private EF 10:30am Sat": [
+     1,
+     1
+    ],
+    "Sun|10:30am - 11:00am|Private EF 10:30am Sun": [
+     1,
+     1
+    ],
+    "Sun|11:00am - 11:30am|Private EF 11:00am Sun": [
+     2,
+     2
+    ],
+    "Sun|11:30am - 12:00pm|Private EF 11:30am Sun": [
+     2,
+     2
+    ],
+    "Sat|12:00pm - 12:30pm|Private EF 12:00pm Sat": [
+     1,
+     1
+    ],
+    "Sun|12:00pm - 12:30pm|Private EF 12:00pm Sun": [
+     1,
+     1
+    ],
+    "Sun|12:30pm - 1:00pm|Private EF 12:30pm Sun": [
+     1,
+     1
+    ],
+    "Wed|4:30pm - 5:00pm|Private EF 4:30pm Wed": [
+     1,
+     2
+    ],
+    "Thu|5:00pm - 5:30pm|Private EF 5:00pm Thu": [
+     2,
+     2
+    ],
+    "Tue|5:00pm - 5:30pm|Private EF 5:00pm Tue": [
+     2,
+     2
+    ],
+    "Thu|6:30pm - 7:00pm|Private EF 6:30pm Thu": [
+     1,
+     1
+    ],
+    "Tue|6:30pm - 7:00pm|Private EF 6:30pm Tue": [
+     1,
+     1
+    ],
+    "Wed|6:30pm - 7:00pm|Private EF 6:30pm Wed": [
+     1,
+     1
+    ],
+    "Tue|7:00pm - 7:30pm|Private EF 7:00pm Tue": [
+     1,
+     1
+    ],
+    "Thu|7:30pm - 7:30pm|Private EF 7:30pm Thu": [
+     1,
+     1
+    ],
+    "Wed|7:30pm - 8:00pm|Private EF 7:30pm Wed": [
+     1,
+     1
+    ],
+    "Sun|9:00am - 9:30am|Private EF 9:00am Sun": [
+     1,
+     2
+    ],
+    "Sun|9:30am - 10:00am|Private EF 9:30am Sun": [
+     0,
+     1
+    ],
+    "Sun|11:00am - 11:30am|Shark 1 EF 11:00am Sun": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Shark 1/2 EF 12:00pm Sun": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Shark 1/2 EF 5:30pm Thu": [
+     2,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Shark 2 EF 5:00pm Tue": [
+     1,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Starfish EF 10:00am Sat": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Starfish EF 10:30am Sat": [
+     1,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish EF 10:30am Sun": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish EF 11:00am Sat": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Starfish EF 12:00pm Sat": [
+     3,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Starfish EF 4:30pm Thu": [
+     1,
+     8
+    ],
+    "Tue|4:30pm - 5:00pm|Starfish EF 4:30pm Tue": [
+     2,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Starfish EF 4:30pm Wed": [
+     2,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Starfish EF 5:30pm Thu": [
+     3,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Starfish EF 5:30pm Tue": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Starfish EF 6:00pm Wed": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Starfish EF 6:30pm Thu": [
+     3,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Starfish EF 9:30am Sun": [
+     5,
+     8
+    ],
+    "Sat|10:00am - 10:30am|Tad/Swim EF 10:00am Sat": [
+     2,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Tad/Swim EF 4:30pm Thu": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Tadpole EF 10:30am Sat": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Tadpole EF 10:30am Sun": [
+     4,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Tadpole EF 5:30pm Tue": [
+     0,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Tadpole EF 9:00am Sun": [
+     4,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle 1 EF 11:00am Sun": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 EF 11:30am Sat": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle 1 EF 12:00pm Sun": [
+     3,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 EF 5:00pm Wed": [
+     2,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle 1 EF 5:30pm Thu": [
+     2,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 1 EF 6:00pm Thu": [
+     3,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 1 EF 6:00pm Tue": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle 1 EF 6:00pm Wed": [
+     3,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 1 EF 6:30pm Tue": [
+     3,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 2 EF 10:30am Sat": [
+     0,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 2 EF 11:00am Sat": [
+     3,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Turtle 2 EF 4:30pm Tue": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 2 EF 6:00pm Thu": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle 2 EF 6:30pm Thu": [
+     0,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|YA EF 7:30pm Tue": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|YA/Adult EF 12:30pm Sat": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Young Adult EF 1:00pm Sat": [
+     0,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Young Adult EF 11:30am Sat": [
+     3,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Young Adult EF 7:00pm Wed": [
+     3,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|Drop In Private EF 7:30pm Wed": [
+     1,
+     1
+    ],
+    "Sat|11:30am - 12:00pm|Minnow EF 11:30am Sat": [
+     3,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Minnow EF 6:00pm Tue": [
+     3,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Private EF 4:00pm Wed": [
+     1,
+     1
+    ],
+    "Wed|5:30pm - 6:00pm|Private EF 5:30pm Wed": [
+     1,
+     1
+    ],
+    "Thu|7:00pm - 7:30pm|Private EF 7:00pm Thu": [
+     1,
+     1
+    ],
+    "Tue|7:30pm - 8:00pm|Private EF 7:30pm Tue": [
+     1,
+     1
+    ],
+    "Sun|11:30am - 12:00pm|Seahorse EF 11:30am Sun": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Shark 1 EF 11:30am Sun": [
+     0,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Shark 1 EF 6:30pm Wed": [
+     0,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Starfish EF 12:30pm Sat": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish EF 5:00pm Wed": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Starfish EF 5:30pm Wed": [
+     3,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Starfish EF 6:00pm Tue": [
+     2,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Starfish EF 6:30pm Tue": [
+     2,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Turtle 1 EF 9:00am Sun": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 2 EF 10:00am Sun": [
+     2,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle 2 EF 12:00pm Sun": [
+     0,
+     5
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 2 EF 6:30pm Wed": [
+     1,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Adult 1 EF 12:30pm Sat": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Adult 1 EF 12:30pm Sun": [
+     4,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Adult 1 EF 7:00pm Tue": [
+     4,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Adult 1 EF 7:00pm Wed": [
+     8,
+     8
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

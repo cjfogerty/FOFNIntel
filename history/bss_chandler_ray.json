@@ -184,6 +184,185 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 75,
+    "capacity": 166,
+    "utilization": 45.2
+   },
+   "slots": {
+    "Mon|7:00pm - 7:30pm|Adult 1 EOSRAY Mon 7:00pm": [
+     1,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Adult 1 EOSRAY Sat 1:30pm": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Adult 1 EOSRAY Wed 6:30pm": [
+     1,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Adult 2 EOSRAY Fri 6:00pm": [
+     2,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Adult 2 EOSRAY Mon 6:00pm": [
+     3,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Adult 2 EOSRAY Wed 6:30pm": [
+     3,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Adult 3 EOSRAY Wed 7:00pm": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 6:00pm|Barracuda EOSRAY Mon 5:00pm": [
+     0,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Minnow EOSRAY Fri 5:00pm": [
+     3,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Minnow EOSRAY Fri 7:00pm": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Minnow EOSRAY Mon 4:30pm": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow EOSRAY Mon 5:30pm": [
+     0,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Minnow EOSRAY Sat 11:00am": [
+     3,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Minnow EOSRAY Sat 12:30pm": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Minnow EOSRAY Wed 6:00pm": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Seahorse EOSRAY Mon 5:30pm": [
+     2,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Shark 1 EOSRAY Fri 5:30pm": [
+     0,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Shark 1 EOSRAY Mon 6:00pm": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Shark 1 EOSRAY Sat 12:00pm": [
+     1,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Shark 1 EOSRAY Wed 4:30pm": [
+     1,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Shark 2 EOSRAY Fri 6:00pm": [
+     0,
+     6
+    ],
+    "Mon|6:30pm - 7:00pm|Shark 2 EOSRAY Mon 6:30pm": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Shark 2 EOSRAY Sat 12:00pm": [
+     3,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Starfish EOSRAY Fri 4:30pm": [
+     0,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Starfish EOSRAY Mon 4:00pm": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish EOSRAY Sat 11:00am": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish EOSRAY Wed 5:00pm": [
+     2,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Swimboree EOSRAY Mon 4:00pm": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Swimboree EOSRAY Sat 11:30am": [
+     2,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Tadpole EOSRAY Mon 4:00pm": [
+     3,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Tadpole EOSRAY Sat 11:30am": [
+     2,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Turtle 1 EOSRAY Fri 4:30pm": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 EOSRAY Mon 5:00pm": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 EOSRAY Wed 5:00pm": [
+     2,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Turtle 2 EOSRAY Fri 5:00pm": [
+     2,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Turtle 2 EOSRAY Fri 6:30pm": [
+     1,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 2 EOSRAY Mon 4:30pm": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Turtle 2 EOSRAY Mon 5:30pm": [
+     0,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Turtle 2 EOSRAY Sat 1:00pm": [
+     2,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle 2 EOSRAY Wed 5:30pm": [
+     2,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Young Adult 1 EOSRAY Mon 6:30pm": [
+     1,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

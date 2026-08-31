@@ -40,6 +40,37 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 12,
+    "capacity": 16,
+    "utilization": 75.0
+   },
+   "slots": {
+    "Sun|4:00pm - 4:30pm|Swimboree EMBTRY 4pm Sun": [
+     4,
+     4
+    ],
+    "Sun|4:00pm - 4:30pm|Tadpole EMBTRY 4pm S": [
+     1,
+     4
+    ],
+    "Sun|6:00pm - 6:30pm|Adult EMBTRY 6pm S": [
+     3,
+     4
+    ],
+    "Sun|6:30pm - 7:00pm|Adult 1 EMBTRY 630pm Sun": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

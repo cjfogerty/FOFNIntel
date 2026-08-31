@@ -260,6 +260,257 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 163,
+    "capacity": 213,
+    "utilization": 76.5
+   },
+   "slots": {
+    "Sat|12:00pm - 12:30pm|*CLOSING 9/20* Turtle 1 JAG 12:00pm Sat": [
+     4,
+     4
+    ],
+    "Wed|8:00pm - 8:30pm|Adult 1 JAG 8:00pm Wed": [
+     2,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Minnow JAG 10:00am Sun": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Minnow JAG 10:30am Sat": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Minnow JAG 10:30am Sun": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Minnow JAG 11:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Minnow JAG 11:30am Sat": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Minnow JAG 11:30am Sun": [
+     5,
+     8
+    ],
+    "Sun|12:00pm - 12:30pm|Minnow JAG 12:00pm Sun": [
+     3,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Minnow JAG 4:30pm Wed": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Minnow JAG 5:30pm Wed": [
+     3,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Minnow JAG 6:00pm Fri": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Minnow JAG 6:00pm Wed": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Private JAG 1:00pm Sat": [
+     2,
+     2
+    ],
+    "Sat|10:00am - 10:30am|Private JAG 10:00am Sat": [
+     1,
+     1
+    ],
+    "Sun|11:00am - 11:30am|Private JAG 11:00am Sun": [
+     1,
+     1
+    ],
+    "Sat|12:00pm - 12:30pm|Private JAG 12:00pm Sat": [
+     1,
+     1
+    ],
+    "Wed|4:00pm - 4:30pm|Private JAG 4:00pm Wed": [
+     1,
+     1
+    ],
+    "Fri|4:30pm - 5:00pm|Private JAG 4:30pm Fri": [
+     1,
+     1
+    ],
+    "Wed|5:00pm - 5:30pm|Private JAG 5:00pm Wed": [
+     1,
+     1
+    ],
+    "Wed|7:30pm - 8:00pm|Private JAG 7:30pm Wed": [
+     1,
+     1
+    ],
+    "Sat|9:30am - 10:00am|Private JAG 9:30am Sat": [
+     1,
+     1
+    ],
+    "Fri|4:00pm - 4:30pm|Semi-Private JAG 4:00pm Fri": [
+     2,
+     2
+    ],
+    "Sat|12:30pm - 1:00pm|Shark 1 JAG 12:30pm Sat": [
+     2,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Shark 1 JAG 6:30pm Fri": [
+     1,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Shark 1/2 JAG 5:30pm Fri": [
+     4,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Shark 1/2 JAG 12:30pm Sun": [
+     2,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Shark 1/2 JAG 7:00pm Wed": [
+     1,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Starfish JAG 10:30am Sat": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish JAG 10:30am Sun": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Starfish JAG 6:00pm Wed": [
+     3,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Starfish/Minnow JAG 4:30pm Fri": [
+     2,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Tad/Swim JAG 9:30am Sun": [
+     2,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Turtle 1 JAG 5:00pm Fri": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 JAG 10:00am Sun": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 1 JAG 11:00am Sat": [
+     4,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle 1 JAG 11:00am Sun": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 JAG 11:30am Sat": [
+     4,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle 1 JAG 12:00pm Sun": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle 1 JAG 5:30pm Wed": [
+     4,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Turtle 1 JAG 6:00pm Fri": [
+     2,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Turtle 1 JAG 6:30pm Fri": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 1 JAG 6:30pm Wed": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Turtle 1 JAG 9:30am Sun": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Turtle 2 JAG 1:00pm Sun": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 2 JAG 12:30pm Sat": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle 2 JAG 12:30pm Sun": [
+     4,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Turtle 2 JAG 5:00pm Fri": [
+     0,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 2 JAG 5:00pm Wed": [
+     3,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Turtle 2 JAG 5:30pm Fri": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 2 JAG 6:30pm Wed": [
+     4,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Young Adult JAG 7:00pm Wed": [
+     2,
+     4
+    ],
+    "Fri|7:30pm - 8:00pm|Young adult JAG 7:30pm Fri": [
+     4,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Tadpole JAG 9:30am Sat": [
+     0,
+     5
+    ],
+    "Sat|10:00am - 10:30am|SPV JAG 10:00am Sat": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Starfish JAG 1:00pm Sun": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Turtle 1 JAG 4:00pm Wed": [
+     3,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Turtle 1 JAG 4:30pm Wed": [
+     1,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Adult 2 JAG 7:00pm Fri": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

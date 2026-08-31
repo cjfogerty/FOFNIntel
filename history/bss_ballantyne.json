@@ -412,6 +412,401 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 196,
+    "capacity": 331,
+    "utilization": 59.2
+   },
+   "slots": {
+    "Thu|6:30pm - 7:00pm|Adult LAFBAL 630 R": [
+     3,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Adult LAFBAL 630pm M": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult LAFBAL 7pm R": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Adult 1 LAFBAL 630 R": [
+     3,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|Adult 1 LAFBAL 730pm W": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult 1 semi private LAFBAL 7 R": [
+     1,
+     2
+    ],
+    "Wed|7:00pm - 7:30pm|Adult 2 LAFBAL 7pm W": [
+     4,
+     4
+    ],
+    "Sun|1:30pm - 2:00pm|Adult LAFBAL 130pm Sun": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Adult LAFBAL 630pm R": [
+     4,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Adult LAFBAL 730pm R": [
+     8,
+     8
+    ],
+    "Thu|7:30pm - 8:00pm|Adult semi private LAFBAL 730pm R": [
+     2,
+     2
+    ],
+    "Mon|3:30pm - 4:00pm|Adult Semi Private LAFBAL 330pm M": [
+     2,
+     2
+    ],
+    "Sun|11:00am - 11:30am|Minnow LAFBAL 11am Sunday": [
+     0,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Private child LAFBAL 1030am Sat": [
+     1,
+     1
+    ],
+    "Sun|2:00pm - 2:30pm|Private LAFBAL 2pm Sun": [
+     2,
+     2
+    ],
+    "Mon|4:00pm - 4:30pm|Private LAFBAL 4pm M": [
+     2,
+     2
+    ],
+    "Wed|4:00pm - 4:30pm|Private LAFBAL 4pm W": [
+     2,
+     2
+    ],
+    "Wed|5:30pm - 6:00pm|Private LAFBAL 530 W": [
+     1,
+     1
+    ],
+    "Wed|6:00pm - 6:30pm|Private LAFBAL 6pm w": [
+     1,
+     1
+    ],
+    "Mon|5:00pm - 5:30pm|Seahorse LAFBAL 5pm M": [
+     1,
+     4
+    ],
+    "Sun|1:30pm - 2:00pm|Shark LAFBAL 130pm Sun": [
+     0,
+     6
+    ],
+    "Thu|6:00pm - 6:30pm|Shark LAFBAL 6pm R": [
+     0,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Starfish LAFBAL 5pm M": [
+     1,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish LAFBAL 5pm W": [
+     1,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 1 LAFBAL 4:30 M": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle 2 LAFBAL 1230 Sun": [
+     2,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Turtle 2 LAFBAL 1pm Sun": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Turtle 2 LAFBAL 530pm M": [
+     0,
+     4
+    ],
+    "Sat|2:00pm - 2:30pm|Private LAFBAL 2pm Sat": [
+     1,
+     1
+    ],
+    "Wed|4:30pm - 5:00pm|Private LAFBAL 430pm W": [
+     2,
+     2
+    ],
+    "Mon|5:00pm - 5:30pm|Private LAFBAL 5pm M": [
+     1,
+     1
+    ],
+    "Sun|11:30am - 12:00pm|Seahorse LAFBAL 1130am Sun": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Swimboree LAFBAL 11am Sat": [
+     4,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Swimboree LAFBAL 11am Sun": [
+     2,
+     4
+    ],
+    "Mon|3:30pm - 4:00pm|Swimboree LAFBAL 330pm M": [
+     2,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Swimboree LAFBAL 5pm R": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Tadpole LAFBAL 11am Sat": [
+     1,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Tadpole LAFBAL 11am Sun": [
+     2,
+     4
+    ],
+    "Mon|3:30pm - 4:00pm|Tadpole LAFBAL 330pm M": [
+     0,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Tadpole LAFBAL 5pm R": [
+     0,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Private LAFBAL 1130am Sun": [
+     2,
+     2
+    ],
+    "Sat|10:30am - 11:00am|Seahorse LAFBAL 1030 Sat": [
+     4,
+     4
+    ],
+    "Sat|2:00pm - 2:30pm|Adult 1 LAFBAL 2pm Sat": [
+     3,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Adult 1 LAFBAL 5pm W": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Adult 1 LAFBAL 630pm M": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Adult LAFBAL 1230pm Sat": [
+     4,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Adult Semi Private LAFBAL 130pm Sat": [
+     2,
+     2
+    ],
+    "Wed|7:00pm - 7:30pm|Adult Semi private LAFBAL 7pm W": [
+     2,
+     2
+    ],
+    "Mon|6:00pm - 6:30pm|Barracuda Swim Team LAFBAL 6pm M": [
+     0,
+     8
+    ],
+    "Thu|6:00pm - 6:30pm|Barracuda Swim Team LAFBAL 6pm R": [
+     0,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Minnow LAFBAL 430pm M": [
+     1,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Minnow LAFBAL 1130am Sat": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Minnow LAFBAL 1230 Sun": [
+     1,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Minnow LAFBAL 1pm Sat": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow LAFBAL 530pm M": [
+     2,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Minnow LAFBAL 530pm R": [
+     3,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Private child LAFBAL 530pm R": [
+     1,
+     1
+    ],
+    "Sun|12:00pm - 12:30pm|Private LAFBAL 12 Sun": [
+     1,
+     1
+    ],
+    "Sat|12:30pm - 1:00pm|Private LAFBAL 1230pm Sat": [
+     1,
+     1
+    ],
+    "Sat|12:00pm - 12:30pm|Private LAFBAL 12pm Sat": [
+     3,
+     3
+    ],
+    "Thu|4:00pm - 4:30pm|Private LAFBAL 4pm R": [
+     1,
+     1
+    ],
+    "Thu|5:30pm - 6:00pm|Private LAFBAL 530pm R": [
+     1,
+     1
+    ],
+    "Wed|5:00pm - 5:30pm|Private LAFBAL 5pm W": [
+     1,
+     1
+    ],
+    "Wed|6:30pm - 7:00pm|Shark LAFBAL 630pm W": [
+     0,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Starfish LAFBAL 1pm Sat": [
+     0,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish LAFBAL 1030 Sun": [
+     2,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Starfish LAFBAL 1130am Sat": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Starfish LAFBAL 12 Sun": [
+     0,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Starfish LAFBAL 4pm M": [
+     0,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Starfish LAFBAL 4pm R": [
+     0,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Starfish LAFBAL 5pm R": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Starfish LAFBAL 6pm W": [
+     0,
+     4
+    ],
+    "Mon|3:30pm - 4:00pm|Turtle 1 LAFBAL 330pm M": [
+     0,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 1 LAFBAL 1030 Sun": [
+     2,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 LAFBAL 1130am Sat": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle 1 LAFBAL 1230pm Sun": [
+     3,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Turtle 1 LAFBAL 1pm Sat": [
+     2,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Turtle 1 LAFBAL 1pm Sun": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Turtle 1 LAFBAL 530pm M": [
+     4,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle 1 LAFBAL 5pm R": [
+     3,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle 2 LAFBAL 430 R": [
+     1,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 2 LAFBAL 1100am Sat": [
+     0,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle 2 LAFBAL 12 Sun": [
+     4,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 2 LAFBAL 430pm M": [
+     2,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 2 LAFBAL 630pm W": [
+     2,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Adult LAFBAL 1030am Sun": [
+     4,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Adult 2 LAFBAL 130pm Sat": [
+     2,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1 LAFBAL 7pm M": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Adult 2 LAFBAL 1230pm Sat": [
+     4,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|Adult 2 LAFBAL 730pm W": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 2 LAFBAL 7pm M": [
+     3,
+     4
+    ],
+    "Sat|2:00pm - 2:30pm|Adult LAFBAL 2pm Sat": [
+     2,
+     4
+    ],
+    "Sun|2:00pm - 2:30pm|Adult LAFBAL 2pm Sun": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult Semi Private LAFBAL 7pm M": [
+     2,
+     2
+    ],
+    "Thu|7:00pm - 7:30pm|Private LAFBAL 7pm R": [
+     1,
+     1
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

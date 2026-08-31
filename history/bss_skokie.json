@@ -448,6 +448,441 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 255,
+    "capacity": 425,
+    "utilization": 60.0
+   },
+   "slots": {
+    "Sun|10:00am - 10:30am|Seahorse SK 10:00a Su": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Shark 1/2 Hybrid SK 11:00a Sa": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Shark 1/2 Hybrid SK 12:00p Sa": [
+     0,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Shark 1/2 Hybrid SK 12:30p Sa": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Shark 1/2 Hybrid SK 5:00p Mo": [
+     2,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Shark 1/2 Hybrid SK 5:30p Mo": [
+     2,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Shark 1/2 Hybrid SK 5:30p Tu": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Shark 1/2 Hybrid SK 6:30p We": [
+     0,
+     5
+    ],
+    "Sat|1:00pm - 1:30pm|Turtle 1 SK 1:00p Sa": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 1 SK 10:30a Su": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Turtle 1 SK 11:30a Su": [
+     1,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle 1 SK 12:00p Su": [
+     2,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 1 SK 12:30p Sa": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle 1 SK 12:30p Su": [
+     3,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Turtle 1 SK 4:00p Tu": [
+     4,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Turtle 1 SK 4:30p Tu": [
+     4,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Turtle 1 SK 4:30p We": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 SK 5:00p Mo": [
+     2,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Turtle 1 SK 5:00p Tu": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 SK 5:00p We": [
+     2,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle 1 SK 5:30p We": [
+     2,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Turtle 1 SK 6:00p Mo": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle 1 SK 6:00p We": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 1 SK 6:30p Tu": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 1 SK 6:30p We": [
+     2,
+     4
+    ],
+    "Sun|8:30am - 9:00am|Turtle 1 SK 8:30a Su": [
+     8,
+     8
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 2 SK 12:30p Sa": [
+     3,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Turtle 2 SK 1:00p Su": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 2 SK 11:00a Sa": [
+     1,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle 2 SK 11:00a Su": [
+     3,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Turtle 2 SK 4:00p Mo": [
+     1,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Turtle 2 SK 4:30p We": [
+     3,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Turtle 2 SK 5:00p Tu": [
+     2,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Turtle 2 SK 5:30p Tu": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle 2 SK 6:00p We": [
+     1,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 2 SK 6:30p Mo": [
+     2,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 2 SK 6:30p Tu": [
+     0,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Seahorse SK 4:30p Tu": [
+     2,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Swimboree SK 12:00p Su": [
+     1,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Tadpole SK 10:00a Sa": [
+     1,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Tadpole SK 10:30a Su": [
+     0,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Tadpole SK 11:30a Sa": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Tadpole SK 12:30p Su": [
+     4,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Tadpole SK 4:30p Mo": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Tadpole SK 5:30p We": [
+     1,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 1 SK 12:00p Sa": [
+     1,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Swimboree SK 4:00p We": [
+     1,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Swimboree SK 6:30p Mo": [
+     1,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Swimboree SK 9:30a Sa": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Seahorse SK 11:00a Sa": [
+     0,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Starfish SK 10:00a Sa": [
+     1,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Minnow SK 1:00p Sa": [
+     3,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Minnow SK 1:00p Su": [
+     4,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Minnow SK 10:00a Sa": [
+     3,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Minnow SK 10:00a Su": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Minnow SK 10:30a Sa": [
+     2,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Minnow SK 11:30a Sa": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Minnow SK 11:30a Su": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Minnow SK 12:00p Sa": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Minnow SK 12:30p Su": [
+     2,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Minnow SK 4:00p Tu": [
+     2,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Minnow SK 4:30p We": [
+     2,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Minnow SK 5:00p Tu": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Minnow SK 5:00p We": [
+     2,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow SK 5:30p Mo": [
+     4,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Minnow SK 5:30p Tu": [
+     1,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Minnow SK 5:30p We": [
+     1,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Minnow SK 6:00p Tu": [
+     4,
+     4
+    ],
+    "Sun|8:30am - 9:00am|Minnow SK 8:30a Su": [
+     1,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Minnow SK 9:00a Su": [
+     4,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Minnow SK 9:30a Sa": [
+     0,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow SK 9:30a Su": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Shark 1/2 Hybrid SK 1:00p Su": [
+     2,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Shark 1/2 Hybrid SK 9:30a Su": [
+     2,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Starfish SK 1:00p Sa": [
+     3,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Starfish SK 10:30a Sa": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish SK 10:30a Su": [
+     4,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Starfish SK 11:00a Su": [
+     0,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Starfish SK 11:30a Sa": [
+     1,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Starfish SK 11:30a Su": [
+     1,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Starfish SK 12:00p Su": [
+     1,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Starfish SK 4:00p Mo": [
+     4,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Starfish SK 4:00p Tu": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Starfish SK 4:00p We": [
+     3,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish SK 4:30p Mo": [
+     4,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Starfish SK 4:30p Tu": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Starfish SK 6:00p Mo": [
+     4,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Starfish SK 6:00p Tu": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Starfish SK 6:00p We": [
+     3,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Starfish SK 6:30p Tu": [
+     2,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Starfish SK 9:00a Su": [
+     3,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Starfish SK 9:30a Su": [
+     2,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Turtle 1 SK 9:00a Sa": [
+     3,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Turtle 1 SK 9:00a Su": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 2 SK 10:30a Sa": [
+     1,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Shark 1/2 Hybrid SK 6:00p Tu": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Young Adult 1 SK 5:00p We": [
+     1,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Young Adult 1 SK 9:00a Sa": [
+     1,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Young Adult 2/3 Hybrid SK 9:00a Sa": [
+     1,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Adult 1/2 Hybrid SK 7:00p We": [
+     3,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Adult 1 SK 1:30p Sa": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1/2 Hybrid SK 7:00p Mo": [
+     4,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Adult 2 SK 7:30p Mo": [
+     4,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Adult 1 SK 7:00p Tu": [
+     4,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|Adult 1 SK 7:30p We": [
+     2,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

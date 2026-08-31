@@ -168,6 +168,149 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 82,
+    "capacity": 124,
+    "utilization": 66.1
+   },
+   "slots": {
+    "Fri|7:00pm - 7:30pm|[LAF-NB] MINNOW FRIDAY 07:00PM": [
+     0,
+     4
+    ],
+    "Sat|9:30am - 10:00am|[LAF-NB] MINNOW SATURDAY 09:30AM": [
+     4,
+     4
+    ],
+    "Sat|10:00am - 10:30am|[LAF-NB] MINNOW SATURDAY 10:00AM": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|[LAF-NB] MINNOW SATURDAY 11:00AM": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|[LAF-NB] MINNOW SATURDAY 11:30AM": [
+     0,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|[LAF-NB] MINNOW WEDNESDAY 06:30PM": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|[LAF-NB] ADULT 2 SATURDAY 12:00PM": [
+     0,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|[LAF-NB] ADULT 2 SATURDAY 12:30PM": [
+     1,
+     4
+    ],
+    "Fri|7:30pm - 8:00pm|[LAF-NB] ADULT1 FRIDAY 07:30PM": [
+     3,
+     4
+    ],
+    "Sat|10:00am - 10:30am|[LAF-NB] ADULT1 SATURDAY 10:00AM": [
+     1,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|[LAF-NB] ADULT1 WEDNESDAY 07:30PM": [
+     4,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|[LAF-NB] DOLPHIN FRIDAY 06:30PM": [
+     3,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|[LAF-NB] PRIVATE FRIDAY 05:00PM makeup": [
+     0,
+     1
+    ],
+    "Wed|4:30pm - 5:00pm|[LAF-NB] PRIVATE WEDNESDAY 04:30PM makeup": [
+     0,
+     1
+    ],
+    "Wed|6:00pm - 6:30pm|[LAF-NB] SHARK 2 WEDNESDAY 06:00PM": [
+     4,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|[LAF-NB] STARFISH FRIDAY 04:30PM": [
+     4,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|[LAF-NB] STARFISH FRIDAY 05:30PM": [
+     4,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|[LAF-NB] STARFISH FRIDAY 06:00PM": [
+     4,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|[LAF-NB] STARFISH FRIDAY 07:00PM": [
+     4,
+     4
+    ],
+    "Sat|9:00am - 9:30am|[LAF-NB] STARFISH SATURDAY 09:00AM": [
+     4,
+     4
+    ],
+    "Sat|9:30am - 10:00am|[LAF-NB] STARFISH SATURDAY 09:30AM": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|[LAF-NB] STARFISH SATURDAY 10:30AM": [
+     1,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|[LAF-NB] STARFISH SATURDAY 11:30AM": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|[LAF-NB] STARFISH WEDNESDAY 05:00PM": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|[LAF-NB] STARFISH WEDNESDAY 05:30PM": [
+     0,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|[LAF-NB] STARFISH WEDNESDAY 07:00PM": [
+     4,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|[LAF-NB] TADPOLE FRIDAY 04:30PM": [
+     4,
+     4
+    ],
+    "Sat|9:00am - 9:30am|[LAF-NB] TADPOLE SATURDAY 09:00AM": [
+     4,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|[LAF-NB] TADPOLE WEDNESDAY 04:30PM": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|[LAF-NB] TURTLE2 SATURDAY 11:00AM": [
+     0,
+     5
+    ],
+    "Wed|6:30pm - 7:00pm|[LAF-NB] TURTLE2 WEDNESDAY 06:30PM": [
+     0,
+     5
+    ],
+    "Fri|6:00pm - 6:30pm|[LAF-NB] YOUNG ADULT 1 FRIDAY 06:00PM": [
+     1,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

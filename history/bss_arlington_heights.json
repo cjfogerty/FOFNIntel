@@ -152,6 +152,149 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 74,
+    "capacity": 122,
+    "utilization": 60.7
+   },
+   "slots": {
+    "Sat|11:30am - 12:00pm|Adult 1 LAFAH 11:30 am Sat": [
+     4,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Adult 1 LAFAH 4:30 Thurs": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1 LAFAH 7:00 pm Mon": [
+     4,
+     4
+    ],
+    "Thu|8:00pm - 8:30pm|Adult 1 LAFAH 8:00pm Thurs": [
+     4,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Adult 2 LAFAH 9:00am Sat": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Adult 2/3 LAFAH 12:00 pm Sun": [
+     3,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Adult 2/3 LAFAH 7:30 Thurs": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Minnow LAFAH 10:00a Sun": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Minnow LAFAH 12:00pm Sat": [
+     3,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Minnow LAFAH 4:30 Mon": [
+     2,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow LAFAH 5:00pm Thu": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Private LAFAH 9:30am Sa": [
+     1,
+     1
+    ],
+    "Sun|11:00am - 11:30am|Private LAFAH 11:00am Sun": [
+     1,
+     1
+    ],
+    "Mon|7:30pm - 8:00pm|Private LAFAH 7:30 Mon": [
+     1,
+     1
+    ],
+    "Sat|10:00am - 10:30am|Seahorse LAFAH 10:00am Sat": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Seahorse/minnow LAFAH 10:00am Sun": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Shark 1 LAFAH 6:00pm Mon": [
+     2,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Shark 1 LAFAH Thurs 5:30pm": [
+     2,
+     4
+    ],
+    "Sun|1:30pm - 2:00pm|Shark LAFAH 1:30pm Sun": [
+     1,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Starfish/Minnow LAFAH 11:30am Sun": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Tadpole LAFAH 11:00 am Sat": [
+     0,
+     6
+    ],
+    "Thu|6:00pm - 6:30pm|Tadpole LAFAH 6:00pm Thurs": [
+     0,
+     5
+    ],
+    "Sat|10:30am - 11:00am|Turtle 1 LAFAH 10:30 am Sat": [
+     1,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 1 LAFAH 10:30a Sun": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 LAFAH 5:00p Mon": [
+     2,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 1 LAFAH 6:30 Mon": [
+     2,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Turtle 1 LAFAH 7:00pm Thur": [
+     1,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 2 LAFAH 12:30pm Sat": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle 2 LAFAH 12:30pm Sun": [
+     2,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle 2 LAFAH 6:30p Thu": [
+     2,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Turtle1 LAFAH 1:00 pm Sun": [
+     2,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Young Adult 2/3 LAFAH 5:30pm Mon": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

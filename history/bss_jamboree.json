@@ -136,6 +136,133 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 16,
+    "capacity": 115,
+    "utilization": 13.9
+   },
+   "slots": {
+    "Thu|7:00pm - 7:30pm|Adult 1": [
+     0,
+     2
+    ],
+    "Thu|4:30pm - 5:00pm|Adult 2": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Adult 2": [
+     1,
+     2
+    ],
+    "Sat|10:30am - 11:00am|Minnow": [
+     0,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Minnow": [
+     0,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Minnow": [
+     0,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Private": [
+     0,
+     1
+    ],
+    "Thu|5:00pm - 5:30pm|Shark 1": [
+     2,
+     6
+    ],
+    "Thu|7:00pm - 7:30pm|Shark 1": [
+     2,
+     6
+    ],
+    "Sat|10:00am - 10:30am|Shark 2": [
+     0,
+     6
+    ],
+    "Sat|1:00pm - 1:30pm|Starfish": [
+     0,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Starfish": [
+     2,
+     4
+    ],
+    "Tue|3:00pm - 3:30pm|Starfish": [
+     0,
+     4
+    ],
+    "Thu|3:30pm - 4:00pm|Starfish": [
+     0,
+     4
+    ],
+    "Tue|3:30pm - 4:00pm|Starfish": [
+     0,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Starfish": [
+     0,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Starfish": [
+     0,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Starfish": [
+     0,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Starfish": [
+     1,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Swimboree": [
+     0,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Tadpole": [
+     1,
+     6
+    ],
+    "Thu|3:30pm - 4:00pm|Tadpole": [
+     0,
+     6
+    ],
+    "Thu|4:00pm - 4:30pm|Turtle 1": [
+     1,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle 1": [
+     0,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 1": [
+     0,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Turtle 2": [
+     1,
+     5
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 2": [
+     1,
+     5
+    ],
+    "Sat|9:00am - 9:30am|Young Adult 1": [
+     2,
+     2
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

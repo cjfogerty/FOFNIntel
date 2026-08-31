@@ -36,6 +36,33 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 7,
+    "capacity": 9,
+    "utilization": 77.8
+   },
+   "slots": {
+    "Mon|3:00pm - 3:30pm|Dolphin Group LIFE Mon 3:00pm": [
+     2,
+     4
+    ],
+    "Mon|3:30pm - 4:00pm|Dolphin Private Samuel LIFE Mon 3:30pm": [
+     1,
+     1
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 1 LIFE Mon 4:30pm": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

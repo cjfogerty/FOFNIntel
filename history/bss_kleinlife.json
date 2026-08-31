@@ -288,6 +288,285 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 190,
+    "capacity": 244,
+    "utilization": 77.9
+   },
+   "slots": {
+    "Sun|1:00pm - 1:30pm|Adult 1 KL 1:00pm Sun": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Adult 1 KL 12:00pm Sun": [
+     2,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Adult 1 KL 7:30pm Mon": [
+     4,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Adult 1 KL 7:30pm Thu": [
+     4,
+     4
+    ],
+    "Thu|8:00pm - 8:30pm|Adult 1 KL 8:00pm Thu": [
+     4,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Adult 1/2 KL 12:00pm Sun": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Minnow KL 10:00am Sun": [
+     4,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Minnow KL 10:30am Sun": [
+     2,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Minnow KL 11:00am Sun": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow KL 5:30pm Mon": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Minnow KL 6:00pm Mon": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Minnow KL 7:00pm Thu": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Minnow/Starfish KL 6:00pm Thu": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Minnow/Starfish KL 6:30pm Mon": [
+     3,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Private (Min) KL 1:00pm Sun": [
+     1,
+     1
+    ],
+    "Sun|1:30pm - 2:00pm|Private KL 1:30pm Sun": [
+     1,
+     1
+    ],
+    "Sun|10:30am - 11:00am|Private KL 10:30am Sun": [
+     1,
+     1
+    ],
+    "Sun|12:30pm - 1:00pm|Private KL 12:30pm Sun": [
+     2,
+     2
+    ],
+    "Thu|5:00pm - 5:30pm|Private KL 5:00pm Thu": [
+     1,
+     1
+    ],
+    "Sun|11:30am - 12:00pm|Shark 1 KL 11:30am Sun": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Shark 1 KL 5:30pm Mon": [
+     4,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Shark 1 KL 6:30pm Thu": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Shark 1/2 KL 6:00pm Thu": [
+     4,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Star/Min KL 5:00pm Thu": [
+     3,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Starfish KL 10:00am Sun": [
+     2,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Starfish KL 11:00am Sun": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Starfish KL 12:00pm Sun": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish KL 4:30pm Mon": [
+     3,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Starfish KL 6:00pm Mon": [
+     4,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Starfish KL 6:30pm Thu": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Starfish KL 7:00pm Thu": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Starfish/Minnow (Family) KL 1:00pm Sun": [
+     4,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Tadpole KL 11:00am Sun": [
+     1,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Tadpole KL 5:00pm Mon": [
+     2,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Tadpole KL 9:30am Sun": [
+     2,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 KL 10:00am Sun": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Turtle 1 KL 11:30am Sun": [
+     4,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 1 KL 4:30pm Mon": [
+     2,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Turtle 1 KL 5:30pm Mon": [
+     1,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle 1 KL 5:30pm Thu": [
+     3,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 1 KL 6:30pm Mon": [
+     4,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle 1 KL 6:30pm Thu": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Turtle 1 KL 7:00pm Mon": [
+     2,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Turtle 1 KL 7:00pm Thu": [
+     1,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 2 KL 10:30am Sun": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 2 KL 4:30pm Mon": [
+     3,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 2 KL 5:00pm Mon": [
+     3,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle 2 KL 5:30pm Thu": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 2 KL 6:00pm Thu": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 2 KL 6:30pm Mon": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Turtle 2 KL 7:00pm Mon": [
+     4,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Young Adult KL 7:30pm Mon": [
+     4,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Young Adult KL 7:30pm Thu": [
+     3,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow KL 9:30am Sun": [
+     2,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Private KL 4:30pm Thu": [
+     1,
+     1
+    ],
+    "Mon|6:00pm - 6:30pm|Shark 1 KL 6:00pm Mon": [
+     1,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Starfish KL 11:30am Sun": [
+     1,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Starfish KL 4:30pm Thu": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Starfish KL 5:30pm Thu": [
+     0,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Starfish KL 7:00pm Mon": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Starfish KL 9:30am Sun": [
+     4,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 KL 5:00pm Mon": [
+     3,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle 1 KL 5:00pm Thu": [
+     4,
+     4
+    ],
+    "Thu|8:00pm - 8:30pm|Young Adult KL 8:00pm Thu": [
+     4,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Adult 1 KL 12:30pm Sun": [
+     4,
+     4
+    ],
+    "Mon|8:00pm - 8:30pm|Private KL 8:00pm Mon": [
+     1,
+     1
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

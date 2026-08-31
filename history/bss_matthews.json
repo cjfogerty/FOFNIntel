@@ -80,6 +80,77 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 21,
+    "capacity": 52,
+    "utilization": 40.4
+   },
+   "slots": {
+    "Tue|4:30pm - 5:00pm|Swimboree HIEMAT 430pm T": [
+     2,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Swimboree HIEMAT 530pm T": [
+     2,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Tadpole HIEMAT 430pm T": [
+     2,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Tadpole HIEMAT 530pm T": [
+     2,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Adult HIEMAT 4pm T": [
+     3,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Adult semi private HIEMAT 730pm T": [
+     1,
+     2
+    ],
+    "Tue|5:00pm - 5:30pm|Minnow HIEMAT 5pm T": [
+     1,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Minnow HIEMAT 630pm T": [
+     0,
+     4
+    ],
+    "Tue|4:00pm - 4:30pm|Seahorse HIEMAT 4pm T": [
+     1,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Starfish HIEMAT 430pm T": [
+     1,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Starfish HIEMAT 5:30pm T": [
+     2,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Turtle 1 HIEMAT 5pm T": [
+     2,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 2 HIEMAT 6pm T": [
+     0,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Adult 2 semi private HIEMAT 7pm T": [
+     2,
+     2
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

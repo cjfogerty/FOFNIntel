@@ -120,6 +120,117 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 60,
+    "capacity": 84,
+    "utilization": 71.4
+   },
+   "slots": {
+    "Tue|4:30pm - 5:00pm|Adult 1 HICS 4:30pm Tu": [
+     4,
+     4
+    ],
+    "Sun|5:00pm - 5:30pm|Adult 1 HICS 5:00pm Sun": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Adult 1 HICS 6:00pm Mon": [
+     4,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Adult 1 HICS 6:00pm Tu": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Adult 1 HICS 6:30 pm Mon": [
+     4,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Adult 1 HICS 7:00pm Tu": [
+     4,
+     4
+    ],
+    "Sun|4:00pm - 4:30pm|Adult 2/3 HICS 4:00PM Sun": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 2/3 HICS 7:00PM M": [
+     3,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Adult 2/3 HICS 7:00pm Tues": [
+     2,
+     4
+    ],
+    "Sun|3:00pm - 3:30pm|Minnow HICS 3:00pm Su": [
+     1,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow HICS 5:30p M": [
+     3,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Minnow HICS 5:30pm Tue": [
+     3,
+     4
+    ],
+    "Sun|3:30pm - 4:00pm|Private HICS 3:30pm Sun": [
+     1,
+     1
+    ],
+    "Sun|4:30pm - 5:00pm|Private HICS 4:30pm Sun": [
+     1,
+     1
+    ],
+    "Tue|5:00pm - 5:30pm|Private HICS 5:00pm HICS": [
+     1,
+     1
+    ],
+    "Tue|5:00pm - 5:30pm|Private Minnow HICS 5:00p Tues": [
+     1,
+     1
+    ],
+    "Tue|6:00pm - 6:30pm|Shark HICS 6:00pm Tu": [
+     0,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Starfish HICS 5:30 Tue": [
+     3,
+     4
+    ],
+    "Sun|2:00pm - 2:30pm|Turtle 1 HICS 2:00pm Sun": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 1 HICS 4:30p M": [
+     1,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 1 HICS 6:30 PM Tue": [
+     2,
+     4
+    ],
+    "Sun|2:30pm - 3:00pm|Turtle 2 HICS 2:30pm Sun": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 2 HICS 5:00pm M": [
+     3,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 2 HICS 6:30 PM Tue": [
+     3,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

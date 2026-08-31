@@ -280,6 +280,281 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T19:10",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 173,
+    "capacity": 248,
+    "utilization": 69.8
+   },
+   "slots": {
+    "Sat|1:30pm - 2:15pm|Adult 1 LA59 1:30 am Sa": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Adult 1 LA59 11:00 am Sa": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Adult 1 LA59 11:30am Sun": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Adult 1 LA59 5:30pm M": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1 LA59 7:00pm M": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult 1 LA59 7:00pm Th": [
+     3,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Adult 1 LA59 7:30pm Th": [
+     3,
+     4
+    ],
+    "Mon|8:00pm - 8:30pm|Adult 1 LA59 8:00 pm M": [
+     4,
+     4
+    ],
+    "Tue|8:00pm - 8:45pm|Adult 1 LA59 8:00 pm Tues": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Adult 2 LA59 1:00pm Sun": [
+     4,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Adult 2 LA59 5:00pm Thurs": [
+     3,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Adult 2 LA59 7:30pm Tues": [
+     4,
+     4
+    ],
+    "Mon|8:00pm - 8:30pm|Adult 2 LA59 8:00pm Mon": [
+     2,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Minnow LA59 11:00am Sun": [
+     1,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Minnow LA59 12:30 pm Sa": [
+     2,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow LA59 5:00pm Thurs": [
+     1,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Private LA59 5:30 pm Wednesday": [
+     1,
+     1
+    ],
+    "Tue|7:00pm - 7:30pm|Private LA59 7:00 pm Tues": [
+     1,
+     1
+    ],
+    "Mon|7:00pm - 7:30pm|Private LA59 7:00pm Mon": [
+     1,
+     1
+    ],
+    "Thu|8:00pm - 8:30pm|Private LA59 8:00pm Thurs": [
+     1,
+     1
+    ],
+    "Sun|11:30am - 12:00pm|Private LA59 Sun 11:30": [
+     1,
+     1
+    ],
+    "Sun|12:00pm - 12:30pm|Shark 1 LA59 12:00pm Sun": [
+     3,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Shark 1 LA59 5:30pm Tu": [
+     0,
+     5
+    ],
+    "Thu|6:00pm - 6:30pm|Shark 1 LA59 6:00p Th": [
+     4,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Shark 1 LA59 6:30p Th": [
+     0,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Shark 1 LA59 7:00p W": [
+     1,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Shark 1 LA59 7:30p M": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Starfish LA59 12:30pm Sun": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Starfish LA59 Sat 10:30 pm": [
+     4,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Starfish/Minnow LA59 5:30p Wed": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Starfish/Minnow LA59 6:30p Wed": [
+     2,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish/Minnow LA59 10:30am Su": [
+     3,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Starfish/Minnow LA59 5:00p Tu": [
+     3,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Starfish/Minnow LA59 5:30p Th": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Starfish/Minnow LA59 6:00p Mo": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Starfish/Minnow LA59 7:00pm Thurs": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Tadpole LA59 1:00 pm Sat": [
+     0,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Tadpole LA59 10:00am Sun": [
+     0,
+     6
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 LA59 10:00a Su": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 1 LA59 12:00pm Sa": [
+     4,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle 1 LA59 12:30p Su": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 LA59 5:00p M": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 LA59 5:00pm We": [
+     3,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 1 LA59 6:00p Tu": [
+     1,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle 1 LA59 6:00p wed": [
+     3,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 1 LA59 6:30p Mon": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle 1 LA59 6:30p Th": [
+     3,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Turtle 2 LA59 1:00pm Sun": [
+     0,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 2 LA59 10:30a SUN": [
+     2,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 2 LA59 11:30am Sa": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 2 LA59 5:00p M": [
+     3,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle 2 LA59 5:30p Th": [
+     3,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Turtle 2 LA59 6:00p Mon": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 2 LA59 6:00pm Th": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle 2 LA59 6:00pm W": [
+     3,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 2 LA59 6:30p Tu": [
+     3,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Turtle 2 LA59 7:00p W": [
+     1,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Turtle 2 LA59 7:30p M": [
+     3,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Young Adult 1 LA59 11:00am Sun": [
+     3,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Young Adult 1 LA59 5:00pm Weds": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Young Adult 1 LA59 6:30 PM": [
+     3,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Young Adult 1 LA59 7:30 PM": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Young Adult 2 LA59 12:00pm Sun": [
+     3,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|Adult 1 LA59 7:30 pm W": [
+     3,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Adult 1 LA59 6:30 W": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}
