@@ -1,0 +1,90 @@
+{
+ "location": "Charlotte, NC",
+ "slug": "bss_pineville_matthews",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 34,
+    "capacity": 56,
+    "utilization": 60.7
+   },
+   "slots": {
+    "Sun|4:00pm - 4:30pm|Swimboree PROVHS 4pm Sun": [
+     3,
+     4
+    ],
+    "Sun|4:00pm - 4:30pm|Tadpole PROVHS 4pm Sun": [
+     1,
+     4
+    ],
+    "Sun|5:30pm - 6:30pm|Barracuda Swim Team PROVHS 530pm Sun": [
+     3,
+     4
+    ],
+    "Sun|4:30pm - 5:00pm|Minnow PROVHS 430pm S": [
+     3,
+     4
+    ],
+    "Sun|5:00pm - 5:30pm|Shark PROVHS 5pm Sun": [
+     0,
+     4
+    ],
+    "Sun|4:30pm - 5:00pm|Starfish PROVHS 430pm Sun": [
+     2,
+     4
+    ],
+    "Sun|4:00pm - 4:30pm|Starfish PROVHS 4pm Sun": [
+     0,
+     4
+    ],
+    "Sun|5:00pm - 5:30pm|Turtle 1 PROVHS 5pm Sun": [
+     4,
+     4
+    ],
+    "Sun|5:00pm - 5:30pm|Turtle 2 PROVHS 5pm Sun": [
+     0,
+     6
+    ],
+    "Sun|6:30pm - 7:00pm|Adult 1 Semi Private PROVHS 630pm Sun": [
+     2,
+     2
+    ],
+    "Sun|6:30pm - 7:00pm|Adult 1 semi private PROVHS 630pm Sun": [
+     2,
+     2
+    ],
+    "Sun|6:30pm - 7:00pm|Adult 2 semi private PROVHS 630pm Sun": [
+     2,
+     2
+    ],
+    "Sun|4:30pm - 5:00pm|Young Adult PROVHS 430pm Sun": [
+     4,
+     4
+    ],
+    "Sun|4:30pm - 5:00pm|Adult PROVHS 430pm Sun": [
+     4,
+     4
+    ],
+    "Sun|4:00pm - 4:30pm|Adult PROVHS 4pm Sun": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

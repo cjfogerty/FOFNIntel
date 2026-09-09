@@ -1,0 +1,573 @@
+{
+ "location": "Draper, UT",
+ "slug": "bss_lehi_draper",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-08-31",
+   "end": "2099-12-31",
+   "catalog_from": "2026-08-31"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T23:52",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 160,
+    "capacity": 276,
+    "utilization": 58.0
+   },
+   "slots": {
+    "Fri|1:30pm - 2:00pm|Adult 1 DIVDRA 1:30pm Fri": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Adult 1 DIVDRA 10:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Adult 1 DIVDRA 11am Sat": [
+     6,
+     8
+    ],
+    "Wed|12:00pm - 12:30pm|Adult 1 DIVDRA 12pm Wed": [
+     1,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Adult 2 DIVDRA 12:30pm Sat": [
+     3,
+     4
+    ],
+    "Sat|8:30am - 9:00am|Adult 2 DIVDRA 8:30am Sat": [
+     3,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Adult 2 DIVDRA 9:30am Sat": [
+     3,
+     4
+    ],
+    "Wed|1:30pm - 2:00pm|Minnow DIVDRA 1:30pm Wed": [
+     0,
+     4
+    ],
+    "Mon|1:30pm - 2:00pm|Minnow DIVDRA 1:30pm Mon": [
+     0,
+     4
+    ],
+    "Thu|1:30pm - 2:00pm|Minnow DIVDRA 1:30pm Thu": [
+     1,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Minnow DIVDRA 10:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Minnow DIVDRA 10:30am Sat": [
+     4,
+     4
+    ],
+    "Mon|12:00pm - 12:30pm|Minnow DIVDRA 12:00pm Mon": [
+     2,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Minnow DIVDRA 12:30pm Sat": [
+     3,
+     4
+    ],
+    "Thu|12:00pm - 12:30pm|Minnow DIVDRA 12pm Thu": [
+     3,
+     4
+    ],
+    "Fri|2:30pm - 3:00pm|Minnow DIVDRA 2:30pm Fri": [
+     3,
+     4
+    ],
+    "Sat|2:30pm - 3:00pm|Minnow DIVDRA 2:30pm Sat": [
+     4,
+     4
+    ],
+    "Sat|8:30am - 9:00am|Minnow DIVDRA 8:30am Sat": [
+     2,
+     4
+    ],
+    "Fri|12:00pm - 12:30pm|Seahorse DIVDRA 12:00pm Fri": [
+     4,
+     4
+    ],
+    "Mon|12:30pm - 1:00pm|Seahorse DIVDRA 12:30pm Mon": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Seahorse DIVDRA 12pm Sat": [
+     1,
+     4
+    ],
+    "Sat|2:30pm - 3:00pm|Seahorse DIVDRA 2:30pm Sat": [
+     2,
+     4
+    ],
+    "Wed|2:30pm - 3:00pm|Seahorse DIVDRA 2:30pm Wed": [
+     3,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Seahorse DIVDRA 9:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Seahorse OOO DIVDRA 1:30pm Sat": [
+     4,
+     4
+    ],
+    "Thu|12:00pm - 12:30pm|Shark 1 DIVDRA 12pm Thu": [
+     0,
+     5
+    ],
+    "Thu|1:00pm - 1:30pm|Shark 1 DIVDRA 1pm Th": [
+     0,
+     6
+    ],
+    "Sat|2:00pm - 2:30pm|Shark 1 DIVDRA 2pm Sat": [
+     1,
+     4
+    ],
+    "Fri|2:00pm - 2:30pm|Shark 2 DIVDRA Fri 2:00pm": [
+     3,
+     4
+    ],
+    "Thu|1:30pm - 2:00pm|Starfish DIVDRA 1:30pm Thu": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish DIVDRA 11am Sat": [
+     1,
+     4
+    ],
+    "Fri|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Fri": [
+     2,
+     4
+    ],
+    "Mon|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Mon": [
+     1,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Sat": [
+     2,
+     4
+    ],
+    "Wed|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Wed": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Starfish DIVDRA 9:30am Sat": [
+     1,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Starfish OOO DIVDRA 1pm Sat": [
+     4,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Tadpole DIVDRA 10am Sat": [
+     4,
+     4
+    ],
+    "Thu|12:30pm - 1:00pm|Tadpole DIVDRA 12:30pm Thu": [
+     0,
+     6
+    ],
+    "Mon|2:30pm - 3:00pm|Tadpole DIVDRA 2:30pm Mon": [
+     0,
+     5
+    ],
+    "Wed|2:00pm - 2:30pm|Tadpole DIVDRA 2pm Wed": [
+     0,
+     5
+    ],
+    "Sat|1:00pm - 1:30pm|Tadpole OOO DIVDRA 1:00pm Sat": [
+     4,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Turtle 2 DIVDRA 1:30pm Sat": [
+     3,
+     4
+    ],
+    "Thu|12:30pm - 1:00pm|Turtle 2 DIVDRA 12:30pm Thu": [
+     0,
+     5
+    ],
+    "Fri|1:30pm - 2:00pm|Turtle 1 DIVDRA Fri 1:30": [
+     2,
+     4
+    ],
+    "Thu|1:00pm - 1:30pm|Turtle 1 DIVDRA 1:00pm Thurs": [
+     3,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 DIVDRA 11:30am Sat": [
+     4,
+     4
+    ],
+    "Fri|12:30pm - 1:00pm|Turtle 1 DIVDRA 12:30pm Fri": [
+     4,
+     4
+    ],
+    "Wed|1:00pm - 1:30pm|Turtle 1 DIVDRA 1pm Wed": [
+     0,
+     4
+    ],
+    "Mon|2:00pm - 2:30pm|Turtle 1 DIVDRA 2:00pm Mon": [
+     2,
+     4
+    ],
+    "Sat|2:00pm - 2:30pm|Turtle 1 DIVDRA 2:00pm Sat": [
+     4,
+     4
+    ],
+    "Fri|2:30pm - 3:00pm|Turtle 1 DIVDRA 2:30pm Fri": [
+     4,
+     4
+    ],
+    "Thu|2:00pm - 2:30pm|Turtle 1 DIVDRA 2pm Thu": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Turtle 1 DIVDRA 9:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 OOO DIVDRA 11:30am Sat": [
+     4,
+     4
+    ],
+    "Wed|12:00pm - 12:30pm|Turtle 1 OOO DIVDRA 12pm Wed": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Turtle 1 OOO DIVDRA 1pm Sat": [
+     4,
+     4
+    ],
+    "Fri|2:00pm - 2:30pm|Turtle 2 DIVDRA Fri 2pm": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 2 DIVDRA 12pm Sat": [
+     4,
+     4
+    ],
+    "Fri|1:00pm - 1:30pm|Turtle 2 DIVDRA 1pm Fri": [
+     2,
+     4
+    ],
+    "Mon|1:00pm - 1:30pm|Turtle 2 DIVDRA 1pm Mon": [
+     1,
+     4
+    ],
+    "Thu|2:00pm - 2:30pm|Turtle 2 DIVDRA 2pm Thur": [
+     0,
+     4
+    ],
+    "Thu|2:30pm - 3:00pm|Young Adult 1 DIVDRA 2:30pm Thurs": [
+     2,
+     4
+    ],
+    "Mon|12:00pm - 12:30pm|Young Adult 2 DIVDRA 12pm Mon": [
+     4,
+     4
+    ],
+    "Mon|1:00pm - 1:30pm|Young Adult 2 DIVDRA 1pm Mon": [
+     1,
+     4
+    ],
+    "Thu|2:30pm - 3:00pm|Young Adult 2 DIVDRA 2:30pm Thu": [
+     3,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 160,
+    "capacity": 276,
+    "utilization": 58.0
+   },
+   "slots": {
+    "Fri|1:30pm - 2:00pm|Adult 1 DIVDRA 1:30pm Fri": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Adult 1 DIVDRA 10:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Adult 1 DIVDRA 11am Sat": [
+     6,
+     8
+    ],
+    "Wed|12:00pm - 12:30pm|Adult 1 DIVDRA 12pm Wed": [
+     1,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Adult 2 DIVDRA 12:30pm Sat": [
+     3,
+     4
+    ],
+    "Sat|8:30am - 9:00am|Adult 2 DIVDRA 8:30am Sat": [
+     3,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Adult 2 DIVDRA 9:30am Sat": [
+     3,
+     4
+    ],
+    "Wed|1:30pm - 2:00pm|Minnow DIVDRA 1:30pm Wed": [
+     0,
+     4
+    ],
+    "Mon|1:30pm - 2:00pm|Minnow DIVDRA 1:30pm Mon": [
+     0,
+     4
+    ],
+    "Thu|1:30pm - 2:00pm|Minnow DIVDRA 1:30pm Thu": [
+     1,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Minnow DIVDRA 10:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Minnow DIVDRA 10:30am Sat": [
+     4,
+     4
+    ],
+    "Mon|12:00pm - 12:30pm|Minnow DIVDRA 12:00pm Mon": [
+     2,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Minnow DIVDRA 12:30pm Sat": [
+     3,
+     4
+    ],
+    "Thu|12:00pm - 12:30pm|Minnow DIVDRA 12pm Thu": [
+     3,
+     4
+    ],
+    "Fri|2:30pm - 3:00pm|Minnow DIVDRA 2:30pm Fri": [
+     3,
+     4
+    ],
+    "Sat|2:30pm - 3:00pm|Minnow DIVDRA 2:30pm Sat": [
+     4,
+     4
+    ],
+    "Sat|8:30am - 9:00am|Minnow DIVDRA 8:30am Sat": [
+     2,
+     4
+    ],
+    "Fri|12:00pm - 12:30pm|Seahorse DIVDRA 12:00pm Fri": [
+     4,
+     4
+    ],
+    "Mon|12:30pm - 1:00pm|Seahorse DIVDRA 12:30pm Mon": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Seahorse DIVDRA 12pm Sat": [
+     1,
+     4
+    ],
+    "Sat|2:30pm - 3:00pm|Seahorse DIVDRA 2:30pm Sat": [
+     2,
+     4
+    ],
+    "Wed|2:30pm - 3:00pm|Seahorse DIVDRA 2:30pm Wed": [
+     3,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Seahorse DIVDRA 9:00am Sat": [
+     4,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Seahorse OOO DIVDRA 1:30pm Sat": [
+     4,
+     4
+    ],
+    "Thu|12:00pm - 12:30pm|Shark 1 DIVDRA 12pm Thu": [
+     0,
+     5
+    ],
+    "Thu|1:00pm - 1:30pm|Shark 1 DIVDRA 1pm Th": [
+     0,
+     6
+    ],
+    "Sat|2:00pm - 2:30pm|Shark 1 DIVDRA 2pm Sat": [
+     1,
+     4
+    ],
+    "Fri|2:00pm - 2:30pm|Shark 2 DIVDRA Fri 2:00pm": [
+     3,
+     4
+    ],
+    "Thu|1:30pm - 2:00pm|Starfish DIVDRA 1:30pm Thu": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish DIVDRA 11am Sat": [
+     1,
+     4
+    ],
+    "Fri|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Fri": [
+     2,
+     4
+    ],
+    "Mon|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Mon": [
+     1,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Sat": [
+     2,
+     4
+    ],
+    "Wed|12:30pm - 1:00pm|Starfish DIVDRA 12:30pm Wed": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Starfish DIVDRA 9:30am Sat": [
+     1,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Starfish OOO DIVDRA 1pm Sat": [
+     4,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Tadpole DIVDRA 10am Sat": [
+     4,
+     4
+    ],
+    "Thu|12:30pm - 1:00pm|Tadpole DIVDRA 12:30pm Thu": [
+     0,
+     6
+    ],
+    "Mon|2:30pm - 3:00pm|Tadpole DIVDRA 2:30pm Mon": [
+     0,
+     5
+    ],
+    "Wed|2:00pm - 2:30pm|Tadpole DIVDRA 2pm Wed": [
+     0,
+     5
+    ],
+    "Sat|1:00pm - 1:30pm|Tadpole OOO DIVDRA 1:00pm Sat": [
+     4,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Turtle 2 DIVDRA 1:30pm Sat": [
+     3,
+     4
+    ],
+    "Thu|12:30pm - 1:00pm|Turtle 2 DIVDRA 12:30pm Thu": [
+     0,
+     5
+    ],
+    "Fri|1:30pm - 2:00pm|Turtle 1 DIVDRA Fri 1:30": [
+     2,
+     4
+    ],
+    "Thu|1:00pm - 1:30pm|Turtle 1 DIVDRA 1:00pm Thurs": [
+     3,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 DIVDRA 11:30am Sat": [
+     4,
+     4
+    ],
+    "Fri|12:30pm - 1:00pm|Turtle 1 DIVDRA 12:30pm Fri": [
+     4,
+     4
+    ],
+    "Wed|1:00pm - 1:30pm|Turtle 1 DIVDRA 1pm Wed": [
+     0,
+     4
+    ],
+    "Mon|2:00pm - 2:30pm|Turtle 1 DIVDRA 2:00pm Mon": [
+     2,
+     4
+    ],
+    "Sat|2:00pm - 2:30pm|Turtle 1 DIVDRA 2:00pm Sat": [
+     4,
+     4
+    ],
+    "Fri|2:30pm - 3:00pm|Turtle 1 DIVDRA 2:30pm Fri": [
+     4,
+     4
+    ],
+    "Thu|2:00pm - 2:30pm|Turtle 1 DIVDRA 2pm Thu": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Turtle 1 DIVDRA 9:30am Sat": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 OOO DIVDRA 11:30am Sat": [
+     4,
+     4
+    ],
+    "Wed|12:00pm - 12:30pm|Turtle 1 OOO DIVDRA 12pm Wed": [
+     4,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Turtle 1 OOO DIVDRA 1pm Sat": [
+     4,
+     4
+    ],
+    "Fri|2:00pm - 2:30pm|Turtle 2 DIVDRA Fri 2pm": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 2 DIVDRA 12pm Sat": [
+     4,
+     4
+    ],
+    "Fri|1:00pm - 1:30pm|Turtle 2 DIVDRA 1pm Fri": [
+     2,
+     4
+    ],
+    "Mon|1:00pm - 1:30pm|Turtle 2 DIVDRA 1pm Mon": [
+     1,
+     4
+    ],
+    "Thu|2:00pm - 2:30pm|Turtle 2 DIVDRA 2pm Thur": [
+     0,
+     4
+    ],
+    "Thu|2:30pm - 3:00pm|Young Adult 1 DIVDRA 2:30pm Thurs": [
+     2,
+     4
+    ],
+    "Mon|12:00pm - 12:30pm|Young Adult 2 DIVDRA 12pm Mon": [
+     4,
+     4
+    ],
+    "Mon|1:00pm - 1:30pm|Young Adult 2 DIVDRA 1pm Mon": [
+     1,
+     4
+    ],
+    "Thu|2:30pm - 3:00pm|Young Adult 2 DIVDRA 2:30pm Thu": [
+     3,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

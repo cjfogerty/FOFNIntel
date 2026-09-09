@@ -1,0 +1,181 @@
+{
+ "location": "Atlanta, GA",
+ "slug": "bss_lenox_buckhead",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-08-31",
+   "end": "2099-12-31",
+   "catalog_from": "2026-08-31"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-08-31",
+   "ts": "2026-08-31T23:52",
+   "label": "Aug 31",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 32,
+    "capacity": 68,
+    "utilization": 47.1
+   },
+   "slots": {
+    "Sun|11:30am - 12:00pm|Adult 1 11:30 Sunday Buckhead": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Adult 1 4:30 Monday Buckhead": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1 7:00 Monday Buckhead": [
+     2,
+     4
+    ],
+    "Tue|8:30pm - 9:00pm|Adult 1 8:30 Tuesday Buckhead": [
+     3,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Adult 1 9:00 Sunday Buckhead": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Adult 2 12:00 Saturday Buckhead": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Adult 2 6:00 Thursday Buckhead": [
+     3,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow 9:30 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Seahorse 6:30 Thursday Buckhead": [
+     2,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Seahorse 9:00 Saturday Buckhead": [
+     2,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Shark 1 5:30 Monday Buckhead": [
+     1,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Shark 2 5:30 Tuesday Buckhead": [
+     1,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Starfish 5:00 Monday Buckhead": [
+     2,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Starfish 5:00 Tuesday Buckhead": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Tadpole 12:30 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 10:00 Sunday Buckhead": [
+     0,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 2 10:30 Saturday Buckhead": [
+     1,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 32,
+    "capacity": 68,
+    "utilization": 47.1
+   },
+   "slots": {
+    "Sun|11:30am - 12:00pm|Adult 1 11:30 Sunday Buckhead": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Adult 1 4:30 Monday Buckhead": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1 7:00 Monday Buckhead": [
+     2,
+     4
+    ],
+    "Tue|8:30pm - 9:00pm|Adult 1 8:30 Tuesday Buckhead": [
+     3,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Adult 1 9:00 Sunday Buckhead": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Adult 2 12:00 Saturday Buckhead": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Adult 2 6:00 Thursday Buckhead": [
+     3,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow 9:30 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Seahorse 6:30 Thursday Buckhead": [
+     2,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Seahorse 9:00 Saturday Buckhead": [
+     2,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Shark 1 5:30 Monday Buckhead": [
+     1,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Shark 2 5:30 Tuesday Buckhead": [
+     1,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Starfish 5:00 Monday Buckhead": [
+     2,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Starfish 5:00 Tuesday Buckhead": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Tadpole 12:30 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 10:00 Sunday Buckhead": [
+     0,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 2 10:30 Saturday Buckhead": [
+     1,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

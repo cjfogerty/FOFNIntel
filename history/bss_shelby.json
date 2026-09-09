@@ -1,0 +1,378 @@
+{
+ "location": "Shelby Township, MI",
+ "slug": "bss_shelby",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 243,
+    "capacity": 371,
+    "utilization": 65.5
+   },
+   "slots": {
+    "Sat|1:30pm - 2:00pm|Adult 1 LAF-Shelby 1:30 PM Saturday": [
+     6,
+     8
+    ],
+    "Sun|11:00am - 11:30am|Adult 1 LAF-Shelby 11:00 AM Sunday": [
+     4,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Adult 1 LAF-Shelby 12:00 PM Sunday": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Adult 1 LAF-Shelby 12:30 PM Saturday": [
+     3,
+     4
+    ],
+    "Sat|2:00pm - 2:30pm|Adult 1 LAF-Shelby 2:00 PM Saturday": [
+     6,
+     8
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1 LAF-Shelby 7:00 PM Monday": [
+     4,
+     4
+    ],
+    "Wed|7:15pm - 7:45pm|Adult 1 LAF-Shelby 7:15 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Adult 1 LAF-Shelby 7:30 PM Monday": [
+     4,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Adult 1 LAF-Shelby 7:30 PM Monday 2": [
+     2,
+     4
+    ],
+    "Wed|7:45pm - 8:15pm|Adult 1 LAF-Shelby 7:45 PM Wednesday": [
+     8,
+     8
+    ],
+    "Sat|1:00pm - 1:30pm|Minnow LAF-Shelby 1:00 PM Saturday": [
+     1,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Minnow LAF-Shelby 10:30 AM Saturday": [
+     2,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Minnow LAF-Shelby 11:30 AM Saturday": [
+     3,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Minnow LAF-Shelby 11:30 AM Sunday": [
+     4,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Minnow LAF-Shelby 12:00PM Saturday": [
+     2,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Minnow LAF-Shelby 4:30 PM Monday": [
+     4,
+     4
+    ],
+    "Wed|4:45pm - 5:15pm|Minnow LAF-Shelby 4:45 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Minnow LAF-Shelby 5:00 PM Monday": [
+     2,
+     4
+    ],
+    "Wed|5:15pm - 5:45pm|Minnow LAF-Shelby 5:15 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow LAF-Shelby 5:30 PM Monday": [
+     3,
+     4
+    ],
+    "Wed|6:15pm - 6:45pm|Minnow LAF-Shelby 6:15 PM Wednesday": [
+     8,
+     8
+    ],
+    "Mon|6:30pm - 7:00pm|Minnow LAF-Shelby 6:30 PM Monday": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Minnow LAF-Shelby 7:00 PM Monday": [
+     3,
+     4
+    ],
+    "Wed|7:15pm - 7:45pm|Minnow LAF-Shelby 7:15 PM Wednesday": [
+     3,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Minnow LAF-Shelby 9:00 AM Sunday": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow LAF-Shelby 9:30 AM Sunday": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Shark 1 LAF-Shelby 10:30 AM Sunday": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Shark 1 LAF-Shelby 12:00 PM Saturday": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Shark 1 LAF-Shelby 5:30 PM Monday": [
+     0,
+     5
+    ],
+    "Wed|6:45pm - 7:15pm|Shark 1 LAF-Shelby 6:45 PM Wednesday": [
+     2,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Starfish 2 LAF-Shelby 5:30 PM Monday": [
+     3,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Starfish LAF-Shelby 1:00 PM Saturday": [
+     4,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish LAF-Shelby 11:00 AM Saturday": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Starfish LAF-Shelby 11:30 AM Saturday": [
+     2,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Starfish LAF-Shelby 11:30 AM Sunday": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Starfish LAF-Shelby 12:00 PM Saturday": [
+     4,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Starfish LAF-Shelby 4:00PM Monday": [
+     0,
+     4
+    ],
+    "Wed|4:15pm - 4:45pm|Starfish LAF-Shelby 4:15 PM Wednesday": [
+     1,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish LAF-Shelby 4:30PM Monday": [
+     1,
+     4
+    ],
+    "Wed|4:45pm - 5:15pm|Starfish LAF-Shelby 4:45 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Starfish LAF-Shelby 5:00PM Monday": [
+     1,
+     4
+    ],
+    "Wed|5:15pm - 5:45pm|Starfish LAF-Shelby 5:15 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Starfish LAF-Shelby 5:30PM Monday": [
+     1,
+     4
+    ],
+    "Wed|5:45pm - 6:15pm|Starfish LAF-Shelby 5:45 PM Wednesday": [
+     3,
+     4
+    ],
+    "Wed|5:45pm - 6:15pm|Starfish LAF-Shelby 5:45 PM Wednesday 2": [
+     2,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Starfish LAF-Shelby 6:30 PM Monday": [
+     2,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Starfish LAF-Shelby 6:30PM Monday": [
+     2,
+     4
+    ],
+    "Wed|6:45pm - 7:15pm|Starfish LAF-Shelby 6:45 PM Wednesday": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Starfish LAF-Shelby 7:00PM Monday": [
+     3,
+     4
+    ],
+    "Wed|7:15pm - 7:45pm|Starfish LAF-Shelby 7:15 PM Wednesday": [
+     0,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Starfish LAF-Shelby 9:00 AM Sunday": [
+     3,
+     4
+    ],
+    "Sun|11:00am - 11:30pm|Starfish LAF-Shelby11:00 AM Sunday": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Swimboree LAF-Shelby 10:30 AM Saturday": [
+     0,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Swimboree LAF-Shelby 4:30PM Monday": [
+     2,
+     4
+    ],
+    "Wed|4:45pm - 5:15pm|Swimboree LAF-Shelby 4:45 PM Wednesday": [
+     4,
+     4
+    ],
+    "Wed|5:45pm - 6:15pm|Swimboree LAF-Shelby 5:45 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Swimboree LAF-Shelby 6:00 PM Monday": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Tadpole LAF-Shelby 10:30 AM Saturday": [
+     1,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Tadpole LAF-Shelby 4:00 PM Monday": [
+     0,
+     6
+    ],
+    "Wed|4:15pm - 4:45pm|Tadpole LAF-Shelby 4:15 PM Wednesday": [
+     0,
+     5
+    ],
+    "Mon|6:00pm - 6:30pm|Tadpole LAF-Shelby 6:00 PM Monday": [
+     0,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Tadpole/Swimboree LAF-Shelby 10:30 AM Sunday": [
+     3,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Turtle 1 LAF-Shelby 1:00 PM Saturday": [
+     3,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 LAF-Shelby 10:00 AM Sunday": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 1 LAF-Shelby 11:00 AM Saturday": [
+     2,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 LAF-Shelby 11:30 AM Saturday": [
+     2,
+     4
+    ],
+    "Wed|4:45pm - 5:15pm|Turtle 1 LAF-Shelby 4:45 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 LAF-Shelby 5:00 PM Monday": [
+     4,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 LAF-Shelby 5:00 PM Monday 2": [
+     4,
+     4
+    ],
+    "Wed|5:15pm - 5:45pm|Turtle 1 LAF-Shelby 5:15 PM Wednesday": [
+     4,
+     4
+    ],
+    "Wed|5:45pm - 6:15pm|Turtle 1 LAF-Shelby 5:45 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Turtle 1 LAF-Shelby 6:00 PM Monday": [
+     4,
+     4
+    ],
+    "Wed|6:15pm - 6:45pm|Turtle 1 LAF-Shelby 6:15 PM Wednesday": [
+     3,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Turtle 1 LAF-Shelby 6:30 PM Monday": [
+     4,
+     4
+    ],
+    "Wed|6:45pm - 7:15pm|Turtle 1 LAF-Shelby 6:45 PM Wednesday": [
+     4,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Turtle 1 LAF-Shelby 7:00PM Monday": [
+     2,
+     4
+    ],
+    "Wed|7:15pm - 7:45pm|Turtle 1 LAF-Shelby 7:15 PM Wednesday": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Turtle 1 LAF-Shelby 9:30 AM Sunday": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 2 LAF-Shelby 10:00 AM Sunday": [
+     2,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|Turtle 2 LAF-Shelby 12:30 PM Saturday": [
+     3,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Turtle 2 LAF-Shelby 4:30 PM Monday": [
+     0,
+     5
+    ],
+    "Wed|5:15pm - 5:45pm|Turtle 2 LAF-Shelby 5:15 PM Wednesday": [
+     0,
+     6
+    ],
+    "Mon|6:00pm - 6:30pm|Turtle 2 LAF-Shelby 6:00 PM Monday": [
+     1,
+     4
+    ],
+    "Wed|6:15pm - 6:45pm|Turtle 2 LAF-Shelby 6:15 PM Wednesday": [
+     1,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Young Adult LAF-Shelby 1:30 PM Saturday": [
+     3,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Young Adult 1 LAF-Shelby 7:30 PM Monday": [
+     4,
+     4
+    ],
+    "Wed|7:45pm - 8:15pm|Young Adult 1 LAF-Shelby 7:45 PM Wednesday": [
+     4,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

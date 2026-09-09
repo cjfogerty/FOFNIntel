@@ -1,0 +1,150 @@
+{
+ "location": "Fishers, IN",
+ "slug": "bss_livrite_fishers",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 63,
+    "capacity": 124,
+    "utilization": 50.8
+   },
+   "slots": {
+    "Sat|10:45am - 11:15am|Adult LivRite 10:45am (Sat)": [
+     4,
+     4
+    ],
+    "Thu|5:45pm - 6:15pm|Adult LivRite 5:45pm (Th)": [
+     4,
+     4
+    ],
+    "Sat|10:15am - 10:45am|Minnow LivRite 10:15am (Sat)": [
+     3,
+     4
+    ],
+    "Sat|11:45am - 12:15pm|Minnow LivRite 11:45am (Sat)": [
+     1,
+     4
+    ],
+    "Thu|5:15pm - 5:45pm|Minnow LivRite 5:15pm (Th)": [
+     4,
+     4
+    ],
+    "Tue|6:15pm - 6:45pm|Minnow LivRite 6:15pm (Tu)": [
+     2,
+     4
+    ],
+    "Thu|6:45pm - 7:15pm|Minnow LivRite 6:45pm (Th)": [
+     2,
+     4
+    ],
+    "Sat|10:45am - 11:15am|Seahorse LivRite 10:45am (Sat)": [
+     2,
+     4
+    ],
+    "Sat|12:15pm - 12:45pm|Seahorse LivRite 12:15pm (Sat)": [
+     1,
+     4
+    ],
+    "Tue|4:45pm - 5:15pm|Seahorse LivRite 4:45pm (Tu)": [
+     4,
+     4
+    ],
+    "Thu|5:45pm - 6:15pm|Seahorse LivRite 5:45pm (Th)": [
+     2,
+     4
+    ],
+    "Sat|11:15am - 11:45am|Shark LivRite 11:15am (Sat)": [
+     1,
+     4
+    ],
+    "Tue|5:15pm - 5:45pm|Shark LivRite 5:15pm (Tu)": [
+     0,
+     5
+    ],
+    "Sat|12:45pm - 1:15pm|Starfish LivRite 12:45pm (Sat)": [
+     0,
+     4
+    ],
+    "Thu|4:45pm - 5:15pm|Starfish LivRite 4:45pm (Th)": [
+     4,
+     4
+    ],
+    "Sat|9:45am - 10:15am|Starfish LivRite 9:45am (Sat)": [
+     1,
+     4
+    ],
+    "Tue|4:15pm - 4:45pm|Tadpole/Swimboree LivRite 4:15pm (Tu)": [
+     0,
+     5
+    ],
+    "Thu|4:45pm - 5:15pm|Tadpole/Swimboree LivRite 4:45pm (Th)": [
+     1,
+     4
+    ],
+    "Sat|9:45am - 10:15am|Tadpole/Swimboree LivRite 9:45am (Sat)": [
+     1,
+     4
+    ],
+    "Sat|11:15am - 11:45am|Turtle 1 LivRite 11:15am (Sat)": [
+     4,
+     4
+    ],
+    "Sat|12:15pm - 12:45pm|Turtle 1 LivRite 12:15pm (Sat)": [
+     3,
+     4
+    ],
+    "Thu|4:15pm - 4:45pm|Turtle 1 LivRite 4:15pm (Th)": [
+     3,
+     4
+    ],
+    "Thu|5:15pm - 5:45pm|Turtle 1 LivRite 5:15pm (Th)": [
+     3,
+     4
+    ],
+    "Tue|5:15pm - 5:45pm|Turtle 1 LivRite 5:15pm (Tu)": [
+     2,
+     4
+    ],
+    "Tue|5:45pm - 6:15pm|Turtle 1 LivRite 5:45pm (Tu)": [
+     4,
+     4
+    ],
+    "Sat|11:45am - 12:15pm|Turtle 2 LivRite 11:45am (Sat)": [
+     1,
+     4
+    ],
+    "Thu|4:15pm - 4:45pm|Turtle 2 LivRite 4:15pm (Th)": [
+     4,
+     4
+    ],
+    "Tue|4:15pm - 4:45pm|Turtle 2 LivRite 4:15pm (Tu)": [
+     0,
+     4
+    ],
+    "Thu|6:15pm - 6:45pm|Turtle 2 LivRite 6:15pm (Th)": [
+     0,
+     6
+    ],
+    "Sat|12:45pm - 1:15pm|Young Adult LivRite 12:45pm (Sat)": [
+     2,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

@@ -1,0 +1,162 @@
+{
+ "location": "Miami, FL",
+ "slug": "bss_north_miami_beach",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 66,
+    "capacity": 136,
+    "utilization": 48.5
+   },
+   "slots": {
+    "Sat|1:00pm - 1:30pm|ADULT 1 LAMIAG 1:00 PM SAT": [
+     2,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|ADULT 1 LAMIAG 6:00 PM FRI": [
+     2,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|ADULT 1 LAMIAG 7:00 PM FRI": [
+     4,
+     4
+    ],
+    "Sun|12:30pm - 1:30pm|BARRACUDAS LAMIAG": [
+     0,
+     7
+    ],
+    "Sat|11:00am - 11:30am|MINNOW LAMIAG 11:00 AM SAT": [
+     3,
+     4
+    ],
+    "Sun|11:00am - 11:30am|MINNOW LAMIAG 11:00 AM SUN": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|MINNOW LAMIAG 6:00 PM WED": [
+     1,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|SEMI PRIVATE LAMIAG": [
+     2,
+     2
+    ],
+    "Wed|5:30pm - 6:00pm|SHARK 1 LAMIAG 05.30 PM WED": [
+     3,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|SHARK 1 LAMIAG 06.30 PM FRI": [
+     1,
+     4
+    ],
+    "Sun|10:00am - 10:30am|SHARK 1 LAMIAG 10:00 AM SUN": [
+     0,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|SHARK 1 LAMIAG 12:30 PM SAT": [
+     1,
+     4
+    ],
+    "Sat|10:30am - 11:00am|STARFISH LAMIAG 10:30 AM SAT": [
+     4,
+     4
+    ],
+    "Sun|10:30am - 11:00am|STARFISH LAMIAG 10:30 AM SUN": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|STARFISH LAMIAG 5:00 PM WED": [
+     2,
+     4
+    ],
+    "Sat|10:00am - 10:30am|SWIMBOREE LAMIAG 10:00 AM SAT": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|SWIMBOREE LAMIAG 4:00 PM WED": [
+     1,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|TADPOLE LAMIAG 6:30 PM WED": [
+     0,
+     4
+    ],
+    "Sat|9:30am - 10:00am|TADPOLE LAMIAG 9:30 AM SAT": [
+     0,
+     6
+    ],
+    "Fri|5:00pm - 5:30pm|TURTLE 1 LAMIAG 05:00 PM FRI": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|TURTLE 1 LAMIAG 06.00 PM WED": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|TURTLE 1 LAMIAG 11:30 AM SAT": [
+     2,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|TURTLE 1 LAMIAG 12:00 PM SUN": [
+     4,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|TURTLE 1 LAMIAG 4:30 PM WED": [
+     1,
+     4
+    ],
+    "Sun|9:30am - 10:00am|TURTLE 1 LAMIAG 9:30 AM SUN": [
+     1,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|TURTLE 2 LAMIAG 12:00 PM SAT": [
+     0,
+     5
+    ],
+    "Wed|5:30pm - 6:00pm|YOUNG ADULT LAMIAG 5:30 PM WED": [
+     3,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|MINNOW LAMIAG 4:00 PM WED": [
+     3,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|STARFISH LAMIAG 11:30 AM SUN": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|TURTLE 2 LAMIAG 05.00 PM WED": [
+     1,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|TURTLE 2 LAMIAG 05.30 PM FRI": [
+     2,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|ADULT 1 LAMIAG 07:00 PM WED": [
+     3,
+     4
+    ],
+    "Sun|9:00am - 9:30am|YOUNG ADULT LAMIAG 9:00 AM SUN": [
+     1,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

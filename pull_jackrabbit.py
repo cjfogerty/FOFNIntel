@@ -159,6 +159,140 @@ SITES = [
     dict(brand="British", org="548617", name_code=["LIFE"], slug="bss_gilbert_lauren",
          location="Gilbert, AZ", lma="British Swim School - Lauren's Institute Gilbert"),
 
+    # --- added 2026-08-31 from the national-index sweep (LMA CAVEATS 4p) -----
+    # Both orgs were found on britishswimschool.com/locations/us/, verified live
+    # against their own openings feeds, and their site tokens read off the raw
+    # class names rather than guessed.
+    dict(brand="British", org="548998", name_code=["DIVDRA"], slug="bss_lehi_draper",
+         location="Draper, UT", lma="British Swim School - Lehi-Draper",
+         note="Dive Addicts Draper. DIVDRA carries 67 of the org's 70 classes; the "
+              "remaining 3 are untagged makeups. Single-pool territory."),
+    dict(brand="British", org="526069", name_code=["Buckhead"], slug="bss_lenox_buckhead",
+         location="Atlanta, GA", lma="British Swim School - LA Fitness Lenox/Buckhead",
+         note="This org tags the site at the END of the class name in plain words "
+              "-- 'Adult 1 4:30 Monday Buckhead' -- not as an uppercase code. Its "
+              "other tokens are Roswell and Onelife."),
+
+    # --- Swim Atlanta, added 2026-08-31 -------------------------------------
+    # The brand was on file as unreadable ("books through its own /find/ paths
+    # on its own domain"). It does -- and those paths hand off to Jackrabbit.
+    # One org per physical location, like Barron, so no name_code is needed.
+    # Org IDs read from each location page's regv2.asp?id= registration link
+    # and joined to the LMA on an exact street-address match.
+    # No public instructor ratio was found, so capacity rests on observed-max
+    # only, the weaker of the two calibrations -- same basis as Bear Paddle.
+    # HELD OUT pending a session-selection rule. Swim Atlanta does not run
+    # continuous enrolment like British and Bear Paddle -- it sells MONTHLY
+    # SESSIONS, and the feed lists every session from August through December
+    # 2026 at once. Summing them counts the same physical slot five times and
+    # drags utilisation down with months nobody has booked yet: Roswell reads
+    # 12.2% and Johns Creek 31.3% on that basis, which is not what either site
+    # is doing. Measuring them needs the CURRENT session only. Uncomment once
+    # that rule exists; the org IDs and address joins below are verified.
+    #   Roswell     org 551530, 57 classes, 795 Old Roswell Rd -- exact join
+    #   Johns Creek org 539092, 327 classes, 4050 Johns Creek Pkwy -- exact join
+    # dict(brand="Swim Atlanta", org="551530", name_code=None, slug="swimatl_roswell",
+    #      location="Roswell, GA", lma="Swim Atlanta Roswell"),
+    # dict(brand="Swim Atlanta", org="539092", name_code=None, slug="swimatl_johns_creek",
+    #      location="Suwanee, GA", lma="Swim Atlanta Johns Creek"),
+    # NOT added: East Cobb (LMA has 2111 Old Canton Rd; the nearest Swim Atlanta
+    # page, /midway, is 5059 Post Road -- a different address, so no join) and
+    # Georgia Tech (the /gatech page carries no regv2 link, so no org). Do not
+    # guess either; that is the trap that produced the LA Fitness Jamboree hold.
+
+    dict(brand="British", org="547058", name_code=["LAF"], slug="bss_shelby",
+         location="Shelby Township, MI", lma="British Swim School - LA Fitness Shelby",
+         note="All 91 of the org's classes carry LAF and the macomb-utica territory "
+              "lists one pool, so this is a single-site org. Org verified live "
+              "2026-08-31 from the national-index sweep."),
+
+    # Hudson Waterfront splits by &loc=, not by class-name token. An earlier pass
+    # searched the class names for site codes, found only CLIFFSI, and wrongly
+    # concluded the org did not cover Winchester Gardens or Home2 Suites EWR. It
+    # does -- their codes are simply not in the class names. All three loc codes
+    # below were read off each pool page's find-a-lesson/?pool_id= link, and each
+    # returns classes only on that pool's published open days. loc=cliffsi also
+    # returns 115 classes against the name_code match's 114, so it is the more
+    # complete split.
+    dict(brand="British", org="530108", loc="cliffsi", slug="bss_cliffside_park",
+         location="Cliffside Park, NJ", lma="British Swim School - Cliffside Park",
+         note="700 Palisadium Dr. Open Sun/Mon/Wed/Fri; feed returns exactly those days."),
+    dict(brand="British", org="530108", loc="SHMAPLE", slug="bss_winchester_maplewood",
+         location="Maplewood, NJ", lma="British Swim School - Winchester Gardens Maplewood",
+         note="333 Elmwood Avenue, Maplewood. Published hours Sun 9-2, Wed 4-8:30, "
+              "Fri 4-8:30, closed Mon/Tue/Thu/Sat; the feed returns 77 classes on "
+              "Sun 27, Fri 26, Wed 24 and nothing on the closed days."),
+    dict(brand="British", org="530108", loc="newhot", slug="bss_home2_ewr",
+         location="Newark, NJ", lma="British Swim School - Home2 Suites Newark Route 1&9",
+         note="Home2 Suites EWR Airport -- Route 1&9 is the EWR frontage road. "
+              "Published hours Sun 9-2, Thu 4-9, Fri 4-9, Sat 9-2, closed "
+              "Mon/Tue/Wed; the feed returns 57 classes on Sun 16, Sat 16, Thu 18, "
+              "Fri 7 and nothing on the closed days."),
+
+    dict(brand="British", org="534305", name_code=["LivRite"], slug="bss_livrite_fishers",
+         location="Fishers, IN", lma="British Swim School - LivRite Fitness Fishers",
+         note="The org carries ONE 'LivRite' token while the central-indiana territory "
+              "lists two LivRite pools, so the join was ambiguous until 2026-09-01. "
+              "Resolved on schedule: North Indianapolis runs SUNDAYS ONLY (pool closed "
+              "Mon-Sat) and every LivRite class in the feed is Tue, Thu or Sat, inside "
+              "Fishers' own Tue/Thu 4-7pm and Sat 9:45am-2:15pm windows. All of them "
+              "are Fishers."),
+    dict(brand="British", org="515732", name_code=["BSSPINES"], slug="bss_pembroke_pines",
+         location="Pembroke Pines, FL", lma="British Swim School - Pembroke Pines",
+         note="BSSPINES carries 75 of the org's 257 classes. The org's other tokens are "
+              "LADORAL (97), LAMIAG (33) and LAHIA (28); the territory lists five pools "
+              "against four tokens, so North Miami Beach stays UNRESOLVED -- do not "
+              "assume LAMIAG is it."),
+
+    dict(brand="British", org="515732", name_code=["LAMIAG"], slug="bss_north_miami_beach",
+         location="Miami, FL", lma="British Swim School - LA Fitness North Miami Beach",
+         note="LAMIAG resolved 2026-09-01 on two independent signals, not on the "
+              "abbreviation. The pool's address is 1580 NE MIAMI GARDENS Dr, which is "
+              "what the token spells; and its published hours are Wed 4-8:30, Fri 4-8, "
+              "Sat 9-1, Sun 9-1:30 with Mon/Tue/Thu closed, against the token's class "
+              "days of Wed 12, Sat 8, Sun 8, Fri 5 and none on Mon/Tue/Thu. The org's "
+              "sibling token LAHIAG is Hialeah Gardens. The territory also lists a "
+              "Kendall pool that has NO token in the feed at all."),
+
+    dict(brand="British", org="545910", name_code=["HTCYCOL"], slug="bss_collegeville",
+         location="Collegeville, PA", lma="British Swim School - Courtyard Marriott Collegeville",
+         note="Org found 2026-09-01 on the POOL page, not the territory page, and in a "
+              "third URL form -- portal/ppLogin.asp?id=545910, alongside the known "
+              "ParentPortal/Login?orgId= and regv2.asp?id= patterns. Match confirmed on "
+              "schedule: HTCYCOL runs Mon 14 and Wed 17 classes and nothing else, "
+              "against published pool hours of Mon & Wed 4:30-8pm with every other day "
+              "closed. The org's other token, LAFPOT, runs Tue/Thu/Sat/Sun as well.",),
+
+    dict(brand="British", org="543485", name_code=["PROVHS"], slug="bss_pineville_matthews",
+         location="Charlotte, NC", lma="British Swim School - Pineville Matthews Charlotte",
+         note="The org was already live for Ballantyne and Matthews; this site sat "
+              "unsized on a suspected duplicate. It is NOT a duplicate. PROVHS is "
+              "Matthews/Arboretum Providence HS at 1800 Pineville Matthews Rd, an exact "
+              "match to our geo source, and all 15 of its classes run Sunday 4:00-7:00pm "
+              "against published hours of Sunday only 4-7pm. The already-measured "
+              "HIEMAT (Matthews, Holiday Inn Express, 9420 E Independence Blvd) runs "
+              "Tuesday only, so the two cannot be conflated."),
+
+    dict(brand="British", org="549004", name_code=None, slug="bss_allen_fairview",
+         location="McKinney, TX", lma="British Swim School - 24 HR Fitness Allen/Fairview",
+         note="Our row is LABELLED Allen/Fairview but its address, 1601 N Hardin Blvd "
+              "McKinney TX 75071, is an exact match to the brand's 24 HR Fitness "
+              "McKinney page -- same pool, different label. Whole-org: the "
+              "mckinney-allen territory lists one pool and all 150 classes read "
+              "'24Hr Fit'. Days confirm it: Tue/Thu/Fri/Sat/Sun carry classes and "
+              "Mon/Wed carry none, against published hours that close Mon and Wed."),
+
+    # Austin is the SECOND org with no code in its class names -- they read
+    # "Adult 1 (3) - 10:30 a.m." with no site marker at all -- so like
+    # Pittsburgh it must be split with &loc=. The code came off the pool page's
+    # Take Swim Assessment link, find-a-lesson/?pool_id=24-NW, which is the
+    # documented way to read one rather than guess it.
+    dict(brand="British", org="529039", loc="24-NW", slug="bss_austin_nw",
+         location="Austin, TX", lma="British Swim School - 24 Hour Fitness Austin NW",
+         note="10616 Research Blvd Austin TX 78759, an exact match to our geo source. "
+              "Published hours Mon 5-8pm, Thu 5-8pm, Sat 9:15am-2pm, closed "
+              "Tue/Wed/Fri/Sun."),
+
     # --- British Pittsburgh: the one org with NO code in its class names -----
     # Class names here are bare ("Adult - 6:30pm"), so this org must be split
     # with &loc= like Bear Paddle. Codes are 6-char abbreviations and are NOT
@@ -230,13 +364,21 @@ def parse_feed(text):
     p.feed(doc)
     rows = [r for r in p.rows if any(c.strip() for c in r)]
 
-    hdr = None
+    # Find the header by locating the cell that says "Class", wherever it sits.
+    # Do NOT key off cell 0: on orgs that expose a Register column, cell 0 reads
+    # "Register" on the header AND on every enrollable data row, so matching it
+    # silently drops every class with openings and yields a fake 100%. But cell
+    # 1 is not safe either -- orgs with public registration switched off emit no
+    # Register column at all and put Class at index 0, which returned zero rows
+    # for every Swim Atlanta org until 2026-08-31. Find the index, then reuse it.
+    hdr = class_ix = None
     for r in rows:
-        # The header must be found via cell 1 ("Class"). Cell 0 is "Register"
-        # on the header AND on every enrollable data row -- keying off cell 0
-        # silently drops every class that has openings and yields a fake 100%.
-        if len(r) > 1 and r[1].strip().lower() == "class":
-            hdr = [c.strip().lower().replace(" ", "_") for c in r]
+        for i, c in enumerate(r[:2]):
+            if c.strip().lower() == "class":
+                hdr = [x.strip().lower().replace(" ", "_") for x in r]
+                class_ix = i
+                break
+        if hdr:
             break
     if hdr is None:
         return []
@@ -244,7 +386,7 @@ def parse_feed(text):
     for r in rows:
         if len(r) != len(hdr):
             continue
-        if r[1].strip().lower() == "class":
+        if r[class_ix].strip().lower() == "class":
             continue
         out.append(dict(zip(hdr, r)))
     return out
@@ -328,6 +470,12 @@ def main():
     for s in sites:
         if s.get("loc"):
             rows = parse_feed(fetch(s["org"], s["loc"]))
+        elif not s.get("name_code"):
+            # Whole-org site: the operator runs one Jackrabbit org per physical
+            # location (Swim Atlanta, Barron), so the org feed IS the site and
+            # there is nothing to split on. Distinguished from a missing code by
+            # being explicit -- name_code=None, never omitted by accident.
+            rows = list(orgcache[s["org"]])
         else:
             codes = s["name_code"]
             if isinstance(codes, str):

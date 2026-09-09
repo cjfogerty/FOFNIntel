@@ -1,0 +1,326 @@
+{
+ "location": "Maplewood, NJ",
+ "slug": "bss_winchester_maplewood",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 227,
+    "capacity": 310,
+    "utilization": 73.2
+   },
+   "slots": {
+    "Sun|1:30pm - 2:00pm|Adult1/Shmaple/1:30pm/Sun": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Adult1/Shmaple/1pm/Sun": [
+     4,
+     4
+    ],
+    "Fri|7:30pm - 8:00pm|Adult1/Shmaple/7:30pm/Fri": [
+     7,
+     8
+    ],
+    "Wed|7:30pm - 8:00pm|Adult1/Shmaple/7:30pm/wed": [
+     4,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Adult1/Shmaple/7pm/Fri": [
+     4,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Adult1/Shmaple/7pm/wed": [
+     4,
+     4
+    ],
+    "Fri|8:00pm - 8:30pm|Adult1/Shmaple/8pm/Fri": [
+     4,
+     4
+    ],
+    "Wed|8:00pm - 8:30pm|Adult1/Shmaple/8pm/wed": [
+     7,
+     8
+    ],
+    "Sun|1:30pm - 2:00pm|Adult2/Shmaple/1:30pm/Sun": [
+     1,
+     4
+    ],
+    "Fri|7:30pm - 8:00pm|Adult2/Shmaple/7:30pm/Fri": [
+     4,
+     4
+    ],
+    "Wed|7:30pm - 8:00pm|Adult2/Shmaple/7:30pm/wed": [
+     4,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Minnow/Shmaple/10:30am/Sun": [
+     2,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Minnow/Shmaple/11am/Sun": [
+     5,
+     8
+    ],
+    "Sun|12:30pm - 1:00pm|Minnow/Shmaple/12:30pm/Sun": [
+     4,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Minnow/Shmaple/4:30pm/Fri": [
+     3,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Minnow/Shmaple/4pm/wed": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Minnow/Shmaple/5:30pm/wed": [
+     4,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Minnow/Shmaple/5pm/Fri": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Minnow/Shmaple/5pm/wed": [
+     0,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Minnow/Shmaple/6pm/wed": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow/Shmaple/9:30am/Sun": [
+     4,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Seahorse/Shmaple/10:30am/Sun": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Seahorse/Shmaple/10am/Sun": [
+     1,
+     4
+    ],
+    "Fri|4:00pm - 4:30pm|Seahorse/Shmaple/4pm/Fri": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Seahorse/Shmaple/5pm/wed": [
+     2,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Seahorse/Shmaple/9:30am/Sun": [
+     4,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Seahorse/Shmaple/9am/Sun": [
+     1,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Shark1/Shmaple/5:30pm/Fri": [
+     0,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Shark1/Shmaple/7pm/wed": [
+     2,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Starfish/Shmaple/10am/Sun": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Starfish/Shmaple/11:30am/Sun": [
+     4,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Starfish/Shmaple/4:30pm/Wed": [
+     4,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Starfish/Shmaple/4pm/wed": [
+     4,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Starfish/Shmaple/5:30pm/Fri": [
+     4,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish/Shmaple/5pm/wed": [
+     3,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Starfish/Shmaple/6:00pm/Fri": [
+     3,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Starfish/Shmaple/6:30pm/Fri": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Starfish/Shmaple/6pm/wed": [
+     4,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Starfish/Shmaple/9am/Sun": [
+     4,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Swimboree/Shmaple/12:30pm/Sun": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Swimboree/Shmaple/4pm/wed": [
+     4,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Swimboree/Shmaple/5pm/Fri": [
+     3,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Swimboree/Shmaple/9:30am/Sun": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Tadpole/Shmaple/10:00am/Sun": [
+     2,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Tadpole/Shmaple/11:30am/Sun": [
+     0,
+     5
+    ],
+    "Fri|4:30pm - 5:00pm|Tadpole/Shmaple/4:30pm/Fri": [
+     1,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Tadpole/Shmaple/4:30pm/wed": [
+     4,
+     4
+    ],
+    "Fri|4:00pm - 4:30pm|Tadpole/Shmaple/4pm/Fri": [
+     0,
+     5
+    ],
+    "Sun|12:30pm - 1:00pm|Turtle1/Shmaple/12:30pm/Sun": [
+     4,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle1/Shmaple/12pm/Sun": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Turtle1/Shmaple/1pm/Sun": [
+     4,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Turtle1/Shmaple/4:30pm/Wed": [
+     4,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Turtle1/Shmaple/5:30pm/Fri": [
+     2,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle1/Shmaple/5:30pm/wed": [
+     3,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Turtle1/Shmaple/6:30pm/Fri": [
+     3,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle1/Shmaple/6:30pm/wed": [
+     4,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Turtle1/Shmaple/6pm/Fri": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Turtle1/Shmaple/6pm/wed": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle2/Shmaple/12pm/Sun": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Turtle2/Shmaple/5:30pm/Wed": [
+     3,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Turtle2/Shmaple/6:30pm/Fri": [
+     0,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle2/Shmaple/6:30pm/wed": [
+     1,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|YoungAdult1/Shmaple/6:30pm/wed": [
+     4,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|YoungAdult1/Shmaple/7pmFri": [
+     4,
+     4
+    ],
+    "Sun|9:00am - 9:30am|YoungAdult1/Shmaple/9am/Sun": [
+     4,
+     4
+    ],
+    "Fri|8:00pm - 8:30pm|Adult2/Shmaple/8pm/Fri": [
+     3,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Minnow/Shmaple/6pm/Fri": [
+     0,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish/Shmaple/10:30am/Sun": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Starfish/Shmaple/12pm/Sun": [
+     2,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle1/Shmaple/11:00am/Sun": [
+     4,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Turtle1/Shmaple/4:30pm/Fri": [
+     2,
+     4
+    ],
+    "Fri|4:00pm - 4:30pm|Turtle1/Shmaple/4pm/Fri": [
+     3,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Turtle1/Shmaple/5pm/Fri": [
+     3,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Turtle1/Shmaple/7pm/Fri": [
+     0,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

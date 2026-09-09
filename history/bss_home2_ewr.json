@@ -1,0 +1,242 @@
+{
+ "location": "Newark, NJ",
+ "slug": "bss_home2_ewr",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 100,
+    "capacity": 234,
+    "utilization": 42.7
+   },
+   "slots": {
+    "Sun|1:00pm - 1:30pm|Adult1/newhot/1:00pm/Sun": [
+     2,
+     4
+    ],
+    "Sat|1:30pm - 2:00pm|Adult1/Newhot/1:30pm/Sat": [
+     3,
+     8
+    ],
+    "Sun|12:30pm - 1:00pm|Adult1/newhot/12:30pm/Sun": [
+     2,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Adult1/Newhot/7:30pm/Thur": [
+     4,
+     4
+    ],
+    "Fri|8:00pm - 8:30pm|Adult1/Newhot/8:00pm/Fri": [
+     4,
+     4
+    ],
+    "Thu|8:00pm - 8:30pm|Adult1/NewHot/8:00pm/Thur": [
+     4,
+     4
+    ],
+    "Fri|8:30pm - 9:00pm|Adult1/Newhot/8:30pm/Fri": [
+     4,
+     4
+    ],
+    "Thu|8:30pm - 9:00pm|Adult1/Newhot/8:30pm/Thur": [
+     7,
+     8
+    ],
+    "Sun|10:00am - 10:30am|Minnow/Newhot/10:00am/Sun": [
+     4,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Minnow/Newhot/10:30am/Sat": [
+     1,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Minnow/newhot/12:00pm/Sun": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Minnow/newhot/12:30pm/Sun": [
+     2,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Minnow/NewHot/5:30pm/Thur": [
+     2,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Minnow/Newhot/9:30am/Sun": [
+     4,
+     4
+    ],
+    "Sun|1:00pm - 1:30pm|Private/Newhot/1:00pm/Sun": [
+     0,
+     1
+    ],
+    "Sun|10:30am - 11:00am|Seahorse/newhot/10:30am/Sun": [
+     6,
+     8
+    ],
+    "Fri|7:00pm - 7:30pm|Seahorse/Newhot/7:00pm/Fri": [
+     3,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Seahorse/Newhot/7:30pm/Thur": [
+     3,
+     4
+    ],
+    "Sat|1:00pm - 1:30pm|Shark1/Newhot/1:00pm/Sat": [
+     1,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Shark1/Newhot/11:30am/Sun": [
+     2,
+     4
+    ],
+    "Fri|4:00pm - 4:30pm|Shark1/NewHot/4:30pm/Fri": [
+     0,
+     6
+    ],
+    "Thu|5:00pm - 5:30pm|Shark1/newhot/5:00pm/Thur": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Shark1/NewHot/6:00pm/Thur": [
+     2,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Shark1/Newhot/7:00pm/Thur": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish/Newhot/11:00am/Sat": [
+     0,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Starfish/Newhot/11:30am/Sun": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Starfish/Newhot/12:00pm/Sat": [
+     2,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Starfish/Newhot/4:30pm/Thur": [
+     1,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Starfish/Newhot/6:00pm/Thur": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Starfish/Newhot/9:30am/Sat": [
+     1,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Tadpole/Newhot/10:00am/Sun": [
+     0,
+     5
+    ],
+    "Sat|10:30am - 11:00am|Tadpole/Newhot/10:30am/Sat": [
+     0,
+     6
+    ],
+    "Sat|1:00pm - 1:30pm|Turtle1/Newhot/1:00pm/Sat": [
+     0,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Turtle1/Newhot/10:00am/Sat": [
+     0,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle1/Newhot/11:00am/Sun": [
+     2,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle1/Newhot/11:30am/Sat": [
+     0,
+     4
+    ],
+    "Thu|4:00pm - 4:30pm|Turtle1/NewHot/4:00pm/Thur": [
+     2,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Turtle1/newhot/5:00pm/Fri": [
+     3,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle1/Newhot/5pm/Thur": [
+     2,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle1/NewHot/6:30pm/Thur": [
+     6,
+     8
+    ],
+    "Sun|9:30am - 10:00am|Turtle1/Newhot/9:30am/Sun": [
+     1,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle2/Newhot/11:00am/Sun": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle2/Newhot/12:00pm/Sat": [
+     0,
+     5
+    ],
+    "Fri|4:30pm - 5:00pm|Turtle2/NewHot/4:30pm/Fri": [
+     0,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle2/NewHot/4:30pm/Thur": [
+     1,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle2/Newhot/5:30pm/Thur": [
+     0,
+     5
+    ],
+    "Fri|6:00pm - 6:30pm|Turtle2/Newhot/6:00pm/Fri": [
+     0,
+     5
+    ],
+    "Sat|9:30am - 10:00am|Turtle2/Newhot/9:30am/Sat": [
+     0,
+     5
+    ],
+    "Thu|8:00pm - 8:30pm|Young Adult1/Newhot/8:00pm/Thur": [
+     3,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|YoungAdult1/Newhot/12:30pm/Sat": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Seahorse/Newhot/11:00am/Sat": [
+     1,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Starfish/newhot/12:00pm/Sun": [
+     1,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Swimboree/Newhot/11:30am/Sat": [
+     0,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

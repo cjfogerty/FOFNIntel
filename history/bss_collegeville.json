@@ -1,0 +1,154 @@
+{
+ "location": "Collegeville, PA",
+ "slug": "bss_collegeville",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 66,
+    "capacity": 118,
+    "utilization": 55.9
+   },
+   "slots": {
+    "Mon|4:30pm - 5:00pm|Minnow HTCYCOL 4:30 PM MON": [
+     2,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Minnow HTCYCOL 4:30 PM WED": [
+     0,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow HTCYCOL 5:30 PM MON": [
+     1,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Minnow HTCYCOL 5:30 PM WED": [
+     1,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Seahorse HTCYCOL 5:00 PM MON": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Seahorse HTCYCOL 5:30 PM WED": [
+     3,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Seahorse HTCYCOL 6:00 PM WED": [
+     4,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Semi-Private Adult HTCYCOL 7:00 PM WED": [
+     1,
+     2
+    ],
+    "Wed|7:30pm - 8:00pm|Semi-Private Adult HTCYCOL 7:30 PM WED": [
+     2,
+     2
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish HTCYCOL 4:30 PM MON": [
+     2,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Starfish HTCYCOL 4:30 PM WED": [
+     0,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish HTCYCOL 5:00 PM WED": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Starfish HTCYCOL 5:30 PM MON": [
+     1,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Starfish HTCYCOL 6:30 PM MON": [
+     0,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Starfish HTCYCOL 6:30 PM WED": [
+     0,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Swimboree HTCYCOL 4:00 PM MON": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Swimboree HTCYCOL 4:00 PM WED": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Swimboree HTCYCOL 5:00 PM MON": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Swimboree HTCYCOL 6:00 PM WED": [
+     3,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Tadpole HTCYCOL 4:00 PM MON": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Tadpole HTCYCOL 4:00 PM WED": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Tadpole HTCYCOL 5:00 PM MON": [
+     3,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Tadpole HTCYCOL 6:30 PM WED": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 HTCYCOL 5:00 PM WED": [
+     4,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Turtle 1 HTCYCOL 6:00 PM MON": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 2 HTCYCOL 6:30 PM WED": [
+     1,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Turtle 2 HTCYCOL 7:00 PM MON": [
+     3,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Young Adult 1 HTCYCOL 7:00 PM WED": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Young Adult 2 HTCYCOL 6:30 PM MON": [
+     3,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Young Adult 2 HTCYCOL 7:00 PM WED": [
+     4,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Semi-Private Adult HTCYCOL 7:30 PM MON": [
+     2,
+     2
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}

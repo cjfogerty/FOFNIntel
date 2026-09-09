@@ -1,0 +1,626 @@
+{
+ "location": "McKinney, TX",
+ "slug": "bss_allen_fairview",
+ "sessions": [
+  {
+   "name": "Continuous enrollment",
+   "start": "2026-09-01",
+   "end": "2099-12-31",
+   "catalog_from": "2026-09-01"
+  }
+ ],
+ "snapshots": [
+  {
+   "date": "2026-09-01",
+   "ts": "2026-09-01T02:10",
+   "label": "Sep 1",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 267,
+    "capacity": 618,
+    "utilization": 43.2
+   },
+   "slots": {
+    "Fri|5:30pm - 6:00pm|Adult 24Hr Fit 5:30PM Friday": [
+     2,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Adult 24Hr Fit 6:30PM Friday": [
+     2,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Adult 24Hr Fit 7:00PM Friday": [
+     0,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Adult 24hrFit 12:00PM Saturday": [
+     0,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Adult 24hrFit 12:00PM Sunday": [
+     0,
+     5
+    ],
+    "Thu|4:30pm - 5:00pm|Adult 24hrFit 4:30PM Thursday": [
+     0,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Adult 24hrFit 5:30PM Thursday": [
+     0,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Adult 24HrFit 6:00PM Tuesday": [
+     0,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Adult 24HrFit 6:30 PM Tuesday": [
+     4,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult 24HrFit 7:00PM Thursday": [
+     1,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Adult 24hrFit 7:00PM Tuesday": [
+     4,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Adult 24hrFit 9:00AM Saturday": [
+     3,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Adult 24HrFit 9:00AM Sunday": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Adult 24HrFit 9:30AM Saturday": [
+     4,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Adult 24HrFit 9:30AM Sunday": [
+     0,
+     5
+    ],
+    "Fri|7:00pm - 8:00pm|Adult 24HrFit Sai Ruchitha": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 8:00pm|Adult 24HrFit Sai Ruchitha": [
+     3,
+     4
+    ],
+    "Tue|6:30pm - 7:30pm|Adult 24HrFit Sai Ruchitha": [
+     3,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Adult 24HrMck 12:30pm Sunday": [
+     2,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Bryant's Pvt Class": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Minnow 24hrFit 10:00AM Sunday": [
+     2,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Minnow 24HrFit 6:00 PM Thursday": [
+     4,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Minnow 24hFit 4:30PM Thursday": [
+     0,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Minnow 24hFit 5:00PM Thursday": [
+     1,
+     4
+    ],
+    "Fri|7:30pm - 8:00pm|Minnow 24Hr Mck 7:30PM Friday": [
+     0,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Minnow 24HrFit 09:30AM Saturday": [
+     3,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Minnow 24HrFit 10.00 AM Saturday": [
+     2,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Minnow 24HrFit 11:00AM Sunday": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Minnow 24HrFit 11:30AM Saturday": [
+     1,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Minnow 24HrFit 12:30 PM Sunday": [
+     3,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Minnow 24HrFit 4:30PM Friday": [
+     0,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Minnow 24HrFit 4:30PM Tuesday": [
+     0,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Minnow 24HrFit 5:00PM Friday": [
+     1,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Minnow 24HrFit 6:30PM Friday": [
+     2,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Minnow 24HrFit 6:30PM Thursday": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Minnow 24HrFit 6:30PM Tuesday": [
+     4,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Minnow 24HrFit 7:00PM Friday": [
+     0,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Minnow 24hrFit 7:00PM Thursday": [
+     4,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Minnow 24hrFit 7:00PM Tuesday": [
+     2,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Minnow 24HrFit 7:30PM Thursday": [
+     0,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Minnow 24HrFit 7:30PM Tuesday": [
+     3,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Minnow 24hrFit 9:00AM Sunday": [
+     0,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Private 24Hr Sat Hudson": [
+     1,
+     1
+    ],
+    "Tue|4:30pm - 5:00pm|Private 24Hr Tues Amogh": [
+     0,
+     1
+    ],
+    "Tue|4:30pm - 5:00pm|Private Tuesday 4:30": [
+     1,
+     1
+    ],
+    "Sun|9:30am - 10:00am|Shark 1 24Hr 09:30AM Sunday": [
+     2,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|Shark 1 & 2 24Hr Mck 7:00PM Friday": [
+     0,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Shark 1 24Hr Mck 6:00PM Friday": [
+     2,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Shark 1 24HrFit 4:30PM Tuesday": [
+     0,
+     6
+    ],
+    "Thu|5:00pm - 5:30pm|Shark 1 24hrFit 5:00PM Thursday": [
+     3,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Shark 1 24HrFit 5:00PM Tuesday": [
+     3,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Shark 1 24HrFit 5:30 PM Thursday": [
+     2,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Shark 1 24HrFit 6:00PM Thursday": [
+     4,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Shark 1 24HrFit 6:00PM Tuesday": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Shark 1 24HrFit 6:30 PM Thursday": [
+     0,
+     6
+    ],
+    "Fri|6:30pm - 7:00pm|Shark 1 24HrFit 6:30PM Friday": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Shark 1 24HrFit Saturday 11:00AM": [
+     2,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Shark 2 24hrFit 10AM Sunday": [
+     2,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Shark 2 24HrFit 5:00PM Tuesday": [
+     1,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Shark 2 24HrFit 5:30 PM Thursday": [
+     4,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Shark 2 24hrFit 5:30PM Thursday": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Shark 2 24HrFit 6:00PM Thursday": [
+     1,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Shark 2 24HrFit 6:00PM Tuesday": [
+     0,
+     6
+    ],
+    "Fri|6:30pm - 7:00pm|Shark 2 24HrFit 6:30PM Friday": [
+     2,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Shark 2 24hrFit 6:30PM Thursday": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Shark 2 24HrFit Saturday 11:00AM": [
+     1,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Shark1 1 24hrFit 10:30AM Saturday": [
+     4,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Shark1 24HrFit 10:00AM Saturday": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Shark1 24hrFit 10:30AM Sunday": [
+     4,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Shark1 24hrFit 10AM Sunday": [
+     3,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Shark2 24hrFit 10:30AM Sunday": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Shark2 24hrFit 12:00PM Saturday": [
+     0,
+     6
+    ],
+    "Sat|12:00pm - 12:30pm|Shark2 24hrFit 12:00PM Sunday": [
+     2,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Starfish 24HrFit 10:30AM Saturday": [
+     2,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Starfish 24hFit 7:30PM Tuesday": [
+     2,
+     4
+    ],
+    "Sun|11:00am - 11:30am|StarFish 24Hr Mck 11:00AM Sunday": [
+     0,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|StarFish 24Hr Mck 5:30PM Friday": [
+     3,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|StarFish 24Hr Mck 6:00PM Friday": [
+     4,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|StarFish 24Hr Mck 7:00PM Friday": [
+     3,
+     4
+    ],
+    "Fri|7:30pm - 8:00pm|StarFish 24Hr Mck 7:30PM Friday": [
+     0,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Starfish 24HrFit 09:30AM Saturday": [
+     3,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Starfish 24HrFit 10:00AM Saturday": [
+     0,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Starfish 24hrFit 10:00AM Sunday": [
+     1,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Starfish 24HrFit 11:00AM Sat": [
+     2,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Starfish 24HrFit 11:30AM Sunday": [
+     3,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Starfish 24hrFit 12:00 PM Saturday": [
+     4,
+     4
+    ],
+    "Sat|12:30pm - 1:00pm|StarFish 24HrFit 12:30PM Saturday": [
+     2,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Starfish 24HrFit 4:30PM Friday": [
+     0,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|StarFish 24HrFit 4:30PM Thursday": [
+     0,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Starfish 24HrFit 5:00PM Thursday": [
+     3,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Starfish 24HrFit 5:30 PM Tuesday": [
+     3,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|StarFish 24HrFit 5:30PM Thursday": [
+     3,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|StarFish 24hrFit 6:00PM Thursday": [
+     2,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|StarFish 24hrFit 6:30PM Thursday": [
+     1,
+     8
+    ],
+    "Thu|7:30pm - 8:00pm|StarFish 24HrFit 7:30PM Thursday": [
+     0,
+     4
+    ],
+    "Sat|9:00am - 9:30am|StarFish 24HrFit 9:00AM Saturday": [
+     2,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Starfish24HrFit 12:30 PM Sunday": [
+     0,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|SwimBoree 24HrFit 5:30PM Friday": [
+     0,
+     6
+    ],
+    "Sat|11:30am - 12:00pm|Swimboree 24HrFit 11:30 AM Saturday": [
+     4,
+     4
+    ],
+    "Fri|7:00pm - 7:30pm|SwimTeam 24hrFit 7:00 PM Friday": [
+     0,
+     10
+    ],
+    "Thu|7:30pm - 8:00pm|SwimTeam 24hrFit 7:30 PM Thursday": [
+     0,
+     6
+    ],
+    "Sat|11:30am - 12:00pm|Tadpole 24HrFit 11:30 AM Saturday": [
+     2,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Tadpole 24HrFit 4:30 PM Thursday": [
+     0,
+     6
+    ],
+    "Thu|5:30pm - 6:00pm|Tadpole 24HrFit 5:30PM Thursday": [
+     2,
+     4
+    ],
+    "Sat|9:30am - 10:00am|Tadpole 24HrFit 9:30AM Saturday": [
+     1,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Trtle2 24HrFit 5:30PM Friday": [
+     3,
+     4
+    ],
+    "Fri|5:00pm - 5:30pm|Turtle 1 24Hr Mck 5:00PM Friday": [
+     3,
+     4
+    ],
+    "Fri|5:30pm - 6:00pm|Turtle 1 24Hr Mck 5:30PM Friday": [
+     0,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 1 24HrFit 10.30 AM Saturday": [
+     0,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 1 24hrFit 10:30AM Sunday": [
+     3,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 1 24HrFit 11.30 AM Saturday": [
+     1,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 1 24hrFit 11:00AM Saturday": [
+     0,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Turtle 1 24hrFit 11:30AM Sunday": [
+     2,
+     4
+    ],
+    "Sat|12:00pm - 12:30pm|Turtle 1 24HrFit 12:00PM Saturday": [
+     3,
+     4
+    ],
+    "Sun|12:00pm - 12:30pm|Turtle 1 24hrFit 12:00PM Sunday": [
+     0,
+     4
+    ],
+    "Fri|4:30pm - 5:00pm|Turtle 1 24HrFit 4:30PM Friday": [
+     0,
+     4
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle 1 24HrFit 4:30PM Thursday": [
+     0,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Turtle 1 24HrFit 4:30PM Tuesday": [
+     0,
+     4
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle 1 24HrFit 5:00 PM Thursday": [
+     1,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Turtle 1 24HrFit 5:00PM Tuesday": [
+     0,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Turtle 1 24HrFit 5:30PM Thursday": [
+     3,
+     4
+    ],
+    "Tue|6:00pm - 6:30pm|Turtle 1 24HrFit 6:00 PM Tuesday": [
+     4,
+     4
+    ],
+    "Fri|6:30pm - 7:00pm|Turtle 1 24HrFit 6:30 PM Friday": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 1 24HrFit 6:30PM Tuesday": [
+     1,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Turtle 1 24HrFit 7:00PM Thursday": [
+     2,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Turtle 1 24HrFit 7:00PM Tuesday": [
+     4,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Turtle 1 24hrFit 7:30PM Thursday": [
+     0,
+     4
+    ],
+    "Tue|7:30pm - 8:00pm|Turtle 1 24hrFit 7:30PM Tuesday": [
+     2,
+     4
+    ],
+    "Sun|9:30am - 10:00am|Turtle 1 24HrFit 9:30AM Sunday": [
+     4,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Turtle 1 24HrMck 6:00PM Friday": [
+     0,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Turtle 2 24Hr Mck 10:30AM Sunday": [
+     0,
+     5
+    ],
+    "Fri|7:00pm - 7:30pm|Turtle 2 24Hr Mck 7:00PM Friday": [
+     0,
+     4
+    ],
+    "Sat|10:00am - 10:30am|Turtle 2 24HrFit 10:00AM Saturday": [
+     0,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 2 24HrFit 10:30am Saturday": [
+     2,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Turtle 2 24HrFit 11:00AM Saturday": [
+     4,
+     4
+    ],
+    "Sat|11:30am - 12:00pm|Turtle 2 24HrFit 11:30AM Saturday": [
+     0,
+     6
+    ],
+    "Thu|4:30pm - 5:00pm|Turtle 2 24HrFit 4:30 PM Thursday": [
+     0,
+     6
+    ],
+    "Thu|5:00pm - 5:30pm|Turtle 2 24HrFit 5:00 PM Thursday": [
+     3,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Turtle 2 24HrFit 5:00PM Tuesday": [
+     1,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Turtle 2 24HrFit 5:30 PM Tuesday": [
+     3,
+     4
+    ],
+    "Fri|6:00pm - 6:30pm|Turtle 2 24HrFit 6:00PM Friday": [
+     4,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Turtle 2 24HrFit 6:00PM Thursday": [
+     3,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle 2 24HrFit 6:30PM Thursday": [
+     2,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Turtle 2 24HrFit 6:30PM Tuesday": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Turtle 2 24HrFit 7:00PM Thursday": [
+     4,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Turtle 2 24HrFit 9:00AM Sunday": [
+     2,
+     4
+    ],
+    "Thu|6:30pm - 7:00pm|Turtle1 24hrFit 6:30PM Thursday": [
+     3,
+     4
+    ],
+    "Sun|11:00am - 11:30am|Turtle2 24HrFit Sunday 11:00AM": [
+     4,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Turtle2 24HrFit Sunday 11:30AM": [
+     1,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
+  }
+ ],
+ "targets": {}
+}
