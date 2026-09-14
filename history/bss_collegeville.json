@@ -148,6 +148,173 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-09-14",
+   "ts": "2026-09-14T18:07",
+   "label": "Sep 14",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 74,
+    "capacity": 142,
+    "utilization": 52.1
+   },
+   "slots": {
+    "Mon|4:30pm - 5:00pm|Minnow HTCYCOL 4:30 PM MON": [
+     0,
+     4
+    ],
+    "Tue|4:30pm - 5:00pm|Minnow HTCYCOL 4:30 PM TUE": [
+     0,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Minnow HTCYCOL 4:30 PM WED": [
+     0,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Minnow HTCYCOL 5:30 PM MON": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Minnow HTCYCOL 5:30 PM WED": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Seahorse HTCYCOL 5:00 PM MON": [
+     3,
+     4
+    ],
+    "Wed|5:30pm - 6:00pm|Seahorse HTCYCOL 5:30 PM WED": [
+     4,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Seahorse HTCYCOL 6:00 PM WED": [
+     4,
+     4
+    ],
+    "Tue|7:00pm - 7:30pm|Semi-Private Adult HTCYCOL 7:00 PM TUE": [
+     0,
+     2
+    ],
+    "Wed|7:00pm - 7:30pm|Semi-Private Adult HTCYCOL 7:00 PM WED": [
+     1,
+     2
+    ],
+    "Wed|7:30pm - 8:00pm|Semi-Private Adult HTCYCOL 7:30 PM WED": [
+     2,
+     2
+    ],
+    "Wed|7:00pm - 7:30pm|Semi-private Dolphin HTCYCOL 7:00 PM WED": [
+     0,
+     2
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish HTCYCOL 4:30 PM MON": [
+     1,
+     4
+    ],
+    "Wed|4:30pm - 5:00pm|Starfish HTCYCOL 4:30 PM WED": [
+     0,
+     4
+    ],
+    "Tue|5:00pm - 5:30pm|Starfish HTCYCOL 5:00 PM TUE": [
+     0,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Starfish HTCYCOL 5:00 PM WED": [
+     3,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Starfish HTCYCOL 5:30 PM MON": [
+     0,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Starfish HTCYCOL 6:30 PM MON": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Starfish HTCYCOL 6:30 PM WED": [
+     0,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Swimboree HTCYCOL 4:00 PM MON": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Swimboree HTCYCOL 4:00 PM WED": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Swimboree HTCYCOL 5:00 PM MON": [
+     2,
+     4
+    ],
+    "Wed|6:00pm - 6:30pm|Swimboree HTCYCOL 6:00 PM WED": [
+     3,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Swimboree HTCYCOL 6:30 PM TUE": [
+     2,
+     4
+    ],
+    "Mon|4:00pm - 4:30pm|Tadpole HTCYCOL 4:00 PM MON": [
+     2,
+     4
+    ],
+    "Wed|4:00pm - 4:30pm|Tadpole HTCYCOL 4:00 PM WED": [
+     2,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Tadpole HTCYCOL 5:00 PM MON": [
+     4,
+     4
+    ],
+    "Tue|6:30pm - 7:00pm|Tadpole HTCYCOL 6:30 PM TUE": [
+     2,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Tadpole HTCYCOL 6:30 PM WED": [
+     2,
+     4
+    ],
+    "Wed|5:00pm - 5:30pm|Turtle 1 HTCYCOL 5:00 PM WED": [
+     4,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Turtle 1 HTCYCOL 5:30 PM TUE": [
+     0,
+     4
+    ],
+    "Mon|6:00pm - 6:30pm|Turtle 1 HTCYCOL 6:00 PM MON": [
+     4,
+     4
+    ],
+    "Wed|6:30pm - 7:00pm|Turtle 2 HTCYCOL 6:30 PM WED": [
+     1,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Turtle 2 HTCYCOL 7:00 PM MON": [
+     3,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Young Adult 1 HTCYCOL 7:00 PM WED": [
+     4,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Young Adult 2 HTCYCOL 6:30 PM MON": [
+     3,
+     4
+    ],
+    "Wed|7:00pm - 7:30pm|Young Adult 2 HTCYCOL 7:00 PM WED": [
+     4,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Semi-Private Adult HTCYCOL 7:30 PM MON": [
+     1,
+     2
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}

@@ -1,33 +1,45 @@
 brand,slug,location,lma_site_name,classes,waitlisted,openings,derived_capacity,est_enrolled,est_utilization_pct,capacity_basis,org,loc,observed_date
-Bear Paddle,bearpaddle_bloomingdale,"Bloomingdale, IL",Bear Paddle Swim School - Bloomingdale,141,63,123,481,358,74.4,observed_max_only,499027,BMD,2026-09-07
-Bear Paddle,bearpaddle_wheaton,"Wheaton, IL",Bear Paddle Swim School - Wheaton,162,85,122,528,406,76.9,observed_max_only,499027,WTN,2026-09-07
-Bear Paddle,bearpaddle_woodridge,"Woodridge, IL",Bear Paddle Swim School - Woodridge,209,143,98,680,582,85.6,observed_max_only,499027,WDR,2026-09-07
-Bear Paddle,bearpaddle_niles,"Niles, IL",Bear Paddle Swim School - Niles,151,86,91,487,396,81.3,observed_max_only,499027,NLS,2026-09-07
-Bear Paddle,bearpaddle_aurora,"Aurora, IL",Bear Paddle Swim School - Aurora,166,88,126,575,449,78.1,observed_max_only,499027,AUR,2026-09-07
-Bear Paddle,bearpaddle_kildeer,"Kildeer, IL",Bear Paddle Swim School - Kildeer,209,111,138,697,559,80.2,observed_max_only,499027,DPK,2026-09-07
-Bear Paddle,bearpaddle_marlton,"Marlton, NJ",Bear Paddle Swim School - Marlton,157,92,103,531,428,80.6,observed_max_only,499027,MRL,2026-09-07
-British,bss_kearny_mesa,"San Diego, CA",British Swim School - 24 HR Fitness Kearny Mesa,37,17,42,115,73,63.5,published_ratio+observed_max,548999,['24KM'],2026-09-07
-British,bss_utc,"San Diego, CA",British Swim School - 24 Hour Fitness UTC,57,16,112,222,110,49.5,published_ratio+observed_max,548999,['UTC'],2026-09-07
-British,bss_woodbury,"Irvine, CA",British Swim School - LA Fitness Woodbury Town Center,79,6,202,365,163,44.7,published_ratio+observed_max,548999,['LAFWTC'],2026-09-07
-British,bss_jamboree,"Irvine, CA",British Swim School - LA Fitness Jamboree,30,4,94,127,33,26.0,published_ratio+observed_max,548999,['24MKTP'],2026-09-07
-British,bss_westminster,"Westminster, CO",British Swim School - Denver Marriott Westminster,28,3,59,127,68,53.5,published_ratio+observed_max,529897,['MRTWST'],2026-09-07
-British,bss_ballantyne,"Charlotte, NC",British Swim School - LA Fitness Ballantyne,96,44,129,308,179,58.1,published_ratio+observed_max,543485,['LAFBAL'],2026-09-07
-British,bss_matthews,"Matthews, NC",British Swim School - Matthews,11,3,22,40,18,45.0,published_ratio+observed_max,543485,['HIEMAT'],2026-09-07
-British,bss_charlotte_tryon,"Charlotte, NC",British Swim School - Embassy Suites Charlotte S. Tryon,4,2,4,16,12,75.0,published_ratio+observed_max,543485,['EMBTRY'],2026-09-07
-British,bss_naperville_59,"Naperville, IL",British Swim School - LA Fitness Naperville Rte 59,59,21,79,232,153,65.9,published_ratio+observed_max,521398,['LA59'],2026-09-07
-British,bss_arlington_heights,"Arlington Heights, IL",British Swim School - LA Fitness Arlington Heights,30,8,49,113,64,56.6,published_ratio+observed_max,521398,['LAFAH'],2026-09-07
-British,bss_carol_stream,"Carol Stream, IL",British Swim School - Holiday Inn & Suites Carol Stream,19,9,23,67,44,65.7,published_ratio+observed_max,521398,['HICS'],2026-09-07
-British,bss_skokie,"Skokie, IL",British Swim School - Skokie,101,13,170,405,235,58.0,published_ratio+observed_max,514856,['SK'],2026-09-07
-British,bss_north_brunswick,"North Brunswick, NJ",British Swim School - LA Fitness North Brunswick,27,12,56,113,57,50.4,published_ratio+observed_max,529182,['LAF-NB'],2026-09-07
-British,bss_villa_park,"Villa Park, IL",British Swim School - Oakbrook Terrace/Villa Park,309,161,321,1195,874,73.1,published_ratio+observed_max,516158,['VILLAP'],2026-09-07
-British,bss_richboro,"Richboro, PA",British Swim School - JAG Richboro,62,32,48,217,169,77.9,published_ratio+observed_max,526635,['JAG'],2026-09-07
-British,bss_bensalem,"Bensalem, PA",British Swim School - LA Fitness Bensalem,97,36,109,375,266,70.9,published_ratio+observed_max,526635,['LAB'],2026-09-07
-British,bss_kleinlife,"Philadelphia, PA",British Swim School - KleinLife Northeast Philadelphia,68,35,53,248,195,78.6,published_ratio+observed_max,526635,['KL'],2026-09-07
-British,bss_jenkintown,"Jenkintown, PA",British Swim School - Abington Club Jenkintown,76,45,46,278,232,83.5,published_ratio+observed_max,526635,"['AB', 'ABGTN']",2026-09-07
-British,bss_voorhees,"Voorhees Township, NJ",British Swim School - Echelon Health and Fitness Voorhees,118,47,120,369,249,67.5,published_ratio+observed_max,526635,['EF'],2026-09-07
-British,bss_ocotillo,"Chandler, AZ",British Swim School - EoS Fitness Ocotillo Gilbert,54,9,105,219,114,52.1,published_ratio+observed_max,548617,['EOSOCT'],2026-09-07
-British,bss_chandler_ray,"Chandler, AZ",British Swim School - EoS Fitness Chandler Ray and Rural,43,4,89,172,83,48.3,published_ratio+observed_max,548617,['EOSRAY'],2026-09-07
-British,bss_gilbert_lauren,"Gilbert, AZ",British Swim School - Lauren's Institute Gilbert,3,0,5,9,4,44.4,published_ratio+observed_max,548617,['LIFE'],2026-09-07
-British,bss_wexford,"Wexford, PA",British Swim School - Woodlands Foundation Wexford,81,13,170,360,190,52.8,published_ratio+observed_max,517761,WOOLND,2026-09-07
-British,bss_valencia,"Valencia, PA",British Swim School - St. Barnabas Crystal Conservatories Valencia,43,9,98,191,93,48.7,published_ratio+observed_max,517761,STBARN,2026-09-07
-British,bss_gibsonia,"Gibsonia, PA",British Swim School - Wildwood Hampton Township,54,17,94,236,142,60.2,published_ratio+observed_max,517761,WILDWD,2026-09-07
+Bear Paddle,bearpaddle_bloomingdale,"Bloomingdale, IL",Bear Paddle Swim School - Bloomingdale,139,78,85,471,386,82.0,observed_max_only,499027,BMD,2026-09-14
+Bear Paddle,bearpaddle_wheaton,"Wheaton, IL",Bear Paddle Swim School - Wheaton,160,89,113,520,407,78.3,observed_max_only,499027,WTN,2026-09-14
+Bear Paddle,bearpaddle_woodridge,"Woodridge, IL",Bear Paddle Swim School - Woodridge,210,145,96,683,587,85.9,observed_max_only,499027,WDR,2026-09-14
+Bear Paddle,bearpaddle_niles,"Niles, IL",Bear Paddle Swim School - Niles,155,91,92,494,402,81.4,observed_max_only,499027,NLS,2026-09-14
+Bear Paddle,bearpaddle_aurora,"Aurora, IL",Bear Paddle Swim School - Aurora,162,96,97,556,459,82.6,observed_max_only,499027,AUR,2026-09-14
+Bear Paddle,bearpaddle_kildeer,"Kildeer, IL",Bear Paddle Swim School - Kildeer,210,115,139,700,561,80.1,observed_max_only,499027,DPK,2026-09-14
+Bear Paddle,bearpaddle_marlton,"Marlton, NJ",Bear Paddle Swim School - Marlton,156,97,97,526,429,81.6,observed_max_only,499027,MRL,2026-09-14
+British,bss_kearny_mesa,"San Diego, CA",British Swim School - 24 HR Fitness Kearny Mesa,37,17,48,167,119,71.3,published_ratio+observed_max,548999,['24KM'],2026-09-14
+British,bss_utc,"San Diego, CA",British Swim School - 24 Hour Fitness UTC,58,20,101,348,247,71.0,published_ratio+observed_max,548999,['UTC'],2026-09-14
+British,bss_woodbury,"Irvine, CA",British Swim School - LA Fitness Woodbury Town Center,73,4,189,488,299,61.3,published_ratio+observed_max,548999,['LAFWTC'],2026-09-14
+British,bss_jamboree,"Irvine, CA",British Swim School - LA Fitness Jamboree,31,4,95,218,123,56.4,published_ratio+observed_max,548999,['24MKTP'],2026-09-14
+British,bss_westminster,"Westminster, CO",British Swim School - Denver Marriott Westminster,28,5,59,183,124,67.8,published_ratio+observed_max,529897,['MRTWST'],2026-09-14
+British,bss_ballantyne,"Charlotte, NC",British Swim School - LA Fitness Ballantyne,96,44,126,314,188,59.9,published_ratio+observed_max,543485,['LAFBAL'],2026-09-14
+British,bss_matthews,"Matthews, NC",British Swim School - Matthews,11,1,23,40,17,42.5,published_ratio+observed_max,543485,['HIEMAT'],2026-09-14
+British,bss_charlotte_tryon,"Charlotte, NC",British Swim School - Embassy Suites Charlotte S. Tryon,4,1,5,16,11,68.8,published_ratio+observed_max,543485,['EMBTRY'],2026-09-14
+British,bss_naperville_59,"Naperville, IL",British Swim School - LA Fitness Naperville Rte 59,63,19,101,249,148,59.4,published_ratio+observed_max,521398,['LA59'],2026-09-14
+British,bss_arlington_heights,"Arlington Heights, IL",British Swim School - LA Fitness Arlington Heights,30,9,44,112,68,60.7,published_ratio+observed_max,521398,['LAFAH'],2026-09-14
+British,bss_carol_stream,"Carol Stream, IL",British Swim School - Holiday Inn & Suites Carol Stream,20,9,21,71,50,70.4,published_ratio+observed_max,521398,['HICS'],2026-09-14
+British,bss_skokie,"Skokie, IL",British Swim School - Skokie,100,14,168,401,233,58.1,published_ratio+observed_max,514856,['SK'],2026-09-14
+British,bss_north_brunswick,"North Brunswick, NJ",British Swim School - LA Fitness North Brunswick,28,12,59,117,58,49.6,published_ratio+observed_max,529182,['LAF-NB'],2026-09-14
+British,bss_villa_park,"Villa Park, IL",British Swim School - Oakbrook Terrace/Villa Park,310,170,326,1206,880,73.0,published_ratio+observed_max,516158,['VILLAP'],2026-09-14
+British,bss_richboro,"Richboro, PA",British Swim School - JAG Richboro,61,33,41,213,172,80.8,published_ratio+observed_max,526635,['JAG'],2026-09-14
+British,bss_bensalem,"Bensalem, PA",British Swim School - LA Fitness Bensalem,96,38,108,373,265,71.0,published_ratio+observed_max,526635,['LAB'],2026-09-14
+British,bss_kleinlife,"Philadelphia, PA",British Swim School - KleinLife Northeast Philadelphia,67,40,46,244,198,81.1,published_ratio+observed_max,526635,['KL'],2026-09-14
+British,bss_jenkintown,"Jenkintown, PA",British Swim School - Abington Club Jenkintown,75,47,40,276,236,85.5,published_ratio+observed_max,526635,"['AB', 'ABGTN']",2026-09-14
+British,bss_voorhees,"Voorhees Township, NJ",British Swim School - Echelon Health and Fitness Voorhees,115,47,114,361,247,68.4,published_ratio+observed_max,526635,['EF'],2026-09-14
+British,bss_ocotillo,"Chandler, AZ",British Swim School - EoS Fitness Ocotillo Gilbert,53,10,101,214,113,52.8,published_ratio+observed_max,548617,['EOSOCT'],2026-09-14
+British,bss_chandler_ray,"Chandler, AZ",British Swim School - EoS Fitness Chandler Ray and Rural,42,8,81,169,88,52.1,published_ratio+observed_max,548617,['EOSRAY'],2026-09-14
+British,bss_lehi_draper,"Draper, UT",British Swim School - Lehi-Draper,61,18,91,248,157,63.3,published_ratio+observed_max,548998,['DIVDRA'],2026-09-14
+British,bss_lenox_buckhead,"Atlanta, GA",British Swim School - LA Fitness Lenox/Buckhead,19,0,36,76,40,52.6,published_ratio+observed_max,526069,['Buckhead'],2026-09-14
+British,bss_shelby,"Shelby Township, MI",British Swim School - LA Fitness Shelby,93,44,110,378,268,70.9,published_ratio+observed_max,547058,['LAF'],2026-09-14
+British,bss_cliffside_park,"Cliffside Park, NJ",British Swim School - Cliffside Park,115,49,164,428,264,61.7,published_ratio+observed_max,530108,cliffsi,2026-09-14
+British,bss_winchester_maplewood,"Maplewood, NJ",British Swim School - Winchester Gardens Maplewood,77,26,115,312,197,63.1,published_ratio+observed_max,530108,SHMAPLE,2026-09-14
+British,bss_home2_ewr,"Newark, NJ",British Swim School - Home2 Suites Newark Route 1&9,50,5,136,209,73,34.9,published_ratio+observed_max,530108,newhot,2026-09-14
+British,bss_livrite_fishers,"Fishers, IN",British Swim School - LivRite Fitness Fishers,36,7,84,150,66,44.0,published_ratio+observed_max,534305,['LivRite'],2026-09-14
+British,bss_pembroke_pines,"Pembroke Pines, FL",British Swim School - Pembroke Pines,67,2,203,283,80,28.3,published_ratio+observed_max,515732,['BSSPINES'],2026-09-14
+British,bss_north_miami_beach,"Miami, FL",British Swim School - LA Fitness North Miami Beach,32,4,80,133,53,39.8,published_ratio+observed_max,515732,['LAMIAG'],2026-09-14
+British,bss_collegeville,"Collegeville, PA",British Swim School - Courtyard Marriott Collegeville,38,9,68,142,74,52.1,published_ratio+observed_max,545910,['HTCYCOL'],2026-09-14
+British,bss_pineville_matthews,"Charlotte, NC",British Swim School - Pineville Matthews Charlotte,15,5,27,56,29,51.8,published_ratio+observed_max,543485,['PROVHS'],2026-09-14
+British,bss_allen_fairview,"McKinney, TX",British Swim School - 24 HR Fitness Allen/Fairview,142,27,324,587,263,44.8,published_ratio+observed_max,549004,,2026-09-14
+British,bss_austin_nw,"Austin, TX",British Swim School - 24 Hour Fitness Austin NW,20,3,37,96,59,61.5,published_ratio+observed_max,529039,24-NW,2026-09-14
+British,bss_wexford,"Wexford, PA",British Swim School - Woodlands Foundation Wexford,81,15,166,538,372,69.1,published_ratio+observed_max,517761,WOOLND,2026-09-14
+British,bss_valencia,"Valencia, PA",British Swim School - St. Barnabas Crystal Conservatories Valencia,43,9,96,269,173,64.3,published_ratio+observed_max,517761,STBARN,2026-09-14
+British,bss_gibsonia,"Gibsonia, PA",British Swim School - Wildwood Hampton Township,54,21,82,364,282,77.5,published_ratio+observed_max,517761,WILDWD,2026-09-14

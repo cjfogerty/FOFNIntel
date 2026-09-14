@@ -74,13 +74,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 358,
-            "derived_capacity": 481,
-            "est_utilization_pct": 74.4,
-            "classes": 141,
-            "classes_waitlisted": 63,
+            "est_enrolled": 386,
+            "derived_capacity": 471,
+            "est_utilization_pct": 82.0,
+            "classes": 139,
+            "classes_waitlisted": 78,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -106,13 +106,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 406,
-            "derived_capacity": 528,
-            "est_utilization_pct": 76.9,
-            "classes": 162,
-            "classes_waitlisted": 85,
+            "est_enrolled": 407,
+            "derived_capacity": 520,
+            "est_utilization_pct": 78.3,
+            "classes": 160,
+            "classes_waitlisted": 89,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -134,13 +134,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 582,
-            "derived_capacity": 680,
-            "est_utilization_pct": 85.6,
-            "classes": 209,
-            "classes_waitlisted": 143,
+            "est_enrolled": 587,
+            "derived_capacity": 683,
+            "est_utilization_pct": 85.9,
+            "classes": 210,
+            "classes_waitlisted": 145,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -170,13 +170,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 396,
-            "derived_capacity": 487,
-            "est_utilization_pct": 81.3,
-            "classes": 151,
-            "classes_waitlisted": 86,
+            "est_enrolled": 402,
+            "derived_capacity": 494,
+            "est_utilization_pct": 81.4,
+            "classes": 155,
+            "classes_waitlisted": 91,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -194,13 +194,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 449,
-            "derived_capacity": 575,
-            "est_utilization_pct": 78.1,
-            "classes": 166,
-            "classes_waitlisted": 88,
+            "est_enrolled": 459,
+            "derived_capacity": 556,
+            "est_utilization_pct": 82.6,
+            "classes": 162,
+            "classes_waitlisted": 96,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -218,13 +218,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 559,
-            "derived_capacity": 697,
-            "est_utilization_pct": 80.2,
-            "classes": 209,
-            "classes_waitlisted": 111,
+            "est_enrolled": 561,
+            "derived_capacity": 700,
+            "est_utilization_pct": 80.1,
+            "classes": 210,
+            "classes_waitlisted": 115,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -242,13 +242,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 428,
-            "derived_capacity": 531,
-            "est_utilization_pct": 80.6,
-            "classes": 157,
-            "classes_waitlisted": 92,
+            "est_enrolled": 429,
+            "derived_capacity": 526,
+            "est_utilization_pct": 81.6,
+            "classes": 156,
+            "classes_waitlisted": 97,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -354,13 +354,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 73,
-            "derived_capacity": 115,
-            "est_utilization_pct": 63.5,
+            "est_enrolled": 119,
+            "derived_capacity": 167,
+            "est_utilization_pct": 71.3,
             "classes": 37,
             "classes_waitlisted": 17,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -378,13 +378,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 110,
-            "derived_capacity": 222,
-            "est_utilization_pct": 49.5,
-            "classes": 57,
-            "classes_waitlisted": 16,
+            "est_enrolled": 247,
+            "derived_capacity": 348,
+            "est_utilization_pct": 71.0,
+            "classes": 58,
+            "classes_waitlisted": 20,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -402,13 +402,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 163,
-            "derived_capacity": 365,
-            "est_utilization_pct": 44.7,
-            "classes": 79,
-            "classes_waitlisted": 6,
+            "est_enrolled": 299,
+            "derived_capacity": 488,
+            "est_utilization_pct": 61.3,
+            "classes": 73,
+            "classes_waitlisted": 4,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -445,13 +445,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 874,
-            "derived_capacity": 1195,
-            "est_utilization_pct": 73.1,
-            "classes": 309,
-            "classes_waitlisted": 161,
+            "est_enrolled": 880,
+            "derived_capacity": 1206,
+            "est_utilization_pct": 73.0,
+            "classes": 310,
+            "classes_waitlisted": 170,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -495,13 +495,13 @@
           ],
           "loc_filter": "['24MKTP']",
           "measured": {
-            "est_enrolled": 33,
-            "derived_capacity": 127,
-            "est_utilization_pct": 26.0,
-            "classes": 30,
+            "est_enrolled": 123,
+            "derived_capacity": 218,
+            "est_utilization_pct": 56.4,
+            "classes": 31,
             "classes_waitlisted": 4,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -547,13 +547,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 153,
-            "derived_capacity": 232,
-            "est_utilization_pct": 65.9,
-            "classes": 59,
-            "classes_waitlisted": 21,
+            "est_enrolled": 148,
+            "derived_capacity": 249,
+            "est_utilization_pct": 59.4,
+            "classes": 63,
+            "classes_waitlisted": 19,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -578,13 +578,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 44,
-            "derived_capacity": 67,
-            "est_utilization_pct": 65.7,
-            "classes": 19,
+            "est_enrolled": 50,
+            "derived_capacity": 71,
+            "est_utilization_pct": 70.4,
+            "classes": 20,
             "classes_waitlisted": 9,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -605,13 +605,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 64,
-            "derived_capacity": 113,
-            "est_utilization_pct": 56.6,
+            "est_enrolled": 68,
+            "derived_capacity": 112,
+            "est_utilization_pct": 60.7,
             "classes": 30,
-            "classes_waitlisted": 8,
+            "classes_waitlisted": 9,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -656,13 +656,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 235,
-            "derived_capacity": 405,
-            "est_utilization_pct": 58.0,
-            "classes": 101,
-            "classes_waitlisted": 13,
+            "est_enrolled": 233,
+            "derived_capacity": 401,
+            "est_utilization_pct": 58.1,
+            "classes": 100,
+            "classes_waitlisted": 14,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -733,13 +733,13 @@
           ],
           "loc_filter": "['JAG']",
           "measured": {
-            "est_enrolled": 169,
-            "derived_capacity": 217,
-            "est_utilization_pct": 77.9,
-            "classes": 62,
-            "classes_waitlisted": 32,
+            "est_enrolled": 172,
+            "derived_capacity": 213,
+            "est_utilization_pct": 80.8,
+            "classes": 61,
+            "classes_waitlisted": 33,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -760,13 +760,13 @@
           ],
           "loc_filter": "['LAB']",
           "measured": {
-            "est_enrolled": 266,
-            "derived_capacity": 375,
-            "est_utilization_pct": 70.9,
-            "classes": 97,
-            "classes_waitlisted": 36,
+            "est_enrolled": 265,
+            "derived_capacity": 373,
+            "est_utilization_pct": 71.0,
+            "classes": 96,
+            "classes_waitlisted": 38,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -783,13 +783,13 @@
           ],
           "loc_filter": "['AB', 'ABGTN']",
           "measured": {
-            "est_enrolled": 232,
-            "derived_capacity": 278,
-            "est_utilization_pct": 83.5,
-            "classes": 76,
-            "classes_waitlisted": 45,
+            "est_enrolled": 236,
+            "derived_capacity": 276,
+            "est_utilization_pct": 85.5,
+            "classes": 75,
+            "classes_waitlisted": 47,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -806,13 +806,13 @@
           ],
           "loc_filter": "['KL']",
           "measured": {
-            "est_enrolled": 195,
-            "derived_capacity": 248,
-            "est_utilization_pct": 78.6,
-            "classes": 68,
-            "classes_waitlisted": 35,
+            "est_enrolled": 198,
+            "derived_capacity": 244,
+            "est_utilization_pct": 81.1,
+            "classes": 67,
+            "classes_waitlisted": 40,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -830,13 +830,13 @@
           ],
           "loc_filter": "['EF']",
           "measured": {
-            "est_enrolled": 249,
-            "derived_capacity": 369,
-            "est_utilization_pct": 67.5,
-            "classes": 118,
+            "est_enrolled": 247,
+            "derived_capacity": 361,
+            "est_utilization_pct": 68.4,
+            "classes": 115,
             "classes_waitlisted": 47,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -869,13 +869,13 @@
           ],
           "loc_filter": "['LAF-NB']",
           "measured": {
-            "est_enrolled": 57,
-            "derived_capacity": 113,
-            "est_utilization_pct": 50.4,
-            "classes": 27,
+            "est_enrolled": 58,
+            "derived_capacity": 117,
+            "est_utilization_pct": 49.6,
+            "classes": 28,
             "classes_waitlisted": 12,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -910,13 +910,23 @@
           "lma_site_name": "British Swim School - Courtyard Marriott Collegeville",
           "city": "Collegeville",
           "state": "PA",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Paoli",
               "distance_mi": 8.23
             }
-          ]
+          ],
+          "loc_filter": "['HTCYCOL']",
+          "measured": {
+            "est_enrolled": 74,
+            "derived_capacity": 142,
+            "est_utilization_pct": 52.1,
+            "classes": 38,
+            "classes_waitlisted": 9,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         }
       ]
     },
@@ -949,13 +959,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 190,
-            "derived_capacity": 360,
-            "est_utilization_pct": 52.8,
+            "est_enrolled": 372,
+            "derived_capacity": 538,
+            "est_utilization_pct": 69.1,
             "classes": 81,
-            "classes_waitlisted": 13,
+            "classes_waitlisted": 15,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -972,13 +982,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 93,
-            "derived_capacity": 191,
-            "est_utilization_pct": 48.7,
+            "est_enrolled": 173,
+            "derived_capacity": 269,
+            "est_utilization_pct": 64.3,
             "classes": 43,
             "classes_waitlisted": 9,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -995,13 +1005,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 142,
-            "derived_capacity": 236,
-            "est_utilization_pct": 60.2,
+            "est_enrolled": 282,
+            "derived_capacity": 364,
+            "est_utilization_pct": 77.5,
             "classes": 54,
-            "classes_waitlisted": 17,
+            "classes_waitlisted": 21,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -1034,13 +1044,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 179,
-            "derived_capacity": 308,
-            "est_utilization_pct": 58.1,
+            "est_enrolled": 188,
+            "derived_capacity": 314,
+            "est_utilization_pct": 59.9,
             "classes": 96,
             "classes_waitlisted": 44,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -1058,13 +1068,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 18,
+            "est_enrolled": 17,
             "derived_capacity": 40,
-            "est_utilization_pct": 45.0,
+            "est_utilization_pct": 42.5,
             "classes": 11,
-            "classes_waitlisted": 3,
+            "classes_waitlisted": 1,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -1072,14 +1082,24 @@
           "lma_site_name": "British Swim School - Pineville Matthews Charlotte",
           "city": "Charlotte",
           "state": "NC",
-          "status": "roster_absent",
+          "status": "live",
           "note": "LMA address 1800 Pineville Matthews Rd does not match any entry on org 543485's active roster. Possibly closed, renamed, or absorbed into 'Matthews/Arboretum Providence HS'. VERIFY before counting as a live competitor.",
           "bbss": [
             {
               "location": "Charlotte - Pineville",
               "distance_mi": 5.15
             }
-          ]
+          ],
+          "loc_filter": "['PROVHS']",
+          "measured": {
+            "est_enrolled": 29,
+            "derived_capacity": 56,
+            "est_utilization_pct": 51.8,
+            "classes": 15,
+            "classes_waitlisted": 5,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         },
         {
           "slug": "bss_charlotte_tryon",
@@ -1096,13 +1116,13 @@
           ],
           "loc_filter": "['EMBTRY']",
           "measured": {
-            "est_enrolled": 12,
+            "est_enrolled": 11,
             "derived_capacity": 16,
-            "est_utilization_pct": 75.0,
+            "est_utilization_pct": 68.8,
             "classes": 4,
-            "classes_waitlisted": 2,
+            "classes_waitlisted": 1,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -1149,13 +1169,23 @@
           "lma_site_name": "British Swim School - Cliffside Park",
           "city": "Cliffside Park",
           "state": "NJ",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Paramus",
               "distance_mi": 9.49
             }
-          ]
+          ],
+          "loc_filter": "cliffsi",
+          "measured": {
+            "est_enrolled": 264,
+            "derived_capacity": 428,
+            "est_utilization_pct": 61.7,
+            "classes": 115,
+            "classes_waitlisted": 49,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         }
       ]
     },
@@ -1236,13 +1266,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 83,
-            "derived_capacity": 172,
-            "est_utilization_pct": 48.3,
-            "classes": 43,
-            "classes_waitlisted": 4,
+            "est_enrolled": 88,
+            "derived_capacity": 169,
+            "est_utilization_pct": 52.1,
+            "classes": 42,
+            "classes_waitlisted": 8,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         },
         {
@@ -1259,13 +1289,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 114,
-            "derived_capacity": 219,
-            "est_utilization_pct": 52.1,
-            "classes": 54,
-            "classes_waitlisted": 9,
+            "est_enrolled": 113,
+            "derived_capacity": 214,
+            "est_utilization_pct": 52.8,
+            "classes": 53,
+            "classes_waitlisted": 10,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -1299,13 +1329,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 68,
-            "derived_capacity": 127,
-            "est_utilization_pct": 53.5,
+            "est_enrolled": 124,
+            "derived_capacity": 183,
+            "est_utilization_pct": 67.8,
             "classes": 28,
-            "classes_waitlisted": 3,
+            "classes_waitlisted": 5,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-07"
+            "observed_date": "2026-09-14"
           }
         }
       ]
@@ -1369,7 +1399,7 @@
           "lma_site_name": "British Swim School - Lehi-Draper",
           "city": "Draper",
           "state": "UT",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Cottonwood Heights",
@@ -1379,7 +1409,17 @@
               "location": "Saratoga Springs",
               "distance_mi": 9.98
             }
-          ]
+          ],
+          "loc_filter": "['DIVDRA']",
+          "measured": {
+            "est_enrolled": 157,
+            "derived_capacity": 248,
+            "est_utilization_pct": 63.3,
+            "classes": 61,
+            "classes_waitlisted": 18,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         }
       ]
     },
@@ -1442,65 +1482,115 @@
           "lma_site_name": "British Swim School - 24 HR Fitness Allen/Fairview",
           "city": "McKinney",
           "state": "TX",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Allen",
               "distance_mi": 5.17
             }
-          ]
+          ],
+          "loc_filter": "",
+          "measured": {
+            "est_enrolled": 263,
+            "derived_capacity": 587,
+            "est_utilization_pct": 44.8,
+            "classes": 142,
+            "classes_waitlisted": 27,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         },
         {
           "slug": "bss_austin_nw",
           "lma_site_name": "British Swim School - 24 Hour Fitness Austin NW",
           "city": "Austin",
           "state": "TX",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Austin - Central",
               "distance_mi": 5.47
             }
-          ]
+          ],
+          "loc_filter": "24-NW",
+          "measured": {
+            "est_enrolled": 59,
+            "derived_capacity": 96,
+            "est_utilization_pct": 61.5,
+            "classes": 20,
+            "classes_waitlisted": 3,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         },
         {
           "slug": "bss_shelby",
           "lma_site_name": "British Swim School - LA Fitness Shelby",
           "city": "Shelby Township",
           "state": "MI",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Sterling Heights",
               "distance_mi": 8.06
             }
-          ]
+          ],
+          "loc_filter": "['LAF']",
+          "measured": {
+            "est_enrolled": 268,
+            "derived_capacity": 378,
+            "est_utilization_pct": 70.9,
+            "classes": 93,
+            "classes_waitlisted": 44,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         },
         {
           "slug": "bss_pembroke_pines",
           "lma_site_name": "British Swim School - Pembroke Pines",
           "city": "Pembroke Pines",
           "state": "FL",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Pembroke Pines",
               "distance_mi": 6.85
             }
-          ]
+          ],
+          "loc_filter": "['BSSPINES']",
+          "measured": {
+            "est_enrolled": 80,
+            "derived_capacity": 283,
+            "est_utilization_pct": 28.3,
+            "classes": 67,
+            "classes_waitlisted": 2,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         },
         {
           "slug": "bss_north_miami_beach",
           "lma_site_name": "British Swim School - LA Fitness North Miami Beach",
           "city": "Miami",
           "state": "FL",
-          "status": "needs_org_id",
+          "status": "live",
           "bbss": [
             {
               "location": "Pembroke Pines",
               "distance_mi": 9.37
             }
-          ]
+          ],
+          "loc_filter": "['LAMIAG']",
+          "measured": {
+            "est_enrolled": 53,
+            "derived_capacity": 133,
+            "est_utilization_pct": 39.8,
+            "classes": 32,
+            "classes_waitlisted": 4,
+            "capacity_basis": "published_ratio+observed_max",
+            "observed_date": "2026-09-14"
+          }
         },
         {
           "slug": "bss_lawrence_ywca",
