@@ -74,13 +74,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 386,
-            "derived_capacity": 471,
-            "est_utilization_pct": 82.0,
-            "classes": 139,
-            "classes_waitlisted": 78,
+            "est_enrolled": 383,
+            "derived_capacity": 488,
+            "est_utilization_pct": 78.5,
+            "classes": 140,
+            "classes_waitlisted": 71,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -106,13 +106,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 407,
-            "derived_capacity": 520,
-            "est_utilization_pct": 78.3,
-            "classes": 160,
-            "classes_waitlisted": 89,
+            "est_enrolled": 427,
+            "derived_capacity": 536,
+            "est_utilization_pct": 79.7,
+            "classes": 162,
+            "classes_waitlisted": 95,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -134,13 +134,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 587,
-            "derived_capacity": 683,
-            "est_utilization_pct": 85.9,
-            "classes": 210,
-            "classes_waitlisted": 145,
+            "est_enrolled": 606,
+            "derived_capacity": 703,
+            "est_utilization_pct": 86.2,
+            "classes": 206,
+            "classes_waitlisted": 139,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -170,13 +170,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 402,
-            "derived_capacity": 494,
-            "est_utilization_pct": 81.4,
+            "est_enrolled": 431,
+            "derived_capacity": 514,
+            "est_utilization_pct": 83.9,
             "classes": 155,
-            "classes_waitlisted": 91,
+            "classes_waitlisted": 97,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -194,13 +194,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 459,
-            "derived_capacity": 556,
-            "est_utilization_pct": 82.6,
-            "classes": 162,
-            "classes_waitlisted": 96,
+            "est_enrolled": 457,
+            "derived_capacity": 543,
+            "est_utilization_pct": 84.2,
+            "classes": 156,
+            "classes_waitlisted": 95,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -218,13 +218,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 561,
-            "derived_capacity": 700,
-            "est_utilization_pct": 80.1,
-            "classes": 210,
-            "classes_waitlisted": 115,
+            "est_enrolled": 593,
+            "derived_capacity": 725,
+            "est_utilization_pct": 81.8,
+            "classes": 211,
+            "classes_waitlisted": 119,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -242,13 +242,13 @@
           ],
           "loc_code_verified": "2026-08-29 against the live feed",
           "measured": {
-            "est_enrolled": 429,
-            "derived_capacity": 526,
-            "est_utilization_pct": 81.6,
-            "classes": 156,
+            "est_enrolled": 446,
+            "derived_capacity": 547,
+            "est_utilization_pct": 81.5,
+            "classes": 160,
             "classes_waitlisted": 97,
             "capacity_basis": "observed_max_only",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -354,13 +354,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 119,
+            "est_enrolled": 123,
             "derived_capacity": 167,
-            "est_utilization_pct": 71.3,
+            "est_utilization_pct": 73.7,
             "classes": 37,
-            "classes_waitlisted": 17,
+            "classes_waitlisted": 18,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -378,13 +378,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 247,
-            "derived_capacity": 348,
-            "est_utilization_pct": 71.0,
-            "classes": 58,
-            "classes_waitlisted": 20,
+            "est_enrolled": 234,
+            "derived_capacity": 343,
+            "est_utilization_pct": 68.2,
+            "classes": 59,
+            "classes_waitlisted": 22,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -402,13 +402,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 299,
-            "derived_capacity": 488,
-            "est_utilization_pct": 61.3,
+            "est_enrolled": 296,
+            "derived_capacity": 497,
+            "est_utilization_pct": 59.6,
             "classes": 73,
             "classes_waitlisted": 4,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -445,13 +445,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 880,
-            "derived_capacity": 1206,
-            "est_utilization_pct": 73.0,
-            "classes": 310,
-            "classes_waitlisted": 170,
+            "est_enrolled": 884,
+            "derived_capacity": 1196,
+            "est_utilization_pct": 73.9,
+            "classes": 307,
+            "classes_waitlisted": 158,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -495,13 +495,13 @@
           ],
           "loc_filter": "['24MKTP']",
           "measured": {
-            "est_enrolled": 123,
+            "est_enrolled": 122,
             "derived_capacity": 218,
-            "est_utilization_pct": 56.4,
+            "est_utilization_pct": 56.0,
             "classes": 31,
-            "classes_waitlisted": 4,
+            "classes_waitlisted": 3,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -547,13 +547,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 148,
+            "est_enrolled": 151,
             "derived_capacity": 249,
-            "est_utilization_pct": 59.4,
+            "est_utilization_pct": 60.6,
             "classes": 63,
             "classes_waitlisted": 19,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -584,7 +584,7 @@
             "classes": 20,
             "classes_waitlisted": 9,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -605,13 +605,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 68,
+            "est_enrolled": 71,
             "derived_capacity": 112,
-            "est_utilization_pct": 60.7,
+            "est_utilization_pct": 63.4,
             "classes": 30,
-            "classes_waitlisted": 9,
+            "classes_waitlisted": 10,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -656,13 +656,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 233,
+            "est_enrolled": 245,
             "derived_capacity": 401,
-            "est_utilization_pct": 58.1,
+            "est_utilization_pct": 61.1,
             "classes": 100,
-            "classes_waitlisted": 14,
+            "classes_waitlisted": 13,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -733,13 +733,13 @@
           ],
           "loc_filter": "['JAG']",
           "measured": {
-            "est_enrolled": 172,
-            "derived_capacity": 213,
-            "est_utilization_pct": 80.8,
-            "classes": 61,
-            "classes_waitlisted": 33,
+            "est_enrolled": 169,
+            "derived_capacity": 210,
+            "est_utilization_pct": 80.5,
+            "classes": 60,
+            "classes_waitlisted": 34,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -760,13 +760,13 @@
           ],
           "loc_filter": "['LAB']",
           "measured": {
-            "est_enrolled": 265,
+            "est_enrolled": 264,
             "derived_capacity": 373,
-            "est_utilization_pct": 71.0,
+            "est_utilization_pct": 70.8,
             "classes": 96,
-            "classes_waitlisted": 38,
+            "classes_waitlisted": 34,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -783,13 +783,13 @@
           ],
           "loc_filter": "['AB', 'ABGTN']",
           "measured": {
-            "est_enrolled": 236,
-            "derived_capacity": 276,
-            "est_utilization_pct": 85.5,
-            "classes": 75,
+            "est_enrolled": 234,
+            "derived_capacity": 270,
+            "est_utilization_pct": 86.7,
+            "classes": 74,
             "classes_waitlisted": 47,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -806,13 +806,13 @@
           ],
           "loc_filter": "['KL']",
           "measured": {
-            "est_enrolled": 198,
+            "est_enrolled": 195,
             "derived_capacity": 244,
-            "est_utilization_pct": 81.1,
+            "est_utilization_pct": 79.9,
             "classes": 67,
-            "classes_waitlisted": 40,
+            "classes_waitlisted": 35,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -830,13 +830,13 @@
           ],
           "loc_filter": "['EF']",
           "measured": {
-            "est_enrolled": 247,
-            "derived_capacity": 361,
-            "est_utilization_pct": 68.4,
-            "classes": 115,
-            "classes_waitlisted": 47,
+            "est_enrolled": 256,
+            "derived_capacity": 358,
+            "est_utilization_pct": 71.5,
+            "classes": 114,
+            "classes_waitlisted": 51,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -869,13 +869,13 @@
           ],
           "loc_filter": "['LAF-NB']",
           "measured": {
-            "est_enrolled": 58,
-            "derived_capacity": 117,
-            "est_utilization_pct": 49.6,
+            "est_enrolled": 60,
+            "derived_capacity": 119,
+            "est_utilization_pct": 50.4,
             "classes": 28,
-            "classes_waitlisted": 12,
+            "classes_waitlisted": 13,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -919,13 +919,13 @@
           ],
           "loc_filter": "['HTCYCOL']",
           "measured": {
-            "est_enrolled": 74,
+            "est_enrolled": 86,
             "derived_capacity": 142,
-            "est_utilization_pct": 52.1,
+            "est_utilization_pct": 60.6,
             "classes": 38,
-            "classes_waitlisted": 9,
+            "classes_waitlisted": 12,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -959,13 +959,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 372,
+            "est_enrolled": 374,
             "derived_capacity": 538,
-            "est_utilization_pct": 69.1,
+            "est_utilization_pct": 69.5,
             "classes": 81,
-            "classes_waitlisted": 15,
+            "classes_waitlisted": 16,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -986,9 +986,9 @@
             "derived_capacity": 269,
             "est_utilization_pct": 64.3,
             "classes": 43,
-            "classes_waitlisted": 9,
+            "classes_waitlisted": 8,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1005,13 +1005,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 282,
+            "est_enrolled": 277,
             "derived_capacity": 364,
-            "est_utilization_pct": 77.5,
+            "est_utilization_pct": 76.1,
             "classes": 54,
             "classes_waitlisted": 21,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -1044,13 +1044,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 188,
+            "est_enrolled": 190,
             "derived_capacity": 314,
-            "est_utilization_pct": 59.9,
-            "classes": 96,
-            "classes_waitlisted": 44,
+            "est_utilization_pct": 60.5,
+            "classes": 97,
+            "classes_waitlisted": 45,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1068,13 +1068,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 17,
+            "est_enrolled": 18,
             "derived_capacity": 40,
-            "est_utilization_pct": 42.5,
+            "est_utilization_pct": 45.0,
             "classes": 11,
-            "classes_waitlisted": 1,
+            "classes_waitlisted": 0,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1098,7 +1098,7 @@
             "classes": 15,
             "classes_waitlisted": 5,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1122,7 +1122,7 @@
             "classes": 4,
             "classes_waitlisted": 1,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -1178,13 +1178,13 @@
           ],
           "loc_filter": "cliffsi",
           "measured": {
-            "est_enrolled": 264,
-            "derived_capacity": 428,
-            "est_utilization_pct": 61.7,
+            "est_enrolled": 273,
+            "derived_capacity": 429,
+            "est_utilization_pct": 63.6,
             "classes": 115,
-            "classes_waitlisted": 49,
+            "classes_waitlisted": 46,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -1266,13 +1266,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 88,
-            "derived_capacity": 169,
-            "est_utilization_pct": 52.1,
-            "classes": 42,
-            "classes_waitlisted": 8,
+            "est_enrolled": 87,
+            "derived_capacity": 192,
+            "est_utilization_pct": 45.3,
+            "classes": 48,
+            "classes_waitlisted": 5,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1289,13 +1289,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 113,
-            "derived_capacity": 214,
-            "est_utilization_pct": 52.8,
-            "classes": 53,
-            "classes_waitlisted": 10,
+            "est_enrolled": 120,
+            "derived_capacity": 225,
+            "est_utilization_pct": 53.3,
+            "classes": 56,
+            "classes_waitlisted": 8,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -1329,13 +1329,13 @@
             }
           ],
           "measured": {
-            "est_enrolled": 124,
+            "est_enrolled": 123,
             "derived_capacity": 183,
-            "est_utilization_pct": 67.8,
+            "est_utilization_pct": 67.2,
             "classes": 28,
-            "classes_waitlisted": 5,
+            "classes_waitlisted": 4,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -1412,13 +1412,13 @@
           ],
           "loc_filter": "['DIVDRA']",
           "measured": {
-            "est_enrolled": 157,
-            "derived_capacity": 248,
-            "est_utilization_pct": 63.3,
-            "classes": 61,
-            "classes_waitlisted": 18,
+            "est_enrolled": 168,
+            "derived_capacity": 260,
+            "est_utilization_pct": 64.6,
+            "classes": 64,
+            "classes_waitlisted": 22,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         }
       ]
@@ -1492,12 +1492,12 @@
           "loc_filter": "",
           "measured": {
             "est_enrolled": 263,
-            "derived_capacity": 587,
-            "est_utilization_pct": 44.8,
+            "derived_capacity": 588,
+            "est_utilization_pct": 44.7,
             "classes": 142,
-            "classes_waitlisted": 27,
+            "classes_waitlisted": 24,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1514,13 +1514,13 @@
           ],
           "loc_filter": "24-NW",
           "measured": {
-            "est_enrolled": 59,
-            "derived_capacity": 96,
-            "est_utilization_pct": 61.5,
-            "classes": 20,
-            "classes_waitlisted": 3,
+            "est_enrolled": 60,
+            "derived_capacity": 94,
+            "est_utilization_pct": 63.8,
+            "classes": 21,
+            "classes_waitlisted": 6,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1537,13 +1537,13 @@
           ],
           "loc_filter": "['LAF']",
           "measured": {
-            "est_enrolled": 268,
-            "derived_capacity": 378,
-            "est_utilization_pct": 70.9,
-            "classes": 93,
-            "classes_waitlisted": 44,
+            "est_enrolled": 265,
+            "derived_capacity": 373,
+            "est_utilization_pct": 71.0,
+            "classes": 92,
+            "classes_waitlisted": 43,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1560,13 +1560,13 @@
           ],
           "loc_filter": "['BSSPINES']",
           "measured": {
-            "est_enrolled": 80,
-            "derived_capacity": 283,
-            "est_utilization_pct": 28.3,
-            "classes": 67,
-            "classes_waitlisted": 2,
+            "est_enrolled": 82,
+            "derived_capacity": 262,
+            "est_utilization_pct": 31.3,
+            "classes": 65,
+            "classes_waitlisted": 4,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
@@ -1583,13 +1583,13 @@
           ],
           "loc_filter": "['LAMIAG']",
           "measured": {
-            "est_enrolled": 53,
-            "derived_capacity": 133,
-            "est_utilization_pct": 39.8,
-            "classes": 32,
-            "classes_waitlisted": 4,
+            "est_enrolled": 55,
+            "derived_capacity": 137,
+            "est_utilization_pct": 40.1,
+            "classes": 33,
+            "classes_waitlisted": 3,
             "capacity_basis": "published_ratio+observed_max",
-            "observed_date": "2026-09-14"
+            "observed_date": "2026-09-21"
           }
         },
         {
