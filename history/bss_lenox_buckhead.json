@@ -428,6 +428,105 @@
    },
    "source": "jackrabbit_public_openings",
    "capacity_basis": "published_ratio+observed_max"
+  },
+  {
+   "date": "2026-10-12",
+   "ts": "2026-10-12T21:20",
+   "label": "Oct 12",
+   "session": "Continuous enrollment",
+   "totals": {
+    "enrolled": 38,
+    "capacity": 84,
+    "utilization": 45.2
+   },
+   "slots": {
+    "Sat|10:00am - 10:30am|Adult 1 10:00 Saturday Buckhead": [
+     3,
+     4
+    ],
+    "Sat|11:00am - 11:30am|Adult 1 11:00 Saturday Buckhead": [
+     2,
+     4
+    ],
+    "Sun|11:30am - 12:00pm|Adult 1 11:30 Sunday Buckhead": [
+     3,
+     4
+    ],
+    "Mon|7:00pm - 7:30pm|Adult 1 7:00 Monday Buckhead": [
+     3,
+     4
+    ],
+    "Thu|7:00pm - 7:30pm|Adult 1 7:00 Thursday Buckhead": [
+     2,
+     4
+    ],
+    "Thu|6:00pm - 6:30pm|Adult 2 6:00 Thursday Buckhead": [
+     3,
+     4
+    ],
+    "Mon|6:30pm - 7:00pm|Adult 2 6:30 Monday Buckhead": [
+     3,
+     4
+    ],
+    "Mon|7:30pm - 8:00pm|Adult 2 7:30 Monday Buckhead": [
+     3,
+     4
+    ],
+    "Thu|7:30pm - 8:00pm|Adult 2 7:30 Thursday Buckhead": [
+     3,
+     4
+    ],
+    "Thu|8:00pm - 8:30pm|Adult 2 8:00 Thursday Buckhead": [
+     2,
+     4
+    ],
+    "Sun|9:00am - 9:30am|Adult 2 9:00 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Sat|9:00am - 9:30am|Seahorse 9:00 Saturday Buckhead": [
+     1,
+     4
+    ],
+    "Mon|5:30pm - 6:00pm|Shark 1 5:30 Monday Buckhead": [
+     1,
+     4
+    ],
+    "Tue|5:30pm - 6:00pm|Shark 2 5:30 Tuesday Buckhead": [
+     1,
+     4
+    ],
+    "Sun|10:30am - 11:00am|Starfish 10:30 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Mon|4:30pm - 5:00pm|Starfish 4:30 Monday Buckhead": [
+     1,
+     4
+    ],
+    "Thu|5:30pm - 6:00pm|Swimboree 5:30 Thursday Buckhead": [
+     1,
+     4
+    ],
+    "Sun|12:30pm - 1:00pm|Tadpole 12:30 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Sun|10:00am - 10:30am|Turtle 1 10:00 Sunday Buckhead": [
+     1,
+     4
+    ],
+    "Mon|5:00pm - 5:30pm|Turtle 1 5:00 Monday Buckhead": [
+     1,
+     4
+    ],
+    "Sat|10:30am - 11:00am|Turtle 2 10:30 Saturday Buckhead": [
+     1,
+     4
+    ]
+   },
+   "source": "jackrabbit_public_openings",
+   "capacity_basis": "published_ratio+observed_max"
   }
  ],
  "targets": {}
