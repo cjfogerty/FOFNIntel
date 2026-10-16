@@ -81,6 +81,8 @@ def main():
         has_camp = os.path.exists(camp_path)
         if has_camp:
             cmd += ['--camp-csv', camp_path]
+        else:
+            cmd += ['--no-camps']
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode == 0:
             updated.append(slug)
@@ -117,6 +119,16 @@ def main():
                 print('  ERR ' + f)
         except Exception as e:
             print('\nsession freeze ERR: ' + str(e))
+
+        # Pre-enrollment targets (80-85% of posted seats) for the session being
+        # pulled; recomputed until it starts, then locked. See build_targets.py.
+        try:
+            from build_targets import update_targets
+            print('\ntargets:')
+            for slug in updated:
+                print(f'  {slug}: {update_targets(slug)}')
+        except Exception as e:
+            print('\ntargets ERR: ' + str(e))
 
         # Regenerate the homepage cards + Enrollment Overview store from the
         # dashboards and history/, so the homepage can't drift from the location

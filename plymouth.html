@@ -554,7 +554,7 @@
                 <span style="letter-spacing:1px;">&#9679;&middot;&middot;&middot;&middot; pre-season pull (enrollment open, session not started)</span>
                 <span style="opacity:0.55;">&#9472;&#9472;&#9472; last value held (session still operating, no newer pull)</span>
                 <span id="trendSimKey" style="display:none;">&#9472; &#9472; simulated demo pull</span>
-                <span style="color:#b7791f;">&#9472;&#9472; target (80&ndash;85% of Fall seats offered)</span>
+                <span style="color:#b7791f;">&#9472;&#9472; target (80&ndash;85% of seats offered, 5 weeks after the session starts)</span>
             </div>
             <div class="chart-title" style="font-size:14px;margin-top:22px;margin-bottom:10px;">Biggest movers since previous pull <span style="font-weight:400;color:#718096;" id="trendMoversRange"></span></div>
             <table id="trendMoversTable"></table>
@@ -19012,7 +19012,9 @@
             if (d && meta) d.textContent = fmtShort(meta.start) + ' \u2013 ' + fmtLong(meta.end);
             if (op) {
                 if (isFrozen) op.textContent = 'Final \u2014 frozen at the ' + fmtLong(frozenDate) + ' pull';
-                else if (meta && meta.catalog_from) op.textContent = 'Enrollment opened ' + usDate(meta.catalog_from);
+                else if (meta && meta.catalog_from)
+                    op.textContent = (meta.catalog_from > new Date().toISOString().slice(0, 10)
+                                      ? 'Enrollment opens ' : 'Enrollment opened ') + usDate(meta.catalog_from);
             }
         }
 

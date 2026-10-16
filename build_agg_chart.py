@@ -40,7 +40,12 @@ TRUNC_RATIO = 0.95
 
 
 def _history_files(repo):
-    return sorted(glob.glob(os.path.join(repo, 'history', '*.json')))
+    # FOSS locations only. history/ also holds the Jackrabbit competitors'
+    # files (bss_*, bearpaddle_*), which used to leak into this chart as a
+    # "Continuous enrollment" line.
+    from update_all_from_api import SLUGS
+    return sorted(p for p in glob.glob(os.path.join(repo, 'history', '*.json'))
+                  if os.path.splitext(os.path.basename(p))[0] in SLUGS)
 
 
 def _carry_forward_truncated(snaps):

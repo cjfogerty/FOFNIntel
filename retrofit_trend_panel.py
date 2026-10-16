@@ -66,7 +66,7 @@ TREND_HTML = """
                 <span style="letter-spacing:1px;">&#9679;&middot;&middot;&middot;&middot; pre-season pull (enrollment open, session not started)</span>
                 <span style="opacity:0.55;">&#9472;&#9472;&#9472; last value held (session still operating, no newer pull)</span>
                 <span id="trendSimKey" style="display:none;">&#9472; &#9472; simulated demo pull</span>
-                <span style="color:#b7791f;">&#9472;&#9472; target (80&ndash;85% of Fall seats offered)</span>
+                <span style="color:#b7791f;">&#9472;&#9472; target (80&ndash;85% of seats offered, 5 weeks after the session starts)</span>
             </div>
             <div class="chart-title" style="font-size:14px;margin-top:22px;margin-bottom:10px;">Biggest movers since previous pull <span style="font-weight:400;color:#718096;" id="trendMoversRange"></span></div>
             <table id="trendMoversTable"></table>
@@ -117,7 +117,7 @@ TREND_JS = r"""
 
         // Enrollment targets: session name -> {totalSeats, targetLow, targetHigh, targetMid, targetLowPct, targetHighPct, targetDate}
         // Populated from a live pull of the session's posted class capacity
-        // (Total Slots) before/at enrollment open — see fall_2026_targets.json.
+        // (Total Slots) during pre-enrollment — see build_targets.py.
         const TARGETS = H.targets || {};
 
         // Pre-parse "Day|HH:MM|Level" slot keys once.

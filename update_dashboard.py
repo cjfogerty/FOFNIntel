@@ -685,6 +685,11 @@ def main():
         print(f"  Loaded {len(camp_raw_data)} camp rows")
         print("Computing camp analytics...")
         camp_analytics = compute_camp_analytics(camp_raw_data)
+    elif "--no-camps" in sys.argv:
+        # This pull returned no clinics: clear the last pull's, so a new
+        # session doesn't show the previous session's clinics under its name.
+        camp_raw_data = []
+        camp_analytics = compute_camp_analytics([])
 
     print(f"Updating HTML: {html_file}")
     update_html(html_file, raw_data, analytics, location,

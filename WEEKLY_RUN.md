@@ -62,6 +62,14 @@ Between quarters FOSS returns only a few Preview lessons per location.
 so a closed or not-yet-open catalog never overwrites the dashboard or history.
 Expect "catalog not open" skips and no daily commit until the new catalog opens.
 
+**Pre-enrollment targets are automatic.** `build_targets.py` (run by
+`update_all_from_api.py` after every pull) sets each location's target for the
+session being pulled: 80-85% of the seats it has posted, checked 5 weeks after
+the session starts. It's recomputed from each pull while the session is in
+pre-enrollment (as FOSS opens or pulls classes) and locked from the first pull
+on or after the session start. Fall 2026's targets were hand-built Jul 29 and
+are left as they are.
+
 Also bump `FALLBACK_SEASON_ID` in **foss_api_extract.js** to the new season's
 id (seasonIds increment by 1 each quarter — Winter/Spring/Summer/Fall). The
 API does NOT auto-correct a stale seasonId; it just returns 0 classes for an

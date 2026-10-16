@@ -219,7 +219,9 @@ FREEZE_JS = """    <script>
             if (d && meta) d.textContent = fmtShort(meta.start) + ' \\u2013 ' + fmtLong(meta.end);
             if (op) {
                 if (isFrozen) op.textContent = 'Final \\u2014 frozen at the ' + fmtLong(frozenDate) + ' pull';
-                else if (meta && meta.catalog_from) op.textContent = 'Enrollment opened ' + usDate(meta.catalog_from);
+                else if (meta && meta.catalog_from)
+                    op.textContent = (meta.catalog_from > new Date().toISOString().slice(0, 10)
+                                      ? 'Enrollment opens ' : 'Enrollment opened ') + usDate(meta.catalog_from);
             }
         }
 

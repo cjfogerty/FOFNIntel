@@ -125,13 +125,17 @@ def append_snapshot(slug, location, raw_data, history_dir, session=None, now=Non
     hist["snapshots"].append(snap)
     hist["snapshots"].sort(key=lambda s: s["date"])
 
-    with open(json_path, 'w', encoding='utf-8') as f:
+    write_history(history_dir, slug, hist)
+    return snap
+
+def write_history(history_dir, slug, hist):
+    """history/<slug>.json (canonical) + .js (what the dashboard loads)."""
+    with open(os.path.join(history_dir, f'{slug}.json'), 'w', encoding='utf-8') as f:
         json.dump(hist, f, ensure_ascii=False, separators=(',', ':'))
     with open(os.path.join(history_dir, f'{slug}.js'), 'w', encoding='utf-8') as f:
         f.write('const ENROLLMENT_HISTORY = ')
         json.dump(hist, f, ensure_ascii=False, separators=(',', ':'))
         f.write(';\n')
-    return snap
 
 def main():
     args = sys.argv[1:]
