@@ -116,7 +116,9 @@ FREEZE_JS = """    <script>
         // Newest COMPLETE pull for a session: walk back past any pull whose seat
         // count collapsed against the pull before it.
         function finalFor(snaps, session) {
-            var list = snaps.filter(function (s) { return s.session === session; });
+            // A session with a final_pull on the calendar is pinned to that pull.
+            var cut = (sessionMeta(session) || {}).final_pull;
+            var list = snaps.filter(function (s) { return s.session === session && (!cut || s.date <= cut); });
             if (!list.length) return null;
             for (var i = list.length - 1; i > 0; i--) {
                 if (list[i].totals.capacity >= list[i - 1].totals.capacity * TRUNC_RATIO)
@@ -221,7 +223,7 @@ FREEZE_JS = """    <script>
             }
         }
 
-        function tagLiveKpis(session) {
+        function tagLiveKpis(session, isFinal) {
             document.querySelectorAll('.headline-modals .headline-modal').forEach(function (el) {
                 var tag = el.querySelector('.modal-session');
                 if (!tag) {
@@ -229,7 +231,7 @@ FREEZE_JS = """    <script>
                     tag.className = 'modal-session';
                     el.insertBefore(tag, el.firstChild);
                 }
-                tag.innerHTML = session + ' &middot; live';
+                tag.innerHTML = session + ' &middot; ' + (isFinal ? 'final' : 'live');
             });
         }
 
@@ -260,7 +262,8 @@ FREEZE_JS = """    <script>
                 setSessionInfo(value, true, res ? res.snap.date : '');
                 syncTrend(value);
             } else {
-                setSessionInfo(live, false, '');
+                var liveFinal = (sessionMeta(live) || {}).final_pull;
+                setSessionInfo(live, !!liveFinal, liveFinal || '');
                 syncTrend(live);
             }
         }
@@ -289,7 +292,11 @@ FREEZE_JS = """    <script>
             sel.innerHTML = '';
             var o = document.createElement('option');
             o.value = 'live';
-            o.innerHTML = live + ' &mdash; Live (current pull)';
+            // Between quarters the newest session can already be final (Fall 2026
+            // after its Oct 11 pull, until the Winter catalog opens).
+            var liveFinal = (sessionMeta(live) || {}).final_pull;
+            o.innerHTML = live + (liveFinal ? ' &mdash; Final (' + fmtShort(liveFinal) + ')'
+                                            : ' &mdash; Live (current pull)');
             sel.appendChild(o);
             names.slice().reverse().forEach(function (name) {
                 if (name === live) return;
@@ -301,8 +308,8 @@ FREEZE_JS = """    <script>
                 sel.appendChild(op);
             });
 
-            tagLiveKpis(live);
-            setSessionInfo(live, false, '');
+            tagLiveKpis(live, !!liveFinal);
+            setSessionInfo(live, !!liveFinal, liveFinal || '');
             sel.value = 'live';
             sel.addEventListener('change', function () { setMode(sel.value, live); });
         }

@@ -339,7 +339,16 @@ def rebuild(index_path):
         for session in all_sessions:
             key, label = season_key(session), session.split()[0]
             active = ' is-active' if session == L['live'] else ''
-            if session == L['live']:
+            final_pull = next((m.get('final_pull') for m in sessions_meta if m['name'] == session), None)
+            if session == L['live'] and final_pull:
+                # Newest session is already final (Fall 2026 after Oct 11, until the
+                # Winter catalog opens): show it as closed, not as a live ramp.
+                snap = final_snapshot([s for s in L['snaps'] if s['date'] <= final_pull], session)
+                if snap:
+                    panels.append(frozen_panel(session, sessions_meta, snap,
+                                               (prev.get(session) or {}).get('camp', 0))
+                                  .replace(' hidden>', '>', 1))
+            elif session == L['live']:
                 panels.append(live_panel(session, sessions_meta, dash['date'], enrolled, seats,
                                          camp_e, camp_s, targets.get(session)))
             elif session in L['sessions']:

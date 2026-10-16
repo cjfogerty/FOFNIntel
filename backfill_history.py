@@ -57,7 +57,14 @@ SLUGS = {
 SESSIONS = [
     {"name": "Spring 2026", "start": "2026-03-16", "end": "2026-06-14", "catalog_from": "2026-01-01"},
     {"name": "Summer 2026", "start": "2026-06-15", "end": "2026-08-30", "catalog_from": "2026-05-12"},
-    {"name": "Fall 2026", "start": "2026-08-31", "end": "2026-11-29", "catalog_from": "2026-08-04"},
+    # final_pull: the last pull that counts for a session. Foss closed Fall to new
+    # enrollment after the Oct 11 pull (Oct 12+ pulls came back near-empty), so
+    # Fall is pinned there and no later snapshot is ever recorded under it.
+    {"name": "Fall 2026", "start": "2026-08-31", "end": "2026-11-29", "catalog_from": "2026-08-04",
+     "final_pull": "2026-10-11"},
+    # Foss moved its calendar for 2026-27: winter weekly lessons Nov 30 - Mar 12,
+    # pre-enrollment opens Oct 27 (fossswimschool.com/annual-calendar/).
+    {"name": "Winter 2027", "start": "2026-11-30", "end": "2027-03-12", "catalog_from": "2026-10-27"},
 ]
 
 CATEGORY_MAP = {
@@ -106,11 +113,13 @@ def parse_session(html, dt):
     m = re.search(r'session-info"><strong>([A-Za-z]+ \d{4}) Session', html)
     if m:
         return m.group(1)
-    d, best = dt.date().isoformat(), None
-    for s in SESSIONS:
+    d, i = dt.date().isoformat(), 0
+    for j, s in enumerate(SESSIONS):
         if s["catalog_from"] <= d:
-            best = s["name"]
-    return best or SESSIONS[0]["name"]
+            i = j
+    while SESSIONS[i].get("final_pull") and SESSIONS[i]["final_pull"] < d and i + 1 < len(SESSIONS):
+        i += 1
+    return SESSIONS[i]["name"]
 
 def extract_raw_data(html):
     m = re.search(r'const RAW_DATA = (\[.*?\]);', html, re.DOTALL)
@@ -136,7 +145,9 @@ def build_history(slug):
         except subprocess.CalledProcessError:
             continue
         raw = extract_raw_data(html)
-        if not raw:
+        # Closed / not-yet-open catalog: only Preview lessons come back (see
+        # append_history.has_regular_classes) -- never a real snapshot.
+        if not raw or all(str(r.get("Class Level", "")).startswith("Preview") for r in raw):
             continue
         dt = parse_extraction_dt(html, commit_iso)
         session = parse_session(html, dt)

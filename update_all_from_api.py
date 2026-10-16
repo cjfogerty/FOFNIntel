@@ -12,9 +12,12 @@ Usage:
 
 The slug<->facility map mirrors FACILITIES in foss_api_extract.js.
 """
+import csv
 import os
 import sys
 import subprocess
+
+from append_history import has_regular_classes
 
 # slug -> (facilityId, "Location Name, ST") for the 16 tracked dashboards
 SLUGS = {
@@ -66,6 +69,13 @@ def main():
             skipped.append((slug, 'no CSV')); continue
         if not os.path.exists(html_path):
             skipped.append((slug, 'no HTML')); continue
+        # Between quarters FOSS returns only a few Preview lessons (Fall closed
+        # after the Oct 11 2026 pull; Winter opens Oct 27). Leave the dashboard
+        # and history on the last real pull instead of overwriting with ~zeros.
+        with open(csv_path, encoding='utf-8-sig') as f:
+            rows = list(csv.DictReader(f))
+        if not has_regular_classes(rows):
+            skipped.append((slug, f'catalog not open ({len(rows)} preview-only rows)')); continue
         cmd = ['python3', os.path.join(repo, 'update_dashboard.py'),
                csv_path, html_path, '--location', location]
         has_camp = os.path.exists(camp_path)

@@ -26,16 +26,42 @@ from datetime import datetime
 SESSIONS = [
     {"name": "Spring 2026", "start": "2026-03-16", "end": "2026-06-14", "catalog_from": "2026-01-01"},
     {"name": "Summer 2026", "start": "2026-06-15", "end": "2026-08-30", "catalog_from": "2026-05-12"},
-    {"name": "Fall 2026", "start": "2026-08-31", "end": "2026-11-29", "catalog_from": "2026-08-04"},
+    # final_pull: the last pull that counts for a session. Foss closed Fall to new
+    # enrollment after the Oct 11 pull (Oct 12+ pulls came back near-empty), so
+    # Fall is pinned there and no later snapshot is ever recorded under it.
+    {"name": "Fall 2026", "start": "2026-08-31", "end": "2026-11-29", "catalog_from": "2026-08-04",
+     "final_pull": "2026-10-11"},
+    # Foss moved its calendar for 2026-27: winter weekly lessons Nov 30 - Mar 12,
+    # pre-enrollment opens Oct 27 (fossswimschool.com/annual-calendar/).
+    {"name": "Winter 2027", "start": "2026-11-30", "end": "2027-03-12", "catalog_from": "2026-10-27"},
 ]
 
 def infer_session(d=None):
+    """Latest session whose catalog has opened by date d. Once a session is past
+    its final_pull, pulls belong to the next session on the calendar instead."""
     d = d or datetime.now().date().isoformat()
-    best = SESSIONS[0]["name"]
-    for s in SESSIONS:
+    i = 0
+    for j, s in enumerate(SESSIONS):
         if s["catalog_from"] <= d:
-            best = s["name"]
-    return best
+            i = j
+    while SESSIONS[i].get("final_pull") and SESSIONS[i]["final_pull"] < d and i + 1 < len(SESSIONS):
+        i += 1
+    return SESSIONS[i]["name"]
+
+def is_closed(session, d):
+    """True when date d is after the session's final_pull -- nothing more may be
+    recorded under it."""
+    meta = next((s for s in SESSIONS if s["name"] == session), None)
+    return bool(meta and meta.get("final_pull") and meta["final_pull"] < d)
+
+def has_regular_classes(raw_data):
+    """False for a catalog that is closed or not yet open: FOSS then returns only
+    a handful of Preview lessons (Fall, Oct 12-15 2026). Recording that would
+    overwrite real numbers with near-zeros."""
+    return any(not str(r.get("Class Level", "")).startswith("Preview") for r in raw_data)
+
+def _final(session):
+    return next((s.get("final_pull") for s in SESSIONS if s["name"] == session), None)
 
 def time_to_slot(t):
     t = t.strip()
@@ -85,6 +111,9 @@ def append_snapshot(slug, location, raw_data, history_dir, session=None, now=Non
         hist = {"location": location, "slug": slug, "sessions": SESSIONS, "snapshots": []}
 
     snap = build_snapshot(raw_data, session=session, now=now)
+    if is_closed(snap["session"], snap["date"]):
+        raise ValueError(f'{snap["session"]} is final as of its {_final(snap["session"])} pull; '
+                         f'refusing to record a {snap["date"]} snapshot under it')
     hist["sessions"] = SESSIONS  # keep the calendar current
     # Dedup on (date, session) rather than date alone: during a session
     # transition (e.g. Aug 2026, Summer still running while Fall ramps up

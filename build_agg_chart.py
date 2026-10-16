@@ -57,7 +57,11 @@ def _carry_forward_truncated(snaps):
         if enrolled == 0 and capacity == 0:
             continue  # failed/empty pull for this location that day -- don't count it
         prev = last_good.get(session)
-        if prev and capacity < prev[1] * TRUNC_RATIO:
+        # Truncation drops enrolled students along with seats. Seats alone falling
+        # is FOSS cancelling unfilled classes after a session starts -- a real
+        # change; treating it as truncation froze Blaine at an Aug pull (1,237 vs
+        # 2,132 enrolled on Oct 11) and understated the Fall total by ~4,000.
+        if prev and capacity < prev[1] * TRUNC_RATIO and enrolled < prev[0] * TRUNC_RATIO:
             yield session, date, prev[0], prev[1]
             continue
         last_good[session] = (enrolled, capacity)
@@ -86,6 +90,7 @@ def find_core_slugs(repo):
 def build_series(repo, only_slugs=None):
     # (session, date) -> {enrolled, capacity, locations}
     buckets = {}
+    last = {}  # (slug, session) -> (date, enrolled, capacity) of its newest pull
     for path in _history_files(repo):
         slug = os.path.splitext(os.path.basename(path))[0]
         if only_slugs is not None and slug not in only_slugs:
@@ -101,6 +106,20 @@ def build_series(repo, only_slugs=None):
             b['enrolled'] += enrolled
             b['capacity'] += capacity
             b['locations'] += 1
+            last[(slug, session)] = (date, enrolled, capacity)
+
+    # A finalized session's total must count every location, including one whose
+    # catalog closed early (Libertyville: last real Fall pull Oct 4). Hold each
+    # location's last pull through the session's final_pull.
+    finals = {s['name']: s['final_pull'] for s in SESSIONS if s.get('final_pull')}
+    for (slug, session), (last_date, enrolled, capacity) in last.items():
+        if session not in finals:
+            continue
+        for (sess, date), b in buckets.items():
+            if sess == session and last_date < date <= finals[session]:
+                b['enrolled'] += enrolled
+                b['capacity'] += capacity
+                b['locations'] += 1
 
     series = {}
     for (session, date), b in buckets.items():

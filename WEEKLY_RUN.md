@@ -46,6 +46,22 @@ enrollment-open date. The dashboards' "Enrollment Over Time" panel uses this
 calendar for its session selector, pre-season (dotted) styling, and
 held-value carry-forward at session changeover.
 
+To close out the outgoing session, give its `SESSIONS` entry a `final_pull`
+date (the last pull that counts). Nothing is recorded under it after that date,
+pulls fall through to the next session on the calendar, and the dashboards
+label it "Final (<date>)" instead of "Live". Fall 2026 is final as of
+2026-10-11; Winter 2027 (weekly Nov 30 - Mar 12, pre-enrollment Oct 27) is the
+session now being pulled.
+
+Set the season being pulled with `FOSS_SEASON_ID` in
+**.github/workflows/refresh-foss.yml** (101 = Winter 2026-27), and keep the
+fallback in **foss_api_extract.py** matching.
+
+Between quarters FOSS returns only a few Preview lessons per location.
+`update_all_from_api.py` skips any location whose pull has no regular classes,
+so a closed or not-yet-open catalog never overwrites the dashboard or history.
+Expect "catalog not open" skips and no daily commit until the new catalog opens.
+
 Also bump `FALLBACK_SEASON_ID` in **foss_api_extract.js** to the new season's
 id (seasonIds increment by 1 each quarter — Winter/Spring/Summer/Fall). The
 API does NOT auto-correct a stale seasonId; it just returns 0 classes for an

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foss Swim School Otsego, MN - Weekly Utilization Dashboard (Oct 15, 2026, 12:33 PM)</title>
+    <title>Foss Swim School Otsego, MN - Weekly Utilization Dashboard (Oct 11, 2026, 12:52 PM)</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
     <script src="history/otsego.js"></script>
     <style>
@@ -449,7 +449,7 @@
         <div class="header">
             <a href="index.html" class="back-home">&larr; All FOSS Locations</a>
             <h1>🏊 Foss Swim School Otsego, MN - Weekly Utilization Dashboard</h1>
-            <div class="extraction-time">Data extracted: October 15, 2026 at 12:33 PM</div>
+            <div class="extraction-time">Data extracted: October 11, 2026 at 12:52 PM</div>
             <div class="session-info"><strong id="sessionInfoName">Session:</strong> <span id="sessionInfoDates"></span> &nbsp;&bull;&nbsp; <span id="sessionInfoOpen"></span> &nbsp;&bull;&nbsp; Includes Once-a-Week classes</div>
             <div class="filters">
                 <div class="filter-group" id="locationSwitcherGroup">
@@ -3273,7 +3273,9 @@
         // Newest COMPLETE pull for a session: walk back past any pull whose seat
         // count collapsed against the pull before it.
         function finalFor(snaps, session) {
-            var list = snaps.filter(function (s) { return s.session === session; });
+            // A session with a final_pull on the calendar is pinned to that pull.
+            var cut = (sessionMeta(session) || {}).final_pull;
+            var list = snaps.filter(function (s) { return s.session === session && (!cut || s.date <= cut); });
             if (!list.length) return null;
             for (var i = list.length - 1; i > 0; i--) {
                 if (list[i].totals.capacity >= list[i - 1].totals.capacity * TRUNC_RATIO)
@@ -3378,7 +3380,7 @@
             }
         }
 
-        function tagLiveKpis(session) {
+        function tagLiveKpis(session, isFinal) {
             document.querySelectorAll('.headline-modals .headline-modal').forEach(function (el) {
                 var tag = el.querySelector('.modal-session');
                 if (!tag) {
@@ -3386,7 +3388,7 @@
                     tag.className = 'modal-session';
                     el.insertBefore(tag, el.firstChild);
                 }
-                tag.innerHTML = session + ' &middot; live';
+                tag.innerHTML = session + ' &middot; ' + (isFinal ? 'final' : 'live');
             });
         }
 
@@ -3417,7 +3419,8 @@
                 setSessionInfo(value, true, res ? res.snap.date : '');
                 syncTrend(value);
             } else {
-                setSessionInfo(live, false, '');
+                var liveFinal = (sessionMeta(live) || {}).final_pull;
+                setSessionInfo(live, !!liveFinal, liveFinal || '');
                 syncTrend(live);
             }
         }
@@ -3446,7 +3449,11 @@
             sel.innerHTML = '';
             var o = document.createElement('option');
             o.value = 'live';
-            o.innerHTML = live + ' &mdash; Live (current pull)';
+            // Between quarters the newest session can already be final (Fall 2026
+            // after its Oct 11 pull, until the Winter catalog opens).
+            var liveFinal = (sessionMeta(live) || {}).final_pull;
+            o.innerHTML = live + (liveFinal ? ' &mdash; Final (' + fmtShort(liveFinal) + ')'
+                                            : ' &mdash; Live (current pull)');
             sel.appendChild(o);
             names.slice().reverse().forEach(function (name) {
                 if (name === live) return;
@@ -3458,8 +3465,8 @@
                 sel.appendChild(op);
             });
 
-            tagLiveKpis(live);
-            setSessionInfo(live, false, '');
+            tagLiveKpis(live, !!liveFinal);
+            setSessionInfo(live, !!liveFinal, liveFinal || '');
             sel.value = 'live';
             sel.addEventListener('change', function () { setMode(sel.value, live); });
         }

@@ -30,6 +30,11 @@ jobs:
         env:
           FOSS_EMAIL: ${{ secrets.FOSS_EMAIL }}
           FOSS_PASSWORD: ${{ secrets.FOSS_PASSWORD }}
+          # Quarter being pulled. 101 = Winter 2026-27 (weekly Nov 30 - Mar 12,
+          # pre-enrollment opens Oct 27). Fall 2026 (100) is final as of the
+          # Oct 11 pull and is no longer pulled. Bump by 1 each quarter, and add
+          # the new session to SESSIONS in append_history.py.
+          FOSS_SEASON_ID: "101"
         run: python3 foss_api_extract.py _foss_csv
 
       - name: Update dashboards + history from extracted CSVs
