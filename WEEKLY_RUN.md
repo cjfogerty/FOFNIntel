@@ -54,8 +54,14 @@ label it "Final (<date>)" instead of "Live". Fall 2026 is final as of
 session now being pulled.
 
 Set the season being pulled with `FOSS_SEASON_ID` in
-**.github/workflows/refresh-foss.yml** (101 = Winter 2026-27), and keep the
-fallback in **foss_api_extract.py** matching.
+**.github/workflows/refresh-foss.yml** (129 = Winter 2027), and keep the
+fallbacks in **foss_api_extract.py** and **foss_api_extract.js** matching.
+
+⚠ Season ids are not sequential. On 2026-10-27 the Winter catalog opened under
+**129**; 101 ("Winter 2026") stayed an empty placeholder, so the forward probe
+(+1..+4) never finds it. To get the right id, open account.fossswimschool.com,
+pick the new quarter, click Find a class, and read `seasonId` from the
+`Classes/SelectClasses/v2` request body.
 
 Between quarters FOSS returns only a few Preview lessons per location.
 `update_all_from_api.py` skips any location whose pull has no regular classes,

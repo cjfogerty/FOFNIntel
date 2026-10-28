@@ -26,7 +26,9 @@
   //     getCurrentSeasonId() below is a probe, not real discovery: bump this constant
   //     every quarter (see WEEKLY_RUN.md) or the pipeline will silently record zeros.
   //     2026-08-05: 99 (Summer 2026) had ended; 100 (Fall 2026) is current.
-  var FALLBACK_SEASON_ID = 101; // Winter 2026-27; 100 = Fall 2026 (final Oct 11)
+  //     ⚠ 2026-10-27: ids are NOT always +1. Winter 2027 is 129; 101 is an empty
+  //     "Winter 2026" placeholder. Take the id the site's class search sends.
+  var FALLBACK_SEASON_ID = 129; // Winter 2027; 100 = Fall 2026 (final Oct 11)
 
   // --- Standing student/level array: casts the widest net across all distinct
   //     levels so SelectClasses/v2 returns the FULL catalog per facility.

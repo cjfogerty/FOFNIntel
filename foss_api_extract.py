@@ -38,7 +38,10 @@ API_BASE = "https://api-account.fossswimschool.com/api"
 # record zeros. Keep in sync with FALLBACK_SEASON_ID in foss_api_extract.js.
 # FOSS_SEASON_ID (set in .github/workflows/refresh-foss.yml) overrides this, so
 # the quarter can be switched from the workflow without a code change.
-FALLBACK_SEASON_ID = int(os.environ.get("FOSS_SEASON_ID") or 101)  # Winter 2026-27; 100 = Fall 2026 (final Oct 11)
+FALLBACK_SEASON_ID = int(os.environ.get("FOSS_SEASON_ID") or 129)  # Winter 2027; 100 = Fall 2026 (final Oct 11)
+# ⚠ seasonIds are NOT always +1 per quarter: Winter 2027 is 129, while 101 is an
+# empty "Winter 2026" placeholder. Read the real id from the seasonId the class
+# search on account.fossswimschool.com sends (Find a class), not by incrementing.
 
 # Standing student/level array: casts the widest net across all distinct levels
 # so SelectClasses/v2 returns the FULL catalog per facility. Mirrors STUDENTS
