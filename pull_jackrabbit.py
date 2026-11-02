@@ -353,11 +353,24 @@ class _T(HTMLParser):
             self.cell.append(d)
 
 
-def parse_feed(text):
+def _feed_html(text):
+    """The HTML inside the OpeningsJS script, in either wire format. Jackrabbit moved
+    from document.write('...') chunks to one string, var content = "\\u003Cdiv...",
+    between 2026-10-26 and 2026-10-29; the old regex then read zero rows from every org."""
+    m = re.search(r"\bvar\s+content\s*=\s*", text)
+    if m:
+        try:
+            doc, _ = json.JSONDecoder(strict=False).raw_decode(text, m.end())
+            return doc
+        except ValueError:
+            pass
     chunks = re.findall(r"'((?:[^'\\]|\\.)*)'", text)
-    doc = "".join(c.replace("\\'", "'").replace('\\"', '"').replace("\\/", "/")
-                  for c in chunks)
-    doc = html.unescape(doc)
+    return "".join(c.replace("\\'", "'").replace('\\"', '"').replace("\\/", "/")
+                   for c in chunks)
+
+
+def parse_feed(text):
+    doc = html.unescape(_feed_html(text))
     doc = re.sub(r"<style.*?</style>", "", doc, flags=re.S | re.I)
     doc = re.sub(r"<script.*?</script>", "", doc, flags=re.S | re.I)
     p = _T()
